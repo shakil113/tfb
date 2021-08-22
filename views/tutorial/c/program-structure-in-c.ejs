@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+    <html lang="en">
+       <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <title>Learn About Basic Structure Of C Programming</title>
+
+        
+        <meta name="Description" content="
+        In here we will learn about basic C programming basic Strucures,What is the header file? Why should I include it? Hwo to include a header file in c
+        Introducing some of Popular header file In C Programming . What is main function and what is program body . 
+
+
+        " />
+        <meta name="Keywords" content="basic structure of c program" />
+        
+        <meta name="author" content="tutorialforbeginner.com">
+        <meta property="og:site_name" content="www.tutorialforbeginner.com" />
+        <meta property="fb:pages" content="340075726591504" />
+        <meta property="fb:pages" content="1524841087795043" />
+        <meta name="viewport" content="width=device-width,initial-scale=1.0,user-scalable=yes">
+        <meta property="og:locale" content="en_US" />
+        <meta property="og:type" content="website" />
+        <link rel="shortcut icon" href="images/ico.jpg" type="image/x-icon" />
+        <link rel="canonical" href="https://tutorialforbeginner.com/program-structure-in-c" />
+
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+        <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+        <style>
+            .navbar-collapse .navbar-nav{float:none;margin:0 auto;text-align:center}img{max-width:100%}#footer{background:#232323;padding:30px 0 0 0;font-size:12px;color:#999}#footer a{color:#ccc}#footer a:hover{color:#fff}#footer h3.widget-title{font-size:15px;font-size:.9375rem;text-transform:uppercase;color:#fff;margin:0 0 20px}#underfooter{background:#191919;padding:15px 0;color:#777;font-size:12px}#underfooter a{color:#aaa}#underfooter a:hover{color:#fff}@media (min-width:1200px){.container{max-width:1080px}}body{overflow-x:hidden}#sidebar-wrapper{min-height:100vh;margin-left:-15rem;-webkit-transition:margin .25s ease-out;-moz-transition:margin .25s ease-out;-o-transition:margin .25s ease-out;transition:margin .25s ease-out}#sidebar-wrapper .sidebar-heading{padding:.875rem 1.25rem;font-size:1.2rem}#sidebar-wrapper .list-group{width:15rem}#page-content-wrapper{min-width:100vw}#wrapper.toggled #sidebar-wrapper{margin-left:0}@media (min-width:768px){#sidebar-wrapper{margin-left:0}#page-content-wrapper{min-width:0;width:100%}#wrapper.toggled #sidebar-wrapper{margin-left:-15rem}}.row.content{height:auto;width:auto}.sidenav{padding-top:20px;background-color:#f1f1f1;height:cover}footer{background-color:#555;color:#fff;padding:15px}@media screen and (max-width:767px){.sidenav{height:auto;padding:15px}.row.content{height:auto}}
+          </style>
+        <link rel="stylesheet" type="/text/css" href="/js/print/prettify.css">
+        
+        <script async type="text/javascript" src="js/print/run_prettify.js??autoload=true&amp;skin=sunburst&amp;"></script>
+        <script data-ad-client="ca-pub-9136564254270725" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+
+
+            <!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-148831263-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-148831263-1');
+</script>
+
+
+        
+
+        
+
+
+    
+
+<body >
+    <%- include('../../includes/navigation.ejs') %>
+    
+    
+    <main id="main">
+        
+        <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+        <!-- c-new -->
+        <ins class="adsbygoogle"
+             style="display:block"
+             data-ad-client="ca-pub-9136564254270725"
+             data-ad-slot="7916462357"
+             data-ad-format="auto"
+             data-full-width-responsive="true"></ins>
+        <script>
+             (adsbygoogle = window.adsbygoogle || []).push({});
+        </script>
+        
+            
+            
+            <div class="d-flex" id="wrapper">
+
+                <!-- Sidebar -->
+                <div class="bg-light border-right" id="sidebar-wrapper">
+                  <div class="sidebar-heading">Topics</div>
+                  <div class="list-group list-group-flush">
+                    <%- include('../../sitebars/c-sitebar.ejs') %>
+                  </div>
+                </div>
+                <!-- /#sidebar-wrapper -->
+            
+                <!-- Page Content -->
+                <div id="page-content-wrapper">
+            
+                  <nav class="navbar navbar-expand-lg navbar-light bg-light border-bottom ">
+                    <button class="btn btn-primary" id="menu-toggle">Contents</button>
+            
+                  </nav>
+            
+                  <div class="container-fluid">
+                      <div class="row content">
+                          
+                          <div class="col-sm-12 col-lg-9 col-md-8 text-left"> 
+                              <h2 class="bg-dark text-center text-white">Learn C Program Structure</h2>
+                              <p class=" text-justify text-secondary"><b>
+                                  In here we will learn about baisc C programming basic Strucures,
+                                  What is the header file? Why should I include it? Hwo to include a header file in c
+                                  Introducing some of Popular header file In C Programming . What is main function and what is program body .  </b> </p>
+
+                              <h1 class="mt-5 mb-3">C programming basic Strucures:</h1>
+
+                              <p class=" text-justify">
+                                Before we start we need to know about basic structure of program .It will help you to 
+                                write the codes and you can understand codes very easily. Let's have a look on the basic 
+                                structure:
+                              </p>
+                              <img src="images/C_structure.jpg" alt="C_structure">
+                   
+                              
+        <hr>
+                              <div class="embed-responsive embed-responsive-16by9">
+                                <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/esd92Lil_9E" allowfullscreen></iframe>
+                            </div>
+                            <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<ins class="adsbygoogle"
+     style="display:block; text-align:center;"
+     data-ad-layout="in-article"
+     data-ad-format="fluid"
+     data-ad-client="ca-pub-9136564254270725"
+     data-ad-slot="3553232436"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+
+                          
+                          <hr>
+
+                          <h3>1.Header File:</h3>
+                          <p class="text-justify">
+                              The first and foremost component is the inclusion of the Header files in a C program top of your program including 
+                              <b>.h</b> extension. <br>
+
+                              May be you are thinking <b>What is the header file? Why should I include it?</b><br>
+                              Header file is very very important component for c program.You can consider it with human brain. <br>
+                              <b>For an example:</b> Suppose you do not know about cat and never seen before . So it is an unknown animal to you right? If someone asked
+                              you about cat then you do not able to say about cat because there is no information about cat in your brain.Now assume you 
+                              know about cat.If someone ask you about cat now able to say this only because the information about cat is available 
+                              in your brain.In the same way C Pragram have some reserves words and functionlities like( <b>int, printf(),</b> ).If you do not add the 
+                              header file it will never understantd what is those words in the other hand if you add header file then the Compiler will understand what should do 
+                              with these words.
+                        
+
+                          </p>
+
+                          <h4>Syntax to include a header file in c</h4>
+ <pre class="prettyprint">
+    #include&lt;(header_file_name).h&gt;</pre>   
+                            <h3>Lets familar with some of headerfile:</h3>    
+                            
+                           <table class="table">
+                              <thead>
+                                <tr>
+                                  <th scope="col">#</th>
+                                  <th scope="col">Header File</th>
+                                  <th scope="col">Description</th>
+                                  
+                                </tr>
+                              </thead>
+                              <tbody>
+                                <tr>
+                                  <th scope="row">1</th>
+                                  <td><b>stdio.h</b></td>
+                                  <td>Basically stdio stands for <b>Standard Input And Output</b> .
+                                    std for <b> Standard</b> and <b>io for Input and Output</b> .It defines
+                                     core input and output functions like <b>scanf(), printf()</b>  
+                                  </td>
+                                  
+                                </tr>
+                                <tr>
+                                  <th scope="row">2</th>
+                                  <td><b>stdlib.h</b></td>
+                                  <td> It defines numeric conversion functions, pseudo-random network generator and memory allocation
+                                    like <b>alloc()</b> which is for dynamic memory allocation.
+
+                                  </td>
+                                 
+                                </tr>
+                                <tr>
+                                  <th scope="row">3</th>
+                                  <td><b>string.h</b></td>
+                                  <td>It defines string handling functions like <b>strlen()</b>  for counting for string length</td>
+                                  
+                                </tr>
+                                <tr>
+                                  <th scope="row">4</th>
+                                  <td><b>math.h</b></td>
+                                  <td>It defines common mathematical functions like <b>sqrt()</b> which is root function</td>
+                                  
+                                </tr>
+                              
+                              </tbody>
+                            </table><hr>
+
+                            <h6>[Note:Not only these header file but also lots of header file available for a specific work]</h6>
+
+
+                        
+                         <br><h4>2.Main function:</h4>
+                         <p class="text-justify">
+                           Remember program always starts from the main function.It defines from where program should 
+                           start.Now you can say first you need to add a header file then you need to define or add the
+                           main function.
+                         </p>
+                         <h5>Syntax of including main function:</h5>
+
+<pre class="prettyprint">
+<code>#include&lt;stdio.h&gt;
+int main()</code></pre>    
+                      <h4>3.Program Body:</h4>   
+                      <p class="txt-justify">
+                        Program body starts with the opening curly brackets <b>{</b> right after the <b>main function</b>  and end
+                          with the closing carlibrace <b>}</b> .In between the opening and closing curly brackets we need to write 
+                          the codes that we wants.
+                      </p>
+
+                      <h5>Lets see how to write:</h5>
+<pre class="prettyprint">
+<code> #include&lt;stdio.h&gt;
+  int main()
+  {//start program body
+    int a = 5;
+    printf("Number is: %d",a);
+    return 0;
+  }//end program body</code></pre>
+  <h5>Output:</h5>
+  <pre class="prettyprint">Number is: 5</code></pre>
+       
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+  <ins class="adsbygoogle"
+       style="display:block; text-align:center;"
+       data-ad-layout="in-article"
+       data-ad-format="fluid"
+       data-ad-client="ca-pub-9136564254270725"
+       data-ad-slot="9525057491"></ins>
+  <script>
+       (adsbygoogle = window.adsbygoogle || []).push({});
+  </script>
+                          
+                         
+                          
+ 
+
+                                                
+                     </div>
+                          <div class="col-sm-12 col-lg-3 col-md-4 sidenav">
+                     
+
+                            <div class="well my-5">
+                                
+                                <details >
+                                    <summary>Best way of learing</summary>
+                                    <p class="text-tustify">
+                                        Self learing is the best learing in the world.
+                                        Discover yourself first then will get what you are And
+                                        what you want to do .It will push you for self learing.
+                                    </p>
+                                  </details>
+                            </div>
+
+                            <div class="well my-5">
+                                
+                                <details >
+                                    <summary>Why you need to learn coding?</summary>
+                                    <p class="text-tustify">
+                                        Coding will play a vital role in one's life . It will help to open 
+                                        a new window of thinking . You can think better way than past . It 
+                                        helps to organise all the thing in better way .
+                                    </p>
+                                  </details>
+                            </div>
+                            
+                            <div class="well sticky-top">
+                            <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+                            <!-- h-ad1 -->
+                            <ins class="adsbygoogle"
+                                style="display:block"
+                                data-ad-client="ca-pub-9136564254270725"
+                                data-ad-slot="9841091579"
+                                data-ad-format="auto"
+                                data-full-width-responsive="true"></ins>
+                            <script>
+                                (adsbygoogle = window.adsbygoogle || []).push({});
+                            </script>
+                            </div>
+                            
+
+                          </div>
+                        </div>
+                      </div>
+                    
+                </div>
+               
+            
+              </div>
+              
+              <script>
+                $("#menu-toggle").click(function(e) {
+                  e.preventDefault();
+                  $("#wrapper").toggleClass("toggled");
+                });
+              </script>
+            
+        
+    
+    </main>
+
+    
+
+<%- include('../../includes/end.ejs') %>

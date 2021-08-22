@@ -1,0 +1,451 @@
+<!DOCTYPE html>
+    <html lang="en">
+       <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <title>HSC ICT Chapter 5 Part-1: Programming language </title>
+
+        
+        <meta name="Description" content="HSC ICT Chapter 5 Part-1we will
+        learn about What is Programming Language, Generation of Programming Language, Machine language, Assembly Language,
+         Low and High Level Language? What is the Advantage and Disadvantage of different Generation Programming Language ?" />
+        
+        
+        <meta name="author" content="tutorialforbeginner.com">
+        <meta property="og:site_name" content="www.tutorialforbeginner.com" />
+        <meta property="og:locale" content="en_US" />
+        <meta property="og:type" content="website" />
+        <link rel="shortcut icon" href="images/ico.jpg" type="image/x-icon" />
+        <link rel="canonical" href="https://tutorialforbeginner.com/hsc-ict-programming-language-part-1"/>
+
+        <%- include('../../includes/boostrap-head.ejs') %>
+        <style>
+            .navbar-collapse .navbar-nav{float:none;margin:0 auto;text-align:center}img{max-width:100%}#footer{background:#232323;padding:30px 0 0 0;font-size:12px;color:#999}#footer a{color:#ccc}#footer a:hover{color:#fff}#footer h3.widget-title{font-size:15px;font-size:.9375rem;text-transform:uppercase;color:#fff;margin:0 0 20px}#underfooter{background:#191919;padding:15px 0;color:#777;font-size:12px}#underfooter a{color:#aaa}#underfooter a:hover{color:#fff}@media (min-width:1200px){.container{max-width:1080px}}body{overflow-x:hidden}#sidebar-wrapper{min-height:100vh;margin-left:-15rem;-webkit-transition:margin .25s ease-out;-moz-transition:margin .25s ease-out;-o-transition:margin .25s ease-out;transition:margin .25s ease-out}#sidebar-wrapper .sidebar-heading{padding:.875rem 1.25rem;font-size:1.2rem}#sidebar-wrapper .list-group{width:15rem}#page-content-wrapper{min-width:100vw}#wrapper.toggled #sidebar-wrapper{margin-left:0}@media (min-width:768px){#sidebar-wrapper{margin-left:0}#page-content-wrapper{min-width:0;width:100%}#wrapper.toggled #sidebar-wrapper{margin-left:-15rem}}.row.content{height:auto;width:auto}.sidenav{padding-top:20px;background-color:#f1f1f1;height:cover}footer{background-color:#555;color:#fff;padding:15px}@media screen and (max-width:767px){.sidenav{height:auto;padding:15px}.row.content{height:auto}}
+          </style>
+
+        
+        
+<script data-ad-client="ca-pub-9136564254270725" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+
+
+            <!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-148831263-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-148831263-1');
+</script>
+
+
+        
+
+        
+        
+    </head>
+
+
+    
+
+<body>
+    <%- include('../../includes/navigation.ejs') %>
+    
+    
+    <main id="main">
+        
+      <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+      <!-- ict-ads-3 -->
+      <ins class="adsbygoogle"
+           style="display:block"
+           data-ad-client="ca-pub-9136564254270725"
+           data-ad-slot="3477296539"
+           data-ad-format="auto"
+           data-full-width-responsive="true"></ins>
+      <script>
+           (adsbygoogle = window.adsbygoogle || []).push({});
+      </script>
+
+        
+            
+            
+<div class="d-flex" id="wrapper">
+
+  <%- include('../../sitebars/ict.ejs') %> 
+  </div>
+</div>
+                <!-- /#sidebar-wrapper -->
+            
+                <!-- Page Content -->
+                <div id="page-content-wrapper">
+            
+                  <nav class="navbar navbar-expand-lg navbar-light bg-light border-bottom">
+                    <button class="btn btn-primary" id="menu-toggle">Contents</button>
+            
+                  </nav>
+            
+                  <div class="container-fluid">
+                      <div class="row content">
+                          
+                          <div class="col-sm-12 col-lg-9 col-md-8 text-left"> 
+                              <h1 class="bg-dark text-center text-white">HSC ICT Chaper 5 Part-1</h1>
+                             
+                   
+                              <h2 class="mt-4 text-center text-secondary"> Programming Language </h2><p class="text-justify text-secondary"><b>
+                                In this HSC ICT Chapter 5 Part-1 : Programming language we will
+                                learn about What is Programming Language , Generation of Programming Language , Machine language , Assembly Language,
+                                 Low and High Level Language? What is the Advantage and Disadvantage of different Generation Programming Language ?</b></p><hr>
+                   
+                            
+
+                              <h2>১.প্রােগ্রামের ধারণা ( Concept of Program ) :</h4>
+                            <p class="text-justify text-dark">
+
+                              পৃথিবীর কোটি কোটি মানুষ অনেক রকমের ভাষা( language ) ব্যবহার করে থাকে। কম্পিউটার 
+                              এত সব ভাষার( language ) একটিও বােঝ না। কম্পিউটারকে তার নিজস্ব বােধগম্য ভাষায়( language ) নির্দেশ
+                               প্রদান করতে হয়। কোনাে সমস্যা সমাধানের জন্য কম্পিউটারের ভাষায়( programming language ) ধারাবাহিকভাবে লিখিত কতকগুলাে কমান্ড বা নির্দেশের সমষ্টিকে প্রােগ্রাম( Program ) বলা হয়।
+                              আর প্রােগ্রামের ( Program ) ভাষা বলতে আমরা বুঝি কিছু নির্দেশাবলি যা কম্পিউটারকে নিয়ন্ত্রণ করবে এবং কম্পিউটার কী ধরনের কাজ করবে,
+                              কোথায় ভেটাসমূহ রাখবে, ফলাফল কী হবে প্রভৃতি নির্ধারণ করে। কম্পিউটার একটি অত্যাধুনিক ইলেকট্রনিক যন্ত্র। কম্পিউটার মানুষের মতাে বর্ণ, সংখ্যা (Number), চিহ্ন এসব কিছু বুঝতে পারে না।
+                              কম্পিউটারের ভাষা শুধু কম্পিউটারই বুঝে। কম্পিউটারের ভাষা জ্ঞান অত্যন্ত সীমিত। প্রকৃতপক্ষে “হ্যা’ বা ‘না’ ছাড়া আর কিছুই বােঝে না 
+                              এ যন্ত্রটি। ইলেকট্রনিক সংকেতের উপর ভিত্তি করে তৈরি করা হয়েছে কম্পিউটারের ভাষা( Programming Language )। এ ভাষাকে( Language ) বাইনারি( Binary ) পদ্ধতির 0 এবং 1 দ্বারা প্রকাশ করা যায়।
+                               কম্পিউটার কেবল ইলেকট্রনিক সংকেত অর্থাৎ সার্কিটে বিদ্যুৎ আছে কি নেই তা বােঝে। বাইনারি( Binary ) দ্বারা বিদ্যুৎ আছে (ON) এবং () দ্বারা বিদ্যুৎ নেই (OFF) এর উপর ভিত্তি করেই কম্পিউটারের ভাষা( Programming Language )
+                              তৈরি করা হয়েছে। প্রােগ্রামের ভাষা (Programming Language) কম্পিউটারকে নির্দেশ প্রদান করার জন্য শব্দ, বর্ণ, সংকেত এবং এগুলাে বিন্যাসের নিয়ম প্রয়োজন হয়। কম্পিউটারকে আদেশ-নির্দেশ প্রদানের জন্য কম্পিউটার বুঝতে পারে এমন কিছু সংকেত
+                              এবং কতিপয় নিয়ম কানুন ব্যবহার করে প্রােগ্রাম( Program ) তৈরি করা হয়। প্রােগ্রাম( Program ) তৈরির জন্য ব্যবহৃত এসব নিয়ম কানুন ও সংকেতগুলােকে একত্রে প্রােগ্রামের ভাষা ( Programming Language ) বলে। কম্পিউটারের নির্দেশ প্রদানযােগ্য প্রােগ্রামের ভাষা ( Programming language ) সুনির্দিষ্ট এবং নির্ভুল না হলে কম্পিউটার
+                              কোনাে কাজ করে না। কম্পিউটারের একটি নিজস্ব ভাষা ( language ) আছে। এটি ইংরেজি, বাংলা, আরবি, উর্দু, হিন্দি ইত্যাদি কোনাে ভাষাই(language) বােঝে না। শুধু তার নিজের ভাষায় প্রােগ্রাম(Program) লিখলেই সে বুঝতে পারে, অন্যথায় পারে না। কম্পিউটার প্রােগ্রাম(Program) রচনার অনেকগুলাে ভাষা(Programming Language) আছে।
+ 
+                            </p><hr>
+                           
+          
+                        
+                              <div class="embed-responsive embed-responsive-16by9">
+                                  <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/sbZpn0i8L0A" allowfullscreen></iframe>
+                              </div>
+                              <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+                                <!-- ict-ads-4 -->
+                                <ins class="adsbygoogle"
+                                    style="display:block"
+                                    data-ad-client="ca-pub-9136564254270725"
+                                    data-ad-slot="9659561509"
+                                    data-ad-format="auto"
+                                    data-full-width-responsive="true"></ins>
+                                <script>
+                                    (adsbygoogle = window.adsbygoogle || []).push({});
+                                </script>
+                            
+                            
+                         
+
+
+                          
+                            
+                            <h2>বিভিন্ন স্তরের প্রােগ্রামের ভাষা (Programming Language) :</h2>
+                            <p class="text-justify text-dark">
+                                                              
+                              কম্পিউটার প্রােগ্রামের(Computer program) জন্য অনেক রকম কৃত্রিম ভাষার উদ্ভব হয়েছে।
+                               ১৯৪৫ সাল থেকে শুরু করে এ পর্যন্ত কয়েকশত Programming Language  বা ভাষা আবিষ্কৃত হয়েছে। 
+                               এসব ভাষাকে বৈশিষ্ট্য অনুযায়ী পাঁচটি স্তর বা প্রজন্মে (Generation) ভাগ করা যায়। যথা - <br>
+
+                               <ul>
+                                <li><b> প্রথম প্রজন্ম বা First Generation :</b> First Generation language বা প্রথম প্রজন্ম ভাষা (১৯৪৫): মেশিন ভাষা (Machine Language) । </li> 
+                                <li><b>দ্বিতীয় প্রজন্ম বা Second Generation :</b> Second Generation language বা দ্বিতীয় প্রজন্ম ভাষা (১৯৫০): অ্যাসেম্বলি ভাষা (Assembly Language)</li>
+                                <li><b>তৃতীয় প্রজন্ম বা Third Generation :</b> Third Generation language বা তৃতীয় (১৯৬০): উচ্চতর (High Level Language)</li>
+                                <li><b>চতুর্থ প্রজন্ম বা Fourth Generation :</b> Fourth Generation language বা চতুর্থ প্রজন্ম ভাষা (১৯৭০): অতি উচ্চতর (Very High Level Language)</li>
+                                <li><b>পঞ্চম প্রজন্ম বা Fifth Generation :</b> Fifth Generation language বা পঞ্চম প্রজন্ম ভাষা (১৯৮০): স্বাভাবিক বা ন্যাচারাল (Natural language) ভাষা।
+                                </li>
+                                
+                              </ul>
+                                
+                                
+                                
+                                </p>
+                              
+
+                            <p class="text-justify text-dark">
+                                <b>প্রােগ্রাম রচনার বৈশিষ্ট্যের ভিত্তিতে প্রােগ্রামের ভাষাসমূহকে প্রধান দুভাগে ভাগ করা হয়। যথা:</b>
+                                <ul>
+                                  <li>নিমস্তরের ভাষা (Low Level Language):কম্পিউটার বা অনুরূপ যন্ত্রগুলাে সরাসরি বুঝতে পারে এরূপ ভাষাকে নিম্নস্তরের। নিম্নস্তরের ভাষা আবার দুপ্রকার। যথা: <ol>
+                                    <li>মেশিনের বা যন্ত্রের ভাষা (Machine_Language) </li>
+                                    <li>অ্যাসেম্বলি ভাষা (Assembly  Language)</li>
+                                  </ol> 
+                                  মেশিন ভাষা (Machine language) ও অ্যাসেম্বলি ভাষাকে(Assembly language) লাে-লেভেল ভাষা বলে। কারণ এগুলাে কম্পিউটারের ভাষার (0 বা 1) কাছাকাছি।
+                              
+                                  
+
+                                  <li>উচ্চস্তরের ভাষা (High Level Language):  উচ্চতর ভাষা মানুষের ভাষার কাছাকাছি, যেমন ইংরেজি।</li>
+                                </ul>
+                                  <img src="images/language_generation.jpg" alt="language generation">
+                          </p><hr>
+                            
+                            <h2>প্রথম প্রজন্ম ভাষা বা First Generation Language (১৯৪৫):</h2>
+                            <p class="text-justify text-dark">
+                             
+                                 <b>Machine Language বা মেশিন ভাষা :</b> কম্পিউটারের সরাসরি বােধগম্য ভাষাকে মেশিন ভাষা ( Machine Language ) বা নিমস্তরের ভাষা(Low level language) বলে।
+                                 যান্ত্রিক ভাষার ( Machine Language ) সহজ অর্থ হচ্ছে যন্ত্রের নিজস্ব ভাষা অথবা হেক্সাপদ্ধতি ব্যবহার করে সবকিছু লেখা হয়। সুতরাং 1 ও 0 এ দুটি অঙ্ক ব্যবহার করে নির্দেশ সাজিয়ে প্
+                                 রােগ্রাম লেখার পদ্ধতিকে মেশিনের ভাষায় প্রােগ্রাম (Machine language Program) বলে। মেশিন ভাষায় লিখিত প্রােগ্রামকে অবজেক্ট (Object) প্রােগ্রাম বলে। মেশিন ভাষা (Machine language) ব্যতিত অন্য যেকোনাে ভাষায় লিখিত প্রােগ্রামকে
+                                 বলে Source Program । কম্পিউটার শুধুমাত্র মেশিন ভাষাই ( Machine Language ) বুঝতে পারে। অন্য কোনাে ভাষায় প্রােগ্রাম রচনা করলে কম্পিউটার কার্য-নির্বাহের আগে উপযুক্ত অনুবাদকের সাহায্যে তাকে মেশিন ভাষায় রূপান্তর করে।
+                                 মেশিন ভাষায় (0 বা 1) প্রােগ্রাম লিখা অত্যন্ত জটিল ও শ্রমসাধ্য। ব্যাপার। মেশিন ভাষায় প্রতিটি নির্দেশের দুটি অংশ থাকে। যথা:
+                                <ol>
+                                  <li>
+                                    <b> অপকোড (Opcode): </b>অপকোড এর পূর্ণরূপ হলাে অপারেশন কোড (Operation Coxle)। এর সাহায্যে কম্পিউটার কি ধরনের কাজ করবে তা বুঝানাে হয়। যেমন- ADD ও DIV দিয়ে যথাক্রমে যােগ ও ভাগ করাকে বুঝায়।  
+                                  </li>
+                                  <li> <b>অপারেন্ড (Operand): </b>অপারেন্ড কম্পিউটারকে কি অপারেশন হবে তা নির্দেশ করে। সাধারণভাবে অপারেন্ড অপারেট করা হবে এমন ডেটা অ্যাড্রেস দিয়ে থাকে।
+
+                                  </li>
+                                </ol><br>
+
+                                মেশিন ভাষায় যেসব নির্দেশ দেওয়া হয় তাদের চারভাগে ভাগ করা যায়। যেমন - 
+                                <ol>
+                                  <li>গাণিতিক (Arithmetic) অর্থাৎ যােগ, বিয়ােগ, গুণ, ভাগ। </li>
+                                  <li>নিয়ন্ত্রণ (Control) অর্থাৎ লােড (Lode), স্টোর (Store) ও জাম্প (Jump)।</li>
+                                  <li>ইনপুট-আউটপুট(Input-Output) অর্থাৎ পড় (Read) ও লেখা (Write) </li>
+                                  <li>প্রত্যক্ষ ব্যবহার (Direct use) অর্থাৎ শুরু করা (Start) এবং শেষ করা (End)
+                                  </li>
+                                </ol><br>
+
+                                মেশিন ভাষার সুবিধা (Advantage of Machine language)- <br>
+                                <ol>
+                                  <li> এ ভাষার সাহায্যে অতি সংক্ষিপ্ত আকারে প্রােগ্রাম লেখা যায়।</li>
+                                  <li>এ ভাষা সিপিইউ সরাসরি বুঝাতে পারে বলে অন্য ভাষার তুলনায় কম সময় লাগে।</li>
+                                  <li>প্রােগ্রাম নির্বাহে কম সময় লাগে।</li>
+                                  <li>এ ভাষায় প্রােগ্রাম নির্বাহে বেশি মেমরির প্রয়ােজন হয় না।</li>
+                                </ol>
+                            </p><hr>
+                            <h2>দ্বিতীয় প্রজন্ম ভাষা  বা Second Generation Language (১৯৫০):</h2>
+                            <p class="text-justify text-dark">
+                              অ্যাসেম্বলি ভাষা (Assembly Language) বিভিন্ন ধরনের সংকেত বা নেমােনিক কোড ব্যবহার করে যে প্রােগ্রাম (Program) রচনা করা হয়,
+                               তাকে অ্যাসেম্বলি ভাষা(Assembly Language) বলে। অ্যাসেম্বলি ভাষার (Assembly Language) প্রচলন শুরু হয় ১৯৫০ সাল থেকে। 
+                               দ্বিতীয় প্রজন্মের কম্পিউটারে এ ভাষার ব্যাপক প্রচলন শুরু হয়। এ অ্যাসেম্বলি ভাষাকে মেশিনের ভাষায় (Machine Language) রূপান্তরিত করার জন্য এক 
+                               ধরনের ট্রান্সলেটর ব্যবহার করা হয় যার নাম অ্যাসেম্বলার। এ ভাষা বিভিন্ন সংকেতের সমন্বয়ে লেখা হয়ে থাকে। এজন্য এ ভাষাকে সাংকেতিক 
+                               ভাষাও বলা হয়। কারণ অ্যাসেম্বলি ভাষার ক্ষেত্রে নির্দেশ ও ডেটার অ্যাড্রেস বাইনারি বা হেক্সা সংখ্যার সাহায্যে না দিয়ে সংকেতের সাহায্যে দেয়া 
+                               হয়। এ সংকেতকে বলে সাংকেতিক কোড (Symbolic Code) বা নেমােনিক (Nemonic)। অর্থাৎ যে সংকেতের সাহায্যে কোনাে বড় সংখ্যা বা 
+                               কথাকে মনে রাখার সুবিধা হয়। যেমন-অ্যাকিউমুলেটরে রাখা, নেমােনিক (LDA)। মেশিনের ভাষার মতাে বাইনারি সংখ্যা সরাসরি ব্যবহার না
+                                করে বরং কতকগুলাে বিটের সমষ্টিকে কয়েকটি ইংরেজি বর্ণের সাহায্যে বিশেষ কোডে প্রকাশ করে কম্পিউটারকে বােঝানাে হয়।
+                                 এ কোডগুলােকে অ্যাসেম্বলি কোড বা অ্যাসেম্বলি ভাষা বলা হয়। যেমন- যােগ করার জন্য কম্পিউটারকে নির্দেশ দেয়ার জন্য ADD
+                                  এবং বিয়ােগ করার জন্য SUB ইত্যাদি ব্যবহার করা হয়। অ্যাসেম্বলি ভাষার প্রতিটি নির্দেশে চারটি অংশ থাকে -
+                                  <ol>
+                                    <li>লেবেল (Label)</li>
+                                    <li>অপকোড (Opcode)</li>
+                                    <li>অপারেন্ড (Operand)</li>
+                                    <li>মন্তব্য (Comment) </li>
+                                  </ol>
+                                  অ্যাসেম্বলি ভাষায় লিখিত প্রােগ্রাম কম্পিউটার সরাসরি বুঝতে পারে না। এজন্য এ জাতীয় প্রােগ্রামকে মেশিন 
+                                  ভাষায় রূপান্তর করতে হয়। এ রূপান্তরের কাজে বিশেষ প্রােগ্রাম ব্যবহার করা হয়। যে প্রােগ্রামের সাহায্যে 
+                                  অ্যাসেম্বলি ভাষার প্রােগ্রামকে মেশিন ভাষায় রূপান্তর করা হয় তাকে অ্যাসেম্বলার বলে। নিম্নের চিত্রে অ্যাসেম্বলি ভাষায়
+                                   প্রােগ্রাম নির্বাহ প্রক্রিয়া দেখানাে হলাে-
+                                   <img src="images/2GL_pro.JPG" alt="Second Generation language Processing"><br>
+
+                                  <b>অ্যাসেম্বলি ভাষার সুবিধা (Advantage of Assembly Language):-</b>
+
+                                  <ol>
+                                    <li>অ্যাসেম্বলি ভাষায় প্রােগ্রাম রচনা করা যান্ত্রিক ভাষার তুলনায় অনেক সহজ।</li>
+                                    <li> প্রােগ্রাম রচনা করতে কম সময় লাগে।</li>
+                                    <li>প্রােগ্রাম পরিবর্তন করা সহজ।
+                                    </li>
+                                    <li>মেশিনের ভাষার তুলনায় ডিবাগিং সহজতর । </li>
+                                    
+                                  </ol><br>
+                                  <b>অ্যাসেম্বলি ভাষার অসুবিধা(Disadvantage of Assembly language):-</b>
+                                  <ol>
+                                    <li>প্রােগ্রাম রচনার সময় প্রােগ্রামারকে মেশিন সম্পর্কে ধারণা থাকতে হয়।</li>
+                                    <li>এক ধরনের মেশিনের জন্য লিখিত প্রােগ্রাম অন্য ধরনের মেশিনে ব্যবহার করা যায় না।</li>
+                                    <li>এটি যন্ত্র নির্ভর ভাষা।</li>
+                                    <li>অনুবাদক প্রােগ্রামের প্রয়ােজন হয়।</li>
+                                  </ol>
+
+
+                                </p><hr>
+
+                            <h2>মধ্যম স্তরের ভাষা (Mid-Level Language):</h2>
+                            <p class="text-justify text-dark">
+                              কম্পিউটারের হার্ডওয়্যার নিয়ন্ত্রণ ও সিস্টেম প্রােগ্রাম রচনার জন্য বিট পর্যায়ের প্রােগ্রামিং ভাষা (Programming Language) হচ্ছে মধ্যম স্তরের ভাষা (Mid-Level Language) ।
+                               এ ভাষায় উচ্চতর ভাষার সুবিধা পাওয়া যায় আবার নিম্ন স্তরের ভাষায়ও প্রােগ্রাম রচনা করা যায়। সি (C) Mid-Level Language)।
+                              </p><hr>
+                              <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- ad-2 -->
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-9136564254270725"
+     data-ad-slot="8826219349"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+                            
+                           
+                            <h2>তৃতীয় প্রজন্ম ভাষা বা Third Generation Language (১৯৬০):
+                            </h2>
+                            <p class="text-justify text-dark">
+                              
+                              উচ্চস্তরের বা হাই লেভেল (High Level) ভাষা প্রােগ্রাম রচনার জন্য সহজে বােধগম্য সার্বজনীন ভাষাকে
+                               উচ্চস্তরের (High Level Language ) ভাষা বলা হয়। উচ্চস্তরের ভাষায় আমাদের পরিচিত বাক্য, বর্ণ ও
+                                সংখ্যা ব্যবহার করে প্রােগ্রাম রচনা করা হয়। উচ্চস্তরের ভাষা অনেকটা ইংরেজি ভাষার মতাে। 
+                                এ ভাষায় খুব দ্রুত এবং সহজে প্রােগ্রাম লেখা যায়। উচ্চস্তরের ভাষার সবচেয়ে বড় সুবিধা হলাে লিখিত প্রােগ্রাম
+                                 যেকোনাে কম্পিউটারের ব্যবহার করা যায়। অর্থাৎ এ ভাষা যন্ত্র বা মেশিন নির্ভর নয়। মেশিন ও অ্যাসেম্বলি 
+                                 ভাষার প্রধান অসুবিধা হলাে যে, এক ধরনের কম্পিউটারের জন্য রচিত প্রােগ্রাম অন্য ধরনের কম্পিউটারে
+                                  ব্যবহার করা যায় না। তাছাড়া লাে-লেভেল ভাষায় (মেশিন ও অ্যাসেম্বলি ভাষা) প্রােগ্রাম লিখা কষ্টকর 
+                                  ও শ্রমসাধ্য কাজ। কম্পিউটারের পক্ষে লাে-লেভেল ভাষা বােঝা সম্ভব হলেও মানুষের পক্ষে Low level Language বােঝা সহজসাধ্য
+                                   নয়। এ অসুবিধা থেকে অব্যাহতির প্রচেষ্টার ফলে উচ্চতর ভাষার উদ্ভব হয়। এ স্তরের ভাষায় লিখিত প্রােগ্রাম বিভিন্ন ধরনের 
+                                   মেশিনে ব্যবহার করা সম্ভব। অর্থাৎ এ প্রােগ্রাম কম্পিউটার সংগঠনের নিয়ন্ত্রণের উর্দ্ধে, ফলে এসব ভাষাকে উচ্চতর ভাষা বলা হয়।
+                                    উচ্চস্তরের ভাষা মানুষের ভাষার (যেমন-ইংরেজি ভাষা) সাথে মিল রেখে তৈরি করা হয়েছে। উচ্চস্তরের ভাষার মধ্যে প্রধান হলাে 
+                                   C,C++, VISUAL BASIC, JAVA, ORACLE, ALGOL, FORTRAN ইত্যাদি। <br>
+
+
+                                   <b> প্রয়ােগের ভিত্তিতে উচ্চস্তরের ভাষাকে সাধারণত নিম্নলিখিত দুভাগে ভাগ করা যায়:</b>
+                                   <ol>
+                                     <li>সাধারণ কাজের ভাষা (General Purpose Language)
+                                    </li>
+                                    <li>বিশেষ কাজের ভাষা (Special Purpose Language) </li>
+                                   </ol>
+                                   যেসব ভাষা সব ধরনের কাজের উপযােগী করে তৈরি করা হয় তা সাধারণ কাজের ভাষা নামে পরিচিত। যেমন- BASIC, PASCAL, C ইত্যাদি। আর যেসব ভাষা বিশেষ বিশেষ কাজের উপযােগী করে তৈরি করা হয় তা বিশেষ কাজের ভাষা নামে পরিচিত। যেমন- COBOL, ALGOL, FORTRAN ইত্যাদি। 
+                                   <br><br> <b>উচ্চস্তরের ভাষার সুবিধা ( Advantage Of High Level Language ):</b><br>
+                                   <ol>
+                                     <li>উচ্চস্তরের ভাষায় লিখিত প্রােগ্রাম যেকোনাে কম্পিউটারে ব্যবহার করা যায়।</li>
+                                     <li>লাে লেভেল ভাষার চেয়ে হাই লেভেল ভাষা শেখা বেশি সহজ।</li>
+                                     <li>প্রােগ্রাম রচনা সহজ ও যুক্তিনির্ভর।
+                                    </li>
+                                     <li>হাই লেভেল ভাষায় স্বাভাবিক ভাষার অনেক শব্দ ব্যবহার করা যায়। </li>
+                                     <li>প্রােগ্রাম লেখার সময় কম্পিউটারের অভ্যন্তরীণ গঠন সম্পর্কে ধারণার প্রয়ােজন নেই। </li>
+                                     <li> এ ভাষায় লেখা প্রােগ্রাম সহজে পরিবর্তন বা ভুল সংশােধন করা যায়।
+                                    </li>
+                                   </ol> <br>
+                                   <b>উচ্চস্তরের ভাষার অসুবিধা or Disadvantage of High level Language :</b><br>
+                                   <ol>
+                                     <li>উচ্চস্তরের ভাষার (High level Language) প্রােগ্রাম সরাসরি কম্পিউটার বুঝতে পারে না।</li>
+                                     <li>এ ভাষায় লিখিত প্রােগ্রাম কম্পিউটারে চালাতে হলে অনুবাদক প্রােগ্রামের প্রয়ােজন হয়।</li>
+                                     <li>প্রােগ্রাম রান করতে অধিক মেমরির প্রয়ােজন হয়।</li>
+                                     <li> প্রােগ্রাম রান করতে বেশি সময় প্রয়ােজন হয়। </li>
+                                   </ol> <br>
+                                   <b>উচ্চস্তরের ভাষার ব্যবহার (Use of High level language):</b>
+                                   <ol>
+                                     <li>বৃহৎ ডেটা প্রসেসিং এর কাজে ব্যবহৃত প্রােগ্রাম তৈরি করতে। </li>
+                                     <li>যেসব ক্ষেত্রে প্রচুর মেমরির প্রয়ােজন সেসব ক্ষেত্রের সফটওয়্যার তৈরির কাজে।</li>
+                                     <li>জটিল গাণিতিক হিসাব-নিকাসে সফটওয়্যার তৈরির কাজে।</li>
+                                     <li>এ্যাপ্লিকেশন প্যাকেজ সফটওয়্যার তৈরির কাজে। </li>
+                                     <li> বিভিন্ন ধরনের অটোমেটিক প্রসেস কন্ট্রোলের কাজে।</li>
+                                   </ol> <br>
+
+                                   <b> সি (C):</b> ১৯৭০ সালে আমেরিকার বেল ল্যাবরেটরির গবেষক ডেনিস রিচি C ভাষা উদ্ভাবন করেন। সিস্টেম প্রােগ্রাম তৈরির ক্ষেত্রে এ ভাষা বেশ জনপ্রিয়। C ভাষাকে কম্পিউটার ভাষার জনক বলা হয়। এ ভাষার অনেক সংস্করণ রয়েছে। যেমন: C, ANSI C, Turbo C, Visual C ইত্যাদি। পরবর্তী পাঠে আমরা C ভাষা নিয়ে বিস্তারিত আলােচনা করব।
+
+                                   <br><br><b>সি++ (C++): </b>C ভাষায় কিছু নতুন সুবিধা সংযােজন করায় এর পরবর্তী সংস্করণ যা দাঁড়ায় তা হচ্ছে C++ ভাষা। ১৯৮৩ সালে বেল ল্যাবরেটরিরই আরেক ডেনিস গবেষক বিয়ান স্ট্রাউস্ট্রপ (Bjarne Stroustrup) C++ ভাষার সূচনা করেন। এতে নতুন যে সুবিধা সংযােজন করা হয় তা হচ্ছে অবজেক্ট ওরিয়েন্টেড ফিচার। মূলত ১৯৭৯ সাল থেকে এর | গবেষণা শুরু হয় ‘C উইথ ক্লাশেস’ নামে। ১৯৮৫ সাল থেকে এর বাণিজ্যিক ব্যবহার শুরু হয়।
+                                   <br><br><b>ভিজুয়্যাল বেসিক (Visual Basic): </b>বিশ্বখ্যাত সফটওয়্যার নির্মাতা প্রতিষ্ঠান Microsoft ১৯৯১ সালে Customer application software তৈরির জন্য Windows Operating System জন্য উপযােগী ভিজুয়্যাল বেসিক নির্মাণ করে। এটি মূলত বেসিক প্রােগ্রামিং ভাষার ( Programming Language ) “ Graphical User Interface ” ভার্সন। এটি একটি Visual Programming Language । এতে Event Driven Feature সংযােজন করা হয়, ফলে যে কেউ ইচ্ছা করলে Visual Basic ব্যবহার করে অল্প সময়ে Customized Application Software তৈরি করতে পারে। পরবর্তীতে এর অনেক ভার্সন তৈরি হয়। বর্তমানে VB.Net হচ্ছে এর সমসাময়িক ভার্সন।
+                                   <br><br><b>ওরাকল (Oracle):</b>  ডেটাবেজ (Database) সংক্রান্ত Software তৈরির সবচেয়ে বড় প্রতিষ্ঠান Oracle Corporation । এর তৈরি একটি RDBMS হচ্ছে Oracle । ১৯৭৭ সালে এড ওয়াটস ও বব মাইনারকে সাথে নিয়ে এটি তৈরি করেন ল্যারি এলিসন যারা বর্তমানে ওরাকল কর্পোরেশনের (Oracle Corporation) কর্ণধার। সিকিউরিটির দিক দিয়ে সবচেয়ে শক্তিশালী এবং সবচেয়ে বেশি ডেটা ধারণক্ষম RDBMS হচ্ছে ওরাকল ।
+                                   <br><br><b>জাভা (Java):</b> সান মাইক্রোসিস্টেমের তৈরি অবজেক্ট ওরিয়েন্টেড প্রােগ্রামিং ভাষা হচ্ছে জাভা। এটি মূলত OAK প্রােগ্রামিং ভাষার পরবর্তী সংস্করণ যা ১৯৯৫ সালের জুন মাসে বাজারে আসে। সান মাইক্রোসিস্টেম OAK প্রােগ্রামিং ভাষা তৈরি করেছিলেন মূলত হ্যান্ডহেল্ড ইলেক্ট্রনিক ডিভাইসের (হাতে বহনকারী ইলেক্ট্রনিক যন্ত্র) জন্য যা জনপ্রিয়তা পায় নি। পরবর্তীতে নাম পরিবর্তন করে এতে WWW এর ফিচারসমূহ সংযােজন করা হয়। ফলে ইন্টারনেটভুক্ত যন্ত্রসমূহে জাভা প্লাটফর্ম নামে নতুন একটা পরিবেশ তৈরি হয় যা সব ধরনের অপারেটিং সিস্টেম সাপাের্ট করে।
+                                   <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<ins class="adsbygoogle"
+     style="display:block; text-align:center;"
+     data-ad-layout="in-article"
+     data-ad-format="fluid"
+     data-ad-client="ca-pub-9136564254270725"
+     data-ad-slot="5078546027"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+                                   <br><br><b>অ্যালগল (Algol):</b> ১৯৫৮ সালে ইউরােপিয়ান ও আমেরিকান কম্পিউটার বিজ্ঞানীদের যৌথ উদ্যোগে অ্যালগল (ALGOrithomic Language) প্রােগ্রামিং ল্যাঙ্গুয়েজ তৈরি হয়। এটি ব্যবহার হতাে মূলত গবেষকদের গবেষণার জন্য। অন্যান্য প্রােগ্রামিং ভাষাকে অ্যালগরিদমের বর্ণনার কাজে সহযােগিতা করত।
+                                   <br><br><b>ফোরট্রান (Fortran):</b> উচ্চস্তরের ভাষার মধ্যে সবচেয়ে পুরােনাে হচ্ছে ফোরট্রান (FORmula TRANslation) ভাষার। ১৯৫৩ সালে আইবিএম (IBM) এর গবেষক জন ব্যাকাস এটি তৈরি করেন। গাণিতিক জটিল হিসাব নিকাশের সুবিধার জন্য মূলত এটি তৈরি করা হয়েছিল। এটি প্রকৌশল সংক্রান্ত গবেষণার কাজে এখনাে বেশ জনপ্রিয়।
+                                   <br><br><b>পাইথন (Python):</b> পাইথন (Python) একটি মাল্টিপ্যারাডিজম প্রােগ্রামিং ভাষা (Multi Paradigm Programming Language) যা একই সাথে Object Oriented ও Structured Feature সাপাের্ট করে। এটি একটি Dynamic Programming Language যেখানে প্রােগ্রাম রান করার পর চলক এবং কোনাে মেথডকে
+                                   স্বয়ংক্রিয়ভাবে চিনে নেয়। ১৯৮৯ সালে নেদারল্যান্ড-এর কম্পিউটার বিজ্ঞানী গুইডাে ভ্যান রােসাম এই প্রােগ্রামিং ভাষা তৈরি করেন।
+                                   
+                                  </p><hr>
+                            <h2>চতুর্থ প্রজন্মের ভাষা (4th Generation Language):</h2>
+                            <p class="text-justify text-dark">
+                              চতুর্থ প্রজন্মের ভাষাকে (Fourth Generation Language) সংক্ষেপে 4GL বলা হয়। সভ্যতার ক্রমবিকাশের সাথে সাথে বিভিন্ন প্রজন্মের ভাষার উদ্ভব হয়েছে। বর্তমানে বহুল ব্যবহৃত কয়েকটি চতুর্থ প্রজন্মের ভাষা হচ্ছে SQL, NOMAD, RPG III, FOCUS, Intelect ইত্যাদি কয়েকটি চতুর্থ প্রজন্মের ভাষা। চতুর্থ প্রজন্মের ভাষা মানুষের ভাষার মতাে। এধরনের ভাষা উচ্চস্তরের ভাষার চেয়েও বােধগম্য এবং সহজে ব্যবহারযােগ্য। সাধারণ ব্যবহারকারীর কাছে কম্পিউটারের ব্যবহার সর্বোচ্চ পর্যায়ে সহজ করার উদ্দেশ্যে এধরনের ভাষা তৈরি করা হয়েছে। কম্পিউটারে ব্যবহৃত বিশেষ কয়েকটি ভাষাকে 4GL বলা হয়। যেমন-
+                              <ul>
+                                <li>ন্যাচারাল ল্যাংগুয়েজ (Natural Language)</li>
+                                <li>অ্যাকটরাল ভাষা</li>
+                                
+                                <li>অতি উচ্চস্তরের ভাষা(Very High Level Language)</li><li>ব্যবহার বা প্রয়ােগভিত্তিক ভাষা </li>
+                              </ul>
+                              <br><b>4GL এর বৈশিষ্ট্য : </b>
+                              <ul>
+                                <li>এ ভাষায় লিখিত কোনাে প্রােগ্রাম বিভিন্ন কোম্পানির তৈরি কম্পিউটারে একই সাথে কোনােরূপ
+                                  পরিবর্তন ছাড়াই ব্যবহার করা যায়। 
+                                  </li>
+                                  <li>
+                                    এ ভাষায় পুঙ্খানুপুঙ্খ বা বিস্তারিত প্রক্রিয়াকরণের বর্ণনা দিতে হয় না।
+                                  </li>
+                                  <li> এ ভাষায় প্রােগ্রাম লেখার পর পুরােটা কম্পাইল করার প্রয়ােজন হয় না। একটি কমান্ড লেখার সাথে
+                                    সাথেই কম্পাইল হয়ে যায়। 
+                                    </li>
+                                    <li> এ ভাষা ব্যবহার করে ডেটাবেসের প্রয়ােজন অনুযায়ী ডেটা সংরক্ষণ, কুয়েরি, রিপাের্ট ইত্যাদি কাজ করা যায়।</li>
+                                    <li>কথােপকথন রীতিতে প্রশ্ন উত্তরের মাধ্যমে ব্যবহারকারী ডেটাবেসের সাথে সংযােগ স্থাপন এবং
+                                      ডেটা আদান-প্রদান করতে পারে।
+                                      </li>
+                              </ul>
+
+                            </p><hr>
+                            <h2>পঞম প্রজন্মের ভাষা or Fifth Generation Language:</h2>
+                            <p class="text-justify text-dark">
+                               <b>স্বাভাবিক ভাষা (Natural Language): </b>পঞম প্রজন্মের প্রােগ্রামের ভাষা হিসেবে মানুষের স্বাভাবিক ভাষা বা ন্যাচারাল ল্যাঙ্গুয়েজকে ব্যবহারের চেষ্টা চলছে। মানুষের ভাষার মতাে স্বাভাবিক ভাষা কম্পিউটারে ব্যবহারের জন্য এখনাে অনেক পরীক্ষা-নিরীক্ষা চলছে। এ ধরনের ভাষাকে মেশিনের ভাষায় রূপান্তরের জন্য ব্যবহৃত অনুবাদককে বুদ্ধিমান বা ইনটেলিজেন্ট কম্পাইলার বলা হয়।
+
+                                <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+                              <!-- home-ads-1 -->
+                              <ins class="adsbygoogle"
+                                   style="display:block"
+                                   data-ad-client="ca-pub-9136564254270725"
+                                   data-ad-slot="2619903643"
+                                   data-ad-format="auto"
+                                   data-full-width-responsive="true"></ins>
+                              <script>
+                                   (adsbygoogle = window.adsbygoogle || []).push({});
+                              </script>
+
+                              </p>
+     
+                              
+                     </div>
+                          <div class="col-sm-12 col-lg-3 col-md-4 sidenav">
+                             
+                           
+
+                            
+                             
+
+                            <div class="well">
+                                
+                                <marquee bgcolor="green" direction=""><h5 class="text-white">C/C++ Compiler For Android</h5></marquee>
+                                  <img src="images/c_ide.png" alt="C ide for android">
+                                  <center><a class="btn btn-success" href="https://play.google.com/store/apps/details?id=igenius.tech.bestcideforandroid">Download</a></center>
+                            </div>
+
+                            
+                           
+                            <div class="well sticky-top">
+                                <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+                                <!-- ict-verticle-1 -->
+                                <ins class="adsbygoogle"
+                                     style="display:block"
+                                     data-ad-client="ca-pub-9136564254270725"
+                                     data-ad-slot="1200802774"
+                                     data-ad-format="auto"
+                                     data-full-width-responsive="true"></ins>
+                                <script>
+                                     (adsbygoogle = window.adsbygoogle || []).push({});
+                                </script>
+                             
+                            </div>
+                            
+
+                          </div>
+                        </div>
+                      </div>
+                    
+                </div>
+               
+            
+              </div>
+              
+              <script>
+                $("#menu-toggle").click(function(e) {
+                  e.preventDefault();
+                  $("#wrapper").toggleClass("toggled");
+                });
+              </script>
+            
+        
+    
+    </main>
+
+    
+
+<%- include('../../includes/end.ejs') %>

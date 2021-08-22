@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+    <html lang="en">
+       <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <title>HSC ICT Chapter 6 Part-3: Database Management System</title>
+
+        
+        <meta name="Description" content=" HSC ICT Chapter 6 Part-3: Database Management System we will learn about What is One to Many Relation, Many to One Relation, Many to Many Relation, What is Days Sequrity ,encription, QBE,
+        Parameter Query, Literal , SQL Query , Human Resource Management System?  "
+         />
+        
+        
+        <meta name="author" content="tutorialforbeginner.com">
+        <meta property="og:site_name" content="www.tutorialforbeginner.com" />
+        <meta property="og:locale" content="en_US" />
+        <meta property="og:type" content="website" />
+        <link rel="shortcut icon" href="images/ico.jpg" type="image/x-icon" />
+        <link rel="canonical" href="https://tutorialforbeginner.com/hsc-ict-database-management-system-part-3"/>
+
+        <%- include('../../includes/boostrap-head.ejs') %>
+        <style>
+            .navbar-collapse .navbar-nav{float:none;margin:0 auto;text-align:center}img{max-width:100%}#footer{background:#232323;padding:30px 0 0 0;font-size:12px;color:#999}#footer a{color:#ccc}#footer a:hover{color:#fff}#footer h3.widget-title{font-size:15px;font-size:.9375rem;text-transform:uppercase;color:#fff;margin:0 0 20px}#underfooter{background:#191919;padding:15px 0;color:#777;font-size:12px}#underfooter a{color:#aaa}#underfooter a:hover{color:#fff}@media (min-width:1200px){.container{max-width:1080px}}body{overflow-x:hidden}#sidebar-wrapper{min-height:100vh;margin-left:-15rem;-webkit-transition:margin .25s ease-out;-moz-transition:margin .25s ease-out;-o-transition:margin .25s ease-out;transition:margin .25s ease-out}#sidebar-wrapper .sidebar-heading{padding:.875rem 1.25rem;font-size:1.2rem}#sidebar-wrapper .list-group{width:15rem}#page-content-wrapper{min-width:100vw}#wrapper.toggled #sidebar-wrapper{margin-left:0}@media (min-width:768px){#sidebar-wrapper{margin-left:0}#page-content-wrapper{min-width:0;width:100%}#wrapper.toggled #sidebar-wrapper{margin-left:-15rem}}.row.content{height:auto;width:auto}.sidenav{padding-top:20px;background-color:#f1f1f1;height:cover}footer{background-color:#555;color:#fff;padding:15px}@media screen and (max-width:767px){.sidenav{height:auto;padding:15px}.row.content{height:auto}}
+          </style>
+        <script data-ad-client="ca-pub-9136564254270725" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+
+
+       <!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-148831263-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-148831263-1');
+</script>
+
+    </head>
+
+
+    
+
+<body>
+    <%- include('../../includes/navigation.ejs') %>
+    
+    
+    <main id="main">
+        
+        <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+        <!-- ict-ads-4 -->
+        <ins class="adsbygoogle"
+             style="display:block"
+             data-ad-client="ca-pub-9136564254270725"
+             data-ad-slot="9659561509"
+             data-ad-format="auto"
+             data-full-width-responsive="true"></ins>
+        <script>
+             (adsbygoogle = window.adsbygoogle || []).push({});
+        </script>
+        
+            
+            
+                  <div class="d-flex" id="wrapper">
+                    <%- include('../../sitebars/ict.ejs') %> 
+          </div>
+       </div>
+                <!-- /#sidebar-wrapper -->
+            
+                <!-- Page Content -->
+                <div id="page-content-wrapper">
+            
+                  <nav class="navbar navbar-expand-lg navbar-light bg-light border-bottom">
+                    <button class="btn btn-primary" id="menu-toggle">Contents</button>
+            
+                  </nav>
+            
+                  <div class="container-fluid">
+                      <div class="row content">
+                          
+                          <div class="col-sm-12 col-lg-9 col-md-8 text-left"> 
+                              <h1 class="bg-dark text-center text-white">HSC ICT Chaper 6 Part-3</h1>
+                   
+                              <h3 class="mt-4 text-center"> Database Management System</h3> <p class="text-justify text-secondary"><b>
+                                  In this HSC ICT Chapter 6 Part-3 : Database Management System we will
+                                  learn about What is One to Many Relation, Many to One Relation, Many to Many Relation, What is Days Sequrity ,encription, QBE,
+                                  Parameter Query, Literal , SQL Query , Human Resource Management System?  </b></p><hr>
+          
+                             
+                              <div class="embed-responsive embed-responsive-16by9">
+                                  <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/sbZpn0i8L0A" allowfullscreen></iframe>
+                              </div>
+                              <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- ict-ads-3 -->
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-9136564254270725"
+     data-ad-slot="3477296539"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+                           
+
+                           
+                              
+                            </p><hr>
+                            <h4>৪৪ ডেটাবেজ রিলেশন কত প্রকার ও কী কী ব্যাখ্যা দাও?
+                                ?</h4><hr>
+                            <p class="text-justify text-dark">
+                             
+                                  উঃ ডেটা টেবিলের উপর ভিত্তি করে রিলেশনকে ৪ ভাগে ভাগ করা যায়। <br> ক) One to One Relation  <br>
+                                  খ) One to Many Relation<br> গ)Many to One Relation<br>
+                                  ঘ) Many to Many Relation। <br> ক) One to One Relation: যদি কোনাে ডেটাবেজের
+                                  কোনাে একটি টেবিলের একটি রেকর্ড অপর একটি ডেটা টেবিলের একটি মাত্র রেকর্ডের সাথে সম্পর্কিত থাকে তবে। তাদের মধ্যে যে রিলেশনশিপ স্থাপন করা হয় তাকে বলা হয় One to One রিলেশন। <br>
+                                   খ) One to Many Relation : যদি কোনাে ডেটাবেজের কোনাে একটি টেবিলের একটি রেকর্ড অন্য এক বা একাধিক ডেটা টেবিলের একাধিক রেকর্ডের সাথে
+                                    সম্পর্কিত থাকে তবে তাদের মধ্যে যে রিলেশনশিপ স্থাপন করা হয় তাকে One to Many রিলেশন বলে।<br>
+                                    গ) Many to One Relation : টেবিলের একাধিক রেকর্ড অপর এক বা একাধিক ডেটা টেবিলের একটি রেকর্ডের সাথে সম্পর্কিত
+                                   হয় তখন তাদের মধ্যকার রিলেশনকে Many to One রিলেশন বলে। <br> ঘ) Many to Many Relation : কোন টেবিলে একাধিক রেকর্ডের সাথে অন্য 
+                                   কোন টেবিলের একাধিক রেকর্ডের সম্পর্ককে Many to Many রিলেশন বলে। <br>
+
+                                   <img src="images/ch6p6.PNG" alt="TTypes of Database Relation">
+                                   
+
+                            </p><hr>
+                            <h4>৪৫.কর্পোরেট ডেটাবেজ কাকে বলে?
+                              </h4>
+                            <p class="text-justify text-dark">
+                                উঃ প্রয়ােজনীয় তথ্য সংরক্ষন ও তা ব্যবহারের জন্য বিশেষ সফটওয়্যার দ্বারা তৈরিকৃত বহুমুখী সুবিধাসম্পন্ন ডেটাবেজ ম্যানেজমেন্ট সিস্টেমকে কর্পোরেট ডেটাবেজ বলে।<br>
+                                 উদাহরনঃ আমরা এটিএম বুথ থেকে টাকা উত্তোলন করি সেই। ডেটা আমাদের রেকর্ডে এন্ট্রি হয়। এটি একটি ইন্টারনেট ভিত্তিক ডেটাবেজ ম্যানেজমেন্ট সিস্টেম। যা বড় বড় এন্টারপ্রাইজ বা কপোরেট প্রতিষ্টান।
+                                 যেমন: ব্যাংক, বীমা, মাল্টিন্যাশনাল কোম্পানি, সরকারি প্রতিষ্ঠান, এনজিও এবং নেটওয়ার্কিং দ্বারা পরিচালিত।
+                            </p><hr>
+                            <h4>৪৬. কর্পোরেট ডেটাবেজ কোন কোন কাজে ব্যবহৃত হয়?</h4>
+                            <p class="text-justify text-dark">
+                                উঃ যে সকল কাজে কর্পোরেট ডেটাবেজ ব্যবহৃত হয় <br>১) জাতীয় পরিচয়পত্রের ছবি ও তথ্য সংরক্ষনে। <br>২) বাড়ির হােল্ডিং নাম্বার, ভূমি ট্যাক্স, আয়কর প্রভৃতি তথ্য সংরক্ষনে।<br>
+                                 ৩) ভূমি জরিপ ও ম্যাপসংক্রান্ত তথ্য সংরক্ষনে।<br> ৪) অপরাধমূলক কর্মকান্ডে জড়িত ব্যক্তিদের তথ্য সংরক্ষনে।<br>
+                                  ৫) আদমশুমারি, কৃষিশুমারি ও অর্থনৈতিক তথ্য সংরক্ষনে।<br> ৬) ব্যানবেইজ (BANBEIS= Bangladesh Bureau of Education Information and Statistics) a farem শিক্ষা প্রতিষ্ঠানের তথ্য সংরক্ষনে।<br>
+                                   ৭) শেয়ার মার্কেটের তথ্য, আয়কর, কাস্টমস ও আমদানিরপ্তানি সংক্রান্ত তথ্য সংরক্ষনে।<br> ৮) সরকারি আয়-ব্যয়, রাজস্ব আদায় এবং বাজেট সংক্রান্ত তথ্য সংরক্ষনে।<br> ৯) সামরিক বাহিনীর ভূমি, সৈন্য ও অপারেশন সংক্রান্ত তথ্য সংরক্ষনে।<br> ১০) আইন, আদালত ও মামলা সংক্রান্ত তথ্য সংরক্ষনে ইত্যাদি।
+                            </p><hr>
+                            <h4>৪৭. HRMS কাকে বলে?
+                              </h4>
+                            <p class="text-justify text-dark">
+                             
+                                        উঃ HRMS এর পূর্নরুপ হলাে Human Resource Management System। 
+                                        মানব সম্পর্ক কার্যক্রমগুলােকে নিয়ন্ত্রনের জন্য যে তথ্য ও পদ্ধতি ব্যবহার করা হয় 
+                                        তাকে হিউম্যান রিসাের্স ইনফরমেশন সিস্টেম বা HRMS বলে। <br> যেমনঃ প্রতিষ্ঠানের কর্মীর রেকর্ড সংরক্ষন, কর্মী মূল্যায়ন, কর্মকর্তা বা কর্মচারীদের প্রশিক্ষন এবং তাদের সুবিধা ও ক্ষতিপূরন ইত্যাদি ব্যাবস্থাপনার দায়িত্ব পালন করে HRMS।
+
+                            </p><hr>
+                            <h4>৪৮. ডেটা সিকিউরিটি কী? কত প্রকার ও কী কী?
+                              </h4>
+                            <p class="text-justify text-dark">
+                                উঃ ডেটাকে সবার জন্য প্রদর্শন বা পরিবর্তন করা উন্মুক্ত করা। নাও হতে পারে,
+                                 শুধু অনুমােদিত ব্যাক্তি ব্যতিত অন্যদের থেকে ডেটার সুরক্ষাকে ডেটা সিকিউরিটি বলে।<br> অথবা,<br> আনঅথারাইজড অনাকাক্ষিত ব্যাক্তির হাত থেকে ডেটাকে মুক্ত রাখার পদ্ধতিকে ডেটা সিকিউরিটি বলে।
+                                 সাধারনত ডেটার গােপনীয়তা ও নিরাপত্তা ব্যবস্থার পদ্ধতিকে ডেটা সিকিউরিটি বলে।
+                            </p><hr>
+                            <h4>৪৯, ডেটা সিকিউরিটি কত প্রকার ও কী কী? </h4>
+                            <p class="text-justify text-dark">
+                                উঃ ডেটা সিকিউরিটি ২ প্রকার যথাঃ<br> ক) সিস্টেম সিকিউরিটি।<br>
+                                খ) ডেটা সিকিউরিটি।<br> ক) সিস্টেম সিকিউরিটিঃ ডেটাবেজ সিস্টেম লেবেলে ডেটা 
+                                ব্যবহার করার জন্য নিরাপত্তামূলক ব্যবস্থাকে সিস্টেম সিকিউরিটি বলে। 
+                                যেমনঃ ডেটাবেজ সিস্টেম ব্যবহারের জন্য অনুমােদিত কিনা, ব্যবহারকারীর নাম ও পাসওয়ার্ড 
+                                পরীক্ষা করা ইত্যাদি।<br> খ) ডেটা সিকিউরিটিঃ ডেটা সিকিউরিটি অবজেক্ট লেবেলে ডেটাবেজের
+                                 একসেস ও ব্যবহার নিয়ন্ত্রন করে। এক্ষেত্রে কোনাে ব্যবহারকারী কী কী অবজেক্ট ব্যবহার করতে পারবে 
+                                 এবং কী ধরনের অ্যাকশন প্রয়ােগ করতে পারে তাকে ডেটা সিকিউরিটি বলে। অথবা, ডেটার গােপনীয়তা
+                                  ও নিরাপত্তা ব্যবস্থার পদ্ধতিকে বলা হয়। ডেটা সিকিউরিটি। যেমনঃ ধরি ‘A’ নামের একজন ব্যবহারকারী 
+                                  ‘Student’ডেটাবেজের ডেটা দেখতে পারবে, কিন্তু মুছতে পারবে না। 
+                                
+                            </p><hr>
+                            <h4>৫০. ডেটা এনক্রিপশন কাকে বলে?</h4>
+                            <p class="text-justify text-dark">
+                                উঃ ডেটার নিরাপত্তা নিশ্চিত করার জন্য ডেটাকে উৎস হতে গন্তব্যে প্রেরনের পূর্বে যে বিশেষ পদ্ধতিতে 
+                                পরিবর্তন করা যায় তাকে ডেটা এনক্রিশন পদ্ধতি বলা হয়। অথবা,
+                                 ডেটা এনক্রিপশন হলাে একটি প্রক্রিয়া, যেখানে প্লেইন টেক্সট ডেটাগুলাে সাইফার টেক্সট
+                                  ডেটাতে রুপান্তরিত হয়যাতে করে এটি সর্বসাধারনের পড়ার ক্ষেত্রে দুর্বোধ্য হয়ে ওঠে যাতে
+                                   করে কেউ তাতে অযাচিত হস্তক্ষেপ করতে না পারে। উদাহরণঃ এনক্রিপ্ট করে SAJJAD
+                                    শব্দটিকে লেখা যায় TBKKBE। এক্ষেত্রে ‘পরবর্তী” অক্ষর'কে কোডিং পদ্ধতি হিসেবে বেছে 
+                                    নেওয়া হয়েছে। যেমন- S এর পরবর্তী অক্ষর |T, A এর পরবর্তী অক্ষর B, J এর পরবর্তী অক্ষর K এবং D এর পরবর্তী অক্ষর E। TBKKBE কাজেই থাকলে ডিক্রিপ্ট করে বুঝতে হবে সেটি আসলে SAJJAD। 
+                                
+                            </p><hr>
+                            <h4> ৫১.এনক্রিপশন স্কিমের ধরন কয়টি ও কী কী?</h4>
+                            <p class="text-justify text-dark">
+                                উঃ এনক্রিপশন স্কিম ২ ধরনের যথাঃ <br> ক) সিমেট্রিক বা সিক্রেট-কী এনক্রিপশন।<br>
+                                খ) অ্যাসিমেট্রিক বা পাবলিক-কী এনক্রিপশন। 
+                                
+                            </p><hr>
+                            <h4>৫২. রিকভারী (Recovery) কাকে বলে?</h4>
+                            <p class="text-justify text-dark">
+                                উঃ কোনাে কারনে কম্পিউটার অচল হয়ে পড়ে ডেটাবেজের ডেটা হারিয়ে যায়। কিন্তু বিশেষ ব্যবস্থায় বিশেষ পদ্ধতির সাহায্যে হারিয়ে যাওয়া ডেটাকে পূনরুদ্ধার করাকে ডেটা রিকভারী বলে।
+                                
+                            </p><hr>
+                            <h4>৫৩. ডেটা এনক্রিপশনের উপায় সমূহ লেখ?</h4>
+                            <p class="text-justify text-dark">
+
+                              উঃ ডেটা এনক্রিপ্ট করার জন্য অনেকগুলাে পদ্ধতি প্রচলিত আছে যেমনঃ- <br> ক) সিজার কোড।<br>
+                                খ) ডেটা এনক্রিপশন স্ট্যান্ডার্ড।<br> গ) ট্রিপল ডিইএস অ্যাডভান্সড এনক্রিপশন স্ট্যান্ডার্ড।<br>
+                                ঘ) ইন্টারন্যাশনাল ডেটা এনক্রিপশন অ্যালগরিদম।
+                                
+                            </p><hr>
+                            <h4>৫৪.QBE কী?
+                              </h4>
+                            <p class="text-justify text-dark">
+                                উঃ QBE এর পূর্নরুপ হলাে- Query By Example। এর মাধ্যমে ব্যবহারকরী কী করতে চায় তার বর্ণনা Example
+                                অনুসারে Query লেখা হয়।
+                                <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<ins class="adsbygoogle"
+     style="display:block; text-align:center;"
+     data-ad-layout="in-article"
+     data-ad-format="fluid"
+     data-ad-client="ca-pub-9136564254270725"
+     data-ad-slot="2687298352"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+                            </p><hr>
+
+                            <h4>৫৪.QBE কী?
+                              </h4>
+                            <p class="text-justify text-dark">
+                                উঃ QBE এর পূর্নরুপ হলাে- Query By Example। এর মাধ্যমে ব্যবহারকরী কী করতে চায় তার বর্ণনা Example
+                                অনুসারে Query লেখা হয়।
+                                
+                            </p><hr>
+                            <h4> ৫৫. ফিজিক্যাল ডিজাইন কাকে বলে?
+
+                              </h4>
+                            <p class="text-justify text-dark">
+                                উঃ ডেটা কীভাবে সূরক্ষিত, সংগৃহীত, পরিবর্তন ও দ্রুত সময়ে 
+                                      ডেটা আহরন করার ব্যাখ্যাকেই ফিজিক্যাল ডিজাইন বলে। 
+
+                                
+                            </p><hr>
+                            <h4> ৫৬. SQL কমান্ড ব্যবহার করে ডেটাটেবিল তৈরির ব্যাখ্যা দাও?
+
+
+                              </h4>
+                            <p class="text-justify text-dark">
+                                উঃ মনেকরি Teacher A_Section নামের একটি ডেটাটেবিল তৈরি করতে হবে। যে টেবিলটিতে নাম, রােল, পিতার নাম, জন্মতারিখ এই চারটি ফিল্ড থাকবে। এক্ষেত্রে সাথে নতুন টেবিল তৈরির কমান্ড ব্যবহার করতে হবে।
+                                  নতুন টেবিল তৈরি করতে গেলে SQL এ “creat table” কমান্ড ব্যবহার করতে হবে। তাহলে যে কমান্ড ব্যবহার করে টেবিলটি তৈরি করতে হবে তার নিম্নরুপ:
+                                  <br>Creat table A_Section ( <br>Name char (2u),<br> Roll numeric (5),<br>
+                                  Father's name char (20),<br>
+                                  Data_of_birth Date<br>);
+
+
+                            </p><hr>
+                            <h4>৫৭.SQL কমান্ড ব্যবহার সমূহ ?
+
+
+                              </h4>
+                            <p class="text-justify text-dark">
+                                উঃ ১. ict নামে ডেটাবেজ তৈরি করা: CREATE DATABASE ict; <br>
+                                 উদাহরনঃ Student Table এর সব তথ্য দেখতে চাইলে Select From Studenti <br>
+                                  ২. Table তৈরি করাঃ CREATE TABLE Student
+                                StudentID int,<br> StudentName varchar(50),<br> FatherName varchar(50),<br>
+                                 Address varchar(255),<br> Class varchar(15)<br>
+                                উদাহরনঃ Student Table এর Name Field দেখতে 1961- Select Name From Student;<br>
+                                 ৩.Table এর নিদিষ্ট data Delete ফেলাঃ <br>
+                                  DELETE FROM table_name(student) DELETE FROM Customers WHERE CustomerName="Rabbi' AND
+                                   ContactName=Rasel';
+                                
+                            </p><hr>
+                            <h4>৫৮, Parameter Query কী?
+
+                              </h4>
+                            <p class="text-justify text-dark">
+                                
+                                উঃ ডায়লগ বক্সের মধ্যে বিভিন্ন প্যারামিটার নির্ধারন করে যে
+                                কুয়েরি পরিচালনা করা হয় তাকে Parameter Query বলে। 
+
+                            </p><hr>
+                            <h4>৫৯, Literal কী?
+
+                              </h4>
+                            <p class="text-justify text-dark">
+                                
+                           উঃ যে সকল ভেলু কে ডেটাবেজ ম্যানেজমেন্টে- যথাযথভাবে সেই ভেন্যু হিসেবে বিবেচনা করে তাকে Literal বলে।
+
+
+                                
+                            </p>
+                            
+
+                            
+                           
+                                 
+                     </div>
+                          <div class="col-sm-12 col-lg-3 col-md-4 sidenav">
+                              
+
+                            <div class="well my-5">
+                                
+                                <details >
+                                    <summary>Best way of learing</summary>
+                                    <p class="text-tustify">
+                                        Self learing is the best learing in the world.
+                                        Discover yourself first then will get what you are And
+                                        what you want to do .It will push you for self learing.
+                                    </p>
+                                  </details>
+                            </div>
+                            
+
+                            <div class="well my-5">
+                                
+                                <details >
+                                    <summary>Why you need to learn coding?</summary>
+                                    <p class="text-tustify">
+                                        Coding will play a vital role in one's life . It will help to open 
+                                        a new window of thinking . You can think better way than past . It 
+                                        helps to organise all the thing in better way .
+                                    </p>
+                                  </details>
+                            </div>
+                            <div class="well sticky-top">
+                                <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+                                <!-- ict-verticle-1 -->
+                                <ins class="adsbygoogle"
+                                     style="display:block"
+                                     data-ad-client="ca-pub-9136564254270725"
+                                     data-ad-slot="1200802774"
+                                     data-ad-format="auto"
+                                     data-full-width-responsive="true"></ins>
+                                <script>
+                                     (adsbygoogle = window.adsbygoogle || []).push({});
+                                </script>
+                            </div>
+
+                          </div>
+                        </div>
+                      </div>
+                    
+                </div>
+               
+            
+              </div>
+              
+              <script>
+                $("#menu-toggle").click(function(e) {
+                  e.preventDefault();
+                  $("#wrapper").toggleClass("toggled");
+                });
+              </script>
+            
+        
+    
+    </main>
+
+    
+
+<%- include('../../includes/end.ejs') %>

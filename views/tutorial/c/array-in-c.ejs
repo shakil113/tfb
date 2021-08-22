@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+    <html lang="en">
+       <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <title>Learn About Array In C Programming</title>
+
+        
+        <meta name="Description" content="An array is a data strucutre which contain a set of same type variables and each variable has distinct index number and index number start from 0 to N, here N is how many number you want to store. Maybe you thinking why array is need? Let's discover why array is needed in our program.
+        " />
+        <meta name="Keywords" content="Array,C Array Array in C" />
+        
+        <meta name="author" content="tutorialforbeginner.com">
+        <meta property="og:site_name" content="www.tutorialforbeginner.com" />
+        <meta property="fb:pages" content="340075726591504" />
+        <meta property="fb:pages" content="1524841087795043" />
+        <meta name="viewport" content="width=device-width,initial-scale=1.0,user-scalable=yes">
+        <meta property="og:locale" content="en_US" />
+        <meta property="og:type" content="website" />
+        <link rel="shortcut icon" href="images/ico.jpg" type="image/x-icon" />
+        <link rel="canonical" href="https://tutorialforbeginner.com/array-in-c" />
+
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+        <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+        <style>
+            .navbar-collapse .navbar-nav{float:none;margin:0 auto;text-align:center}img{max-width:100%}#footer{background:#232323;padding:30px 0 0 0;font-size:12px;color:#999}#footer a{color:#ccc}#footer a:hover{color:#fff}#footer h3.widget-title{font-size:15px;font-size:.9375rem;text-transform:uppercase;color:#fff;margin:0 0 20px}#underfooter{background:#191919;padding:15px 0;color:#777;font-size:12px}#underfooter a{color:#aaa}#underfooter a:hover{color:#fff}@media (min-width:1200px){.container{max-width:1080px}}body{overflow-x:hidden}#sidebar-wrapper{min-height:100vh;margin-left:-15rem;-webkit-transition:margin .25s ease-out;-moz-transition:margin .25s ease-out;-o-transition:margin .25s ease-out;transition:margin .25s ease-out}#sidebar-wrapper .sidebar-heading{padding:.875rem 1.25rem;font-size:1.2rem}#sidebar-wrapper .list-group{width:15rem}#page-content-wrapper{min-width:100vw}#wrapper.toggled #sidebar-wrapper{margin-left:0}@media (min-width:768px){#sidebar-wrapper{margin-left:0}#page-content-wrapper{min-width:0;width:100%}#wrapper.toggled #sidebar-wrapper{margin-left:-15rem}}.row.content{height:auto;width:auto}.sidenav{padding-top:20px;background-color:#f1f1f1;height:cover}footer{background-color:#555;color:#fff;padding:15px}@media screen and (max-width:767px){.sidenav{height:auto;padding:15px}.row.content{height:auto}}
+          </style>
+       
+        
+        <script async type="text/javascript" src="js/print/run_prettify.js??autoload=true&amp;skin=sunburst&amp;"></script>
+        <script data-ad-client="ca-pub-9136564254270725" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+
+            <!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-148831263-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-148831263-1');
+</script>
+
+        
+
+        
+    </head>
+
+
+    
+
+<body >
+    <%- include('../../includes/navigation.ejs') %>
+    
+    
+    <main id="main">
+        
+        <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+        <!-- home-last -->
+        <ins class="adsbygoogle"
+             style="display:block"
+             data-ad-client="ca-pub-9136564254270725"
+             data-ad-slot="7126124861"
+             data-ad-format="auto"
+             data-full-width-responsive="true"></ins>
+        <script>
+             (adsbygoogle = window.adsbygoogle || []).push({});
+        </script>
+
+        
+            
+            
+            <div class="d-flex" id="wrapper">
+
+                <!-- Sidebar -->
+                <div class="bg-light border-right" id="sidebar-wrapper">
+                  <div class="sidebar-heading">Topics</div>
+                  <div class="list-group list-group-flush">
+                    <%- include('../../sitebars/c-sitebar.ejs') %>
+                  </div>
+                </div>
+                <!-- /#sidebar-wrapper -->
+            
+                <!-- Page Content -->
+                <div id="page-content-wrapper">
+            
+                  <nav class="navbar navbar-expand-lg navbar-light bg-light border-bottom ">
+                    <button class="btn btn-primary" id="menu-toggle">Contents</button>
+            
+                  </nav>
+            
+                  <div class="container-fluid">
+                      <div class="row content">
+                          
+                          <div class="col-sm-12 col-lg-9 col-md-8 text-left"> 
+                              <h2 class="bg-dark text-center text-white">Array</h2>
+
+
+                              <p class=" text-justify">
+                                  <b>Array:</b> An array is a data strucutre which contain a set of same type variables and 
+                                  each variable has distinct index number and index number start from 0 to N, here N is how many number you want to store. <b>Maybe you thinking</b> why array is need?
+                                  Let's discover why array is needed in our program. <br><br>
+                          
+                                  Assume that your teacher order you to do such a program that can store and print 2 roll number of your class 
+                                  mate.What you are thinking to do ? I think you are thinking to declare two variable store and print then right?
+                                  Now just think instead of 2 you need to store 1000 roll number. For that you need to declare 1000 of variables
+                                  . I think that very difficult to manage 1000 of variable . To get of that kind of situation we need array. In C programming 
+                                  there are two types of array and these are -- 
+                                  <ol>
+                                    <li>1- Dimentional Array</li>
+                                    <li>2-D or Multi Dimentional Array</li>
+                                  </ol>
+                                
+                             
+                             </p><br>
+                             <h5>1- Dimentional Array Declaration:</h5>
+<pre class="prettyprint">
+    <code>Data_Type array_name[n];//here n is how many number you want to store.</code></pre>  
+    
+    
+
+    <h6>Let's see a sample and assume you need to store 5 integer numbers so you need an int type array.</h6>
+
+    <pre class="prettyprint">
+      <code>#include&lt;stdio.h&gt;
+      int main(){
+        int num[5]; //you can choose name as your own
+     }</code></pre><br>
+     <p class=" text-justify">
+      When we declare an array <code> int num[5];</code> where <code>int</code> is the type of this array that means 
+      in this array we can store int number only. <code>num</code> is name of this array you choose as your own/ <code>[5]</code> 
+      means there are 5 index it starts from 0 to 4.Each index act like an individual variable you can think there are 5 variables
+      these are <code>num[0], num[1], num[2], num[3], num[4] </code>.After declare the array it looks like ---
+ 
+ </p>
+      <img src="images/C_array1.jpg" width="100%" alt="array example">
+      <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- c-new -->
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-9136564254270725"
+     data-ad-slot="7916462357"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+
+
+                              <div class="embed-responsive embed-responsive-16by9">
+                                  <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/1lJ8S3nKRls" allowfullscreen></iframe>
+                              </div>
+                            
+                            
+                            
+
+
+                                  <p class="text-justify">
+                                    Generally there are two common way to insert the value in an array- 
+                                    <ol>
+                                      <li><p class="text-justify">
+                                        <code>num[5]= { 10, 20, 30, 40, 50 }</code> in this way 10 will assign in index 0 or num[0]
+                                        in the same way 20, 30, 40, 50 will assign following index.
+                                      </p>
+                                   </li>
+
+  <pre class="prettyprint">
+    <code>#include&lt;stdio.h&gt;
+    int main(){
+      int num[5]= { 10, 20, 30, 40, 50 };
+    return 0;
+   }</code></pre>      
+
+
+                                   
+                                      <li><p class="text-justify">
+                                          In the other hand you can assign value the following this way.
+
+                                      </p></li>
+<pre class="prettyprint">
+<code>#include&lt;stdio.h&gt;
+  int main(){
+     int num[5];
+     num[0] = 10;
+     num[1] = 20;
+     num[2] = 30;
+     num[3] = 40;
+     num[4] = 50;
+     return 0;
+  }</code></pre>  
+ </ol>
+ <h6>
+  Except the above two way you can take user input using loops.See the example:
+ </h6>
+ <pre class="prettyprint">
+  <code>#include&lt;stdio.h&gt;
+ 
+  int main()
+  {
+   int i, num[5];
+   for( i=0; i<=4; i++ ){
+     scanf("%d",&num[i]);
+   }
+    return 0;
+  }</code></pre>
+ <h6>After assign the value it looks like this</h6>
+ <img src="images/C_array2.jpg" width="100%" alt="array example">
+ <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- home-ads-1 -->
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-9136564254270725"
+     data-ad-slot="2619903643"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+
+ <h6>Let's do a full program you need to take 5 number from user store it in an array and print this array using loop.</h6>
+ <pre class="prettyprint">
+  <code>#include&lt;stdio.h&gt;
+ 
+  int main()
+  {
+   int i,j num[5];
+   for( i=0; i<=4; i++ ){
+     scanf("%d",&num[i]);
+   }
+   for( j=0; j<=4; j++ ){
+    printf("%d ",num[i]);
+  }
+
+    return 0;
+  }</code></pre>
+ <h6><br>
+  <h5>Input:</h5>
+  <pre class="prettyprint">
+    10
+    20
+    30
+    40
+    50
+  </code></pre>
+  <h5>Output:</h5>
+  <pre class="prettyprint">
+    10 20 30 40 50 </code></pre>
+
+    
+ <h5>2-D Array Declaration:</h5>
+<pre class="prettyprint">
+    <code>Data_Type array_name[n][n];//here n is how many number you want to store.</code></pre>  
+    
+    
+
+    <h6>Let's see a sample .</h6>
+
+    <pre class="prettyprint">
+      <code>#include&lt;stdio.h&gt;
+      int main(){
+        int num[5][5]; //you can choose name as your own
+     }</code></pre>
+     <p class=" text-justify">
+      When we declare an array <code> int num[5][5];</code> where <code>int</code> is the type of this array that means 
+      in this array we can store int number only. <code>num</code> is name of this array you choose as your own. And<code>[5][5]</code> 
+      means there are 5 rows and each of rows and each rows have 5 index/columns,As you know the array index starts form 0 so, it starts from 0 to 4 columns and rows.Each index act like an individual variable you can think there are 25 variables
+      these are <code>num[0][0], num[0][1], num[0][2], num[0][3], num[0][4] </code> following that up to <code>num[4][4]</code> and one thing you must remember tha first 3rd braket <b>[]</b> is for rows and 2nd is for columns fter declare the array it looks like ---
+ 
+ </p>
+      <img src="images/two-d.JPG" width="100%" alt="array example">
+     
+
+<h5>Lets see the implementation:</h5>
+<pre class="prettyprint">
+<code>#include&lt;stdio.h&gt;
+int main(){
+     int num[5][5];
+     //input value
+     for(int i=0; i<=4;i++){
+      for(int j=0; j<=4;i++){
+       scanf("%d",&num[i][j]);
+      }
+    }
+    //Output value
+    for(int i=0; i<=4;i++){
+      for(int i=0; i<=4;i++){
+       printf("%d ", num[i][j]);
+      }
+      printf("\n");
+    }
+}</code></pre>
+<h5>Input:</h5>
+<pre class="prettyprint">
+10 11 12 13 14 
+20 21 22 23 24
+30 31 32 33 34
+40 41 42 43 44
+50 51 52 53 54
+ </code></pre>
+ <h5>Output:</h5>
+<pre class="prettyprint">
+10 11 12 13 14 
+20 21 22 23 24
+30 31 32 33 34
+40 41 42 43 44
+50 51 52 53 54
+</code></pre>
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- ad-3 -->
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-9136564254270725"
+     data-ad-slot="1689965350"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+              
+                 
+
+
+                              
+</div>
+                          <div class="col-sm-12 col-lg-3 col-md-4 sidenav">
+                          
+                            <div class="well my-5">
+                                
+                                <details >
+                                    <summary>Best way of learing</summary>
+                                    <p class="text-tustify">
+                                        Self learing is the best learing in the world.
+                                        Discover yourself first then will get what you are And
+                                        what you want to do .It will push you for self learing.
+                                    </p>
+                                  </details>
+                            </div>
+
+                            <div class="well my-5">
+                                
+                                <details >
+                                    <summary>Why you need to learn coding?</summary>
+                                    <p class="text-tustify">
+                                        Coding will play a vital role in one's life . It will help to open 
+                                        a new window of thinking . You can think better way than past . It 
+                                        helps to organise all the thing in better way .
+                                    </p>
+                                  </details>
+                            </div>
+                           
+                            <div class="well sticky-top">
+                                <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+                                <!-- C-verticle -->
+                                <ins class="adsbygoogle"
+                                     style="display:block"
+                                     data-ad-client="ca-pub-9136564254270725"
+                                     data-ad-slot="1132697628"
+                                     data-ad-format="auto"
+                                     data-full-width-responsive="true"></ins>
+                                <script>
+                                     (adsbygoogle = window.adsbygoogle || []).push({});
+                                </script>
+                              
+                            </div>
+                            
+
+                          </div>
+                        </div>
+                      </div>
+                    
+                </div>
+               
+            
+              </div>
+              
+              <script>
+                $("#menu-toggle").click(function(e) {
+                  e.preventDefault();
+                  $("#wrapper").toggleClass("toggled");
+                });
+              </script>
+            
+        
+    
+    </main>
+
+    
+
+<%- include('../../includes/end.ejs') %>

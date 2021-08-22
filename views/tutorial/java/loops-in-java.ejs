@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+    <html lang="en">
+       <head>
+          <meta charset="utf-8">
+          <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+          <title>Loops In Java | tutorialforbeginner.com</title>
+
+          <meta name="Description" content="What is Loops in Java? | Loops in Java | Differece between for loop and while loop in Java?
+          Differece between for loop and do while loop in Java" />
+           
+          <meta name="author" content="tutorialforbeginner.com">
+          <meta property="og:site_name" content="www.tutorialforbeginner.com" />
+          <meta property="og:locale" content="en_US" />
+          <meta property="og:type" content="website" />
+          <link rel="shortcut icon" href="images/ico.jpg" type="image/x-icon" />
+          <link rel="canonical" href="https://tutorialforbeginner.com/loops-in-java" />
+          <%- include('../../includes/boostrap-head.ejs') %>
+          <style>
+              .navbar-collapse .navbar-nav{float:none;margin:0 auto;text-align:center}img{max-width:100%}#footer{background:#232323;padding:30px 0 0 0;font-size:12px;color:#999}#footer a{color:#ccc}#footer a:hover{color:#fff}#footer h3.widget-title{font-size:15px;font-size:.9375rem;text-transform:uppercase;color:#fff;margin:0 0 20px}#underfooter{background:#191919;padding:15px 0;color:#777;font-size:12px}#underfooter a{color:#aaa}#underfooter a:hover{color:#fff}@media (min-width:1200px){.container{max-width:1080px}}body{overflow-x:hidden}#sidebar-wrapper{min-height:100vh;margin-left:-15rem;-webkit-transition:margin .25s ease-out;-moz-transition:margin .25s ease-out;-o-transition:margin .25s ease-out;transition:margin .25s ease-out}#sidebar-wrapper .sidebar-heading{padding:.875rem 1.25rem;font-size:1.2rem}#sidebar-wrapper .list-group{width:15rem}#page-content-wrapper{min-width:100vw}#wrapper.toggled #sidebar-wrapper{margin-left:0}@media (min-width:768px){#sidebar-wrapper{margin-left:0}#page-content-wrapper{min-width:0;width:100%}#wrapper.toggled #sidebar-wrapper{margin-left:-15rem}}.row.content{height:auto;width:auto}.sidenav{padding-top:20px;background-color:#f1f1f1;height:100%}footer{background-color:#555;color:#fff;padding:15px}@media screen and (max-width:767px){.sidenav{height:auto;padding:15px}.row.content{height:auto}}
+          </style>
+
+          <script data-ad-client="ca-pub-9136564254270725" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+          <script async src="js/print/run_prettify.js?lang=css&amp;skin=desert"></script>
+            <!-- Global site tag (gtag.js) - Google Analytics -->
+          <script async src="https://www.googletagmanager.com/gtag/js?id=UA-148831263-1"></script>
+          <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+
+            gtag('config', 'UA-148831263-1');
+          </script>
+      
+        </head>
+
+
+    
+
+<body>
+    <%- include('../../includes/navigation.ejs') %>
+    
+    
+    <main id="main">
+        
+        <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+        <!-- home-last -->
+        <ins class="adsbygoogle"
+             style="display:block"
+             data-ad-client="ca-pub-9136564254270725"
+             data-ad-slot="7126124861"
+             data-ad-format="auto"
+             data-full-width-responsive="true"></ins>
+        <script>
+             (adsbygoogle = window.adsbygoogle || []).push({});
+        </script>           
+            
+            <div class="d-flex w-100" id="wrapper">
+
+                <!-- Sidebar -->
+                <div class="bg-light border-right" id="sidebar-wrapper">
+                    <div class="sidebar-heading bg-success text-center text-white rounded-top border-to"><b>Topics</b></div>
+                    <div class="list-group list-group-flush">
+                        <%- include('../../sitebars/java.ejs') %>
+                    </div>
+                </div>
+                <!-- /#sidebar-wrapper -->
+            
+                <!-- Page Content -->
+                <div id="page-content-wrapper">
+            
+                    <nav class="navbar navbar-expand-lg border-bottom" style="background-color: #375028;">
+                        <button class="btn text-white btn-lg" style="background-color: #521212;" id="menu-toggle">&#x2190;TOPICS</button>                
+                    </nav>
+            
+                  <div class="container-fluid">
+                      <div class="row content ">
+                          
+                          <div class="col-sm-12 col-lg-9 col-md-8 text-left w-100"> 
+                              <h1 class="bg-dark text-center text-white">Loops In Java</h1>
+                              <p class="text-justify"><b>
+                               In this page, We will learn about What is Loops in Java? | Loops in Java | Differece between for loop and while loop in Java?
+                               Differece between for loop and do while loop in Java?</b></p>
+
+                              <h2 class="my-3">What is Loops in Java?</h2>
+   
+                            <p class="text-justify">
+                              Not only in java, but also in other programming languages, the concept of loop is same. Loops are used to execute a set of instructions
+                              that needs to execute n number of times. In Java, there are there types of loops and these are:
+                            </p>
+                              <ul type="square">
+                                  <li class="mt-3"><b><a href="/for-loop-in-java">For Loop: </a></b>
+                                For loop in java is used to itarate a portion of the program in a number of times. If the of the number of iterations is fixed, then is good to go with for loop. For loop systax in java is given below: <br><br>
+<pre class="prettyprint">
+<code>
+  for(varible init; condition; incr/decr){  
+    // code to be executed 
+  }
+</code>
+</pre>
+                              </li> 
+                                  <li class="mt-3"><b><a href="/while-loop-in-java">While Loop: </a></b>
+                                    While loop in java is used to iterate a portion of the program in number of times and If the of the number of iterations is not fixed or unknown, then is good to go with 
+<br><br><pre class="prettyprint">
+<code>
+  while(boolean condition){  
+    // code to be executed 
+    incr/decr;
+  }
+</code>
+</pre>                                  </li>
+                                  <li class="mt-3"><b><a href="/do-while-loop-in-java">Do While Loop: </a></b> 
+                                    Do While loop in java is used to iterate a part of the program several times and If you need to iterate atleast one time, then is good to go with Do While loop.<br><br>
+<pre class="prettyprint">
+<code>
+  do{  
+      //code to be executed
+      incr/decr;  
+    }while(condition);
+</code>
+</pre>     
+                                  </li>
+                                 
+                              </ul>
+
+
+<div class="text-center my-3">
+    <img src="images/tutorial/loops.png" alt="loops In java">
+  </div><hr>
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+  <!-- ad-2 -->
+  <ins class="adsbygoogle"
+  style="display:block"
+  data-ad-client="ca-pub-9136564254270725"
+  data-ad-slot="8826219349"
+  data-ad-format="auto"
+  data-full-width-responsive="true"></ins>
+  <script>
+  (adsbygoogle = window.adsbygoogle || []).push({});
+  </script>
+<h2>Differece between for loop and while loop in java and different between for loop and do while loop :-</h2>
+<div class="table-responsive">
+    <table class="table table-bordered">
+        <tr class="bg-success">
+            <th>Key</th>
+            <th>For</th>
+            <th>While</th>
+            <th>Do While</th>
+        </tr>
+        <tr>
+            <td>Intro</td>
+            <td>The Java for loop may be a management flow statement that iterates a locality of the programs multiple times.</td>
+            <td>The Java whereas loop could be a management flow statement that executes a locality of the programs repeatedly on the idea of given Boolean condition.</td>
+            <td>The Java do whereas loop may be a management flow statement that executes an area of the programs a minimum of once and therefore the any execution depends upon the given mathematician condition.</td>
+        </tr>
+        <tr>
+            <td>When to use</td>
+            <td>If the number of iteration is fixed, it is recommended to use for loop.</td>
+            <td>If the quantity of iteration isn't mounted, it's suggested to use whereas loop.</td>
+            <td>If the amount of iteration isn't mounted and you want to have to be compelled to execute the loop a minimum of once, it's counseled to use the do-while loop.</td>
+        </tr>
+        <tr>
+            <td>Syntax</td>
+            <td>
+<pre>
+for(init;condition;incr/decr){  
+ // code to be executed 
+}
+</pre>
+            </td>
+            <td>
+<pre>
+while(condition){  
+    // code to be executed
+    incr/decr  
+}
+</pre>
+</td>
+<td>
+<pre>
+do{  
+  //code to be executed  
+  incr/decr 
+}while(condition);
+
+</pre>
+</td>
+        </tr>
+
+    </table>
+</div>
+
+
+                  
+                            
+                     </div>
+                          <div class="col-sm-12 col-lg-3 col-md-4 sidenav">
+                
+
+                            <div class="well my-5">
+                                
+                                <details >
+                                    <summary>Best way of learing</summary>
+                                    <p class="text-tustify">
+                                        Self learing is the best learing in the world.
+                                        Discover yourself first then will get what you are And
+                                        what you want to do .It will push you for self learing.
+                                    </p>
+                                  </details>
+                            </div>
+
+                            <div class="well my-5">
+                                
+                                <details >
+                                    <summary>Why you need to learn coding?</summary>
+                                    <p class="text-tustify">
+                                        Coding will play a vital role in one's life . It will help to open 
+                                        a new window of thinking . You can think better way than past . It 
+                                        helps to organise all the thing in better way .
+                                    </p>
+                                  </details>
+                            </div>
+                           
+                            <div class="well sticky-top">
+                                <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+                                <!-- h-ad1 -->
+                                <ins class="adsbygoogle"
+                                     style="display:block"
+                                     data-ad-client="ca-pub-9136564254270725"
+                                     data-ad-slot="9841091579"
+                                     data-ad-format="auto"
+                                     data-full-width-responsive="true"></ins>
+                                <script>
+                                     (adsbygoogle = window.adsbygoogle || []).push({});
+                                </script>
+                            </div>
+                            
+
+                          </div>
+                        </div>
+                      </div>
+                    
+                </div>
+               
+            
+              </div>
+              
+              <script>
+                $("#menu-toggle").click(function(e) {
+                  e.preventDefault();
+                  $("#wrapper").toggleClass("toggled");
+                });
+              </script>
+            
+        
+    
+    </main>
+<%- include('../../includes/end.ejs') %>

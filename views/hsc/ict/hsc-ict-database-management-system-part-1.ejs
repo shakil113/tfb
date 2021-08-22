@@ -1,0 +1,446 @@
+<!DOCTYPE html>
+    <html lang="en">
+       <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <title>HSC ICT Chapter 6 Part-1: Database Management System</title>
+
+        
+        <meta name="Description" content=" In this HSC ICT Chapter 6 Part-1 : Database Management System we will
+        learn about What is Data ,types of data, What is Information?,Difference between Data and Information,What is database?,Advantage of database,Entity,Entity Set,Attribute,
+       "/>
+        
+        
+        <meta name="author" content="tutorialforbeginner.com">
+        <meta property="og:site_name" content="www.tutorialforbeginner.com" />
+        <meta property="og:locale" content="en_US" />
+        <meta property="og:type" content="website" />
+        <link rel="shortcut icon" href="images/ico.jpg" type="image/x-icon" />
+        <link rel="canonical" href="https://tutorialforbeginner.com/hsc-ict-database-management-system-part-1"/>
+
+
+        <%- include('../../includes/boostrap-head.ejs') %>
+          <style>
+            .navbar-collapse .navbar-nav{float:none;margin:0 auto;text-align:center}img{max-width:100%}#footer{background:#232323;padding:30px 0 0 0;font-size:12px;color:#999}#footer a{color:#ccc}#footer a:hover{color:#fff}#footer h3.widget-title{font-size:15px;font-size:.9375rem;text-transform:uppercase;color:#fff;margin:0 0 20px}#underfooter{background:#191919;padding:15px 0;color:#777;font-size:12px}#underfooter a{color:#aaa}#underfooter a:hover{color:#fff}@media (min-width:1200px){.container{max-width:1080px}}body{overflow-x:hidden}#sidebar-wrapper{min-height:100vh;margin-left:-15rem;-webkit-transition:margin .25s ease-out;-moz-transition:margin .25s ease-out;-o-transition:margin .25s ease-out;transition:margin .25s ease-out}#sidebar-wrapper .sidebar-heading{padding:.875rem 1.25rem;font-size:1.2rem}#sidebar-wrapper .list-group{width:15rem}#page-content-wrapper{min-width:100vw}#wrapper.toggled #sidebar-wrapper{margin-left:0}@media (min-width:768px){#sidebar-wrapper{margin-left:0}#page-content-wrapper{min-width:0;width:100%}#wrapper.toggled #sidebar-wrapper{margin-left:-15rem}}.row.content{height:auto;width:auto}.sidenav{padding-top:20px;background-color:#f1f1f1;height:cover}footer{background-color:#555;color:#fff;padding:15px}@media screen and (max-width:767px){.sidenav{height:auto;padding:15px}.row.content{height:auto}}
+          </style>
+        <script data-ad-client="ca-pub-9136564254270725" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+
+
+       <!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-148831263-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-148831263-1');
+</script>
+
+    </head>
+
+
+    
+
+<body>
+    <%- include('../../includes/navigation.ejs') %>
+    
+    
+    <main id="main">
+        
+      <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+      <!-- ict-ads-4 -->
+      <ins class="adsbygoogle"
+           style="display:block"
+           data-ad-client="ca-pub-9136564254270725"
+           data-ad-slot="9659561509"
+           data-ad-format="auto"
+           data-full-width-responsive="true"></ins>
+      <script>
+           (adsbygoogle = window.adsbygoogle || []).push({});
+      </script>
+
+        
+            
+            
+                  <div class="d-flex" id="wrapper">
+                    <%- include('../../sitebars/ict.ejs') %> 
+                   </div>
+       </div>
+                <!-- /#sidebar-wrapper -->
+            
+                <!-- Page Content -->
+                <div id="page-content-wrapper">
+            
+                  <nav class="navbar navbar-expand-lg navbar-light bg-light border-bottom">
+                    <button class="btn btn-primary" id="menu-toggle">Contents</button>
+            
+                  </nav>
+            
+                  <div class="container-fluid">
+                      <div class="row content">
+                          
+                          <div class="col-sm-12 col-lg-9 col-md-8 text-left"> 
+                              <h1 class="bg-dark text-center text-white">HSC ICT Chaper 6 Part-1</h1>
+                            
+                   
+        <h3 class="mt-4 text-center"> Database Management System</h3> <p class="text-justify text-secondary"><b>
+            In this HSC ICT Chapter 6 Part-1 : Database Management System we will
+            learn about What is Data ,types of data,
+            Information,What is Information?,Difference between Data and Information,What is database?,Advantage of database,Entity,Entity Set,Attribute,
+          </b></p><hr>
+
+
+                              <h4>১.ডেটা কী (What is Data )?</h4>
+                              <p class="text-justify text-dark">
+  
+                                 
+                                  উঃ Data শব্দটি ল্যাটিন শব্দ Datum এর বহুবচন। Datum অর্থ হচ্ছে তথ্যের উপাদান। তথ্যের অন্তর্ভূক্ত ক্ষুদ্রতর অংশসমূহ হচ্ছে ডেটা বা উপাত্ত।<br> অথবা,
+                                  <br> Data হচ্ছে তথ্যের ক্ষুদ্রতম একক। সুশৃঙ্খলভাবে সাজানাে নয় এমন Fact বা উপাদান যা সুনির্দিষ্ট ফলাফল পাওয়ার জন্য প্রসেসিংয়ের কাঁচামাল হিসেবে
+                                        ব্যবহৃত হয় তাকে ডেটা বলে। <br> যেমনঃ অ, ক, ১, ২ ইত্যাদি অথবা সূর্য, চন্দ্র, গাড়ি বা অন্য যেকোনাে কিছুই ডেটা।
+       
+                              </p><hr>
+                              
+                              <div class="embed-responsive embed-responsive-16by9">
+                                  <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/sbZpn0i8L0A" allowfullscreen></iframe>
+                              </div>
+                              <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+                              <!-- ict-ads-3 -->
+                              <ins class="adsbygoogle"
+                                   style="display:block"
+                                   data-ad-client="ca-pub-9136564254270725"
+                                   data-ad-slot="3477296539"
+                                   data-ad-format="auto"
+                                   data-full-width-responsive="true"></ins>
+                              <script>
+                                   (adsbygoogle = window.adsbygoogle || []).push({});
+                              </script>
+                            
+
+                           
+                            <h4> ২. ডেটা (Data) প্রধানত কত প্রকার ও কী কী?</h4>
+                            <p class="text-justify text-dark">
+                              উঃ ডেটা প্রধানত তিন প্রকার যথাঃ<br>
+                              a) Numeric.(2,10,17 etc) <br> b) Non-Numeric.(Sam, Jon etc) <br> c) Boolean.(Yes, No)
+
+                            </p><hr>
+                            <h4>৩. ইনফরমেশন (Information) কী?
+                            </h4>
+                            <p class="text-justify text-dark">
+                              উঃ ডেটাকে ব্যবহার করার জন্য প্রক্রিয়া করতে হয়। সরবরাহকৃত ডেটা প্রক্রিয়াকরনের পর যে ফলাফল পাওয়া যায় তাকে তথ্য বা Information বলে।
+
+                            </p><hr>
+                            <h4>৪.ডেটা ও ইনফরমেশনের পার্থক্য লিখ (Difference between Data and Information) ?</h4>
+
+                            
+                            <table class="table table-bordered">
+                              <thead>
+                                <tr>
+                                  <th scope="col">#</th>
+                                  <th scope="col">ডেটা </th>
+                                  <th scope="col">ইনফরমেশনের</th>
+                                  
+                                </tr>
+                              </thead>
+                              <tbody>
+                                <tr>
+                                  <th scope="row">1</th>
+                                  <td>সুনির্দিষ্ট আউটপুট বা ফলাফল পাওয়ার জন্যে যা প্রসেসিংয়ে ব্যবহৃত কাঁচামাল সমূহকে ডেটা উপাত্ত বলে</td>
+                                  <td>ইনফরমেশন বা তথ্য হলাে সুশৃঙ্খলভাবে সাজানাে ডেটা যা প্রসেসিংয়ে সহজবােধ্য, অর্থবহ, কার্যকর ও   ব্যবহারযােগ্য।</td>
+                                  
+                                </tr>
+                                <tr>
+                                  <th scope="row">2</th>
+                                  <td>ডেটা একটি একক ধারনা ইনফরমেশন বা তথ্যের ক্ষুদ্রতম এককই ডেটা যা বিভিন্ন উৎস থেকে সংগ্রহ করা হয় ।</td>
+                                  <td>ডেটাকে প্রসেস করে  ইনফরমেশনে রুপান্তর করা  হয় ।</td>
+                                 
+                                </tr>
+                                <tr>
+                                  <th scope="row">3</th>
+                                  <td>ডেটা পুরােপুরি কোন অর্থ বা ভাবার্থ প্রকাশ করে না। </td>
+                                  <td>ইনফরমেশন কোন বিষয়ের অর্থ প্রকাশ করে যা
+                                     ব্যবহারকারী বুঝতে পারে।
+                                    </td>
+                                  
+                                </tr>
+                                <tr>
+                                  <th scope="row">4</th>
+                                  <td> ডেটা ইনফরমেশন উপর নির্ভর করে ।</td>
+                                  <td> ইনফরমেশন ডেটার উপর। নির্ভর করে না।</td>
+                                  
+                                </tr>
+                                <tr>
+                                  <th scope="row">5</th>
+                                  <td>ডেটা ইনফরমেশন তৈরি প্রক্রিয়ায় ব্যবহৃত হয়। </td>
+                                  <td>ইনফরমেশন সিদ্ধান্ত গ্রহণ প্রক্রিয়ায় ব্যবহৃত হয়। 
+                                    </td>
+                                  
+                                </tr>
+                                <tr>
+                                  <th scope="row">6</th>
+                                  <td>উদাহরণঃ ফলাফল, দ্বিতীয়, ০০১, ইসা,০০৫, সুমাইয়া, পরীক্ষা, বার্ষিক । </td>
+                                  <td>বার্ষিক পরীক্ষার ফলাফল  রােল নাম মেধাস্থান ইত্যাদি ডেটা
+                                    ০০১ ইসা ০০৫ সুমাইয়া ।
+                                    
+                                    </td>
+                                  
+                                </tr>
+                              </tbody>
+                            </table> <hr>
+                          
+                            <h4>৫. ডেটাবেজ কী (What is Database) ?</h4>
+                            <p class="text-justify text-dark">
+                            উঃ ডেটা শব্দের অর্থ হচ্ছে উপাত্ত এবং বেজ শব্দের অর্থ হচ্ছে
+                            ঘাঁটি বা সমাবেশ। পরস্পর সম্পর্কযুক্ত এক বা একাধিক ডেটা টেবিল বা ফাইলের সমষ্টি কে ডেটাবেজ বলে। <br> অথবা,
+                             <br>
+                            কোন একটি কম্পিউটারের সিস্টেমে জমাকৃত সর্বমােট স্ট্রাকচার ডাটার সমষ্টিকেই ডেটাবেজ (Database) বলে।</p><hr>
+                            
+                            <h4>৬. ডেটাবেজ (Database) ব্যবহারের জন্য কোন সফটওয়্যার লাগে?</h4>
+                            <p class="text-justify text-dark">
+                              উঃ MS Access, My Sql, MS Sql, Oracle ইত্যাদি।
+                            </p><hr>
+                            <h4>৭. ডেটা (Data) সংগঠন কাকে বলে?
+                            </h4>
+                            <p class="text-justify text-dark">
+                              উঃ একটি ডেটাবেজের (Database) প্রসেসিং-এর উপযােগী ডেটার বিশেষ সংগঠনকে ডেটা সংগঠন বলে। যেমনঃ টেবিল, রেকর্ড, ফিল্ড, বিট, ইত্যাদি ডেটা সংগঠনের উপাদান।
+                            </p><hr>
+
+                            <h4>৮. ডেটাবেজে (Database) ব্যবহারের সুবিধা সমূহ লেখ?</h4>
+                            <p class="text-justify text-dark">
+                              উঃ ডেটাবেজে ব্যবহারের সুবিধা সমূহ হলাে  :- <br> ১) সফটওয়্যার ব্যবহার করে সহজে ডেটা সংরক্ষন করা যায়। <br> ২) ডেটা সংশােধন, পরিবর্তন এবং বিভিন্নভাবে সাজানাে যায়। <br>৩) অপ্রয়ােজনীয় বা অতিরিক্ত ডেটা মুছা যায়। <br>৪) অতি দ্রুত ডেটা উপস্থাপন করা যায়।
+                              <br>৫) সংরক্ষিত ডেটাকে পরবর্তীতে আপডেট করা যায়।<br> ৬) ডেটাবেজের তথ্যসমূহ প্রয়ােজনে বড় থেকে ছােট বা ছােট থেকে বড় আকারে সাজানাে যায়। <br>৭) ডেটা বিন্যাসে অল্প সময় লাগে ও ভুল হওয়ার সম্ভাবনা কম
+                              থাকে।
+
+
+                            </p><hr>
+                            <h4>৯. ডেটাবেজে ব্যবহারের  অসুবিধা সমূহ লেখ?</h4>
+                            <p class="text-justify text-dark">
+                              উঃ ডেটাবেজে ব্যবহারের অসুবিধা সমূহ হলাে :-<br> ১) ডেটাবেজ বাস্তবায়নের জন্য প্রশিক্ষনপ্রাপ্ত ও অভিজ্ঞ জনবল নেই।<br> ২) সফটওয়্যার অসুবিধার কারণে প্রক্রিয়াকরণ ধীরগতিসম্পন্ন হতে পারে। <br>
+                              ৩) ভুল ডেটার কারনে অনেক ধরনের সমস্যা হতে পারে। <br>৪) সফটওয়্যার তৈরি করা সবার পক্ষে সম্ভব হয় না। অনেক সময় বেশি দাম দিয়ে ক্রয় করতে হয়।<br> ৫) ডেটাবেজে সংরক্ষিত ডেটা চাহিবা মাত্র পাওয়া যায়।
+
+                            </p><hr>
+                            <h4>১০. ডেটাবেজ (Database) ব্যবহার সমূহ লেখ
+                              ?</h4>
+                            <p class="text-justify text-dark">
+                              উঃ ডেটাবেজ ব্যবহার সমূহ হলােঃ<br>১) সরকারি প্রতিষ্ঠানে তথ্য প্রক্রিয়াকরণ ও সংরক্ষন ব্যবস্থাপনায় ডেটাবেজ ব্যবহার করা হয়।<br>
+                               ২) কমিশন, অর্থ মন্ত্রনালয়, শিক্ষা মন্ত্রনালয়, পরিসংখ্যান ব্যুরাে, রপ্তানি উন্নয়ন ব্যুরাে, ব্যানবেইজ ইত্যাদিতে ব্যবহার করা হয়।<br>
+                                ৩) ব্যাংক ও বিমায় গ্রাহকের বিবরণ, ব্যালেন্স, অ্যাকাউন্ট, স্টেটমেন্ট, লােন, ব্যাংকিং লেনদেন, ক্রেডিট কার্ড ইত্যাদি কাজে ব্যবহার করা হয়।<br>
+                                 ৪) বিভিন্ন মােবাইল কোম্পানি ডেটাবেজ ব্যবহার করা হয়। <br>৫) শেয়ার মার্কেটে ডেটাবেজ ব্যবহার করা হয়।<br> ৬) বিদ্যুৎ, পানি, টেলিফোন ব্যবহারের রেকর্ড, মাসিক বিল। ইত্যাদি।<br>
+                                  ৭) শিক্ষা প্রতিষ্ঠান, শিক্ষা বাের্ড, রেজিস্ট্রেশন, ফলাফল ইত্যাদি।<br>
+                                   ৮) এয়ার লাইনস , ট্রেন, হােটেল ইত্যাদি রিজাভেশন সিস্টেম, সিডিউলিং ও নেটওয়ার্কিংয়ে ব্যবহার হয়।
+
+                            </p><hr>
+                            <h4>১২. ডেটাবেজের (Database) বিভিন্ন উপাদান সমূহের সংজ্ঞা সহ ব্যাখ্যা দাও?
+                            </h4>
+                            <p class="text-justify text-dark">
+                              উঃ ডেটাবেজের বিভিন্ন উপাদান সমূহের বণর্না <br> ডেটা(Data): ডেটা টেবিলের বিভিন্ন ফিল্ডে আমরা যা ইনপুট করি তাই ডেটা।
+                               উদাহরণঃ নাম, রােল, সিরিয়াল ইত্যাদি।<br> ফিল্ড(Field): ডেটা সংগঠনের কয়েকটি অক্ষর এর সমষ্টি অর্থাৎ রেকর্ডের ক্ষুদ্রতম অংশ হলাে ফিল্ড। উদাহরণঃ আইডি, নাম, রােল, শ্রেনী ইত্যাদি।
+                               <br> রেকর্ড(Record) পরস্পর সম্পর্কযুক্ত কয়েকটি ফিল্ডের সমন্বয়ে গঠিত হয় এক একটি রেকর্ড। উদাহরণঃ কোনাে ব্যাক্তির নাম, ঠিকানা, টেলিফোন, নম্বর ইত্যাদি।
+                               <br> ডেটা টেবিল বা ফাইল(Data Table or file) : পরস্পর সম্পর্কযুক্ত কতগুলাে রেকর্ডের সমন্বয়ে গঠিত হয় একটি ডেটা টেবিল বা ফাইল।
+                               <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+                               <ins class="adsbygoogle"
+                                    style="display:block; text-align:center;"
+                                    data-ad-layout="in-article"
+                                    data-ad-format="fluid"
+                                    data-ad-client="ca-pub-9136564254270725"
+                                    data-ad-slot="2687298352"></ins>
+                               <script>
+                                    (adsbygoogle = window.adsbygoogle || []).push({});
+                               </script>
+                              </p>
+                              <img src="images/ch6p1.PNG" alt="Example of Database">
+                              
+                            <h4>১৩. ডেটার এনটিটি(Entity) কী?</h4>
+                            <p class="text-justify text-dark">
+                              উঃ Entity হচ্ছে সত্তা যা দিয়ে অবজেক্টকে চিহ্নিত করা হয়। ডেটা ডেবিলকে চিহৃিত করার জন্য টেবিলের জন্য যে নাম।
+                               দেওয়া হয় তাকে ডেটার এনটিটি বলে। যেমনঃ একজন ছাত্রের নাম, রােল নম্বর ইত্যাদি এনটিটি।
+                            </p><hr>
+                            <h4>১৪. ডেটা এনটিটি সেট(Entity Set) কী?
+                            </h4>
+                            <p class="text-justify text-dark">
+                              উঃ এক বা একাধিক ডেটার এনটিটি সেটের সমষ্টিকে এনটিটি
+                                সেট বলে। 
+
+                            </p><hr>
+                            <h4>১৫. অ্যাট্রিবিউট(Attribute) ও ভেলু(Value) কাকে বলে?
+                            </h4>
+                            <p class="text-justify text-dark">
+                              উঃ অ্যাট্রিবিউট(Attribute): একটি এনটিটি সেটের অন্তর্ভূক্ত প্রতিটি অবজেক্টকে নির্দেশ করার জন্য যে সকল বৈশিষ্ট্য ব্যবহৃত হয় সেসব 
+                              বৈশিষ্ট্যকে অ্যাট্রিবিউট বলে। যেমনঃ Customer একটি এনটিটি যার অ্যাট্রিবিউটগুলাে হলাে Account-Id, Name, Address ইত্যাদি।<br>
+                              ভেলু(Value) বা মান : একটি এনটিটি সেটের প্রতিটি অ্যাট্রিবিউট প্রকাশ করার জন্য ব্যবহৃত নির্দিষ্ট শব্দ বা সংখ্যাকে ভেলু বলে।
+                               যেমনঃ Account -Id অ্যাট্রিবিউটের একটি মান A-20766 এবং Name অ্যাট্রিবিউটের মান Sajjad ইত্যাদি।
+
+                            </p>
+                            <table class="table table-bordered">
+                              <thead>
+                                <tr>
+                                  <th scope="col">Entity Set </th>
+                                  <th scope="col">Attribute</th>
+                                  <th scope="col">Value</th>
+                                  
+                                </tr>
+                              </thead>
+                              <tbody>
+                                <tr>
+                                  
+                                  <td rowspan="4">Customer</td>
+                                  
+                                    
+                                  <td>Customer_Name</td>
+                                  <td>Md.Shakil</td>
+                                </tr>    
+                                    
+                                <tr>
+                                      <td>Serial_No </td>
+                                      <td>10011</td>
+                                      
+                                </tr>
+                                <tr>
+                                    <td>Customer_City</td>
+                                    <td>Dinajpur</td>
+                                    </tr>
+                                <tr>
+                                    <td>Account_Id</td>
+                                    <td>A-1232</td>
+                                      
+                                </tr>
+                         
+                              </tbody>
+                            </table> <hr>
+                            <h4>১৬. ফিল্ড ও রেকর্ড এর মধ্যে পার্থক্য(Difference between Field and Record) ?</h4>
+
+                            <table class="table table-bordered">
+                              <thead>
+                                <tr>
+                                  <th scope="col"> ফিল্ড(Field)</th>
+                                  <th scope="col">রেকর্ড(Record)</th>
+                                  
+                                  
+                                </tr>
+                              </thead>
+                              <tbody>
+                                <tr>
+                               
+                                  <td> ১। ফিল্ড হলাে কতগুলাে বাইট বা অক্ষরের সমষ্টি যা অর্থ প্রকাশ করে।</td>
+                                  <td>১। পরস্পর সম্পর্কযুক্ত কতগুলাে ফিল্ড নিয়ে রেকর্ড তৈরি হয়।</td>
+                                </tr>    
+                                    
+                                <tr>
+                                      <td>২। ফিল্ড হলাে ডেটা টেবিলের কলাম শিরােনাম। </td>
+                                      <td>২। রেকর্ড হলাে সবগুলাে কলামের সমন্বিত একটি সারির মান।</td>
+                                      
+                                </tr>
+                                <tr>
+                                    <td>৩। ফিল্ড দ্বারা পরিপূর্ন তথ্য। পাওয়া যায় না।</td>
+                                    <td>৩। রেকর্ড দ্বারা পরিপূর্ন তথ্য পাওয়া যায়।</td>
+                                    </tr>
+                                <tr>
+                                    <td>৪। প্রতিটি ফিল্ডের ডেটার মান একই হয়ে থাকে।</td>
+                                    <td>৪। একটি রেকর্ডের বিভিন্ন ফিল্ডের মান ভিন্ন ভিন্ন হতে পারে।
+                                    </td>
+                                      
+                                </tr>
+                                <tr>
+                                  <td>৫। ডেটা সনাক্তকরনে ব্যবহৃত হয়।
+                                  </td>
+                                  <td>৫। দুটি টেবিলের মধ্যে রিলেশন তৈরি করতে ব্যবহৃত হয়।</td>
+                                  </tr>
+                              <tr>
+                                  <td>৬। একটি টেবিলে একটি মাত্র প্রাইমারি কী থাকে।
+                                  </td>
+                                  <td>৬। একটি টেবিলে বিভিন্ন টেবিলের একাধিক ফরেন কী থাকতে পারে।</td>
+                                    
+                              </tr>
+                         
+                              </tbody>
+                            </table> 
+                            <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<ins class="adsbygoogle"
+     style="display:block; text-align:center;"
+     data-ad-layout="in-article"
+     data-ad-format="fluid"
+     data-ad-client="ca-pub-9136564254270725"
+     data-ad-slot="2458044125"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+
+                            <h4> ১৭। ডেটাবেজের সুবিধা আসুবিধা লিখ ? 
+                              ?</h4>
+                            <p class="text-justify text-dark">
+                              উঃ ডেটাবেজে ব্যবহারের সুবিধা অসুবিধা সমূহ হলাে :-<br> ১) ডেটাবেজ বাস্তবায়নের জন্য প্রশিক্ষনপ্রাপ্ত ও অভিজ্ঞ জনবল নেই।<br> ২) সফটওয়্যার অসুবিধার কারণে প্রক্রিয়াকরণ ধীরগতিসম্পন্ন হতে পারে। <br>
+                              ৩) ভুল ডেটার কারনে অনেক ধরনের সমস্যা হতে পারে। <br>৪) সফটওয়্যার তৈরি করা সবার পক্ষে সম্ভব হয় না। অনেক সময় বেশি দাম দিয়ে ক্রয় করতে হয়।<br> ৫) ডেটাবেজে সংরক্ষিত ডেটা চাহিবা মাত্র পাওয়া যায়।
+
+                            </p><hr>
+
+
+                            
+                            
+
+                            
+                           
+                                 
+                     </div>
+                          <div class="col-sm-12 col-lg-3 col-md-4 sidenav">
+                              
+
+                            <div class="well my-5">
+                                
+                                <details >
+                                    <summary>Best way of learing</summary>
+                                    <p class="text-tustify">
+                                        Self learing is the best learing in the world.
+                                        Discover yourself first then will get what you are And
+                                        what you want to do .It will push you for self learing.
+                                    </p>
+                                  </details>
+                            </div>
+                            
+
+                            <div class="well my-5">
+                                
+                                <details >
+                                    <summary>Why you need to learn coding?</summary>
+                                    <p class="text-tustify">
+                                        Coding will play a vital role in one's life . It will help to open 
+                                        a new window of thinking . You can think better way than past . It 
+                                        helps to organise all the thing in better way .
+                                    </p>
+                                  </details>
+                            </div>
+                            <div class="well sticky-top">
+                              <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- ict-verticle-1 -->
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-9136564254270725"
+     data-ad-slot="1200802774"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+                            
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    
+                </div>
+               
+            
+              </div>
+              
+              <script>
+                $("#menu-toggle").click(function(e) {
+                  e.preventDefault();
+                  $("#wrapper").toggleClass("toggled");
+                });
+              </script>
+            
+        
+    
+    </main>
+
+    
+
+<%- include('../../includes/end.ejs') %>

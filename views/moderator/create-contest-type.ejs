@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+    <html lang="en">
+       <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <title>Create Contest Type</title>
+
+        <meta name="author" content="tutorialforbeginner.com">
+        <meta property="og:site_name" content="www.tutorialforbeginner.com" />
+        
+        <meta property="og:locale" content="en_US" />
+        <meta property="og:type" content="website" />
+        <link rel="shortcut icon" href="../images/ico.jpg" type="image/x-icon" />
+        <%- include('../includes/boostrap-head.ejs') %>  
+        <style>
+            .navbar-collapse .navbar-nav{float:none;margin:0 auto;text-align:center}img{max-width:100%}#footer{background:#232323;padding:30px 0 0 0;font-size:12px;color:#999}#footer a{color:#ccc}#footer a:hover{color:#fff}#footer h3.widget-title{font-size:15px;font-size:.9375rem;text-transform:uppercase;color:#fff;margin:0 0 20px}#underfooter{background:#191919;padding:15px 0;color:#777;font-size:12px}#underfooter a{color:#aaa}#underfooter a:hover{color:#fff}@media (min-width:1200px){.container{max-width:1080px}}body{overflow-x:hidden}#sidebar-wrapper{min-height:100vh;margin-left:-15rem;-webkit-transition:margin .25s ease-out;-moz-transition:margin .25s ease-out;-o-transition:margin .25s ease-out;transition:margin .25s ease-out}#sidebar-wrapper .sidebar-heading{padding:.875rem 1.25rem;font-size:1.2rem}#sidebar-wrapper .list-group{width:15rem}#page-content-wrapper{min-width:100vw}#wrapper.toggled #sidebar-wrapper{margin-left:0}@media (min-width:768px){#sidebar-wrapper{margin-left:0}#page-content-wrapper{min-width:0;width:100%}#wrapper.toggled #sidebar-wrapper{margin-left:-15rem}}.row.content{height:auto;width:auto}.sidenav{padding-top:20px;background-color:#f1f1f1;height:cover}footer{background-color:#555;color:#fff;padding:15px}@media screen and (max-width:767px){.sidenav{height:auto;padding:15px}.row.content{height:auto}}
+          </style>
+
+        
+    </head>
+
+
+    
+
+  <body style=" background: linear-gradient(to bottom,#163a37, #265750); ">
+    <%- include('../includes/moderatorNav.ejs') %>  
+    <main id="main" class="px-4 text-white">
+
+    
+
+          <hr class="mb-2 bg-dark" ><h3 class="mb-3 text-center text-white p-3" style="background-color: darkblue;"><i>Create Contest Subjects</i></h3><hr>
+         
+            <form novalidate action="/moderator/create-contest-type" method="POST">
+              <h4 class="text-center">
+                Contest Type Information
+              </h4><hr>
+              <div class="form-row">
+                <div class="col-md-4 mb-3">
+                  <label for="contestTypeName">Contest Type Name</label>
+                  <input type="text" class="form-control" id="contestTypeName" name="contestTypeName" placeholder="Contest Type Name" required>
+                  
+                </div>
+                
+                <div class="col-md-4 mb-3">
+                  <label for="elegible">Elegiblity</label>
+                  <select id="elegible" class="form-control" name="elegiblity">
+                    <option selected>Choose...</option>
+                   
+                    <option value="HSC">HSC</option>
+                    <option value="BCS">BCS</option>
+                    <option value="BANKJOB">BANK JOB</option>
+                  </select>
+                </div>
+                <div class="col-md-4 mb-3">
+                  <label for="contestDuration">Contest Duration</label>
+                  <input type="number" class="form-control" id="contestDuration" name="contestDuration" placeholder="Contest Duration" required>
+                  
+                </div>
+                
+              </div><hr>
+              <h4 class="text-center">
+                Question Quantity
+              </h4><hr>
+              <div class="form-row mb-4">
+                <div class="col-md-4 mb-3">
+                  <label for="totalQuestion">Total Question</label>
+                  <input type="number" class="form-control" id="totalQuestion"name="questionQuantity" placeholder="Total Question" required>
+                  
+                </div>
+                <div class="col-md-4 mb-3">
+                  <label for="markPerRightAns">Mark Per Right Answer</label>
+                  <input type="number" class="form-control" id="markPerRightAns" name="markPerRightAns" id="validationCustom04" placeholder="e.g 1.20" required>                  
+                </div>
+                <div class="col-md-4 mb-3">
+                  <label for="minusPerWrongAns">Minus Per Wrong Answer</label>
+                  <input type="number" class="form-control" id="minusPerWrongAns" name="minusPerWrongAns" placeholder="e.g 0.25" required>
+                  
+                </div>
+                
+              </div>
+              <div class="form-row">
+                
+                <div class="col-md-4 mb-3">
+                  <label for="easyQuestionQuantity">Easy</label>
+                  <input type="number" class="form-control" id="easyQuestionQuantity" name="easyQuestionQuantity" id="validationCustom04" placeholder="e.g 10" required>
+                  
+                </div>
+                <div class="col-md-4 mb-3">
+                  <label for="standardQuestionQuantity">Standard</label>
+                  <input type="number" class="form-control" id="standardQuestionQuantity" name="standardQuestionQuantity" placeholder="e.g 10" required>
+                  
+                </div>
+                <div class="col-md-4 mb-3">
+                  <label for="hardQuestionQuantity">Hard</label>
+                  <input type="number" class="form-control" id="hardQuestionQuantity" name="hardQuestionQuantity" placeholder="e.g 10" required>
+                  
+                </div>
+              </div><hr>
+              <h4 class="text-center">
+                Select Subject
+              </h4><hr>
+              <div class="form-group  " style="padding-left: 200px;">
+                <% subject.forEach( Subject => { %>
+                <div class="form-check mb-2">                  
+                  <input class="form-check-input" type="checkbox" value="<%=Subject.id%>" name="subjectId[]"  required>
+                  <label class="form-check-label" for="invalidCheck">
+                    <%=Subject.subjectName%>
+                  </label>
+                 
+                </div>
+                <% }) %>
+              </div><hr>
+
+              <h4 class="text-center">
+                Contest Detail
+              </h4><hr>
+              <div class="form-group">
+                <label for="contestDetail">Contest Detail</label>
+                <textarea class="form-control" id="contestDetail" name="contestAbout" placeholder="Enter detail about contest" rows="3"></textarea>
+              </div>
+              <input type="hidden" name="_csrf" value="<%= csrfToken %>">
+              <div class="d-flex justify-content-center mb-3">
+                <button class="btn btn-lg btn-primary "  type="submit">Create </button>
+              </div>
+             
+            </form>
+            
+            <script>
+            
+            </script>
+           
+           
+           
+        
+
+
+                
+
+
+              
+              
+           
+  
+
+
+       
+    </main>
+
+<%- include('../includes/end.ejs') %>
+
+   
+    
+                              
+
+
+    
+

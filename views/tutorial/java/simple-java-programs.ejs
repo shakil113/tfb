@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+    <html lang="en">
+       <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <title>Simple Java Programs | How Java Program Works | tutorialforbeginner.com</title>
+
+        
+        <meta name="Description" content=" In this page we will learn about Simple Java Programs, First Java Program, Hello World Example,
+        How it compiles, Parameters used in first Java Programs, Ways of writing Java Program, Valid and Invalid java main method signature." />
+        
+        <meta name="author" content="tutorialforbeginner.com">
+        <meta property="og:site_name" content="www.tutorialforbeginner.com" />
+        <meta property="og:locale" content="en_US" />
+        <meta property="og:type" content="website" />
+        <link rel="shortcut icon" href="images/ico.jpg" type="image/x-icon" />
+        <link rel="canonical" href="https://tutorialforbeginner.com/simple-java-programs" />
+        <%- include('../../includes/boostrap-head.ejs') %>
+        <style>
+          .navbar-collapse .navbar-nav{float:none;margin:0 auto;text-align:center}img{max-width:100%}#footer{background:#232323;padding:30px 0 0 0;font-size:12px;color:#999}#footer a{color:#ccc}#footer a:hover{color:#fff}#footer h3.widget-title{font-size:15px;font-size:.9375rem;text-transform:uppercase;color:#fff;margin:0 0 20px}#underfooter{background:#191919;padding:15px 0;color:#777;font-size:12px}#underfooter a{color:#aaa}#underfooter a:hover{color:#fff}@media (min-width:1200px){.container{max-width:1080px}}body{overflow-x:hidden}#sidebar-wrapper{min-height:100vh;margin-left:-15rem;-webkit-transition:margin .25s ease-out;-moz-transition:margin .25s ease-out;-o-transition:margin .25s ease-out;transition:margin .25s ease-out}#sidebar-wrapper .sidebar-heading{padding:.875rem 1.25rem;font-size:1.2rem}#sidebar-wrapper .list-group{width:15rem}#page-content-wrapper{min-width:100vw}#wrapper.toggled #sidebar-wrapper{margin-left:0}@media (min-width:768px){#sidebar-wrapper{margin-left:0}#page-content-wrapper{min-width:0;width:100%}#wrapper.toggled #sidebar-wrapper{margin-left:-15rem}}.row.content{height:auto;width:auto}.sidenav{padding-top:20px;background-color:#f1f1f1;height:100%}footer{background-color:#555;color:#fff;padding:15px}@media screen and (max-width:767px){.sidenav{height:auto;padding:15px}.row.content{height:auto}}
+        </style>
+        <script async src="js/print/run_prettify.js?lang=css&amp;skin=desert"></script>
+        <script data-ad-client="ca-pub-9136564254270725" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+       
+        <!-- Global site tag (gtag.js) - Google Analytics -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=UA-148831263-1"></script>
+        <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'UA-148831263-1');
+        </script>
+
+        
+
+       
+        
+    </head>
+
+
+    
+
+<body >
+    <%-include('../../includes/navigation.ejs') %>
+    
+    
+    <main id="main">
+        
+        <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+        <!-- home-last -->
+        <ins class="adsbygoogle"
+             style="display:block"
+             data-ad-client="ca-pub-9136564254270725"
+             data-ad-slot="7126124861"
+             data-ad-format="auto"
+             data-full-width-responsive="true"></ins>
+        <script>
+             (adsbygoogle = window.adsbygoogle || []).push({});
+        </script>
+        
+            
+            
+            <div class="d-flex w-100" id="wrapper">
+
+                <!-- Sidebar -->
+                <div class="bg-light border-right" id="sidebar-wrapper">
+                    <div class="sidebar-heading bg-success text-center text-white rounded-top border-to"><b>Topics</b></div>
+                    <div class="list-group list-group-flush">
+                        <%- include('../../sitebars/java.ejs') %>
+                    </div>
+                </div>
+                <!-- /#sidebar-wrapper -->
+            
+                <!-- Page Content -->
+                <div id="page-content-wrapper">
+            
+                    <nav class="navbar navbar-expand-lg border-bottom" style="background-color: #375028;">
+                        <button class="btn text-white btn-lg" style="background-color: #521212;" id="menu-toggle">&#x2190;TOPICS</button>
+                
+                      </nav>
+            
+                  <div class="container-fluid">
+                      <div class="row content ">
+                          
+                          <div class="col-sm-12 col-lg-9 col-md-8 text-left w-100"> 
+                              <h1 class="bg-dark text-center text-white">Simple Java Programs</h1>
+                              <p class="text-justify"><b>
+                               In this page we will learn about Simple Java Programs, First Java Program | Hello World Example,
+                               How it compiles, Parameters used in first Java Programs, Ways of writing Java Program, Valid and Invalid java main method signature. 
+                              </b></p><hr>
+
+                              <h2 class="my-2">First Java Program | Hello World Example</h2>
+     
+                              <p class="text-justify">
+                                For creating simple java program, we need to create a class that will contain the main method of java programming. Now we shall understand the requirement first. 
+                                
+                              </p>
+                              <h4 class="my-2">In order to executing any java program, you need to:</h4>
+                              <ul type="circle">
+                                <li>Install the JDK if you don't have installed it, Java Development Kit (JDK)</b> <a href="https://www.oracle.com/java/technologies/javase-jdk16-downloads.html" target="_blank" rel="noopener noreferrer">www.oracle.com</a>. </li>
+                                <li>Set path of the jdk/bin directory. <a href="/java-installation">https://www.javatpoint.com//java-installation</a></li>
+                                <li>Create the java program</li>
+                                <li>Compile and run the java program</li>
+
+
+                              </ul>
+                              <h2 class="mt-5">First Java Programs : Hello Java</h2>  
+<pre class="prettyprint"><code>
+  import java.io.*;
+  class Simple{  
+    public static void main(String args[]){  
+      System.out.println("Hello Java");  
+    }  
+  }
+</code>
+</pre>
+<h4>Output:</h4>
+<pre class="prettyprint"><code>
+  Hello Java
+</code>
+</pre>
+                              <h2 class="mt-5">How it compiles:-</h2>
+                              <p class="text-justify">
+                                When we assemble Java program using javac tool, java writer converts the source code into byte code.
+                              </p>
+                              <div class="text-center my-3">
+                                <img src="images/tutorial/workflows.png" alt="how java compiles">
+                              </div>
+
+                              <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+                            <!-- ad-2 -->
+                            <ins class="adsbygoogle"
+                                style="display:block"
+                                data-ad-client="ca-pub-9136564254270725"
+                                data-ad-slot="8826219349"
+                                data-ad-format="auto"
+                                data-full-width-responsive="true"></ins>
+                            <script>
+                                (adsbygoogle = window.adsbygoogle || []).push({});
+                            </script>
+                             <h2>Parameters used in first Java Programs:-</h2>
+   
+                           
+                            <p class="text-justify">
+                              Let's find out what's the meaning of <code>class</code>, <code>public</code>, <code>static</code>, <code>void</code>, <code>main</code>, <code>String[]</code>, <code>System.out.println()</code>.
+                            </p>
+                            <ul type="square">
+                                <li><code>Class</code> keyword is used to declare a class in java.</li>
+                                <li><code>Public</code> keyword is an access modifier which represents visibility. It means it is visible to all.</li>
+                                <li><code>Static</code> is a keyword. If we declare any method as static, it is known as the static method. The core advantage of the static method is that there is no need to create an object to invoke the static method. The main method is executed by the JVM, so it doesn't require to create an object to invoke the main method. So it saves memory.</li>
+                                <li><code>Void</code> is the return type of the method. It means it doesn't return any value.</li>
+                                <li><code>Main</code> represents the starting point of the program.</li>
+                                <li><code>String[]</code> args is used for command line argument. We will learn it later.</li>
+                                <li><code>System.out.println()</code> is used to print statement. Here, System is a class, out is the object of <code>PrintStream</code>  class, <code>println()</code> is the method of PrintStream class. We will learn about the internal working of System.out.println statement later.</li>
+
+                            </ul>
+                           
+                         
+                           
+                            <h2 class="mt-5">Ways of writing Java Program:</h2>
+     
+                            <p class="text-justify">
+                              There are many different ways to write a Java program. The modifications that we can do in a Java program are given below:-
+                            </p>
+
+                            <ul type="circle">
+                              <li><b>By changing the sequence of the modifiers, method prototype is not changed in Java.</b>
+                                <br><br> Let us see the simple code of the main system:
+                                <pre class="prettyprint">static public void main(String args[])</pre>
+                              
+                              </li>
+                              <li><b>The subscript notation in Java array can be used after type, before the variable or after the variable.</b>
+                                <br><br>Let us see the different codes to write the main system.
+<pre class="prettyprint">
+  public static void main(String[] args)  
+
+  public static void main(String []args)
+    
+  public static void main(String args[])
+</pre>
+                                
+                                </li>
+
+                                <li><b>You can provide var-args support to the main method by passing 3 ellipses (dots).</b>
+                                  <br><br>Now Let us see the simple code of using the var-args in the main system. We will learn about the var-args later in Java New Features chapter:
+                                  <pre class="prettyprint">public static void main(String... args)</pre>
+                                
+                                </li>
+
+                                <li><b>Having a semicolon at the end of class is optional in Java.</b>
+                                  <br><br>Now let's see the simple code:
+                                  <pre class="prettyprint"><code>
+  class Sample{  
+    static public void main(String... args){  
+      System.out.println("Wellcome to Java Word");  
+    }  
+  };
+</code>
+</pre>
+                                
+                                </li>
+                            </ul><hr>
+                           
+                            
+
+
+<h2>Valid java main method signature are given below:</h2>
+<pre class="prettyprint"><code>
+  public static void main(String[] args)
+
+  public static void main(String []args)  
+
+  public static void main(String args[])
+
+  public static void main(String... args)
+
+  static public void main(String[] args) 
+
+  public static final void main(String[] args)
+
+  final public static void main(String[] args) 
+
+  final strictfp public static void main(String[] args)
+</code>
+</pre>
+
+
+<h2>Invalid java main method signature are given below:</h2>
+<pre class="prettyprint"><code>
+  public void main(String[] args)
+
+  static void main(String[] args)
+
+  public void static main(String[] args) 
+  
+  abstract public static void main(String[] args)
+</code>
+</pre>
+                         
+                           
+                            
+                            
+         </div>
+                          <div class="col-sm-12 col-lg-3 col-md-4 sidenav">
+                
+
+                            <div class="well my-5">
+                                
+                                <details >
+                                    <summary>Best way of learing</summary>
+                                    <p class="text-tustify">
+                                        Self learing is the best learing in the world.
+                                        Discover yourself first then will get what you are And
+                                        what you want to do .It will push you for self learing.
+                                    </p>
+                                  </details>
+                            </div>
+
+                            <div class="well my-5">
+                                
+                                <details >
+                                    <summary>Why you need to learn coding?</summary>
+                                    <p class="text-tustify">
+                                        Coding will play a vital role in one's life . It will help to open 
+                                        a new window of thinking . You can think better way than past . It 
+                                        helps to organise all the thing in better way .
+                                    </p>
+                                  </details>
+                            </div>
+                           
+                            <div class="well sticky-top">
+                                <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+                                <!-- h-ad1 -->
+                                <ins class="adsbygoogle"
+                                     style="display:block"
+                                     data-ad-client="ca-pub-9136564254270725"
+                                     data-ad-slot="9841091579"
+                                     data-ad-format="auto"
+                                     data-full-width-responsive="true"></ins>
+                                <script>
+                                     (adsbygoogle = window.adsbygoogle || []).push({});
+                                </script>
+                            </div>
+                            
+
+                          </div>
+                        </div>
+                      </div>
+                    
+                </div>
+               
+            
+              </div>
+              
+              <script>
+                $("#menu-toggle").click(function(e) {
+                  e.preventDefault();
+                  $("#wrapper").toggleClass("toggled");
+                });
+              </script>
+            
+        
+    
+    </main>
+
+    
+
+<%- include('../../includes/end.ejs') %>

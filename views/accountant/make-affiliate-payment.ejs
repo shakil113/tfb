@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+    <html lang="en">
+       <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <title>Make Affiliate Payment</title>
+
+        <meta name="author" content="tutorialforbeginner.com">
+        <meta property="og:site_name" content="www.tutorialforbeginner.com" />
+       
+        <meta property="og:locale" content="en_US" />
+        <meta property="og:type" content="website" />
+        <link rel="shortcut icon" href="../../images/ico.jpg" type="image/x-icon" />
+        <%- include('../includes/boostrap-head.ejs') %> 
+        <style>
+            .navbar-collapse .navbar-nav{float:none;margin:0 auto;text-align:center}img{max-width:100%}#footer{background:#232323;padding:30px 0 0 0;font-size:12px;color:#999}#footer a{color:#ccc}#footer a:hover{color:#fff}#footer h3.widget-title{font-size:15px;font-size:.9375rem;text-transform:uppercase;color:#fff;margin:0 0 20px}#underfooter{background:#191919;padding:15px 0;color:#777;font-size:12px}#underfooter a{color:#aaa}#underfooter a:hover{color:#fff}@media (min-width:1200px){.container{max-width:1080px}}body{overflow-x:hidden}#sidebar-wrapper{min-height:100vh;margin-left:-15rem;-webkit-transition:margin .25s ease-out;-moz-transition:margin .25s ease-out;-o-transition:margin .25s ease-out;transition:margin .25s ease-out}#sidebar-wrapper .sidebar-heading{padding:.875rem 1.25rem;font-size:1.2rem}#sidebar-wrapper .list-group{width:15rem}#page-content-wrapper{min-width:100vw}#wrapper.toggled #sidebar-wrapper{margin-left:0}@media (min-width:768px){#sidebar-wrapper{margin-left:0}#page-content-wrapper{min-width:0;width:100%}#wrapper.toggled #sidebar-wrapper{margin-left:-15rem}}.row.content{height:auto;width:auto}.sidenav{padding-top:20px;background-color:#f1f1f1;height:cover}footer{background-color:#555;color:#fff;padding:15px}@media screen and (max-width:767px){.sidenav{height:auto;padding:15px}.row.content{height:auto}}
+          </style>
+
+        
+    </head>
+
+
+    
+
+  <body class="bg-light">
+    <%- include('../includes/accountantNav.ejs') %>  
+    <main id="main">
+        
+     
+
+      <hr class="mb-2 bg-dark " ><h4 class="mb-3 text-center text-white p-3" style="background-color: darkblue;"><i>Make Payment</i></h4><hr>
+          
+          <div class="table-responsive">
+            
+            
+                <table class="table table-bordered table-hover text-center mx-2">
+
+                  <tr class="bg-dark text-white">
+                    <th>#Name.</th>
+                    <th>#Phone No.</th>                                       
+                   
+                      
+                  </tr>
+                  <tr>
+
+                    
+                        <td><%=user.firstname+' '+user.lastname%></td>
+                        <td><%=user.phoneNumber%></td>
+
+                  </tr>
+
+         
+                
+                </table>
+
+              
+          </div>
+          <hr class="mb-2 bg-dark " ><h4 class="mb-3 text-center text-white p-3" style="background-color: darkblue;"><i>Sending Information</i></h4><hr>
+         <%if(userDetail){%>
+          <form class="mx-2" method="POST" action="/accountant/send-affiliate-payment">
+            <div class="form-row">
+              <div class="col-md-6 mb-3">
+                <label for="payoutMethod">Payout Method</label>
+                <input type="text" class="form-control" id="payoutMethod" name="payoutMethod" value="<%=userDetail.payoutMethod%>" readonly>
+              </div>
+              <div class="col-md-6 mb-3">
+                <label for="payoutNumber">Payout Number</label>
+                <input type="text" class="form-control" id="payoutNumber" name="payoutNumber" value="<%=userDetail.payoutNumber%>" readonly>
+              </div>
+            
+              
+            </div>
+
+            <div class="form-row">
+                <div class="col-md-6 mb-3">
+                    <label for="amount">Amount</label>
+                    <input type="text" class="form-control" id="amount" name="amount" value="<%=payment.withdrawAmount%>" readonly>
+                  </div>
+              <div class="col-md-6 mb-3">
+                <label for="tranxId">Transaction Id</label>
+                <input type="text" class="form-control" id="trxId" name="trxId"  required>
+              </div>
+             
+
+              
+            </div>
+            <input type="hidden" name="_csrf" value="<%= csrfToken %>">
+            <input type="hidden" name="userId" value="<%= user.id %>">
+              
+            <div class="d-flex justify-content-center">
+
+              <button class="btn btn-primary my-3 btn-lg" type="submit">Send</button>
+         
+            </div>
+             </form>
+       <%}%>
+       
+    </main>
+
+<%- include('../includes/end.ejs') %>
+
+   
+    
+                              
+
+
+    
+

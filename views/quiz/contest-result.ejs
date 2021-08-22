@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+    <html lang="en">
+       <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <title>View Result Card</title>
+
+        
+        <meta name="Description" content=" 
+        " />
+        <meta name="Keywords" content="" />
+        
+        <meta name="author" content="tutorialforbeginner.com">
+        <meta property="og:site_name" content="www.tutorialforbeginner.com" />
+        <meta property="og:locale" content="en_US" />
+        <meta property="og:type" content="website" />
+        <link rel="shortcut icon" href="../images/ico.jpg" type="image/x-icon" />
+       
+        <%- include('../includes/boostrap-head.ejs') %>
+          <style>
+            .navbar-collapse .navbar-nav{float:none;margin:0 auto;text-align:center}img{max-width:100%}#footer{background:#232323;padding:30px 0 0 0;font-size:12px;color:#999}#footer a{color:#ccc}#footer a:hover{color:#fff}#footer h3.widget-title{font-size:15px;font-size:.9375rem;text-transform:uppercase;color:#fff;margin:0 0 20px}#underfooter{background:#191919;padding:15px 0;color:#777;font-size:12px}#underfooter a{color:#aaa}#underfooter a:hover{color:#fff}@media (min-width:1200px){.container{max-width:1080px}}body{overflow-x:hidden}#sidebar-wrapper{min-height:100vh;margin-left:-15rem;-webkit-transition:margin .25s ease-out;-moz-transition:margin .25s ease-out;-o-transition:margin .25s ease-out;transition:margin .25s ease-out}#sidebar-wrapper .sidebar-heading{padding:.875rem 1.25rem;font-size:1.2rem}#sidebar-wrapper .list-group{width:15rem}#page-content-wrapper{min-width:100vw}#wrapper.toggled #sidebar-wrapper{margin-left:0}@media (min-width:768px){#sidebar-wrapper{margin-left:0}#page-content-wrapper{min-width:0;width:100%}#wrapper.toggled #sidebar-wrapper{margin-left:-15rem}}.row.content{height:auto;width:auto}.sidenav{padding-top:20px;background-color:#f1f1f1;height:cover}footer{background-color:#555;color:#fff;padding:15px}@media screen and (max-width:767px){.sidenav{height:auto;padding:15px}.row.content{height:auto}}
+          </style>
+        
+    </head>
+
+
+    
+
+<body class="bg-light" >
+    <%- include('../includes/navigation.ejs') %>
+    
+    
+    <main id="main">
+        
+     
+            <div class="d-flex" id="wrapper">
+
+                <!-- Sidebar -->
+                <div class="bg-light border-right" id="sidebar-wrapper">
+                  <div class="sidebar-heading bg-success text-white text-center"><b>Topic Menu</b> </div>
+                  <div class="list-group list-group-flush ">
+
+                    <%- include('../sitebars/online-quiz-contest-sitebar.ejs') %> 
+                     
+                  </div>
+                </div>
+                <!-- /#sidebar-wrapper -->
+            
+                <!-- Page Content -->
+                <div id="page-content-wrapper">
+            
+                  <nav class="navbar navbar-expand-lg border-bottom" style="background-color: #375028;">
+                    <button class="btn text-white btn-lg" style="background-color: #521212;" id="menu-toggle">&#x2190;QUIZ MENU</button>
+            
+                  </nav>
+            
+                <div class="container-fluid ">
+                      <div class="row content">
+                          
+                          <div class="col-sm-12 col-lg-9 col-md-8 text-left"> 
+                         
+                                
+                                <table class="table mt-5">
+                                  <tr class="bg-success text-center">
+                                    <th colspan="2">Congratulation! <%=user.firstname%> <%=user.lastname%></th>
+                                  </tr>
+                                  <tr class="table-success ">
+                                    <th >Marks Obtained:</th>
+                                    <th ><%=contestInfo.mark.toFixed(2) %></th>
+                                  </tr>
+                                  <tr class="table-success ">
+                                    <th >Time Taken:</th>
+                                    <th ><%=(parseFloat(contestInfo.submissionTime)/60).toFixed(3) %> Min</th>
+                                  </tr>
+                                  <tr class="table-success ">
+                                    <th >Right Ans:</th>
+                                
+                                   
+                                    <th ><%=contestInfo.rightAns %></th>
+                                  </tr>
+                                  <tr class="table-success ">
+                                    <th >Wrong Ans:</th>
+                                    <th ><%= contestInfo.wrongAns %></th>
+                                  </tr>
+                                  <tr class="table-success ">
+                                    <th >Not Answered:</th>
+                                    <th ><%=contestInfo.notAttempted %></th>
+                                  </tr>
+                                  
+                                  <tr class="table-info ">
+                                    <th>Position:</th>
+                                    <td> Available At Result Page After <span id = "timer"></span></td>
+                                  </tr>
+                              
+                                  
+                         
+
+                                </table>
+                                
+                            
+                             
+                              
+                                <script>
+                                            
+                                  var time = setInterval(() => {
+
+                                    var dest = new Date('<%=contest.contestDate %>T<%=contest.contestTime %>').getTime();
+                                    var current = new Date().toLocaleString("en-US", { timeZone: "Asia/Dhaka", timeZoneName: "short", hourCycle: "h24" }).split(' ');
+                                    var currentDate = current[0].split(',')[0];
+                                    var currentTime = current[1];                           
+                                    var now = new Date(currentDate+' '+currentTime).getTime();
+                                    var contestDuration = parseInt('<%=contestTime%>')*60*1000;
+                                   
+                                    var diff = (dest + contestDuration - now);
+                                    var hours = Math.floor((diff%(1000*24*3600))/(1000*3600));
+                                    if(hours<0){hours +=1;}
+                                    var minutes = Math.floor((diff%(1000*3600))/(1000*60));
+                                    if(minutes<0){minutes +=1;}
+                                    var seconds = Math.floor((diff%(1000*60))/(1000));
+
+                                    document.getElementById("timer").innerHTML = hours+"H : "+ minutes+"M : "+seconds+"S";
+
+                                  },1000);
+                                </script>
+                            
+                            
+                             
+                              
+                        </div>
+                          <div class="col-sm-12 col-lg-3 col-md-4 sidenav">
+                          
+                            <div class="well my-5">
+                                
+                              <details >
+                                  <summary>আসুন ......</summary>
+                                  <p class="text-tustify">
+                                    দূর্নীতিকে না বলি ,<br> সোনার বাংলাদেশ গড়ি ।
+                                  </p>
+                                </details>
+                          </div>
+
+                          <div class="well my-5">
+                              
+                              <details >
+                                <summary>আসুন ......</summary>
+                                <p class="text-tustify">
+                                   নিজেকে বদলাই তাহলে ,<br> সমাজ আপনা আপনি বদলে যাবে ।
+                                </p>
+                                </details> 
+                          </div>
+                         
+                           
+                           
+
+                          </div>
+                        </div>
+                      </div>
+                    
+                </div>
+               
+            
+              </div>
+              
+              <script>
+                $("#menu-toggle").click(function(e) {
+                  e.preventDefault();
+                  $("#wrapper").toggleClass("toggled");
+                });
+              </script>
+            
+        
+    
+    </main>
+
+    
+
+<%- include('../includes/end.ejs') %>

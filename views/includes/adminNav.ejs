@@ -1,0 +1,71 @@
+
+	
+	<nav class="navbar navbar-expand-md navbar-dark bg-dark text-uppercase" >
+        <a href="/admin/admin-home"><img src="../images/logo.svg" alt="site logo" style="height: 60px;"></a>
+        <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse justify-content-between" id="navbarCollapse">
+            <div class="navbar-nav ">
+                <a href="/admin/admin-home" class="nav-item nav-link ">Home</a>
+
+                <div class="nav-item dropdown">
+                    <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Add</a>
+                    <div class="dropdown-menu">
+                        <a href="/admin/add-contest-payment" class="dropdown-item">Contest Payment</a>
+                        <a href="/admin/add-contest-level" class="dropdown-item">Contest Level</a>
+                        <a href="/admin/add-faq" class="dropdown-item">FAQ</a>
+                        <a href="/admin/add-terms-of-use" class="dropdown-item">Terms of use</a>
+                        <a href="/admin/add-privacy-policiy" class="dropdown-item">Privacy Policy</a>
+                        
+                        
+                    </div>
+                </div>
+                <div class="nav-item dropdown">
+                        <a href="#" class="nav-link  dropdown-toggle" data-toggle="dropdown">Create</a>
+                        <div class="dropdown-menu">
+                            <a href="/admin/create-moderator" class="dropdown-item ">Create Moderator</a>
+                            <a href="/admin/create-accountant" class="dropdown-item ">Create Accountant</a>
+                        
+                           
+                        
+                        </div>
+                </div>
+
+                <div class="nav-item dropdown">
+                    <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">View</a>
+                    <div class="dropdown-menu">
+                        <a href="/admin/view-contest-payment" class="dropdown-item">View Contest Payment</a>
+                        <a href="/admin/view-contest-level" class="dropdown-item">View Contest Level</a>
+                        <a href="/admin/view-faq" class="dropdown-item">View FAQ</a>
+                        <a href="/admin/view-contest-terms-of-use" class="dropdown-item">View Terms of use</a>
+                        <a href="/admin/view-contest-privacy-policiy" class="dropdown-item">View Privacy Policy</a>      
+                    </div>
+                </div>
+
+
+            
+        </div>
+     <% if(isAdminAuthenticated) { %>
+
+            <form  action="/admin/admin-logout" method="post">
+                <input type="hidden" name="_csrf" value="<%= csrfToken %>">
+                <button class="btn btn-outline-danger nav-item nav-link my-2 my-sm-0 w-100" >Logout</button>
+            </form>
+        <% }%>
+            
+        
+        
+    </div>
+</nav>
+
+
+
+
+
+
+
+
+
+

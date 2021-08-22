@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+    <html lang="en">
+       <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <title>Learn About Variables And Constants In C Programing</title>
+
+        
+        <meta name="Description" content="
+        In here we will learn about Variables And Constants .
+        What is variable ? What is Constant ? What are the Variable Declaration rules ? The ranges of variables
+        Why we use constants and types of constant .
+        " />
+        <meta name="Keywords" content="C Variables, C Constant,Variable Declaration,Rules for Naming variables,Ranges of Data type
+        Local variables,Global variables" />
+        
+        <meta name="author" content="tutorialforbeginner.com">
+        <meta property="og:site_name" content="www.tutorialforbeginner.com" />
+        <meta property="fb:pages" content="340075726591504" />
+        <meta property="fb:pages" content="1524841087795043" />
+        <meta name="viewport" content="width=device-width,initial-scale=1.0,user-scalable=yes">
+        <meta property="og:locale" content="en_US" />
+        <meta property="og:type" content="website" />
+        <link rel="shortcut icon" href="images/ico.jpg" type="image/x-icon" />
+        <link rel="canonical" href="https://tutorialforbeginner.com/variable-and-constant-in-c" />
+
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+        <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+        <style>
+            .navbar-collapse .navbar-nav{float:none;margin:0 auto;text-align:center}img{max-width:100%}#footer{background:#232323;padding:30px 0 0 0;font-size:12px;color:#999}#footer a{color:#ccc}#footer a:hover{color:#fff}#footer h3.widget-title{font-size:15px;font-size:.9375rem;text-transform:uppercase;color:#fff;margin:0 0 20px}#underfooter{background:#191919;padding:15px 0;color:#777;font-size:12px}#underfooter a{color:#aaa}#underfooter a:hover{color:#fff}@media (min-width:1200px){.container{max-width:1080px}}body{overflow-x:hidden}#sidebar-wrapper{min-height:100vh;margin-left:-15rem;-webkit-transition:margin .25s ease-out;-moz-transition:margin .25s ease-out;-o-transition:margin .25s ease-out;transition:margin .25s ease-out}#sidebar-wrapper .sidebar-heading{padding:.875rem 1.25rem;font-size:1.2rem}#sidebar-wrapper .list-group{width:15rem}#page-content-wrapper{min-width:100vw}#wrapper.toggled #sidebar-wrapper{margin-left:0}@media (min-width:768px){#sidebar-wrapper{margin-left:0}#page-content-wrapper{min-width:0;width:100%}#wrapper.toggled #sidebar-wrapper{margin-left:-15rem}}.row.content{height:auto;width:auto}.sidenav{padding-top:20px;background-color:#f1f1f1;height:cover}footer{background-color:#555;color:#fff;padding:15px}@media screen and (max-width:767px){.sidenav{height:auto;padding:15px}.row.content{height:auto}}
+          </style>
+         <script async type="text/javascript" src="js/print/run_prettify.js??autoload=true&amp;skin=sunburst&amp;"></script>
+        
+        <script data-ad-client="ca-pub-9136564254270725" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+
+
+           <!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-148831263-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-148831263-1');
+</script>
+
+
+        
+
+        
+    </head>
+
+
+    
+
+<body >
+    <%- include('../../includes/navigation.ejs') %>
+    
+    
+    <main id="main">
+        
+        <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+        <!-- c-new -->
+        <ins class="adsbygoogle"
+             style="display:block"
+             data-ad-client="ca-pub-9136564254270725"
+             data-ad-slot="7916462357"
+             data-ad-format="auto"
+             data-full-width-responsive="true"></ins>
+        <script>
+             (adsbygoogle = window.adsbygoogle || []).push({});
+        </script>
+            
+            
+            <div class="d-flex" id="wrapper">
+
+                <!-- Sidebar -->
+                <div class="bg-light border-right" id="sidebar-wrapper">
+                  <div class="sidebar-heading">Topics</div>
+                  <div class="list-group list-group-flush">
+                    <% include('../../sitebars/c-sitebar.ejs') %>
+                  </div>
+                </div>
+                <!-- /#sidebar-wrapper -->
+            
+                <!-- Page Content -->
+                <div id="page-content-wrapper">
+            
+                  <nav class="navbar navbar-expand-lg navbar-light bg-light border-bottom ">
+                    <button class="btn btn-primary" id="menu-toggle">Contents</button>
+            
+                  </nav>
+            
+                  <div class="container-fluid">
+                      <div class="row content">
+                          
+                          <div class="col-sm-12 col-lg-9 col-md-8 text-left"> 
+                              <h1 class="bg-dark text-center text-white">Variables And Constants</h1>
+                              <p class=" text-justify text-secondary"><b>
+                                  In here we will learn about Variables And Constants .
+                                What is variable ? What is Constant ? What are the Variable Declaration rules ? The ranges of variables
+                              Why we use constants and types of constant</b> </p>
+
+
+
+                              <p class=" text-justify">
+                                  <b>Variables:</b> A variable is nothing but a name of a memory address that our program
+                                  can manupulate . You can consider as an empty pot that you can put something or some value .
+                                  In C programming, it has different data types that we have learnt previous chapter . In a variable
+                                  which type value you want to place and what is ranges it depends on the data type.In C programming 
+                                  there is some rules to declare and use of the variables. 
+                             </p><br>
+                             <h5>Variable Declaration:</h5>
+<pre class="prettyprint">
+    <code>Data_Type Variable_name;//must give a space between data type and variable name.</code></pre>  
+    
+    <h4>Rules for Naming variables:</h4>
+    <ol>
+      <li><p class="text-justify">
+        Variable names must begin with a letter of the alphabet or an
+         underscore( _ ) but for beginner programmer I will suggest you to 
+         start with alphabet.
+      </p></li>
+      <li><p class="text-justify">
+        After the first initial letter you can use other letters,  numbers etc but you can not have space in a variable name
+      </p></li>
+      <li><p class="text-justify">
+        You can not use same name for different variables.
+      </p></li>
+      <li><p class="text-justify">
+        If you are declare more than one variable of same type must be separate with ","(comma) and must give semicolon(;)
+        end of the line.
+
+      </p></li>
+      <li><p class="text-justify">
+          You can not use the keywords(reserved words)that we shown on previous chapter as a variable name .
+      </p></li>
+      <li><p class="text-justify">
+        We can not duplicate variable name in the same function.
+
+    </p></li>
+    </ol>
+
+    <h6>Let's see an example</h6>
+
+    <pre class="prettyprint">
+      <code>#include&lt;stdio.h&gt;
+      int main()
+      {
+        int a; // declare a single variable
+        int c, d; //declare more than one variable of same data type.
+        float  ad, salary; //declare float type variable
+        double n; //declare double type variable
+        char g; // declare a Charater type variable
+        return 0;
+      }</code></pre>
+
+
+                              <hr><div class="embed-responsive embed-responsive-16by9">
+                                  <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/ukV6341Jk8Q" allowfullscreen></iframe>
+                              </div>
+                            
+                              <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+                              <ins class="adsbygoogle"
+                                   style="display:block; text-align:center;"
+                                   data-ad-layout="in-article"
+                                   data-ad-format="fluid"
+                                   data-ad-client="ca-pub-9136564254270725"
+                                   data-ad-slot="5078546027"></ins>
+                              <script>
+                                   (adsbygoogle = window.adsbygoogle || []).push({});
+                              </script>
+
+
+                              <h4 class="text-center bg-dark text-white">Ranges of Data type</h4>
+                              
+                                <table class="table table-striped table-dark">
+                                    <thead>
+                                      <tr>
+                                        
+                                        <th scope="col">DATA TYPE</th>
+                                        <th scope="col">RANGES</th>
+                                        
+                                        
+                                      </tr>
+                                    </thead>
+                                    <tbody>
+                                      <tr>
+
+                                        
+                                          <th scope="row">short int</th>
+                                        <td>-32,768 to 32,767</td>
+                                    
+                                        
+                                      </tr>
+                                      <tr>
+                                        <th scope="row">unsigned short int</th>
+                                        <td>0 to 65,535</td>
+                                     
+                                      </tr>
+                                      <tr>
+                                        <th scope="row">int</th>
+                                        <td>-2,147,483,648 to 2,147,483,647</td>
+                                      
+                                      </tr>
+                                      <tr>
+                                          <th scope="row">long int</th>
+                                          <td>-2,147,483,648 to 2,147,483,647</td>
+                                          
+                                        </tr>
+                                        <tr>
+                                            <th scope="row">long long int</th>
+                                            <td>-2<sup>63</sup> to 2<sup>63</sup>-1</td>
+                                            
+                                            
+                                          </tr>
+                                          
+                                            <tr>
+                                                <th scope="row">char</th>
+                                                <td>1 Charater</td>
+                                                
+                                                
+                                              </tr>
+                                             
+                                                  <tr>
+                                                      <th scope="row">float</th>
+                                                      <td>-2,147,483,648 to 2,147,483,647</td>
+                                                      
+                                                      
+                                                    </tr>
+                                                    <tr>
+                                                        <th scope="row">double</th>
+                                                        <td>-2<sup>63</sup> to 2<sup>63</sup>-1</td>
+                                                        
+                                                        
+                                                      </tr>
+                                                      
+                                    </tbody>
+                                  </table>
+
+                                  <p class="text-justify">
+                                    There is two types of variables- 
+                                    <ol>
+                                      <li><p class="text-justify"><b>Local variables:</b>If you decalare variable in between a function
+                                        like <code>main()</code>or any other function that is call local variables . You can not
+                                        access the <b>Local variables</b> outside the function where it is declared.</p>
+                                   </li>
+                                      <li><p class="text-justify">
+                                          <b>Global variables:</b>If declare the variable outside of the function that is 
+                                          call global variable.You can access the <b>Global variables</b> from 
+                                        any where of your program.
+                                      </p></li>
+                                    </ol>
+
+                                  </p>
+                                  <h5>For an example:</h5>
+    <pre class="prettyprint">
+    <code>#include&lt;stdio.h&gt;
+    int  a,b,c; //global variables. 
+    int main(){
+      int x,y,z; //local variable
+    return 0;
+   }</code></pre>         
+
+
+
+                                  <p class=" text-justify">
+                                      <p class=" text-justify">
+                                            <b>Constants:</b> The Constants is a fixed value that you can not change using 
+                                            any of operators in your program.It is used to get rid of writing same value over and over again.
+                                            like value of PI 3.14159265358979323846264338327950288 ....... if you need to write 
+                                            same value for several times is very much annoying so instead of that you can declare
+                                            it as a constant. There are two different ways to declare constant and these are - <br><br>
+                                             1.Using <code>#define</code>. <br>
+                                             2.Using <code> const </code> key before declare variables. <br> <b>See the following 
+                                             example: </b> 
+                                          </p><hr>
+ <pre class="prettyprint">
+<code>#include&lt;stdio.h&gt;
+#define PI =  3.14159265358979323 //using define
+int main()
+{
+  const int a = 3.14159265358979323; // using const. Must use ; end of the line 
+  return 0;
+}</code></pre>
+
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- c-ads-1 -->
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-9136564254270725"
+     data-ad-slot="8711842734"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+
+
+                            
+
+
+                              
+ </div>
+                          <div class="col-sm-12 col-lg-3 col-md-4 sidenav">
+                          
+                            <div class="well my-5">
+                                
+                                <details >
+                                    <summary>Best way of learing</summary>
+                                    <p class="text-tustify">
+                                        Self learing is the best learing in the world.
+                                        Discover yourself first then will get what you are And
+                                        what you want to do .It will push you for self learing.
+                                    </p>
+                                  </details>
+                            </div>
+
+                            <div class="well my-5">
+                                
+                                <details >
+                                    <summary>Why you need to learn coding?</summary>
+                                    <p class="text-tustify">
+                                        Coding will play a vital role in one's life . It will help to open 
+                                        a new window of thinking . You can think better way than past . It 
+                                        helps to organise all the thing in better way .
+                                    </p>
+                                  </details>
+                            </div>
+                           
+                            <div class="well sticky-top">
+
+                                <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+                                <!-- h-ad1 -->
+                                <ins class="adsbygoogle"
+                                     style="display:block"
+                                     data-ad-client="ca-pub-9136564254270725"
+                                     data-ad-slot="9841091579"
+                                     data-ad-format="auto"
+                                     data-full-width-responsive="true"></ins>
+                                <script>
+                                     (adsbygoogle = window.adsbygoogle || []).push({});
+                                </script>
+                                    
+                            </div>
+                            
+
+                          </div>
+                        </div>
+                      </div>
+                    
+                </div>
+               
+            
+              </div>
+              
+              <script>
+                $("#menu-toggle").click(function(e) {
+                  e.preventDefault();
+                  $("#wrapper").toggleClass("toggled");
+                });
+              </script>
+            
+        
+    
+    </main>
+
+    
+
+<%- include('../../includes/end.ejs') %>

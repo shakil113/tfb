@@ -1,0 +1,615 @@
+<!DOCTYPE html>
+    <html lang="en">
+       <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <title>Operators In Java | tutorialforbeginner.com</title>
+
+        
+        <meta name="Description" content=" Operators In Java | What are the Operators in Java? | Assignment Operators In Java | Arithmetic Operators In Java | 
+        Relational Operators In Java | Logical Operators In Java | Bitwise Operators In Java | Unary Operators In Java | Ternary Operators In Java" />
+        
+        <meta name="author" content="tutorialforbeginner.com">
+        <meta property="og:site_name" content="www.tutorialforbeginner.com" />
+        <meta property="og:locale" content="en_US" />
+        <meta property="og:type" content="website" />
+        <link rel="shortcut icon" href="images/ico.jpg" type="image/x-icon" />
+        <link rel="canonical" href="https://tutorialforbeginner.com/operators-in-java" />
+        <%- include('../../includes/boostrap-head.ejs') %>
+        <style>
+          .navbar-collapse .navbar-nav{float:none;margin:0 auto;text-align:center}img{max-width:100%}#footer{background:#232323;padding:30px 0 0 0;font-size:12px;color:#999}#footer a{color:#ccc}#footer a:hover{color:#fff}#footer h3.widget-title{font-size:15px;font-size:.9375rem;text-transform:uppercase;color:#fff;margin:0 0 20px}#underfooter{background:#191919;padding:15px 0;color:#777;font-size:12px}#underfooter a{color:#aaa}#underfooter a:hover{color:#fff}@media (min-width:1200px){.container{max-width:1080px}}body{overflow-x:hidden}#sidebar-wrapper{min-height:100vh;margin-left:-15rem;-webkit-transition:margin .25s ease-out;-moz-transition:margin .25s ease-out;-o-transition:margin .25s ease-out;transition:margin .25s ease-out}#sidebar-wrapper .sidebar-heading{padding:.875rem 1.25rem;font-size:1.2rem}#sidebar-wrapper .list-group{width:15rem}#page-content-wrapper{min-width:100vw}#wrapper.toggled #sidebar-wrapper{margin-left:0}@media (min-width:768px){#sidebar-wrapper{margin-left:0}#page-content-wrapper{min-width:0;width:100%}#wrapper.toggled #sidebar-wrapper{margin-left:-15rem}}.row.content{height:auto;width:auto}.sidenav{padding-top:20px;background-color:#f1f1f1;height:100%}footer{background-color:#555;color:#fff;padding:15px}@media screen and (max-width:767px){.sidenav{height:auto;padding:15px}.row.content{height:auto}}
+        </style>
+      
+        <script data-ad-client="ca-pub-9136564254270725" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+        <script async src="js/print/run_prettify.js?lang=css&amp;skin=desert"></script>
+        <!-- Global site tag (gtag.js) - Google Analytics -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=UA-148831263-1"></script>
+        <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'UA-148831263-1');
+        </script>
+
+        
+
+       
+        
+    </head>
+
+
+    
+
+<body >
+    <%-include('../../includes/navigation.ejs') %>
+    
+    
+    <main id="main">
+        
+        <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+        <!-- home-last -->
+        <ins class="adsbygoogle"
+             style="display:block"
+             data-ad-client="ca-pub-9136564254270725"
+             data-ad-slot="7126124861"
+             data-ad-format="auto"
+             data-full-width-responsive="true"></ins>
+        <script>
+             (adsbygoogle = window.adsbygoogle || []).push({});
+        </script>
+        
+            
+            
+            <div class="d-flex w-100" id="wrapper">
+
+                <!-- Sidebar -->
+                <div class="bg-light border-right" id="sidebar-wrapper">
+                    <div class="sidebar-heading bg-success text-center text-white rounded-top border-to"><b>Topics</b></div>
+                    <div class="list-group list-group-flush">
+                        <%- include('../../sitebars/java.ejs') %>
+                    </div>
+                </div>
+                <!-- /#sidebar-wrapper -->
+            
+                <!-- Page Content -->
+                <div id="page-content-wrapper">
+            
+                    <nav class="navbar navbar-expand-lg border-bottom" style="background-color: #375028;">
+                        <button class="btn text-white btn-lg" style="background-color: #521212;" id="menu-toggle">&#x2190;TOPICS</button>
+                
+                      </nav>
+            
+                  <div class="container-fluid">
+                      <div class="row content ">
+                          
+                          <div class="col-sm-12 col-lg-9 col-md-8 text-left w-100"> 
+                              <h1 class="bg-dark text-center text-white">Operators In Java</h1>
+                              <p class="text-justify"><b>
+                               In this page we will learn about  Operators In Java | What are the Operators in Java? | Assignment Operators In Java | Arithmetic Operators In Java | 
+                               Relational Operators In Java | Logical Operators In Java | Bitwise Operators In Java | Unary Operators In Java | Ternary Operators In Java.</b></p><hr>
+
+                              <h2 class="my-3">What are the Operators in Java?</h2>
+     
+                              <p class="text-justify">
+                                Operator in Java is a symbol or a sign which is used for performing operations. For example: -, +, /, * etc.
+ In Java there are many different types of operators which are given below:-
+                              </p>
+                              <ul type="square">                                 
+                                  <li>Assignment Operator</li>
+                                  <li>Arithmetic Operator</li>
+                                  <li>Relational Operator</li>
+                                  <li>Logical Operator</li>
+                                  <li>Bitwise Operator</li>
+                                  <li>Unary Operator</li>
+                                  <li>Ternary Operator</li>
+                                  
+                              </ul>
+
+
+
+
+
+                              <h2 class="mt-4">Assignment Operators In Java :-</h2> 
+                              <p class="mt-3 text-justify"> 
+                                 Assignment <code>=</code> operators are used to assigns the value on its left variable to the right side variable or data. Assignment operators in Java are given below:
+                              </p>
+ 
+                              <div class="table-responsive">
+                                  <table class="table table-bordered">
+                                   
+ 
+                                    <tr class="bg-success font-weight-bold text-white" style="font-size:large;">
+                                        <th>Operator</th>
+                                        <th>Example</th>
+                                        <th>Equal To</th>
+                                        <th>Explain</th>
+                                        
+                                    </tr>
+                                   
+                                 <tr>
+                                     <td class="font-weight-bold">=</td>
+                                     <td class="font-weight-bold"><code>a = b;</code></td>
+                                     <td class="font-weight-bold"><code>a = b;</code></td>
+                                     <td>It takes the value of b and assigns into a.</td>
+                                 </tr>
+                                 <tr>
+                                    <td class="font-weight-bold">+=</td>
+                                    <td class="font-weight-bold"><code>a += b;</code></td>
+                                    <td class="font-weight-bold"><code>a = a + b;</code></td>
+                                    <td>It takes the value of a + b and assigns into a.</td>
+                                </tr>
+
+                                <tr>
+                                    <td class="font-weight-bold">-=</td>
+                                    <td class="font-weight-bold"><code>a -= b;</code></td>
+                                    <td class="font-weight-bold"><code>a = a - b;</code></td>
+                                    <td>It takes the value of a - b and assigns into a.</td>
+                                </tr>
+
+                                <tr>
+                                    <td class="font-weight-bold">*=</td>
+                                    <td class="font-weight-bold"><code>a *= b;</code></td>
+                                    <td class="font-weight-bold"><code>a = a * b;</code></td>
+                                    <td>It takes the value of a * b and assigns into a.</td>
+                                </tr>
+
+                                <tr>
+                                    <td class="font-weight-bold">/=</td>
+                                    <td class="font-weight-bold"><code>a /= b;</code></td>
+                                    <td class="font-weight-bold"><code>a = a / b;</code></td>
+                                    <td>It takes the value of a / b and assigns into a.</td>
+                                </tr>
+
+                                <tr>
+                                    <td class="font-weight-bold">%=</td>
+                                    <td class="font-weight-bold"><code>a %= b;</code></td>
+                                    <td class="font-weight-bold"><code>a = a % b;</code></td>
+                                    <td>It takes the value of a % b and assigns into a.</td>
+                                </tr>
+ 
+                                 
+                                   
+                                  </table>
+                              </div>
+                              <h3>Example:</h3>
+ <pre class="prettyprint">
+ <code>
+    import java.io.*;
+    Class Main{  
+     Public static void main(String args[]){  
+       int a = 12, b = 5;
+       int c = 12, d = 5; 
+
+       a += b;
+       c %= d;  
+
+       System.out.println(a);
+       System.out.println(c);         
+     }
+    }
+ </code>
+ </pre>
+ <h4>Output</h4>
+ <pre class="prettyprint">
+    17
+    2</pre><hr>
+                              <h2 class="mt-5">Arithmetic Operators In Java :-</h2> 
+                              <p class="mt-3 text-justify"> 
+                                Arithmetic operators are used to perform arithmetic operations on two or more variables. Arithmetic operators in Java are given below:
+                              </p>
+
+                              <div class="table-responsive">
+                                  <table class="table table-bordered">
+                                   
+
+                                    <tr class="bg-success font-weight-bold text-white" style="font-size:large;">
+                                        <th>Operator</th>
+                                        <th>Operation</th>
+                                    </tr>
+                                    <tr>
+                                        <td class="font-weight-bold">+</td>
+                                        <td>It adds two or more variables / values one with others.</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="font-weight-bold">-</td>
+                                        <td>It subtracts two or more variables / values on from another</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="font-weight-bold">*</td>
+                                        <td>It multiplies two or more variables / values one with others.</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="font-weight-bold">/</td>
+                                        <td>It division two or more variables / values one by anothers. <br>
+                                            [N:B If you use the division operator with two integers, 
+                                            then the result will also be an integer. And, if atleast one of the operands
+                                            is a floating point number, you will get the result will also be in floating point.
+                                            ]
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="font-weight-bold">%</td>
+                                        <td>Modulo Operation is basically keep the remainder.</td>
+                                    </tr>
+                                  </table>
+                              </div>
+                              <h3>Example:</h3>
+<pre class="prettyprint">
+<code>
+    import java.io.*;
+    Class Main{  
+     Public static void main(String args[]){  
+      int a = 12, b = 5;
+      float c = 12, d = 5;
+      int Addition = a + b; // addition operator
+      int Substract = a - b; // subtraction operator
+      int Multiplication = a * b; // multiplication operator
+      float Division = c / d; // division operator
+      int Modulo = a % b; // modulo operator
+    
+      System.out.println("a + b = "+ Addition);
+      System.out.println("a - b = "+ Substract);
+      System.out.println("a * b = "+ Multiplication);
+      System.out.println("c / d = "+ Division);
+      System.out.println("a % b = "+ Modulo);   
+     }
+    }
+</code>
+</pre>
+<h4>Output</h4>
+<pre class="prettyprint">
+    a + b = 17
+    a - b = 5
+    a * b = 60
+    c / d = 2.4
+    a + b = 2
+</pre><hr>
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- c-new -->
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-9136564254270725"
+     data-ad-slot="7916462357"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+<h2 class="mt-4">Relational Operators In Java :-</h2> 
+<p class="mt-3 text-justify"> 
+    Relational operators are used to check the relationship or comparison between two operands or variables. Relational operators in Java are given below:
+</p>
+
+<div class="table-responsive">
+    <table class="table table-bordered">
+     
+
+      <tr class="bg-success font-weight-bold text-white" style="font-size:large;">
+          <th>Operator</th>
+          <th>Description</th>
+          <th>Example</th>
+         
+          
+      </tr>
+     
+   <tr>
+       <td class="font-weight-bold">==</td>
+       <td class="font-weight-bold">Is Equal To</td>
+       <td>5 == 5 will return true.</td>
+   </tr>
+   <tr>
+    <td class="font-weight-bold">!=</td>
+    <td class="font-weight-bold">Is Not Equal To</td>
+    <td>5 != 4 will return true.</td>
+   </tr>
+   <tr>
+    <td class="font-weight-bold">&gt;</td>
+    <td class="font-weight-bold">Greater Than</td>
+    <td>5 &gt; 4 will return true.</td>
+   </tr>
+   <tr>
+    <td class="font-weight-bold">&lt;</td>
+    <td class="font-weight-bold">Less Than</td>
+    <td>5 &lt; 4 will return false.</td>
+   </tr>
+   <tr>
+    <td class="font-weight-bold">&gt;=</td>
+    <td class="font-weight-bold">Greater Than Equal To</td>
+    <td>5 &gt;= 4 will return true.</td>
+   </tr>
+   <tr>
+    <td class="font-weight-bold">&lt;=</td>
+    <td class="font-weight-bold">Less Than Equal To</td>
+    <td>5 &lt;= 4 will return false.</td>
+   </tr>
+     
+    </table>
+</div>
+<h3>Example:</h3>
+<pre class="prettyprint">
+<code>
+    import java.io.*;
+    Class Main{  
+     Public static void main(String args[]){  
+      int a = 5, b = 4;
+      System.out.println(a == b);
+      System.out.println(a &gt;= b);         
+     }
+    }
+</code>
+</pre>
+<h4>Output</h4>
+<pre class="prettyprint">
+    false
+    true</pre><hr>
+
+   
+    
+    <h2 class="mt-4">Logical Operators In Java :-</h2> 
+<p class="mt-3 text-justify"> 
+    Logical operators are used to check 2 or more expression is true or not. Logical operators in Java are given below:
+</p>
+
+<div class="table-responsive">
+    <table class="table table-bordered">
+     
+
+      <tr class="bg-success font-weight-bold text-white" style="font-size:large;">
+          <th>Operator</th>         
+          <th>Example</th>
+          <th>Description</th>     
+      </tr>
+     
+   <tr>
+       <td class="font-weight-bold">&& (Logical AND)</td>
+       <td class="font-weight-bold">5 &gt; 4 && 9 &gt; 3</td>
+       <td>If both side expression of && (AND) is true, then it returns true.</td>
+   </tr>
+   <tr>
+    <td class="font-weight-bold">|| (Logical OR)</td>
+    <td class="font-weight-bold">5 &gt; 4 || 9 &lt; 3</td>
+    <td>If any one side expression of || (OR) is true, then it returns true.</td>
+   </tr>
+
+   <tr>
+    <td class="font-weight-bold">! (Logical NOT)</td>
+    <td class="font-weight-bold">!expression</td>
+    <td>If expression is true, then it returns false and if expression is false then it returns true and vice versa.</td>
+  </tr>
+   
+    </table>
+</div>
+<h3>Example:</h3>
+<pre class="prettyprint">
+<code>
+  import java.io.*;
+  Class Main{  
+    Public static void main(String args[]){  
+     int a = 5, b = 4, c = 1;
+     System.out.println(a &gt; b && b &gt; c);
+     System.out.println(a &gt; b || b &lt; c);
+     System.out.println( !(a &gt; b) );      
+    }
+ }
+</code>
+</pre>
+<h4>Output</h4>
+<pre class="prettyprint">
+    true
+    true
+    false</pre><hr>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+    <!-- ad-2 -->
+    <ins class="adsbygoogle"
+        style="display:block"
+        data-ad-client="ca-pub-9136564254270725"
+        data-ad-slot="8826219349"
+        data-ad-format="auto"
+        data-full-width-responsive="true"></ins>
+    <script>
+        (adsbygoogle = window.adsbygoogle || []).push({});
+    </script>
+    
+    <h2 class="mt-4">Bitwise Operators In Java :-</h2> 
+<p class="mt-3 text-justify"> 
+    Bitwise operators in Java are used to perform operations on every bits. Bitwise operators in java are: 
+</p>
+
+<div class="table-responsive">
+    <table class="table table-bordered">
+     
+
+      <tr class="bg-success font-weight-bold text-white" style="font-size:large;">
+          <th>Operator</th>                  
+          <th>Description</th>     
+      </tr>
+     
+   <tr>
+       <td class="font-weight-bold">&</td>
+       <td>Bitwise AND</td>
+   </tr>
+   <tr>
+    <td class="font-weight-bold">|</td>
+    <td>Bitwise OR</td>
+</tr>
+<tr>
+    <td class="font-weight-bold">^</td>
+    <td>Bitwise XOR</td>
+</tr>
+<tr>
+    <td class="font-weight-bold">~</td>
+    <td>Bitwise Complement</td>
+</tr>
+<tr>
+    <td class="font-weight-bold">&lt;&lt;</td>
+    <td>Bitwise Left Shift</td>
+</tr>
+<tr>
+    <td class="font-weight-bold">&gt;&gt;</td>
+    <td>Bitwise Right Shift</td>
+</tr>
+<tr>
+    <td class="font-weight-bold">&gt;&gt;&gt;</td>
+    <td>Unsigned Right Shift</td>
+</tr>
+  
+    </table>
+</div><hr>
+
+<h2 class="mt-4">Unary Operators In Java :-</h2> 
+<p class="mt-3 text-justify"> 
+    Unary operators are worked with one variable or operands. Unary operators in Java are given below:
+</p>
+
+<div class="table-responsive">
+    <table class="table table-bordered">
+     
+
+      <tr class="bg-success font-weight-bold text-white" style="font-size:large;">
+          <th>Operator</th>
+          <th>Description</th>           
+          <th>Example</th>
+             
+      </tr>
+     
+   <tr>
+       <td class="font-weight-bold">++</td>
+       <td class="font-weight-bold">Increment Operator </td>
+       <td>If a = 4 then a++ will be 5.</td>
+   </tr>
+   <tr>
+    <td class="font-weight-bold">--</td>
+    <td class="font-weight-bold">Decrement Operator </td>
+    <td>If a = 4 then a-- will be 3.</td>
+   </tr>
+   
+   
+    </table>
+</div>
+<h3>Example:</h3>
+<pre class="prettyprint">
+<code>
+  import java.io.*;
+  Class Main{  
+    Public static void main(String args[]){  
+     int a = 5, b = 4;
+     System.out.println(a++);
+     System.out.println(b--);   
+    }
+ }
+</code>
+</pre>
+<h4>Output</h4>
+<pre class="prettyprint">
+    6
+    3</pre><hr>
+
+    
+    <h2 class="mt-4">Ternary Operators In Java :-</h2> 
+    <p class="mt-3 text-justify"> 
+        Ternary operators is basically a conditional operator and sign is <code>?</code>. For an example:
+    
+    </p>
+<pre class="prettyprint">
+    variable = expression ? value1 : value2;
+</pre>
+    <p class="mt-3 text-justify"> 
+       In the above example if expression is true then value1 will be stored in variable and if expression is false
+       then value2 will be stored in variable.
+    
+    </p>
+    
+    <h3>Example:</h3>
+<pre class="prettyprint">
+<code>
+    import java.io.*;
+    Class Main{  
+     Public static void main(String args[]){  
+        int a = 5, b;
+        b = a &lt; 3 ? 2 : 4
+        System.out.println(b);  
+     }
+    }
+</code>
+</pre>
+    <h4>Output</h4>
+<pre class="prettyprint">
+   4
+</pre><hr>
+    
+
+
+                           
+                             
+                           
+                            
+      
+                           
+         
+         </div>
+                          <div class="col-sm-12 col-lg-3 col-md-4 sidenav">
+                
+
+                            <div class="well my-5">
+                                
+                                <details >
+                                    <summary>Best way of learing</summary>
+                                    <p class="text-tustify">
+                                        Self learing is the best learing in the world.
+                                        Discover yourself first then will get what you are And
+                                        what you want to do .It will push you for self learing.
+                                    </p>
+                                  </details>
+                            </div>
+
+                            <div class="well my-5">
+                                
+                                <details >
+                                    <summary>Why you need to learn coding?</summary>
+                                    <p class="text-tustify">
+                                        Coding will play a vital role in one's life . It will help to open 
+                                        a new window of thinking . You can think better way than past . It 
+                                        helps to organise all the thing in better way .
+                                    </p>
+                                  </details>
+                            </div>
+                           
+                            <div class="well sticky-top">
+                                <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+                                <!-- h-ad1 -->
+                                <ins class="adsbygoogle"
+                                     style="display:block"
+                                     data-ad-client="ca-pub-9136564254270725"
+                                     data-ad-slot="9841091579"
+                                     data-ad-format="auto"
+                                     data-full-width-responsive="true"></ins>
+                                <script>
+                                     (adsbygoogle = window.adsbygoogle || []).push({});
+                                </script>
+                            </div>
+                            
+
+                          </div>
+                        </div>
+                      </div>
+                    
+                </div>
+               
+            
+              </div>
+              
+              <script>
+                $("#menu-toggle").click(function(e) {
+                  e.preventDefault();
+                  $("#wrapper").toggleClass("toggled");
+                });
+              </script>
+            
+        
+    
+    </main>
+
+    
+
+<%- include('../../includes/end.ejs') %>

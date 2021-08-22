@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+    <html lang="en">
+       <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <title>HSC ICT Chapter 2 Part-2: Communication System And Networking</title>
+
+        
+        <meta name="Description" content="
+        In this HSC ICT Chapter 2 Part-2: Communication System And Networking we will
+        learn about What is Data Communication medium ? UTP - Unshielded twisted pair,STP-Shielded twisted pair,Difference between STP and UTP?"
+         />
+         
+        
+        
+        <meta name="author" content="tutorialforbeginner.com">
+        <meta property="og:site_name" content="www.tutorialforbeginner.com" />
+        <meta property="og:locale" content="en_US" />
+        <meta property="og:type" content="website" />
+        <link rel="shortcut icon" href="images/ico.jpg" type="image/x-icon" />
+        <link rel="canonical" href="https://tutorialforbeginner.com/hsc-ict-communication-system-and-networking-part-2"/>
+        
+       
+
+        
+        <%- include('../../includes/boostrap-head.ejs') %>
+        <style>
+            .navbar-collapse .navbar-nav{float:none;margin:0 auto;text-align:center}img{max-width:100%}#footer{background:#232323;padding:30px 0 0 0;font-size:12px;color:#999}#footer a{color:#ccc}#footer a:hover{color:#fff}#footer h3.widget-title{font-size:15px;font-size:.9375rem;text-transform:uppercase;color:#fff;margin:0 0 20px}#underfooter{background:#191919;padding:15px 0;color:#777;font-size:12px}#underfooter a{color:#aaa}#underfooter a:hover{color:#fff}@media (min-width:1200px){.container{max-width:1080px}}body{overflow-x:hidden}#sidebar-wrapper{min-height:100vh;margin-left:-15rem;-webkit-transition:margin .25s ease-out;-moz-transition:margin .25s ease-out;-o-transition:margin .25s ease-out;transition:margin .25s ease-out}#sidebar-wrapper .sidebar-heading{padding:.875rem 1.25rem;font-size:1.2rem}#sidebar-wrapper .list-group{width:15rem}#page-content-wrapper{min-width:100vw}#wrapper.toggled #sidebar-wrapper{margin-left:0}@media (min-width:768px){#sidebar-wrapper{margin-left:0}#page-content-wrapper{min-width:0;width:100%}#wrapper.toggled #sidebar-wrapper{margin-left:-15rem}}.row.content{height:auto;width:auto}.sidenav{padding-top:20px;background-color:#f1f1f1;height:cover}footer{background-color:#555;color:#fff;padding:15px}@media screen and (max-width:767px){.sidenav{height:auto;padding:15px}.row.content{height:auto}}
+          </style>
+        
+        
+
+        
+        
+        <script data-ad-client="ca-pub-9136564254270725" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+
+        
+
+          <!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-148831263-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-148831263-1');
+</script>
+
+
+        
+    </head>
+
+
+    
+
+<body>
+    <%- include('../../includes/navigation.ejs') %>
+    
+    
+    <main id="main">
+        
+            <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+            <!-- ict-ads-4 -->
+            <ins class="adsbygoogle"
+                 style="display:block"
+                 data-ad-client="ca-pub-9136564254270725"
+                 data-ad-slot="9659561509"
+                 data-ad-format="auto"
+                 data-full-width-responsive="true"></ins>
+            <script>
+                 (adsbygoogle = window.adsbygoogle || []).push({});
+            </script>
+        
+            
+                  <div class="d-flex" id="wrapper">
+
+                    <%- include('../../sitebars/ict.ejs') %> 
+          </div>
+       </div>
+                <!-- /#sidebar-wrapper -->
+            
+                <!-- Page Content -->
+                <div id="page-content-wrapper">
+            
+                  <nav class="navbar navbar-expand-lg navbar-light bg-light border-bottom">
+                    <button class="btn btn-primary" id="menu-toggle">Contents</button>
+            
+                  </nav>
+            
+                  <div class="container-fluid">
+                      <div class="row content">
+                          
+                          <div class="col-sm-12 col-lg-9 col-md-8 text-left"> 
+                              <h2 class="bg-dark text-center text-white">HSC ICT Chaper 2 Part-2</h2>
+                   
+                              <h3 class="mt-4 text-center">Communication System And Networking</h3><p class="text-justify text-secondary"><b>
+                                In this HSC ICT Chapter 2 Part-2 : Communication System And Networking we will
+                                learn about What is Data Communication medium ? UTP - Unshielded twisted pair,STP-Shielded twisted pair,Difference between STP and UTP?
+
+                              </b></p><hr>
+                              <h4>৩১. ডেটা কমিউনিকেশন মাধ্যম কাকে বলে?</h4>
+                              <p class="text-justify text-dark">
+                                
+                                উঃ প্রেরকের কম্পিউটারের সাথে প্রাপকের কম্পিউটারের যােগাযােগ করার জন্য যে ট্রান্সমিশন মাধ্যম ব্যবহার করা হয়
+                                তাকে কমিউনিকেশন মাধ্যম বা Channel বা Media বলে। 
+  
+  
+                              </p><hr>
+                              <h4>৩২. ডেটা কমিউনিকেশন মাধ্যম কত প্রকার ও কী কী?
+  
+                              </h4>
+                              <p class="text-justify text-dark">
+                                উঃ ডেটা কমিউনিকেশন মাধ্যম ২ প্রকার যথা-<br> ক) তার মাধ্যম(Wire Media)।<br> খ) তারবিহীন বা বেতার মাধ্যম(Wireless Media) ।<br><br> ক) তার মাধ্যমঃ যে সকল তারের মাধ্যমে একাধিক। ডিভাইসের মধ্যে ডেটা আদান-প্রদান তথা যােগাযােগ করার পদ্ধতিকে তার মাধ্যম বা ওয়্যার কমিউনিকেশন সিস্টেম। বলে। যেমনঃ কো-এক্সিয়াল ক্যাবল, টুইস্টেড পেয়ার ক্যাবল, ফাইবার অপটিক ক্যাবল।<br><br> খ) তারবিহীন মাধ্যমঃ যে সকল ডেটা কোন প্রকার তার | ব্যবহার না করে একাধিক ডিভাইসের মধ্যে ডেটা আদানপ্রদান তথা যােগাযােগ করার পদ্ধতিকে তারবিহীন বা| ওয়্যারলেস কমিউনিকেশন সিস্টেম বলে।। যেমনঃ বেতার তরঙ্গ, মাইক্রোওয়েভ, ইনফ্রারেড, ওয়াই
+                                ফাই, ওয়াইমেক্স ইত্যাদি।
+                                
+                              </p><hr>
+          
+                              
+                              <div class="embed-responsive embed-responsive-16by9">
+                                  <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/bEQ1zW9d7wk" allowfullscreen></iframe>
+                              </div>
+                              <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+                                <!-- ict-ads-3 -->
+                                <ins class="adsbygoogle"
+                                    style="display:block"
+                                    data-ad-client="ca-pub-9136564254270725"
+                                    data-ad-slot="3477296539"
+                                    data-ad-format="auto"
+                                    data-full-width-responsive="true"></ins>
+                                <script>
+                                    (adsbygoogle = window.adsbygoogle || []).push({});
+                                </script>
+                                                            
+                                                
+                            
+                            <h4>৩৩.ক্যাবল মাধ্যম বা Wire Media কত প্রকার ও কী কী?</h4>
+                            <p class="text-justify text-dark">
+                              উঃ ক্যাবল মাধ্যম নেটওয়ার্ক ৩ প্রকার যথাঃ<br> ক) কো-এক্সিয়াল ক্যাবল।<br> খ) টুইস্টেড পেয়ার ক্যাবল।<br> গ) ফাইবার অপটিক ক্যাবল।<br><br> ক) কো-এক্সিয়াল ক্যাবলঃ এটি এক ধরনের তামার তৈরি। তার। এটি অপরিবাহী পদার্থের আবরনে ঢাকা দুটি সুপরিবাহী। পদার্থ দিয়ে তৈরি করা হয়। এ ক্যাবলের কেন্দ্র দিয়ে থাকে একটি সলিড কপার তার এবং তারকে ঘিরে জড়ানাে থাকে প্লাস্টিক ফোমের ইনস্যুলেশন। ইনস্যুলেশন ফোমে চারপাশ। জাল বা নেট আকৃতির তার দ্বারা জড়ানাে থাকে এবং বাইরে। প্লাস্টিকের জ্যাকেট দিয়ে ঢাকা থাকে। এটি ১ কি.মি. পর্যন্ত দূরত্বের ডিজিটাল ডেটা প্রেরন করে ।এর ডেটা ট্রান্সফার রেট 200Mbps পর্যন্ত হতে পারে।<br><br> খ) টুইস্টেড পেয়ার ক্যাবলঃ এ ক্যাবলে দুইটি কপার তার থাকে এবং তার দুইটিকে পৃথক রাখার জন্য মধ্যখানে অপরিবাহী পদার্থ ব্যবহার করা হয়। অর্থাৎ একজোড়া। পরিবাহী তারকে পরস্পরের সাথে পেঁচিয়ে এই ক্যাবল তৈরি করা হয়।
+                              এটি ওয়ার্ল্ড ওয়াইড ডেটা প্রেরন করতে পারে। এর ডেটা ট্রান্সফার রেট 1Gbps পর্যন্ত হতে পারে।<br><br> গ) ফাইবার অপটিক ক্যাবলঃ ফাইবার অপটিক ক্যাবল হলাে আলােকরশ্মি পরিবাহী স্বচ্ছ তার যা সিলিকা ও মাল্টিকম্পােনেন্ট কাচ দিয়ে তৈরি। এই ক্যাবলে সবচেয়ে গুরত্বপূর্ন বৈশিষ্ট্য হলাে লাইট সিগন্যাল ট্রান্সমিট করা।
+                              এটি 1Gbps এর চাইতে বেশি রেটে ডেটা পাঠাতে পারে।
+
+                            </p><hr>
+                            <h4>৩৪. কো-এক্সিয়াল ক্যাবল কত প্রকার ও কী কী?
+                            </h4>
+                            <p class="text-justify text-dark">
+                              উঃ কো-এক্সিয়াল ক্যাবল ২ প্রকার যথাঃ<br>ক) থিন নেট (Thin net)<br>
+                              খ) থিক নেট (Thick net)
+                              
+
+                            </p><hr>
+                            <h4>৩৫.টুইস্টেড পেয়ার ক্যাবল কত প্রকার ও কী কী?
+                            </h4>
+                            <p class="text-justify text-dark">
+                              উঃ টুইস্টেড পেয়ার ক্যাবল ২ প্রকার যথাঃ<br> ক) আবরনহীণ টুইস্টেড পেয়ার ক্যাবল
+                              (UTP - Unshielded twisted pair) <br>খ) আরনযুক্ত টুইস্টেড পেয়ার ক্যাবল
+                              (STP-Shielded twisted pair) 
+                              </p><hr>
+                            <h4>৩৬. থিকনেট ও থিননেট এর মধ্যে পার্থক্য লিখ?
+                            </h4>
+
+                                <table class="table table-bordered">
+                                    <thead>
+                                      <tr>
+                                        <th scope="col">থিকনেট (Thik net)</th>
+                                        <th scope="col">থিন নেট (Thin net)</th>
+                                        
+                                        
+                                      </tr>
+                                    </thead>
+                                    <tbody>
+                                      <tr>
+                                     
+                                        <td> ১। থিন কো-এক্সিয়াল ক্যাবল ব্যবহার করে যে নেটওয়ার্ক গড়ে উঠে তাকে থিকনেট
+                                          বলে।
+                                         </td>
+                                        <td> ১। থিক কো-এক্সিয়াল ক্যাবল। ব্যবহার করে যে নেটওয়ার্ক গড়ে উঠে তাকে থিননেট বলে।
+                                          </td>
+                                      </tr>    
+                                          
+                                      <tr>
+                                            <td> ২। থিন কো-এক্সিয়াল ক্যাবলের ব্যাস ০.২৫ ইঞ্চি। </td>
+                                            <td>২। থিক কো-এক্সিয়াল। ক্যাবলের ব্যাস ০.৫ ইঞ্চি। 
+                                            </td>
+                                            
+                                      </tr>
+                                      <tr>
+                                          <td>  ৩। কোনাে প্রকার রিপিটার ছাড়া এটি ১৮৫ মিটার পর্যন্ত ব্যবহার করা যায়। </td>
+                                          <td>৩। কোনাে প্রকার রিপিটার ছাড়া এটি ৫০০ মিটার পর্যন্ত ব্যবহার করা যায়। </td>
+                                          </tr>
+                                      <tr>
+                                          <td>৪। এ ধরনের নেটওয়ার্ককে ১০ বেজ ২ নেটওয়ার্কও বলা হয়।
+
+                                          </td>
+                                          <td>৪। এ ধরনের নেটওয়ার্ককে  ১০ বেজ ৫ নেটওয়ার্কও বলা হয়।
+
+
+      
+                                          </td>
+                                            
+                                      </tr>
+                                      
+                                    
+                               
+                                    </tbody>
+                                  </table> 
+                              
+                            <hr>
+                            <h4>37. Difference between STP and UTP?</h4>
+
+                            <table class="table table-bordered">
+                              <thead>
+                                <tr>
+                                  <th scope="col">UTP</th>
+                                  <th scope="col">STP</th>
+                                  
+                                  
+                                </tr>
+                              </thead>
+                              <tbody>
+                                <tr>
+                               
+                                  <td> ১। UTP ক্যাবল কোনাে অতিরিক্ত শিল্ডিং বা আবরন থাকে না।
+
+                                   </td>
+                                  <td> ১। STP ক্যাবলের প্রতিটি প্যাচানাে জোড়া তার একটি করে শক্ত শিল্ড বা আবরনের ভেতরে থাকে।</td>
+                                </tr>    
+                                    
+                                <tr>
+                                      <td>  ২। UTP তেমন সুরক্ষিত না।
+                                      </td>
+                                      <td>২। STP শক্ত ও অনেক সুরক্ষিত। </td>
+                                      
+                                </tr>
+                                <tr>
+                                    <td>৩। UTP ক্যাবলের ব্যান্ড। উইডথ সাধারনত 10Mbps</td>
+                                    <td>৩। STP ক্যাবলের ব্যান্ড উইডথ সাধারনত 16Mbps 
+                                    </td>
+                                    </tr>
+                                <tr>
+                                    <td>৪।এতে ইলেকট্রোম্যাগনেটিক। ইন্টারফারেন্স প্রভাব খুব বেশি।</td>
+                                    <td>৪। এর বড় সুবিধা হলাে ইলেকট্রোম্যাগনেটিক ইন্টারফারেন্স প্রভাব হ্রাস পায়।
+                                    </td>
+                                      
+                                </tr>
+                                
+                              
+                         
+                              </tbody>
+                            </table> 
+                        
+                            <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<ins class="adsbygoogle"
+     style="display:block; text-align:center;"
+     data-ad-layout="in-article"
+     data-ad-format="fluid"
+     data-ad-client="ca-pub-9136564254270725"
+     data-ad-slot="2687298352"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+
+                           
+                            <h4>৩৮.অপটিক্যাল ফাইবার ক্যাবল কে কত সালে আবিস্কার করেন?
+
+                              </h4>
+                            <p class="text-justify text-dark">
+                              উঃ 1940 সালে পদার্থবিদ Daniel Collodon ও Jacones Babinet ফাইবারে ভিতরে আলাের পূর্ন
+                              অভ্যন্তরীণ হয় তা আবিস্কার করেন।
+                              </p><hr>
+                            <h4>৩৯. অপটিক্যাল ফাইবার ক্যাবল কয়টি অংশ?
+                            </h4>
+                            <p class="text-justify text-dark">
+                              উঃ অপটিক্যাল ফাইবার ক্যাবল ৩টি অংশ যথাঃ<br> ক) কোর (Core) ।<br> খ) ক্ল্যাডিং (Cladding) ।<br>
+                              গ) জ্যাকেট (Jacket) ।
+                              </p><hr>
+                            <h4>৪০. অপটিক্যাল ফাইবার ক্যাবল কত প্রকার ও কী কী?
+
+                              </h4>
+                            <p class="text-justify text-dark">
+                             
+                              উঃ অপটিক্যাল ফাইবার ক্যাবল ৩ প্রকার যথাঃ<br> ক) স্টেপ ইন্ডেক্স (Step Index) ।<br> খ) গ্রেডেড ইন্ডেক্স (Graded Index) ।<br>
+                              গ) মনােমােড ফাইবার (Monomode Fiber) ।
+                              
+                            </p>
+                            <hr>
+                            <h4>৪১. প্রত্যেকটি ক্যাবলের বৈশিষ্ট্য লিখ
+
+                              </h4>
+                            <p class="text-justify text-dark">
+                              উঃ কো-এক্সিয়াল ক্যাবল:<br> ক) সহজে স্থাপন করা যায়।<br>  খ) অধিক নিরাপদ। <br> গ) দামে কম।<br>  ঘ) অধিক দূরত্বে ডেটা প্রেরন।<br>  ঙ) অধিক গতিতে ডেটা প্রেরন।<br> <br>  টুইস্টেড পেয়ার ক্যাবলঃ<br>  ক) কম দূরত্বে যােগাযােগ ক্যাবল স্থাপনে ব্যবহৃত হয়।<br>  খ) সহজে স্থাপন করা যায়।<br> 
+                              গ) অ্যানালগ ও ডিজিটাল উভয় ডেটা প্রেরন করে।<br> ঘ) এতে রিপিটারের প্রয়ােজন হয়।<br> ঙ) নয়েজ সিগন্যাল দ্বারা প্রভাবিত হয়।<br><br> ফাইবার অপটিক ক্যাবলঃ <br>ক) এটি আলােক রশ্মি দ্বারা সিগন্যাল ট্রান্সমিট করে ।<br> খ) নেটওয়ার্কের ব্যাকবােন হিসেবে ফাইবার ক্যাবল ব্যবহৃত হয়। <br>গ) এতে Gbps রেঞ্জ বা তার বেশি গতিতে ডেটা চলাচল করতে পারে।<br> ঘ) ডেটা সংরক্ষনের নিরাপত্তা ও গােপনীয়তা অনেক বেশি।
+                              <br>ঙ) শক্তি কম ক্ষয় হয়।
+                            </p>
+                            
+              
+              
+
+                            
+
+
+                           
+                     </div>
+                          <div class="col-sm-12 col-lg-3 col-md-4 sidenav">
+                              
+                        
+                            <div class="well my-5">
+                                
+                                <details >
+                                    <summary>Best way of learing</summary>
+                                    <p class="text-tustify">
+                                        Self learing is the best learing in the world.
+                                        Discover yourself first then will get what you are And
+                                        what you want to do .It will push you for self learing.
+                                    </p>
+                                  </details>
+                            </div>
+
+                           
+                            <div class="well my-5">
+                                
+                                <details >
+                                    <summary>Why you need to learn coding?</summary>
+                                    <p class="text-tustify">
+                                        Coding will play a vital role in one's life . It will help to open 
+                                        a new window of thinking . You can think better way than past . It 
+                                        helps to organise all the thing in better way .
+                                    </p>
+                                  </details>
+                            </div>
+                            <div class="well mt-5 sticky-top">
+                                    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+                                    <!-- ict-verticle-1 -->
+                                    <ins class="adsbygoogle"
+                                         style="display:block"
+                                         data-ad-client="ca-pub-9136564254270725"
+                                         data-ad-slot="1200802774"
+                                         data-ad-format="auto"
+                                         data-full-width-responsive="true"></ins>
+                                    <script>
+                                         (adsbygoogle = window.adsbygoogle || []).push({});
+                                    </script>
+                                
+                             </div>
+
+                          </div>
+                        </div>
+                      </div>
+                    
+                </div>
+               
+            
+              </div>
+              
+              <script>
+                $("#menu-toggle").click(function(e) {
+                  e.preventDefault();
+                  $("#wrapper").toggleClass("toggled");
+                });
+              </script>
+            
+        
+    
+    </main>
+
+    
+
+<%- include('../../includes/end.ejs') %>

@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+    <html lang="en">
+       <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <title>Create Accountant</title>
+
+        <meta name="author" content="tutorialforbeginner.com">
+        <meta property="og:site_name" content="www.tutorialforbeginner.com" />
+        <meta property="og:locale" content="en_US" />
+        <meta property="og:type" content="website" />
+        <link rel="shortcut icon" href="../images/ico.jpg" type="image/x-icon" />
+       
+        <%- include('../includes/boostrap-head.ejs') %>  
+         <style>
+            .navbar-collapse .navbar-nav{float:none;margin:0 auto;text-align:center}img{max-width:100%}#footer{background:#232323;padding:30px 0 0 0;font-size:12px;color:#999}#footer a{color:#ccc}#footer a:hover{color:#fff}#footer h3.widget-title{font-size:15px;font-size:.9375rem;text-transform:uppercase;color:#fff;margin:0 0 20px}#underfooter{background:#191919;padding:15px 0;color:#777;font-size:12px}#underfooter a{color:#aaa}#underfooter a:hover{color:#fff}@media (min-width:1200px){.container{max-width:1080px}}body{overflow-x:hidden}#sidebar-wrapper{min-height:100vh;margin-left:-15rem;-webkit-transition:margin .25s ease-out;-moz-transition:margin .25s ease-out;-o-transition:margin .25s ease-out;transition:margin .25s ease-out}#sidebar-wrapper .sidebar-heading{padding:.875rem 1.25rem;font-size:1.2rem}#sidebar-wrapper .list-group{width:15rem}#page-content-wrapper{min-width:100vw}#wrapper.toggled #sidebar-wrapper{margin-left:0}@media (min-width:768px){#sidebar-wrapper{margin-left:0}#page-content-wrapper{min-width:0;width:100%}#wrapper.toggled #sidebar-wrapper{margin-left:-15rem}}.row.content{height:auto;width:auto}.sidenav{padding-top:20px;background-color:#f1f1f1;height:cover}footer{background-color:#555;color:#fff;padding:15px}@media screen and (max-width:767px){.sidenav{height:auto;padding:15px}.row.content{height:auto}}
+           
+          
+          </style>
+
+        
+    </head>
+
+
+    
+
+  <body  style="background:  rgb(12, 40, 71)(to right, #0062E6, #33AEFF);">
+    <%- include('../includes/adminNav.ejs') %>  
+    <main id="main">
+        
+      <div class="container">
+        <div class="row">
+            <div class="col-sm-9 col-md-7 col-lg-5 mx-auto">
+              <div class="card card-signin my-5">
+                <div class="card-body" >
+                  <h5 class="card-title text-center text-white p-2 " style="background-color: rgb(16, 53, 95);border-radius:3rem;">Create Accountant</h5>
+                  <form action="/admin/create-accountant" method="POST">
+
+
+                    <div class=" mt-2">
+                    <label for="username">Username</label> 
+                      <input type="text" id="username" class="form-control" name="username" placeholder="Username" required >
+                     
+                    </div>
+                    
+                    <div class=" mt-2">
+                        <label for="phoneNumber">Phone Number</label> 
+                          <input type="text" id="phoneNumber" class="form-control" name="phoneNumber" placeholder="Phone Number" required>
+                         
+                     </div>
+                       
+                    <div>
+                        <label for="inputPassword">Password</label>
+                      <input type="password" id="inputPassword" name="password" class="form-control" placeholder="Password" required>
+                    
+                    </div>
+
+                   
+                    <input type="hidden" name="_csrf" value="<%= csrfToken %>">
+                    <button class="btn  btn-primary btn-block text-uppercase   mt-2" type="submit">Create</button>
+                
+                
+                  </form>
+                  
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+    </main>
+
+<%- include('../includes/end.ejs') %>
+
+   
+    
+                              
+
+
+    
+

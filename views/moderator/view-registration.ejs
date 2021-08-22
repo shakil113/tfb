@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+    <html lang="en">
+       <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <title>View All Registration</title>
+
+        <meta name="author" content="tutorialforbeginner.com">
+        <meta property="og:site_name" content="www.tutorialforbeginner.com" />
+        <meta property="og:locale" content="en_US" />
+        <meta property="og:type" content="website" />
+        <link rel="shortcut icon" href="../../images/ico.jpg" type="image/x-icon" />
+        <%- include('../includes/boostrap-head.ejs') %>
+        <style>
+            .navbar-collapse .navbar-nav{float:none;margin:0 auto;text-align:center}img{max-width:100%}#footer{background:#232323;padding:30px 0 0 0;font-size:12px;color:#999}#footer a{color:#ccc}#footer a:hover{color:#fff}#footer h3.widget-title{font-size:15px;font-size:.9375rem;text-transform:uppercase;color:#fff;margin:0 0 20px}#underfooter{background:#191919;padding:15px 0;color:#777;font-size:12px}#underfooter a{color:#aaa}#underfooter a:hover{color:#fff}@media (min-width:1200px){.container{max-width:1080px}}body{overflow-x:hidden}#sidebar-wrapper{min-height:100vh;margin-left:-15rem;-webkit-transition:margin .25s ease-out;-moz-transition:margin .25s ease-out;-o-transition:margin .25s ease-out;transition:margin .25s ease-out}#sidebar-wrapper .sidebar-heading{padding:.875rem 1.25rem;font-size:1.2rem}#sidebar-wrapper .list-group{width:15rem}#page-content-wrapper{min-width:100vw}#wrapper.toggled #sidebar-wrapper{margin-left:0}@media (min-width:768px){#sidebar-wrapper{margin-left:0}#page-content-wrapper{min-width:0;width:100%}#wrapper.toggled #sidebar-wrapper{margin-left:-15rem}}.row.content{height:auto;width:auto}.sidenav{padding-top:20px;background-color:#f1f1f1;height:cover}footer{background-color:#555;color:#fff;padding:15px}@media screen and (max-width:767px){.sidenav{height:auto;padding:15px}.row.content{height:auto}}
+          </style>
+
+        
+    </head>
+
+
+    
+
+  <body class="bg-light">
+    <%- include('../includes/moderatorNav.ejs') %>  
+    <main id="main">
+        
+     
+
+      
+          
+          <div class="mx-2">
+            <hr class="mb-2 bg-dark" ><h4 class="mb-3 text-center text-white p-3" style="background-color: darkblue;"><i>All Contest </i></h4><hr>
+            
+                <table class="table table-bordered table-hover text-center">
+
+                  <tr class="bg-dark text-white">
+                    <th>#No.</th>                    
+                    <th>#PaymentMethod</th>
+                    <th>#PaymentNumber</th>
+                    <th>#TransactionId</th>
+                    <th>#PaymentStatus</th>
+                    <th>#CheckPayment</th>
+                  
+                   
+                   
+                    
+                  </tr>
+                  <% if(registration.length >0) {  %>
+                    <% for(let user of registration) { %>
+                  <tr class="table-success">
+                    <td><b><%=user.id %></b></td>
+                    <td><b><%=user.paymentMethod%></b></td>
+                    
+                    <td><b><%=user.paymentNumber%></b></td>
+                    <td><b><%=user.transcationId%></b></td>
+                    <td>
+                      <button class=" btn <% if (user.paymentStatus === true) { %> btn-success<% } else { %>btn-primary<% } %>" type="button" ><% if (user.paymentStatus	=== true) { %>Completed<% } else { %>Not Cleared<% } %></button>
+                    </td>
+                    
+                   
+                   
+                   
+
+
+                    <td>
+                      <form action="/moderator/update-contest" method="POST">
+
+                        <div class="form-row align-items-center">
+                          <select class="custom-select d-block" name="contestStatus" id="contestId" required>
+                            <option value="">Choose...</option>
+                           
+                            <option value="0">Payment Clear</option>
+                            <option value="1">Not clear</option>
+                          
+                            
+                          
+                          </select>
+                          
+                          </div>
+                         
+                        
+                          <input type="hidden" name="_csrf" value="<%= csrfToken %>">
+                         
+                          <div class="col-auto">
+                            <button type="submit" class="btn btn-primary mt-2">Submit</button>
+                          </div>
+                       
+
+                        
+                       
+                      </form>
+                       
+                     
+                   
+                   
+                   
+                  </tr>
+                  <% } %>
+                  <% } %>
+                </table>
+
+
+              
+            
+              
+          </div>
+       
+       
+    </main>
+
+<%- include('../includes/end.ejs') %>
+
+   
+    
+                              
+
+
+    
+

@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+    <html lang="en">
+       <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <title>View All Contests</title>
+
+        <meta name="author" content="tutorialforbeginner.com">
+        <meta property="og:site_name" content="www.tutorialforbeginner.com" />
+       
+        <meta property="og:locale" content="en_US" />
+        <meta property="og:type" content="website" />
+        <link rel="shortcut icon" href="../images/ico.jpg" type="image/x-icon" />
+        <%- include('../includes/boostrap-head.ejs') %> 
+        <style>
+            .navbar-collapse .navbar-nav{float:none;margin:0 auto;text-align:center}img{max-width:100%}#footer{background:#232323;padding:30px 0 0 0;font-size:12px;color:#999}#footer a{color:#ccc}#footer a:hover{color:#fff}#footer h3.widget-title{font-size:15px;font-size:.9375rem;text-transform:uppercase;color:#fff;margin:0 0 20px}#underfooter{background:#191919;padding:15px 0;color:#777;font-size:12px}#underfooter a{color:#aaa}#underfooter a:hover{color:#fff}@media (min-width:1200px){.container{max-width:1080px}}body{overflow-x:hidden}#sidebar-wrapper{min-height:100vh;margin-left:-15rem;-webkit-transition:margin .25s ease-out;-moz-transition:margin .25s ease-out;-o-transition:margin .25s ease-out;transition:margin .25s ease-out}#sidebar-wrapper .sidebar-heading{padding:.875rem 1.25rem;font-size:1.2rem}#sidebar-wrapper .list-group{width:15rem}#page-content-wrapper{min-width:100vw}#wrapper.toggled #sidebar-wrapper{margin-left:0}@media (min-width:768px){#sidebar-wrapper{margin-left:0}#page-content-wrapper{min-width:0;width:100%}#wrapper.toggled #sidebar-wrapper{margin-left:-15rem}}.row.content{height:auto;width:auto}.sidenav{padding-top:20px;background-color:#f1f1f1;height:cover}footer{background-color:#555;color:#fff;padding:15px}@media screen and (max-width:767px){.sidenav{height:auto;padding:15px}.row.content{height:auto}}
+          </style>
+
+        
+    </head>
+
+
+    
+
+  <body class="bg-light">
+    <%- include('../includes/moderatorNav.ejs') %>  
+    <main id="main">
+        
+     
+
+      
+          
+          <div class="mx-2">
+            <hr class="mb-2 bg-dark table-responsive" ><h4 class="mb-3 text-center text-white p-3" style="background-color: darkblue;"><i>All Contest </i></h4><hr>
+            
+                <table class="table table-bordered table-hover text-center">
+
+                  <tr class="bg-dark text-white">
+                    <th>#No.</th>
+                    <th>#Name</th>                    
+                    <th>#RegiEnd</th>
+                    <th>#CtEnd</th>
+                    
+                   
+                    <th>#Status</th>
+                    <th>#ChangetStatus</th>
+                    <th>#QSet</th>
+
+                    <th>#Total</th>
+                   
+                  </tr><% var i = 0%>
+                  <% if(allContest.length >0) {  %>
+                    <% for( contest of allContest) { %>
+                  <tr class="table-success">
+                    <td><b><%=i+1 %></b></td>
+                    <td><b><%=contest.contestName%></b></td>
+                    
+                    <td><b><span id="c<%=contest.id%>"></span></b></td>
+                    <td><b><span id="ctend<%=contest.id%>"></span></b></td>
+                    <td>
+                      
+                      <button class="btn  <% if (contest.contestStatus===2) { %>btn-primary<% } else if (contest.contestStatus===0) { %>btn-danger<% } else { %>btn-success<% } %>" type="button" ><% if (contest.contestStatus===2) { %>Upcoming<% }else if (contest.contestStatus===0) { %>Completed<% } else { %>Running<% } %></button>
+                     
+                    </td>
+
+
+                    <td>
+                      <form action="/moderator/update-contest" method="POST">
+
+                        <div class="form-row align-items-center">
+                          <select class="custom-select d-block" name="contestStatus" id="contestId" required>
+                            <option value="">Choose...</option>
+                           
+                            <option value="0">Completed</option>
+                            <option value="1">Running</option>
+                            <option value="2">Upcoming</option>
+                            
+                          
+                          </select>
+                          
+                          </div>
+                         
+                          <input type="hidden" name="contestId" value="<%=contest.id %>">
+                          <input type="hidden" name="_csrf" value="<%= csrfToken %>">
+                         
+                          <div class="col-auto">
+                            <button type="submit" class="btn btn-primary mt-2">Submit</button>
+                          </div>
+                       
+
+                        
+                       
+                      </form>
+                       
+                     
+                    </td>
+                    <td>
+                      <div class="col-auto">
+                            <a href="/moderator/set-question/<%=contest.id%>" class="btn btn-primary mt-2 <% if (allContest[i].questionSetStatus	=== true) { %>disabled btn-danger<% } else { %>btn-primary<% } %>" type="button" ><% if (allContest[i].questionSetStatus	=== true) { %>Done<% } else { %>Set<% } %></a>
+                          </div>
+ 
+                     
+                    </td>
+                    <td><b><%=totalRegistered[i]%> User</b> </td>
+                   
+                   
+                   
+                  </tr>
+
+                  <script>
+                          var time = setInterval(() => {
+
+                            var dest = new Date('<%=contest.contestDate %>T24:00:00').getTime();
+                            var now = new Date().getTime();      
+                            var diff = (dest - now)-86400000;
+
+
+                            var days = Math.floor(diff/(1000*24*3600));
+                            var hours = Math.floor((diff%(1000*24*3600))/(1000*3600));
+                            var minutes = Math.floor((diff%(1000*3600))/(1000*60));
+                            var seconds = Math.floor((diff%(1000*60))/(1000));
+                          
+                         
+                          document.getElementById("c<%=contest.id%>%>").innerHTML = days +"D : "+hours+"H : "+ minutes+"M : "+seconds+"S";
+                                           
+
+                        
+                          },1000);
+
+                          var Endtime = setInterval(() => {
+
+                            var dest = new Date('<%=contest.contestDate %>T<%=contest.contestTime %>').getTime();
+                            var now = new Date().getTime();      
+                            var diff = (dest - now) ;
+                          
+                            var days = Math.floor(diff/(1000*24*3600));
+                            var hours = Math.floor((diff%(1000*24*3600))/(1000*3600));
+                            var minutes = Math.floor((diff%(1000*3600))/(1000*60));
+                            var seconds = Math.floor((diff%(1000*60))/(1000));
+
+
+                            document.getElementById("ctend<%=contest.id%>%>").innerHTML = days +"D : "+hours+"H : "+ minutes+"M : "+seconds+"S";
+                                          
+
+
+                            },1000);
+
+                                           
+                                            
+                                        
+                  </script>
+                  <% i++;} %>
+                  <% } %>
+                </table>
+
+
+              
+            
+              
+          </div>
+       
+       
+    </main>
+
+<%- include('../includes/end.ejs') %>
+
+   
+    
+                              
+
+
+    
+

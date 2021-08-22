@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+    <html lang="en">
+       <head>
+          <meta charset="utf-8">
+          <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+          <title>Switch Case In Java | tutorialforbeginner.com</title>
+
+          <meta name="Description" content="Switch Case In Java | What is Switch Case In Java? | Switch Case Syntax in Java | What is Switch Case In Java? | 
+          Switch Case Example with int in Java | Switch Case Example with char in Java | Switch Case is fall-through In Java | Nested switch case systax in Java | Nested Switch Case Example In Java. " />
+           
+          <meta name="author" content="tutorialforbeginner.com">
+          <meta property="og:site_name" content="www.tutorialforbeginner.com" />
+          <meta property="og:locale" content="en_US" />
+          <meta property="og:type" content="website" />
+          <link rel="shortcut icon" href="images/ico.jpg" type="image/x-icon" />
+          <link rel="canonical" href="https://tutorialforbeginner.com/switch-case-in-java" />
+          <%- include('../../includes/boostrap-head.ejs') %>
+          <style>
+              .navbar-collapse .navbar-nav{float:none;margin:0 auto;text-align:center}img{max-width:100%}#footer{background:#232323;padding:30px 0 0 0;font-size:12px;color:#999}#footer a{color:#ccc}#footer a:hover{color:#fff}#footer h3.widget-title{font-size:15px;font-size:.9375rem;text-transform:uppercase;color:#fff;margin:0 0 20px}#underfooter{background:#191919;padding:15px 0;color:#777;font-size:12px}#underfooter a{color:#aaa}#underfooter a:hover{color:#fff}@media (min-width:1200px){.container{max-width:1080px}}body{overflow-x:hidden}#sidebar-wrapper{min-height:100vh;margin-left:-15rem;-webkit-transition:margin .25s ease-out;-moz-transition:margin .25s ease-out;-o-transition:margin .25s ease-out;transition:margin .25s ease-out}#sidebar-wrapper .sidebar-heading{padding:.875rem 1.25rem;font-size:1.2rem}#sidebar-wrapper .list-group{width:15rem}#page-content-wrapper{min-width:100vw}#wrapper.toggled #sidebar-wrapper{margin-left:0}@media (min-width:768px){#sidebar-wrapper{margin-left:0}#page-content-wrapper{min-width:0;width:100%}#wrapper.toggled #sidebar-wrapper{margin-left:-15rem}}.row.content{height:auto;width:auto}.sidenav{padding-top:20px;background-color:#f1f1f1;height:100%}footer{background-color:#555;color:#fff;padding:15px}@media screen and (max-width:767px){.sidenav{height:auto;padding:15px}.row.content{height:auto}}
+          </style>
+
+          <script data-ad-client="ca-pub-9136564254270725" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+          <script async src="js/print/run_prettify.js?lang=css&amp;skin=desert"></script>
+            <!-- Global site tag (gtag.js) - Google Analytics -->
+          <script async src="https://www.googletagmanager.com/gtag/js?id=UA-148831263-1"></script>
+          <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+
+            gtag('config', 'UA-148831263-1');
+          </script>
+      
+        </head>
+
+
+    
+
+<body>
+    <%- include('../../includes/navigation.ejs') %>
+    
+    
+    <main id="main">
+        
+        <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+        <!-- home-last -->
+        <ins class="adsbygoogle"
+             style="display:block"
+             data-ad-client="ca-pub-9136564254270725"
+             data-ad-slot="7126124861"
+             data-ad-format="auto"
+             data-full-width-responsive="true"></ins>
+        <script>
+             (adsbygoogle = window.adsbygoogle || []).push({});
+        </script>
+        
+            
+            
+            <div class="d-flex w-100" id="wrapper">
+
+                <!-- Sidebar -->
+                <div class="bg-light border-right" id="sidebar-wrapper">
+                    <div class="sidebar-heading bg-success text-center text-white rounded-top border-to"><b>Topics</b></div>
+                    <div class="list-group list-group-flush">
+                        <%- include('../../sitebars/java.ejs') %>
+                    </div>
+                </div>
+                <!-- /#sidebar-wrapper -->
+            
+                <!-- Page Content -->
+                <div id="page-content-wrapper">
+            
+                    <nav class="navbar navbar-expand-lg border-bottom" style="background-color: #375028;">
+                        <button class="btn text-white btn-lg" style="background-color: #521212;" id="menu-toggle">&#x2190;TOPICS</button>
+                
+                      </nav>
+            
+                  <div class="container-fluid">
+                      <div class="row content ">
+                          
+                          <div class="col-sm-12 col-lg-9 col-md-8 text-left w-100"> 
+                              <h1 class="bg-dark text-center text-white">Switch Case In Java</h1>
+                              <p class="text-justify"><b>
+                               In this page, We will learn about Switch Case In Java | What is Switch Case In Java? | Switch Case Syntax in Java | What is Switch Case In Java? | 
+                               Switch Case Example with int in Java | Switch Case Example with char in Java | Switch Case is fall-through In Java | Nested switch case systax in Java | Nested Switch Case Example In Java</b></p><hr>
+
+                              <h2 class="my-3">What is Switch Case In Java?</h2>
+
+                               
+                            <p class="text-justify">
+                                The Java switch case statement conducts one statement from multiplex agreements. It is like if-else-if ladder assertion. The switch case statement pursuits with byte, short, int, long, enum types, String and few wrapper types like Byte, Short, Int, and Long. Since Java 7, you’ll be able to use strings in the switch statement. <br><br>
+                                In another words, the switch case statement tests the equilibrium of a variable opposed to multiple values.
+                             </p>
+
+                             <h2>Points to keep in mind:</h2>
+                              <ul class="font-weight-bold" type="square">
+                                  <li>There be able one or N number of case values for a switch manifestation.</li> 
+                                  <li>The case value need to be switch manifestation type only. The case value must be verbal or constant. It doesn't allow changeable.</li>
+                                  <li>The case values must be unique. In case of similar value, it provides compile-time error.</li>
+                                  <li>The Java switch manifestation must be of byte, short, int, long (with its Wrapper type), enums and string.</li>
+                                  <li>Every case statement be able to break statement which is optional. When control touches to the break statement, it jumps the control after the switch manifestation. If a break statement is not found, it performs the next case.</li>
+                                  <li>The case value can have a default label which is elective.</li>
+                              </ul>
+                              <hr>
+
+                              <h2 class="mt-4">Switch Case Syntax in Java :-</h2>
+                              
+                          
+
+<pre class="prettyprint">
+<code>
+  switch(expression){    
+    case value1:    
+        //code to be executed;    
+        break;  //optional  
+    case value2:    
+        //code to be executed;    
+        break;  //optional	    
+    default:  
+        //if all cases are not matched;   
+    }           
+</code>
+</pre>
+<div class="text-center my-3">
+    <img src="images/tutorial/switch.png" alt="Switch CaseIn java">
+  </div>
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+  <!-- ad-2 -->
+  <ins class="adsbygoogle"
+  style="display:block"
+  data-ad-client="ca-pub-9136564254270725"
+  data-ad-slot="8826219349"
+  data-ad-format="auto"
+  data-full-width-responsive="true"></ins>
+  <script>
+  (adsbygoogle = window.adsbygoogle || []).push({});
+  </script>
+<h3>Switch Case Example with int in Java :-</h3>
+<pre class="prettyprint">
+<code>
+  import java.io.*;
+  public class Example {    
+    public static void main(String[] args) {     
+       int month = 2;    
+         
+       switch(month){     
+         case 1: System.out.println("First Month");   
+                 break;    
+         case 2: System.out.println("Second Month");   
+                 break;    
+         default:System.out.println("Invalid Month!");    
+       }    
+    
+    }    
+  }   
+</code>
+</pre> 
+<h4>Output:</h4>
+<pre class="prettyprint"><code>
+   Second Month
+</code>
+</pre><hr>
+<h3>Switch Case Example with char in Java :-</h3>
+<pre class="prettyprint">
+<code>
+  import java.io.*;
+  public class Example {    
+    public static void main(String[] args) {     
+       char letter = 'a';    
+         
+       switch(letter){     
+         case 'a': System.out.println("This is a");   
+                   break;    
+         case 'b': System.out.println("This is b");   
+                   break;    
+         default:System.out.println("Invalid!");    
+       }    
+    
+    }    
+  }   
+</code>
+</pre> 
+<h4>Output:</h4>
+<pre class="prettyprint"><code>
+    This is a
+</code>
+</pre><hr>
+
+
+
+
+<h2 class="mt-4">Switch Case is fall-through In Java :-</h2>
+<p class="text-justify">
+    The Java switch statement is fall-through. It suggests that it executes all statements after the primary match when a break statement is not at hand.
+</p>
+<h3>Example :-</h3>
+
+
+
+<pre class="prettyprint">
+<code>
+ import java.io.*;
+ public class Main {
+   public static void main(String args[]){
+    int age = 1;
+    switch(age){     
+        case 1: System.out.println("1 Year");   
+                break;    
+        case 2: System.out.println("2 Years");   
+                break;    
+        default:System.out.println("Invalid Age!");    
+      }  
+   }
+ }
+</code></pre> 
+<h4>Output:</h4>
+<pre class="prettyprint"><code>
+   1 Year
+   2 Years
+   Invalid Age!
+</code>
+</pre><hr>
+
+<h2>Nested switch case systax in Java :-</h2>
+<pre class="prettyprint">
+<code>
+  switch(expression){    
+    case value1:    
+        //code to be executed;    
+        break; 
+    case value2:    
+        //Nested Switch Case  
+        switch(expression2){
+            case value1:    
+            //code to be executed;    
+            break;  //optional
+            default:  
+            //if all cases are not matched;   
+        }
+
+        
+        break;  //optional	    
+        default:  
+            //if all cases are not matched;   
+  }     
+</code>
+</pre>
+
+
+<h3>Nested Switch Case Example In Java:-</h3>
+<pre class="prettyprint">
+<code>
+ import java.io.*;
+ public class Main {
+   public static void main(String args[]){
+    int age = 1;
+    int month = 2;
+    switch(age){     
+        case 1: switch(month){
+                    case 1: 
+                        System.out.println("Age 1, Month 1");   
+                        break;
+                    case 2: 
+                        System.out.println("Age 1, Month 2");   
+                        break;
+                    default:
+                        System.out.println("Invalid age,Month!");
+                }  
+                break;    
+        case 2: System.out.println("2 Years");   
+                break;    
+        default:System.out.println("Invalid Age!");    
+      }
+   }
+ }
+</code></pre> 
+<h4>Output:</h4>
+<pre class="prettyprint"><code>
+  Age 1, Month 2
+</code>
+</pre><hr>
+
+
+
+
+                  
+                            
+                     </div>
+                          <div class="col-sm-12 col-lg-3 col-md-4 sidenav">
+                
+
+                            <div class="well my-5">
+                                
+                                <details >
+                                    <summary>Best way of learing</summary>
+                                    <p class="text-tustify">
+                                        Self learing is the best learing in the world.
+                                        Discover yourself first then will get what you are And
+                                        what you want to do .It will push you for self learing.
+                                    </p>
+                                  </details>
+                            </div>
+
+                            <div class="well my-5">
+                                
+                                <details >
+                                    <summary>Why you need to learn coding?</summary>
+                                    <p class="text-tustify">
+                                        Coding will play a vital role in one's life . It will help to open 
+                                        a new window of thinking . You can think better way than past . It 
+                                        helps to organise all the thing in better way .
+                                    </p>
+                                  </details>
+                            </div>
+                           
+                            <div class="well sticky-top">
+                                <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+                                <!-- h-ad1 -->
+                                <ins class="adsbygoogle"
+                                     style="display:block"
+                                     data-ad-client="ca-pub-9136564254270725"
+                                     data-ad-slot="9841091579"
+                                     data-ad-format="auto"
+                                     data-full-width-responsive="true"></ins>
+                                <script>
+                                     (adsbygoogle = window.adsbygoogle || []).push({});
+                                </script>
+                            </div>
+                            
+
+                          </div>
+                        </div>
+                      </div>
+                    
+                </div>
+               
+            
+              </div>
+              
+              <script>
+                $("#menu-toggle").click(function(e) {
+                  e.preventDefault();
+                  $("#wrapper").toggleClass("toggled");
+                });
+              </script>
+            
+        
+    
+    </main>
+
+    
+
+<%- include('../../includes/end.ejs') %>

@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+    <html lang="en">
+       <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <title>Runnining Contest</title>
+
+        
+        <meta name="Description" content=" In this page you can know about the running contest. You can also know about how many contest 
+        are running.
+        " />
+        
+        <meta name="author" content="tutorialforbeginner.com">
+        <meta property="og:site_name" content="www.tutorialforbeginner.com" />
+        <meta property="og:locale" content="en_US" />
+        <meta property="og:type" content="website" />
+        <link rel="shortcut icon" href="images/ico.jpg" type="image/x-icon" />
+        <link rel="canonical" href="https://tutorialforbeginner.com/running-contest" />
+        <%- include('../includes/boostrap-head.ejs') %>
+        
+        <style>
+            .navbar-collapse .navbar-nav{float:none;margin:0 auto;text-align:center}img{max-width:100%}#footer{background:#232323;padding:30px 0 0 0;font-size:12px;color:#999}#footer a{color:#ccc}#footer a:hover{color:#fff}#footer h3.widget-title{font-size:15px;font-size:.9375rem;text-transform:uppercase;color:#fff;margin:0 0 20px}#underfooter{background:#191919;padding:15px 0;color:#777;font-size:12px}#underfooter a{color:#aaa}#underfooter a:hover{color:#fff}@media (min-width:1200px){.container{max-width:1080px}}body{overflow-x:hidden}#sidebar-wrapper{min-height:100vh;margin-left:-15rem;-webkit-transition:margin .25s ease-out;-moz-transition:margin .25s ease-out;-o-transition:margin .25s ease-out;transition:margin .25s ease-out}#sidebar-wrapper .sidebar-heading{padding:.875rem 1.25rem;font-size:1.2rem}#sidebar-wrapper .list-group{width:15rem}#page-content-wrapper{min-width:100vw}#wrapper.toggled #sidebar-wrapper{margin-left:0}@media (min-width:768px){#sidebar-wrapper{margin-left:0}#page-content-wrapper{min-width:0;width:100%}#wrapper.toggled #sidebar-wrapper{margin-left:-15rem}}.row.content{height:auto;width:auto}.sidenav{padding-top:20px;background-color:#f1f1f1;height:cover}footer{background-color:#555;color:#fff;padding:15px}@media screen and (max-width:767px){.sidenav{height:auto;padding:15px}.row.content{height:auto}}
+          </style>
+      
+            <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-148831263-1"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'UA-148831263-1');
+  </script>       
+</head>
+
+
+    
+
+<body  >
+    <%- include('../includes/navigation.ejs') %>
+    
+    
+    <main id="main">
+        
+     
+            <div class="d-flex" id="wrapper">
+
+                <!-- Sidebar -->
+                <div class="bg-light border-right" id="sidebar-wrapper">
+                  <div class="sidebar-heading bg-success text-white text-center"><b>Topic Menu</b> </div>
+                  <div class="list-group list-group-flush ">
+
+                    <%- include('../sitebars/online-quiz-contest-sitebar.ejs') %> 
+                     
+                  </div>
+                </div>
+                <!-- /#sidebar-wrapper -->
+            
+                <!-- Page Content -->
+                <div id="page-content-wrapper">
+            
+                  <nav class="navbar navbar-expand-lg border-bottom" style="background-color: #375028;">
+                    <button class="btn text-white btn-lg" style="background-color: #521212;" id="menu-toggle">&#x2190;QUIZ MENU</button>
+            
+                  </nav>
+            
+                  <div class="container-fluid ">
+                      <div class="row content">
+                        <div class="col-sm-12 col-lg-9 col-md-8 text-left"> 
+ 
+                              <h3 class="bg-success text-center text-white py-2 mt-2"><marquee behavior="alternate" direction="right">Running Contest</marquee> </h3>
+
+                              <%if(message ==='failed'){%>
+                                <div class="bg-danger text-center text-white py-2 rounded-top rounded-bottom" id="s">
+                                  <h4>You are not registered!</h4>
+                               </div>
+                              <%}%>
+                              
+                              <div class="row my-4" >
+
+                                <% if(runningContest.length >0) {  %>
+
+                                  
+                                  <% for(let contest of runningContest) { %>
+
+                                <div class="col-lg-4  col-md-4 portfolio-item mb-5" id="card">
+                                  
+                                  <div class="card  h-100 text-white "  style="background-color: #19582a">
+                                    <button class=" btn  <% if (contest.contestType === false) { %>btn-primary<% } else { %>btn-warning<% } %>"><b><% if (contest.contestType === false) { %>FREE<% } else { %>PAID<% } %></b></button>
+                                    <h5 class="mt-2 bg-dark text-center " style="border-radius: 10px 10px 10px 10px; height: 80px; background: linear-gradient(#870000 ,#3a7bd5,#502424 );padding-top: 10px;" ><b>TIME LEFT TO START</b></h5>
+                                    <h5 class="mt-2 bg-dark text-center " id="<%=contest.id %>" style="border-radius: 10px 10px 10px 10px; height: 80px; background: linear-gradient(#870000 ,#3a7bd5 );padding-top: 10px;" ></h5>
+                                     <div class=" m-2 font-weight-bold detail p-2"   style="background-color:#db51a6; height: 100%;border-radius: 40px 2px 70px 10px;">
+                                       <h5 class="mt-4 bg-success text-left p-2 " style="border-radius: 2px 2px 2px 2px;" ><%=contest.contestName %> </h5>
+
+                                              <div class="px-5 d-flex justify-content-center ">
+                                                <a href="/enter-contest/<%=contest.id %>"  class="btn bg-dark font-weight-bold mt-4 <% if (contest.contestType===0) { %>disbled<% } else { %>btn-outline-success<% } %>">Enter</a>
+                                              </div>                                      
+                                        
+                                     
+                                          <script>
+                                            
+                                            var time = setInterval(() => {
+
+                                              var dest = new Date('<%=contest.contestDate %>T<%=contest.contestTime %>').getTime();
+                                              var current = new Date().toLocaleString("en-US", { timeZone: "Asia/Dhaka", timeZoneName: "short", hourCycle: "h24" }).split(' ');
+                                              var currentDate = current[0].split(',')[0];
+                                              var currentTime = current[1];                           
+                                              var now = new Date(currentDate+' '+currentTime).getTime();
+                                              var diff = (dest - now);
+                                              var hours = Math.floor((diff%(1000*24*3600))/(1000*3600));
+                                              if(hours<0){hours +=1;}
+                                              var minutes = Math.floor((diff%(1000*3600))/(1000*60));
+                                              if(minutes<0){minutes +=1;}
+                                              var seconds = Math.floor((diff%(1000*60))/(1000));
+
+                                              document.getElementById("<%=contest.id %>").innerHTML = hours+"H : "+ minutes+"M : "+seconds+"S";
+
+                                            },1000);
+                                          </script>
+                                       
+                                     </div>
+                         
+                                  </div>
+                                </div>
+
+                                <% } %>
+                                <% } else { %> 
+                                 
+                                 <h2 class="text-center text-danger">No contest found!</h2>
+                                  
+                              <% } %> 
+                                
+               </div>
+
+                            
+                           
+</div>
+                          <div class="col-sm-12 col-lg-3 col-md-4 sidenav">
+                          
+                            <div class="well my-5">
+                                
+                              <details >
+                                  <summary>আসুন ......</summary>
+                                  <p class="text-tustify">
+                                    দূর্নীতিকে না বলি ,<br> সোনার বাংলাদেশ গড়ি ।
+                                  </p>
+                                </details>
+                          </div>
+
+                          <div class="well my-5">
+                              
+                              <details >
+                                <summary>আসুন ......</summary>
+                                <p class="text-tustify">
+                                   নিজেকে বদলাই তাহলে ,<br> সমাজ আপনা আপনি বদলে যাবে ।
+                                </p>
+                                </details> 
+                          </div>
+                         
+                           
+                           
+
+                          </div>
+                        </div>
+                      </div>
+                    
+                </div>
+               
+            
+              </div>
+              
+              <script>
+                $("#menu-toggle").click(function(e) {
+                  e.preventDefault();
+                  $("#wrapper").toggleClass("toggled");
+                });
+              </script>
+
+
+            
+
+
+    
+    
+    </main>
+
+    
+
+<%- include('../includes/end.ejs') %>

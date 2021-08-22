@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+    <html lang="en">
+       <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <title><%=user.fullname%></title>
+        
+        <meta name="author" content="tutorialforbeginner.com">
+        <meta property="og:site_name" content="www.tutorialforbeginner.com" />
+        
+        <meta property="og:locale" content="en_US" />
+        <meta property="og:type" content="website" />
+        <link rel="shortcut icon" href="../images/ico.jpg" type="image/x-icon" />
+
+        <%- include('../includes/boostrap-head.ejs') %>
+          <style>
+            .navbar-collapse .navbar-nav{float:none;margin:0 auto;text-align:center}img{max-width:100%}#footer{background:#232323;padding:30px 0 0 0;font-size:12px;color:#999}#footer a{color:#ccc}#footer a:hover{color:#fff}#footer h3.widget-title{font-size:15px;font-size:.9375rem;text-transform:uppercase;color:#fff;margin:0 0 20px}#underfooter{background:#191919;padding:15px 0;color:#777;font-size:12px}#underfooter a{color:#aaa}#underfooter a:hover{color:#fff}@media (min-width:1200px){.container{max-width:1080px}}body{overflow-x:hidden}#sidebar-wrapper{min-height:100vh;margin-left:-15rem;-webkit-transition:margin .25s ease-out;-moz-transition:margin .25s ease-out;-o-transition:margin .25s ease-out;transition:margin .25s ease-out}#sidebar-wrapper .sidebar-heading{padding:.875rem 1.25rem;font-size:1.2rem}#sidebar-wrapper .list-group{width:15rem}#page-content-wrapper{min-width:100vw}#wrapper.toggled #sidebar-wrapper{margin-left:0}@media (min-width:768px){#sidebar-wrapper{margin-left:0}#page-content-wrapper{min-width:0;width:100%}#wrapper.toggled #sidebar-wrapper{margin-left:-15rem}}.row.content{height:auto;width:auto}.sidenav{padding-top:20px;background-color:#f1f1f1;height:cover}footer{background-color:#555;color:#fff;padding:15px}@media screen and (max-width:767px){.sidenav{height:auto;padding:15px}.row.content{height:auto}}
+            .user-card-full{overflow:hidden}.card{border-radius:5px;-webkit-box-shadow:0 1px 20px 0 rgba(69,90,100,.08);box-shadow:0 1px 20px 0 rgba(69,90,100,.08);border:none;margin-bottom:30px}.m-r-0{margin-right:0}.m-l-0{margin-left:0}.user-card-full .user-profile{border-radius:5px 0 0 5px}.bg-c-lite-green{background:-webkit-gradient(linear,left top,right top,from(#f29263),to(#ee5a6f));background:linear-gradient(to right,#ee5a6f,#f29263)}.user-profile{padding:20px 0}.card-block{padding:1.25rem}.m-b-25{margin-bottom:25px}.img-radius{border-radius:5px}h6{font-size:14px}.card .card-block p{line-height:25px}@media only screen and (min-width:1400px){p{font-size:14px}}.card-block{padding:1.25rem}.b-b-default{border-bottom:1px solid #e0e0e0}.m-b-20{margin-bottom:20px}.p-b-5{padding-bottom:5px!important}.card .card-block p{line-height:25px}.m-b-10{margin-bottom:10px}.text-muted{color:#919aa3!important}.b-b-default{border-bottom:1px solid #e0e0e0}.f-w-600{font-weight:600}.m-b-20{margin-bottom:20px}.m-t-40{margin-top:20px}.p-b-5{padding-bottom:5px!important}.m-b-10{margin-bottom:10px}.m-t-40{margin-top:20px}.user-card-full .social-link li{display:inline-block}.user-card-full .social-link li a{font-size:20px;margin:0 10px 0 0;-webkit-transition:all .3s ease-in-out;transition:all .3s ease-in-out}
+         
+         
+            #level_img{
+                height: 120px;
+                width: 120px;
+            }
+          </style>
+     
+    </head>
+
+
+    
+
+<body >
+    <%- include('../includes/navigation.ejs') %>
+    
+    
+    <main id="main">
+        
+      
+        
+            
+            
+            <div class="d-flex w-100" id="wrapper">
+
+                <!-- Sidebar -->
+                  <div class="bg-light border-right" id="sidebar-wrapper">
+                    <div class="sidebar-heading bg-success text-center text-white rounded-top border-top "><b>Check Out</b></div>
+                    <div class="list-group list-group-flush mt-5">
+                      <%- include('../sitebars/user-menu.ejs') %>
+                    </div>
+                  </div>
+                <!-- /#sidebar-wrapper -->
+            
+                <!-- Page Content -->
+                <div id="page-content-wrapper">
+            
+                  <nav class="navbar navbar-expand-lg border-bottom" style="background-color: #375028;">
+                    <button  class="btn text-white btn-lg" style="background-color: #521212;" id="menu-toggle"><b>&#x2190;MENU</b></button>
+            
+                  </nav>
+            
+                  <div class="container-fluid">
+                      <div class="row content ">
+                     
+                         
+  
+                        <div class="card user-card-full w-100">
+                          <div class="row m-l-0 m-r-0">
+                              <div class="col-sm-4 bg-c-lite-green user-profile">
+                                  <div class="card-block text-center text-white">
+                                      <div class="m-b-25"> <img src="images/contest/level0.png" id="level_img" class="img-radius" alt="User-Profile-Image"> </div>
+                                      <h5 class="f-w-600"><%=user.firstname%> <%=user.lastname%></h5>
+                                      <h6 class="f-w-600"><%=user.studentType%> Student</h6>
+                                      <h5 class="f-w-600"><strong>#Current Point: <% if(userDetail){ %><%=userDetail.currentPoint%><% } else { %>0<% } %></strong></h5>
+                                   
+                                        <h5 class="f-w-600 mt-5"><strong>#Your Roll No.</strong></h5>
+                                        <h6 class="f-w-600 mt-2"><b><%=user.roll%></b></h6>
+                                       
+                                       
+                                  </div>
+                              </div>
+                              <div class="col-sm-8">
+                                  <div class="card-block">
+                                      <h4 class="m-b-20 p-b-5 b-b-default f-w-600 ">General Information</h4>
+                                      <div class="row">
+                                          <div class="col-sm-6">
+                                              <p class="m-b-10 f-w-600">Gender</p>
+                                              <h6 class="text-muted f-w-400"><%=user.gender%></h6>
+                                          </div>
+                                          <div class="col-sm-6">
+                                              <p class="m-b-10 f-w-600">Date Of Birth</p>
+                                              <h6 class="text-muted f-w-400"><%=user.dateofBirth%></h6>
+                                          </div>
+                                          <div class="col-sm-6">
+                                            <p class="m-b-10 f-w-600">Phone</p>
+                                            <h6 class="text-muted f-w-400"><%=user.phoneNumber%></h6>
+                                          </div>
+                                          <div class="col-sm-6">
+                                                <p class="m-b-10 f-w-600">Email</p>
+                                                <h6 class="text-muted f-w-400"><%=user.mail%></h6>
+                                         </div>
+                                        
+                                        </div>
+
+                                      <h4 class="m-b-20 m-t-40 p-b-5 b-b-default f-w-600">Academic Information</h4>
+                                      <div class="row">
+                                          <div class="col-sm-6">
+                                              <p class="m-b-10 f-w-600">SSC Registration No.</p>
+                                              <h6 class="text-muted f-w-400"><%=user.sscRegiNo%></h6>
+                                          </div>
+                                          <div class="col-sm-6">
+                                              <p class="m-b-10 f-w-600">SSC Roll No.</p>
+                                              <h6 class="text-muted f-w-400"><%=user.sscRollNo%></h6>
+                                          </div>
+                                          <div class="col-sm-6">
+                                            <p class="m-b-10 f-w-600">SSC Passing Year</p>
+                                            <h6 class="text-muted f-w-400"><%=user.sscPassingYear%></h6>
+                                          </div>
+                                          <div class="col-sm-6">
+                                            <p class="m-b-10 f-w-600">Education Board</p>
+                                            <h6 class="text-muted f-w-400"><%=user.division%></h6>
+                                          </div>
+                                      </div>
+                                     
+                                      <h4 class="m-b-20 m-t-40 p-b-5 b-b-default f-w-600">Additional Information</h4>
+                                      <%if(userDetail){%>
+                                      <div class="row">
+                                          <div class="col-sm-6">
+                                              <p class="m-b-10 f-w-600">Payout Method</p>
+                                              <h6 class="text-muted f-w-400"><%=userDetail.payoutMethod%></h6>
+                                          </div>
+                                          <div class="col-sm-6">
+                                              <p class="m-b-10 f-w-600">Payout Number</p>
+                                              <h6 class="text-muted f-w-400"><%=userDetail.payoutNumber%></h6>
+                                          </div>
+                                          <div class="col-sm-6">
+                                            <p class="m-b-10 f-w-600">Present Address</p>
+                                            <h6 class="text-muted f-w-400"><%=userDetail.presentAddress%></h6>
+                                          </div>
+                                          <div class="col-sm-6">
+                                            <p class="m-b-10 f-w-600">Courier Address</p>
+                                            <h6 class="text-muted f-w-400"><%=userDetail.courierAddress%></h6>
+                                          </div>
+                                          <div class="col-sm-6">
+                                            <p class="m-b-10 f-w-600">T-Shirt Size</p>
+                                            <h6 class="text-muted f-w-400"><%=userDetail.tshirtSize%></h6>
+                                          </div>
+                                          
+                                      </div>
+                                     <%}%> 
+                                  </div>
+                              </div>
+                          </div>
+                      </div>
+                              
+                        
+                      				
+                              
+  
+    
+                         
+                     </div>
+               
+            
+
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+
+</div>
+              
+              <script>
+                $("#menu-toggle").click(function(e) {
+                  e.preventDefault();
+                  $("#wrapper").toggleClass("toggled");
+                });
+              </script>
+            
+        
+    
+    </main>
+
+    
+
+<%- include('../includes/end.ejs') %>

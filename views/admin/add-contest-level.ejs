@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+    <html lang="en">
+       <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <title>Add Contest Level</title>
+
+        <meta name="author" content="tutorialforbeginner.com">
+        <meta property="og:site_name" content="www.tutorialforbeginner.com" />
+       
+        <meta property="og:locale" content="en_US" />
+        <meta property="og:type" content="website" />
+        <link rel="shortcut icon" href="../images/ico.jpg" type="image/x-icon" />
+        <%- include('../includes/boostrap-head.ejs') %> 
+        <style>
+            .navbar-collapse .navbar-nav{float:none;margin:0 auto;text-align:center}img{max-width:100%}#footer{background:#232323;padding:30px 0 0 0;font-size:12px;color:#999}#footer a{color:#ccc}#footer a:hover{color:#fff}#footer h3.widget-title{font-size:15px;font-size:.9375rem;text-transform:uppercase;color:#fff;margin:0 0 20px}#underfooter{background:#191919;padding:15px 0;color:#777;font-size:12px}#underfooter a{color:#aaa}#underfooter a:hover{color:#fff}@media (min-width:1200px){.container{max-width:1080px}}body{overflow-x:hidden}#sidebar-wrapper{min-height:100vh;margin-left:-15rem;-webkit-transition:margin .25s ease-out;-moz-transition:margin .25s ease-out;-o-transition:margin .25s ease-out;transition:margin .25s ease-out}#sidebar-wrapper .sidebar-heading{padding:.875rem 1.25rem;font-size:1.2rem}#sidebar-wrapper .list-group{width:15rem}#page-content-wrapper{min-width:100vw}#wrapper.toggled #sidebar-wrapper{margin-left:0}@media (min-width:768px){#sidebar-wrapper{margin-left:0}#page-content-wrapper{min-width:0;width:100%}#wrapper.toggled #sidebar-wrapper{margin-left:-15rem}}.row.content{height:auto;width:auto}.sidenav{padding-top:20px;background-color:#f1f1f1;height:cover}footer{background-color:#555;color:#fff;padding:15px}@media screen and (max-width:767px){.sidenav{height:auto;padding:15px}.row.content{height:auto}}
+          </style>
+
+        
+    </head>
+
+
+    
+
+  <body style=" background: linear-gradient(to bottom,#163a37, #051613); ">
+    <%- include('../includes/adminNav.ejs') %>  
+    <main id="main" class="px-4 text-white">
+
+    
+
+          <hr class="mb-2 bg-dark" ><h3 class="mb-3 text-center text-white p-3" style="background-color: darkblue;"><i>Add Contest Payment</i></h3><hr>
+         
+            <form action="/admin/add-contest-level" method="POST">
+              
+              <div class="form-row mb-4">
+                    <div class="col-md-2 mb-3">
+                        <label for="Position">Position</label>
+                        <input type="number" class="form-control" id="Position" name="position" placeholder="Position" required>
+                        
+                    </div>
+
+                    <div class="col-md-2 mb-3">
+                        <label for="from10to1k">From 10 to 1k</label>
+                        <input type="number" class="form-control" id="from10to1k" name="from10to1k" placeholder="From 10 to 1k" required>
+                        
+                    </div> 
+
+                    <div class="col-md-2 mb-3">
+                        <label for="from1kto4k">From 1k to 4k</label>
+                        <input type="number" class="form-control" id="from1kto4k" name="from1kto4k" placeholder="From 1k to 4k" required>
+                        
+                    </div>
+
+                    <div class="col-md-2 mb-3">
+                        <label for="from5kto9k">From 5k to 9k</label>
+                        <input type="number" class="form-control" id="from5kto9k" name="from5kto9k" placeholder="From 5k to 9k" required>
+                        
+                    </div>
+
+                    <div class="col-md-2 mb-3">
+                        <label for="from10kto20k">From 10k to 20k</label>
+                        <input type="number" class="form-control" id="from10kto20k" name="from10kto20k" placeholder="From 5k to 9k" required>
+                        
+                    </div>
+
+                    <div class="col-md-2 mb-3">
+                        <label for="from20k">From 20k </label>
+                        <input type="number" class="form-control" id="from20k" name="from20k" placeholder="From 20k to ..." required>
+                        
+                    </div>
+                
+              </div>
+
+              
+
+
+                <input type="hidden" name="_csrf" value="<%= csrfToken %>">
+                <div class="d-flex justify-content-center mb-3">
+                    <button class="btn btn-lg btn-primary "  type="submit">Add</button>
+                </div>
+             
+            </form>
+            
+            
+           
+           
+           
+        
+
+
+                
+
+
+              
+              
+           
+  
+
+
+       
+    </main>
+
+<%- include('../includes/end.ejs') %>
+
+   
+    
+                              
+
+
+    
+

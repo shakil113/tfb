@@ -1,0 +1,101 @@
+
+	
+	<nav class="navbar navbar-expand-lg navbar-dark bg-dark text-uppercase" >
+			<a href="/"><img src="../../images/logo.svg" alt="Tutorial For Beginner" style="height: 60px;"></a>
+			<button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
+				<span class="navbar-toggler-icon"></span>
+			</button>
+	
+			<div class="collapse navbar-collapse justify-content-between" id="navbarCollapse">
+				<div class="navbar-nav ">
+					<a href="/home" class="nav-item nav-link ">Home</a>
+					<div class="nav-item dropdown">
+							<a href="#" class="nav-link  dropdown-toggle" data-toggle="dropdown">HSC</a>
+							<div class="dropdown-menu">
+								<a href="/hsc-ict-tutorial" class="dropdown-item">HSC ICT Tutorial</a>
+							
+								<a href="/hsc-final-suggestion" class="dropdown-item">HSC Final Suggestion</a>
+							
+							</div>
+				    </div>
+					<div class="nav-item dropdown">
+						<a href="#" class="nav-link  dropdown-toggle" data-toggle="dropdown">Job Preperation</a>
+						<div class="dropdown-menu">
+							<a href="/hsc-ict-tutorial" class="dropdown-item">BCS</a>
+						
+							<a href="/hsc-final-suggestion" class="dropdown-item">Bank Job</a>
+						
+						</div>
+					</div>
+					<div class="nav-item dropdown">
+						<a href="#" class="nav-link  dropdown-toggle" data-toggle="dropdown">Tutorials</a>
+						<div class="dropdown-menu">
+							<a href="/grammar-of-ielts" class="dropdown-item">IELTS GRAMMAR</a>
+						
+							
+						
+						</div>
+					</div>
+
+					
+					
+					
+					
+					<div class="nav-item dropdown">
+							<a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Programming</a>
+							<div class="dropdown-menu">
+								<a href="/how-to-become-a-good-programmer" class="dropdown-item">Beginners Guidline</a>
+								<a href="/c-programming" class="dropdown-item">C Programming</a>
+								<a href="/java-programming-tutorial" class="dropdown-item">Java Programming</a>
+								
+							</div>
+					</div>
+
+					
+					<div class="nav-item dropdown mr-2">
+						<a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Freelancing</a>
+						<div class="dropdown-menu">
+							<a href="/how-to-start-online-earning" class="dropdown-item">Online Earn</a>
+							<a href="/interview-questions-and-answer" class="dropdown-item">Interview Questions & Ans</a>	
+
+						</div>
+					 </div>
+
+	
+				
+			</div>
+
+			<div class="nav-item dropdown">
+				<a href="#" class="nav-link dropdown-toggle btn btn-outline-warning text-white my-2 mr-sm-2" data-toggle="dropdown"><b>MCQ Test</b> </a>
+				<div class="dropdown-menu">
+					<a href="/online-quiz-contest" class="btn btn-outline-warning nav-item nav-link text-dark mb-2  "><b>Practice</b></a>
+					<a href="/online-quiz-contest" class="btn btn-outline-warning nav-item nav-link text-dark "><b>Contest</b></a>
+					
+				</div>
+			 </div>
+		 <% if(!isAuthenticated) { %>
+			
+				<a class="btn btn-outline-success nav-item nav-link mr-sm-2 my-2" href="/login" >Login</a>
+				<a class="btn btn-outline-primary nav-item nav-link my-2 mr-sm-2" href="/signup" >Sign Up</a>
+				<%  } else {%>
+				<a class=" btn btn-outline-success nav-item nav-link my-2 mr-sm-2" href="/profile" >Profile</a>
+				<form action="/logout" method="post">
+					<input type="hidden" name="_csrf" value="<%= csrfToken %>">
+					<button class="btn btn-outline-danger nav-item nav-link my-2 mr-sm-2" >Logout</button>
+				</form>
+				<%  }%>
+				
+			
+			
+		</div>
+</nav>
+
+
+
+
+
+
+
+
+
+    

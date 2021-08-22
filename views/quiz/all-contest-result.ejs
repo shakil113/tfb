@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+    <html lang="en">
+       <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <title>Contest Result</title>
+
+        <meta name="author" content="tutorialforbeginner.com">
+        <meta property="og:site_name" content="www.tutorialforbeginner.com" />
+       
+        <meta property="og:locale" content="en_US" />
+        <meta property="og:type" content="website" />
+        <link rel="shortcut icon" href="../images/ico.jpg" type="image/x-icon" />
+        <%- include('../includes/boostrap-head.ejs') %> 
+        <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+        <script src="/js/table/table.js"></script>
+        <link rel="stylesheet" href="/css/table.css" >
+        <script>
+          $(document).ready(function() {
+              // Setup - add a text input to each footer cell
+                      $('#resultTable tfoot th').each( function () {
+                          var title = $(this).text();
+                          $(this).html( '<input type="text" placeholder="Search '+title+'" />' );
+                      } );
+                  
+                      // DataTable
+                      var table = $('#resultTable').DataTable({
+                          initComplete: function () {
+                              // Apply the search
+                              this.api().columns().every( function () {
+                                  var that = this;
+                  
+                                  $( 'input', this.footer() ).on( 'keyup change clear', function () {
+                                      if ( that.search() !== this.value ) {
+                                          that
+                                              .search( this.value )
+                                              .draw();
+                                      }
+                                  } );
+                              } );
+                          }
+                      });
+                  
+                  } );
+        </script>
+       
+
+          <style>
+            .navbar-collapse .navbar-nav{float:none;margin:0 auto;text-align:center}img{max-width:100%}#footer{background:#232323;padding:30px 0 0 0;font-size:12px;color:#999}#footer a{color:#ccc}#footer a:hover{color:#fff}#footer h3.widget-title{font-size:15px;font-size:.9375rem;text-transform:uppercase;color:#fff;margin:0 0 20px}#underfooter{background:#191919;padding:15px 0;color:#777;font-size:12px}#underfooter a{color:#aaa}#underfooter a:hover{color:#fff}@media (min-width:1200px){.container{max-width:1080px}}body{overflow-x:hidden}#sidebar-wrapper{min-height:100vh;margin-left:-15rem;-webkit-transition:margin .25s ease-out;-moz-transition:margin .25s ease-out;-o-transition:margin .25s ease-out;transition:margin .25s ease-out}#sidebar-wrapper .sidebar-heading{padding:.875rem 1.25rem;font-size:1.2rem}#sidebar-wrapper .list-group{width:15rem}#page-content-wrapper{min-width:100vw}#wrapper.toggled #sidebar-wrapper{margin-left:0}@media (min-width:768px){#sidebar-wrapper{margin-left:0}#page-content-wrapper{min-width:0;width:100%}#wrapper.toggled #sidebar-wrapper{margin-left:-15rem}}.row.content{height:auto;width:auto}.sidenav{padding-top:20px;background-color:#f1f1f1;height:cover}footer{background-color:#555;color:#fff;padding:15px}@media screen and (max-width:767px){.sidenav{height:auto;padding:15px}.row.content{height:auto}}
+          </style>
+
+        
+    </head>
+
+
+    
+
+  <body class="bg-light">
+    <%- include('../includes/navigation.ejs') %>  
+    <main id="main " class="mx-2">
+        
+      
+      
+      <hr class="mb-2 bg-dark" ><h3 class="mb-3 text-center text-white p-3" style="background-color: darkblue;"><i>Contest Result</i></h3><hr>
+      <%if(resultId){%>
+      <div class="my-2 d-flex justify-content-center">
+        <a class="btn my-2 btn-primary text-white btn-lg" href="/view-result-detail/<%=resultId%>" >Check Answer</a>
+      </div><hr>
+      <%}%>
+      <div class="my-2 d-flex justify-content-center">
+        <form action="/all-contest-results" method="POST" >
+          <div class="form-row align-items-center">
+            
+            <div class="col-auto">
+              <div class="input-group mb-2 ">
+                <select class="custom-select d-block text-uppercase" name="contestId" required>
+                  <option value="">CHOOSE A CONTEST</option>
+                  <% contests.forEach(contest=>{ %>
+                    <option value="<%=contest.id%>"><%=contest.contestName%></option>
+                  <% }); %>
+                  
+                 
+                </select>
+              </div>
+            </div>
+            
+            <div class="col-auto">
+              <input type="hidden" name="_csrf" value="<%= csrfToken %>">
+              <button type="submit" class="btn btn-primary mb-2">Get Result</button>
+            </div>
+          </div>
+        </form>
+      
+          
+      </div><hr>
+   
+        <div class="table-responsive">
+          <table id="resultTable" class="display text-center table">
+              <thead>
+                  <tr>
+                    <th>Rank</th>
+                    <th>Name</th>
+                    <th>RollNo</th>
+                    <th>Mark</th>
+                    <th>Time</th>
+                  </tr>
+              </thead>
+          
+            <tbody>
+
+              <% for(let i=0; i< rank.length; i++){%>
+
+                <tr>
+                  <td><%=i+1%></td>
+                  <td><%=user[i].firstname%> <%=user[i].lastname%></td>
+                  <td><%=user[i].roll%></td>
+                  <td><%=rank[i].mark.toFixed(2)%></td>
+                  <td><%=(rank[i].submissionTime/60).toFixed(3)%> Min</td>
+                
+                </tr>
+                <%}%>
+                 
+
+              </tbody>
+              <tfoot>
+                  <tr>
+                    <th>Rank</th>
+                    <th>Name</th>
+                    <th>RollNo</th>
+                    <th>Mark</th>
+                    <th>Time</th>
+                  </tr>
+              </tfoot>
+          </table>
+                
+        </div>
+       
+       
+    </main>
+
+    
+
+<%- include('../includes/end.ejs') %>
+
+   
+    
+                              
+
+
+    
+

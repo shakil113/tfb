@@ -1,0 +1,577 @@
+<!DOCTYPE html>
+    <html lang="en">
+       <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <title>Learn About  Operators In C</title>
+
+        
+        <meta name="Description" content="
+       in C language Operators are the fundations of any programming language. It is a symbol thats inform the compiler to take a particular action or operation.C language has a rich build-in operators.It is provide following operators.
+
+" />
+        <meta name="Keywords" content="Arithmetic Operators,Relational Operators,Logical Operators,Assignment Operators,Bitwise Operators" />
+        
+        <meta name="author" content="tutorialforbeginner.com">
+        <meta property="og:site_name" content="www.tutorialforbeginner.com" />
+        <meta property="fb:pages" content="340075726591504" />
+        <meta property="fb:pages" content="1524841087795043" />
+        <meta name="viewport" content="width=device-width,initial-scale=1.0,user-scalable=yes">
+        <meta property="og:locale" content="en_US" />
+        <meta property="og:type" content="website" />
+        <link rel="shortcut icon" href="images/ico.jpg" type="image/x-icon" />
+        <link rel="canonical" href="https://tutorialforbeginner.com/operator-in-c" />
+
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+        <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+        <style>
+            .navbar-collapse .navbar-nav{float:none;margin:0 auto;text-align:center}img{max-width:100%}#footer{background:#232323;padding:30px 0 0 0;font-size:12px;color:#999}#footer a{color:#ccc}#footer a:hover{color:#fff}#footer h3.widget-title{font-size:15px;font-size:.9375rem;text-transform:uppercase;color:#fff;margin:0 0 20px}#underfooter{background:#191919;padding:15px 0;color:#777;font-size:12px}#underfooter a{color:#aaa}#underfooter a:hover{color:#fff}@media (min-width:1200px){.container{max-width:1080px}}body{overflow-x:hidden}#sidebar-wrapper{min-height:100vh;margin-left:-15rem;-webkit-transition:margin .25s ease-out;-moz-transition:margin .25s ease-out;-o-transition:margin .25s ease-out;transition:margin .25s ease-out}#sidebar-wrapper .sidebar-heading{padding:.875rem 1.25rem;font-size:1.2rem}#sidebar-wrapper .list-group{width:15rem}#page-content-wrapper{min-width:100vw}#wrapper.toggled #sidebar-wrapper{margin-left:0}@media (min-width:768px){#sidebar-wrapper{margin-left:0}#page-content-wrapper{min-width:0;width:100%}#wrapper.toggled #sidebar-wrapper{margin-left:-15rem}}.row.content{height:auto;width:auto}.sidenav{padding-top:20px;background-color:#f1f1f1;height:cover}footer{background-color:#555;color:#fff;padding:15px}@media screen and (max-width:767px){.sidenav{height:auto;padding:15px}.row.content{height:auto}}
+          </style>
+ 
+        
+        <script async type="text/javascript" src="js/print/run_prettify.js??autoload=true&amp;skin=sunburst&amp;"></script>
+        <script data-ad-client="ca-pub-9136564254270725" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+
+           <!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-148831263-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-148831263-1');
+</script>
+
+        
+
+        
+    </head>
+
+
+    
+
+<body >
+    <%- include('../../includes/navigation.ejs') %>
+    
+    
+    <main id="main">
+        
+        <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+        <!-- page-1 -->
+        <ins class="adsbygoogle"
+             style="display:block"
+             data-ad-client="ca-pub-9136564254270725"
+             data-ad-slot="1390582452"
+             data-ad-format="auto"
+             data-full-width-responsive="true"></ins>
+        <script>
+             (adsbygoogle = window.adsbygoogle || []).push({});
+        </script>
+        
+            
+            
+            <div class="d-flex" id="wrapper">
+
+                <!-- Sidebar -->
+                <div class="bg-light border-right" id="sidebar-wrapper">
+                  <div class="sidebar-heading">Topics</div>
+                  <div class="list-group list-group-flush">
+                    <% include('../../sitebars/c-sitebar.ejs') %>
+                  </div>
+                </div>
+                <!-- /#sidebar-wrapper -->
+            
+                <!-- Page Content -->
+                <div id="page-content-wrapper">
+            
+                  <nav class="navbar navbar-expand-lg navbar-light bg-light border-bottom ">
+                    <button class="btn btn-primary" id="menu-toggle">Contents</button>
+
+
+                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                      <span class="navbar-toggler-icon"></span>
+                    </button>
+            
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                      <ul class="navbar-nav ml-auto mt-2 mt-lg-0">
+                        <li class="nav-item active">
+                          <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+                        </li>
+                        <li class="nav-item">
+                          <a class="nav-link" href="#">Link</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Dropdown
+                          </a>
+                          <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+                            <a class="dropdown-item" href="#">Action</a>
+                            <a class="dropdown-item" href="#">Another action</a>
+                            <div class="dropdown-divider"></div>
+                            <a class="dropdown-item" href="#">Something else here</a>
+                          </div>
+                        </li>
+                      </ul>
+                    </div>
+            
+                  </nav>
+            
+                  <div class="container-fluid">
+                      <div class="row content">
+                          
+                          <div class="col-sm-12 col-lg-9 col-md-8 text-left"> 
+                              <h2 class="bg-dark text-center text-white">C Operators</h2>
+
+
+                              <p class=" text-justify">
+                                  <b>Operators:</b> Operators are the foundations of any programming language. It is a symbol that inform the compiler to take a particular action or operation . C language has a rich build-in operators . It is provide following operators.
+                              </p><br>
+                              <ol>
+                                <li>
+                                <h6>Arithmetic Operators</h6>
+                              </li>
+                              <li>
+                                  <h6>Relational Operators</h6>
+                                </li>
+                                <li>
+                                    <h6>Logical Operators</h6>
+                                  </li>
+                                  <li>
+                                      <h6>Assignment Operators</h6>
+                                    </li>
+                                    <li>
+                                        <h6>Bitwise Operators</h6>
+                                      </li>
+                                      <li>
+                                          <h6>Misc Operators</h6>
+                                        </li>
+                            
+                            </ol><hr>
+                            <h4>Arithmetic Operator:</h4>
+                            <p class="text-justify">
+                              This Opreators used to perform some Arithmetic operation
+                              between two operand. Lets consider <b>a =20</b> and <b>b=10</b> are two variables or operand. See the following
+                              table:
+                            </p><br>
+                           
+                              
+                                <table class="table table-striped table-dark">
+                                    <thead>
+                                      <tr>
+                                        
+                                        <th scope="col">Operator</th>
+                                        <th scope="col">Description</th>
+                                        <th scope="col">Example</th>
+                                        
+                                      </tr>
+                                    </thead>
+                                    <tbody>
+                                      <tr>
+                                        
+                                          <th scope="row">+</th>
+                                        <td>To add to variables</td>
+                                        <td>a+b is 30</td>
+                                        
+                                      </tr>
+                                      <tr>
+                                        <th scope="row">-</th>
+                                        <td>To substruct from one to another</td>
+                                        <td>a-b is 10</td>
+                                       
+                                      </tr>
+                                      <tr>
+                                        <th scope="row">*</th>
+                                        <td>Multiplies both operands.</td>
+                                        <td>a*b is 300</td>
+                                        
+                                      </tr>
+                                      <tr>
+                                          <th scope="row">/</th>
+                                          <td>Divide both opreand</td>
+                                          <td>a/b is 2</td>
+                                          
+                                        </tr>
+                                        <tr>
+                                            <th scope="row">%</th>
+                                            <td>Modulus Opreator It used to find the remainder</td>
+                                            <td>a%b is 0</td>
+                                            
+                                          </tr>
+                                          <tr>
+                                              <th scope="row">++</th>
+                                              <td>Increment operator.It use to increment variable value by 1</td>
+                                              <td>a++ is 21,
+                                                b++ is 11
+
+                                              </td>
+                                              
+                                            </tr>
+                                            <tr>
+                                                <th scope="row">--</th>
+                                                <td>Decrement operator.It use to decrement variable value by 1</td>
+                                                <td>a-- is 19, b-- is 9</td>
+                                                
+                                              </tr>
+                                             
+                                                  
+                                    </tbody>
+                                  </table><script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+                                  <ins class="adsbygoogle"
+                                       style="display:block; text-align:center;"
+                                       data-ad-layout="in-article"
+                                       data-ad-format="fluid"
+                                       data-ad-client="ca-pub-9136564254270725"
+                                       data-ad-slot="3553232436"></ins>
+                                  <script>
+                                       (adsbygoogle = window.adsbygoogle || []).push({});
+                                  </script>
+                                  <h5>See the following example:</h5>
+<pre class="prettyprint">
+<code>#include&lt;stdio.h&gt;
+int main(){
+  int a = 20, b = 10;
+  printf("Result= %d",a+b);
+  printf("Result= %d",a-b);
+  printf("Result= %d",a*b);
+  printf("Result= %d",a/b);
+  printf("Result= %d",a%b);
+  printf("Result= %d",a++);
+  printf("Result= %d",b--);
+  return 0;
+}</code></pre><br>
+<h5>Output:</h5>
+<pre class="prettyprint">
+<code>Result= 30
+Result= 10
+Result= 200
+Result= 2
+Result= 0
+Result= 21
+Result= 9  
+                                       
+</code></pre>
+
+
+                              <hr><div class="embed-responsive embed-responsive-16by9">
+                                  <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/1lJ8S3nKRls" allowfullscreen></iframe>
+                              </div>
+                            
+                              <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+                              <!-- ad-2 -->
+                              <ins class="adsbygoogle"
+                                   style="display:block"
+                                   data-ad-client="ca-pub-9136564254270725"
+                                   data-ad-slot="8826219349"
+                                   data-ad-format="auto"
+                                   data-full-width-responsive="true"></ins>
+                              <script>
+                                   (adsbygoogle = window.adsbygoogle || []).push({});
+                              </script>
+                            <h4>Relational Operators:</h4>
+                            <p class="text-justify">
+                                This Opreators used to find relation between two variable.It return boolean value like <b>ture or false</b> . 
+                                Lets consider <b>a=20</b> and <b>b=10</b> are two variables. See the following.
+                                table:
+                              </p>
+                             
+                                
+                                  <table class="table table-striped table-dark">
+                                      <thead>
+                                        <tr>
+                                          
+                                          <th scope="col">Operator</th>
+                                          <th scope="col">Description</th>
+                                          <th scope="col">Example</th>
+                                          
+                                        </tr>
+                                      </thead>
+                                      <tbody>
+                                        <tr>
+                                          
+                                            <th scope="row">==</th>
+                                          <td>Equal to opearator.If two variable is equal to each other
+                                            it return true otherwise false </td>
+                                          <td>a == b return false.</td>
+                                          
+                                        </tr>
+                                        <tr>
+                                          <th scope="row">!=</th>
+                                          <td>Not Equal to opearator.If two variable is not equal to each other
+                                              it return true otherwise false.</td>
+                                          <td>a != b return true</td>
+                                         
+                                        </tr>
+                                        <tr>
+                                          <th scope="row">></th>
+                                          <td>Greater than operator.If a>b is satisfied then it return true otherwise return
+                                            false.
+                                          </td>
+                                          <td> a > b return true.</td>
+                                          
+                                        </tr>
+                                        <tr>
+                                            <th scope="row"> < </th>
+                                            <td>Less than operator.If a < b is satisfied then it return true otherwise return
+                                                false.</td>
+                                            <td>a < b return false.</td>
+                                            
+                                          </tr>
+                                          <tr>
+                                              <th scope="row">>=</th>
+                                              <td>Greater then equal to operator. If a > b  or a == b is satisfied then it return true otherwise return
+                                                false. </td>
+                                              <td>a >= b return ture
+
+                                              </td>
+                                              
+                                            </tr>
+                                            <tr>
+                                                <th scope="row"><=</th>
+                                                <td>Greater then equal to operator. If a < b  or a == b is satisfied then it return true otherwise return
+                                                    false.</td>
+                                                <td>
+                                                    a <= b return false
+                                                </td>
+                                                
+                                              </tr>
+                                            
+                                      </tbody>
+                                    </table><br><hr>
+
+                                    <h4>Logical Operators:</h4>
+                                    <p class="text-justify">
+                                      This Opreators used to setup a relation between two or more things.It is also 
+                                      return boolean value.Assume a=1, b=0.
+
+                                    </p>
+                                   
+                                      
+                                        <table class="table table-striped table-dark">
+                                            <thead>
+                                              <tr>
+                                                
+                                                <th scope="col">Operator</th>
+                                                <th scope="col" >Description</th>
+                                                <th scope="col">Example</th>
+                                                
+                                              </tr>
+                                            </thead>
+                                            <tbody>
+                                              <tr>
+                                                
+                                                  <th scope="row">&&</th>
+                                                <td>Called Logical AND operator. If both the operands are non-zero, then the condition becomes true.</td>
+                                                <td>a&&b is false</td>
+                                                
+                                              </tr>
+                                              <tr>
+                                                <th scope="row">||</th>
+                                                <td>Called Logical OR Operator. If any of the two operands is non-zero, then the condition becomes true.</td>
+                                                <td>(A || B) is true</td>
+                                               
+                                              </tr>
+                                              <tr>
+                                                <th scope="row">!</th>
+                                                <td>Called Logical NOT Operator. It is used to reverse the logical state of its operand. If a condition is true, then Logical NOT operator will make it false.</td>
+                                                <td>!(A || B) is false</td>
+                                                
+                                              </tr>
+                                             
+                                          
+                                            </tbody>
+                                          </table><br>
+                                          
+                                          <h4>Assignment Operators:</h4>
+                                    <p class="text-justify">
+                                      Following these operators supported by C language.Assume that a is 6,b is4,c is 0.
+
+                                    </p>
+                                   
+                                      
+                                        <table class="table table-striped table-dark">
+                                            <thead>
+                                              <tr>
+                                                
+                                                <th scope="col">Operator</th>
+                                                <th scope="col" >Description</th>
+                                                <th scope="col">Example</th>
+                                                
+                                              </tr>
+                                            </thead>
+                                            <tbody>
+                                              <tr>
+                                                
+                                                  <th scope="row">=</th>
+                                                <td>This is used for insert value in a variable</td>
+                                                <td>c = a+b so c is 10
+                                                </td>
+                                                
+                                              </tr>
+                                              <tr>
+                                                <th scope="row">+=</th>
+                                                <td>a+=b is same as a=a+b </td>
+                                                <td>a+=b then a is 10</td>
+                                               
+                                              </tr>
+                                              <tr>
+                                                <th scope="row">-=</th>
+                                                <td>a-=b is same as a=a-b</td>
+                                                <td>a-=b then a is 2</td>
+                                                
+                                              </tr>
+                                              <tr>
+                                                  <th scope="row">*=</th>
+                                                  <td>a*=b is same as a=a*b</td>
+                                                  <td>a*=b then a is 24 </td>
+                                                  
+                                                </tr>
+                                                <tr>
+                                                    <th scope="row">/=</th>
+                                                    <td>a/=b is same as a=a/b</td>
+                                                    <td>a/=b then a is 1.5</td>
+                                                    
+                                                  </tr>
+                                                  <tr>
+                                                      <th scope="row">%=</th>
+                                                      <td>a%=b is same as a=a%b</td>
+                                                      <td>a%=b then a is 2</td>
+                                                      
+                                                    </tr>
+                                                         
+                                             
+                                          
+                                            </tbody>
+                                          </table><br><hr>
+                                          <h4>Bitwise Operators:</h4>
+                                    <p class="text-justify">
+                                      Following these operators supported by C language.Assume .
+
+                                    </p>
+                                   
+                                      
+                                        <table class="table table-striped table-dark">
+                                            <thead>
+                                              <tr>
+                                                
+                                                <th scope="col">Operator</th>
+                                                <th scope="col" >Description</th>
+                                                
+                                              </tr>
+                                            </thead>
+                                            <tbody>
+                                              <tr>
+                                                
+                                                  <th scope="row">&</th>
+                                                <td>This is used to perform binary AND operation between two or more operands</td>
+                                                
+                                                
+                                              </tr>
+                                              <tr>
+                                                <th scope="row">|</th>
+                                                <td>This is used to perform binary OR operation between two or more operands </td>
+                                                
+                                               
+                                              </tr>
+                                              <tr>
+                                                <th scope="row">^</th>
+                                                <td>This is used to perform binary XOR operation between two or more operands</td>
+                                                
+                                                
+                                              </tr>
+                                              <tr>
+                                                  <th scope="row"><<</th>
+                                                  <td>This is used to perform binary left shift operation between two or more operands</td>
+                                                  
+                                                  
+                                                </tr>
+                                                <tr>
+                                                    <th scope="row">>></th>
+                                                    <td>This is used to perform binary Right shift operation between two or more operands</td>
+                                                    
+                                                    
+                                                  </tr>
+                                          
+                                          
+                                            </tbody>
+                                          </table>
+                                          <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- ad-3 -->
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-9136564254270725"
+     data-ad-slot="1689965350"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+                                         
+
+                                         
+
+                      </div>
+                          <div class="col-sm-12 col-lg-3 col-md-4 sidenav">
+                          
+                            <div class="well my-5">
+                                
+                                <details >
+                                    <summary>Best way of learing</summary>
+                                    <p class="text-tustify">
+                                        Self learing is the best learing in the world.
+                                        Discover yourself first then will get what you are And
+                                        what you want to do .It will push you for self learing.
+                                    </p>
+                                  </details>
+                            </div>
+
+                            <div class="well my-5">
+                                
+                                <details >
+                                    <summary>Why you need to learn coding?</summary>
+                                    <p class="text-tustify">
+                                        Coding will play a vital role in one's life . It will help to open 
+                                        a new window of thinking . You can think better way than past . It 
+                                        helps to organise all the thing in better way .
+                                    </p>
+                                  </details>
+                            </div>
+                            
+                            <div class="well sticky-top">
+                                <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+                                <!-- C-verticle -->
+                                <ins class="adsbygoogle"
+                                     style="display:block"
+                                     data-ad-client="ca-pub-9136564254270725"
+                                     data-ad-slot="1132697628"
+                                     data-ad-format="auto"
+                                     data-full-width-responsive="true"></ins>
+                                <script>
+                                     (adsbygoogle = window.adsbygoogle || []).push({});
+                                </script>
+                              
+                            </div>
+                            
+
+                          </div>
+                        </div>
+                      </div>
+                    
+                </div>
+               
+            
+              </div>
+              
+              <script>
+                $("#menu-toggle").click(function(e) {
+                  e.preventDefault();
+                  $("#wrapper").toggleClass("toggled");
+                });
+              </script>
+            
+        
+    
+    </main>
+
+    
+
+<%- include('../../includes/end.ejs') %>

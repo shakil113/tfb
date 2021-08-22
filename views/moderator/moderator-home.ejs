@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+    <html lang="en">
+       <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <title>Set Up ICt MCQ Question</title>
+
+        <meta name="author" content="tutorialforbeginner.com">
+        <meta property="og:site_name" content="www.tutorialforbeginner.com" />
+        
+        <meta property="og:locale" content="en_US" />
+        <meta property="og:type" content="website" />
+        <link rel="shortcut icon" href="../images/ico.jpg" type="image/x-icon" />
+        <%- include('../includes/boostrap-head.ejs') %> 
+       <style>
+            .navbar-collapse .navbar-nav{float:none;margin:0 auto;text-align:center}img{max-width:100%}#footer{background:#232323;padding:30px 0 0 0;font-size:12px;color:#999}#footer a{color:#ccc}#footer a:hover{color:#fff}#footer h3.widget-title{font-size:15px;font-size:.9375rem;text-transform:uppercase;color:#fff;margin:0 0 20px}#underfooter{background:#191919;padding:15px 0;color:#777;font-size:12px}#underfooter a{color:#aaa}#underfooter a:hover{color:#fff}@media (min-width:1200px){.container{max-width:1080px}}body{overflow-x:hidden}#sidebar-wrapper{min-height:100vh;margin-left:-15rem;-webkit-transition:margin .25s ease-out;-moz-transition:margin .25s ease-out;-o-transition:margin .25s ease-out;transition:margin .25s ease-out}#sidebar-wrapper .sidebar-heading{padding:.875rem 1.25rem;font-size:1.2rem}#sidebar-wrapper .list-group{width:15rem}#page-content-wrapper{min-width:100vw}#wrapper.toggled #sidebar-wrapper{margin-left:0}@media (min-width:768px){#sidebar-wrapper{margin-left:0}#page-content-wrapper{min-width:0;width:100%}#wrapper.toggled #sidebar-wrapper{margin-left:-15rem}}.row.content{height:auto;width:auto}.sidenav{padding-top:20px;background-color:#f1f1f1;height:cover}footer{background-color:#555;color:#fff;padding:15px}@media screen and (max-width:767px){.sidenav{height:auto;padding:15px}.row.content{height:auto}}
+          </style>
+
+        
+    </head>
+
+
+    
+
+  <body class="bg-light">
+    <%- include('../includes/moderatorNav.ejs') %>  
+    <main id="main">
+        
+      <div class="container">
+        
+      
+        <div class="row d-flex justify-content-center">
+          
+          <div class="col-md-8 order-md-1">
+            <hr class="mb-2"><h4 class="mb-3 text-center"><i>Create Contest</i></h4><hr>
+            <form action="/moderator/ict-mcq-question" method="POST" class="needs-validation" novalidate>
+
+
+
+                <div class="row">
+                    <div class="col-md-12 col-lg-12 mb-3">
+                      <label for="chapter">Chapter</label>
+                      <select class="custom-select d-block w-100" name="chapter" id="chapter" required>
+                        <option value="">Choose...</option>
+                        <option value="Chapter1">Chapter1</option>
+                        <option value="Chapter2">Chapter2</option>
+                        <option value="Chapter3">Chapter3</option>
+                        <option value="Chapter4">Chapter4</option>
+                        <option value="Chapter5">Chapter5</option>
+                        <option value="Chapter6">Chapter6</option>
+                      </select>
+                      <div class="invalid-feedback">
+                        Please select a valid Chapter.
+                      </div>
+                    </div>    
+                </div>
+                <div class="row">
+                    <div class="col-md-12 col-lg-12 mb-3">
+                      <label for="dificulty_level">Question Difficulty</label>
+                      <select class="custom-select d-block w-100" name="dificulty_level" id="dificulty_level" required>
+                        <option value="">Choose...</option>
+                        <option value="Easy">Easy</option>
+                        <option value="Standard">Standard</option>
+                        <option value="Hard">Hard</option>                      
+                      </select>
+                      <div class="invalid-feedback">
+                        Please select a valid dificulty level.
+                      </div>
+                    </div>    
+                </div>
+
+              <div class="row">
+                <div class="form-group col-md-12 col-lg-12">
+                    <label for="question">Question</label>
+                    <textarea class="form-control" id="question" name="question" rows="3" placeholder="Enter the question...." required></textarea>
+                  </div>
+              </div>
+
+             
+      
+             
+           
+      
+              <div class="mb-3">
+                <label for="Options">Give Options</label>
+                <div class="input-group mb-2 ">
+                  <div class="input-group-prepend">
+                    <span class="input-group-text">A).</span>
+                  </div>
+                  <input type="text" class="form-control" id="option1" name="option1" placeholder="Write options 1" required>
+                  <div class="invalid-feedback" style="width: 100%;">
+                    Option A). is required.
+                  </div>
+                </div>
+                <div class="input-group  mb-2 ">
+                    <div class="input-group-prepend">
+                      <span class="input-group-text">B).</span>
+                    </div>
+                    <input type="text" class="form-control" id="option2" name="option2" placeholder="Write options 2" required>
+                    <div class="invalid-feedback" style="width: 100%;">
+                        Option B). is required.
+                    </div>
+                  </div>
+                  <div class="input-group  mb-2 ">
+                    <div class="input-group-prepend">
+                      <span class="input-group-text">C).</span>
+                    </div>
+                    <input type="text" class="form-control" id="option3" name="option3" placeholder="Write options 3" required>
+                    <div class="invalid-feedback" style="width: 100%;">
+                        Option C). is required.
+                    </div>
+                  </div>
+                  <div class="input-group mb-2 ">
+                  <div class="input-group-prepend">
+                    <span class="input-group-text">D).</span>
+                  </div>
+                  <input type="text" class="form-control" id="option4" name="option4" placeholder="Write options 3" required>
+                  <div class="invalid-feedback" style="width: 100%;">
+                    Option D). is required.
+                  </div>
+                </div>
+              </div>
+             
+
+              
+              <div class="row">
+                <div class="col-md-12 col-lg-12 mb-3">
+                  <label for="answer">Question Answer</label>
+                  <select class="custom-select d-block w-100" name="answer" id="answer" required>
+                    <option value="">Choose...</option>
+                    <option value="A">A</option>
+                    <option value="B">B</option>
+                    <option value="C">C</option>
+                    <option value="D">D</option>
+                  </select>
+                  <div class="invalid-feedback">
+                    Please select a valid Answer.
+                  </div>
+                </div>    
+            </div>
+             
+              
+              <input type="hidden" name="_csrf" value="<%= csrfToken %>">
+              <hr class="mb-4">
+              <button class="btn btn-primary btn-lg btn-block" type="submit">Submit</button>
+
+            </form>
+            <br><br>
+          </div>
+        </div>
+       
+    </main>
+
+<%- include('../includes/end.ejs') %>
+
+   
+    
+                              
+
+
+    
+

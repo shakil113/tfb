@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+    <html lang="en">
+       <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <title>Sign Up</title>
+
+        <meta name="author" content="tutorialforbeginner.com">
+        <meta property="og:site_name" content="www.tutorialforbeginner.com" />
+        <meta property="og:locale" content="en_US" />
+        <meta property="og:type" content="website" />
+        <link rel="shortcut icon" href="images/ico.jpg" type="image/x-icon" />
+        <link rel="canonical" href="https://tutorialforbeginner.com/signup"/>
+        <%- include('../includes/boostrap-head.ejs') %>  
+       <style>
+          :root{--input-padding-x:1.5rem;--input-padding-y:.75rem}body{background:#007bff;background:linear-gradient(to right,#0062e6,#33aeff)}.card-signin{border:0;border-radius:1rem;box-shadow:0 .5rem 1rem 0 rgba(0,0,0,.1)}.card-signin .card-title{margin-bottom:2rem;font-weight:300;font-size:1.5rem}.card-signin .card-body{padding:2rem}.form-signin{width:100%}.form-signin .btn{font-size:80%;border-radius:5rem;letter-spacing:.1rem;font-weight:700;padding:1rem;transition:all .2s}.form-label-group{position:relative;margin-bottom:1rem}.form-label-group input{height:auto;border-radius:2rem}.form-label-group>input,.form-label-group>label{padding:var(--input-padding-y) var(--input-padding-x)}.form-label-group>label{position:absolute;top:0;left:0;display:block;width:100%;margin-bottom:0;line-height:1.5;color:#495057;border:1px solid transparent;border-radius:.25rem;transition:all .1s ease-in-out}.form-label-group input::-webkit-input-placeholder{color:transparent}.form-label-group input:-ms-input-placeholder{color:transparent}.form-label-group input::-ms-input-placeholder{color:transparent}.form-label-group input::-moz-placeholder{color:transparent}.form-label-group input::placeholder{color:transparent}.form-label-group input:not(:placeholder-shown){padding-top:calc(var(--input-padding-y) + var(--input-padding-y) * (2 / 3));padding-bottom:calc(var(--input-padding-y)/ 3)}.form-label-group input:not(:placeholder-shown)~label{padding-top:calc(var(--input-padding-y)/ 3);padding-bottom:calc(var(--input-padding-y)/ 3);font-size:12px;color:#777}.btn-google{color:#fff;background-color:#ea4335}.btn-facebook{color:#fff;background-color:#3b5998}@supports (-ms-ime-align:auto){.form-label-group>label{display:none}.form-label-group input::-ms-input-placeholder{color:#777}}@media all and (-ms-high-contrast:none),(-ms-high-contrast:active){.form-label-group>label{display:none}.form-label-group input:-ms-input-placeholder{color:#777}}
+          
+        </style>
+
+        
+    </head>
+
+
+    <body>
+      <div class="container">
+        <div class="row ">
+          <div class="col-sm-12 col-md-8 col-lg-6 mx-auto">
+
+            
+            
+            <div class="card card-signin my-5">
+              <% if (errorMessage) { %>
+                <div class="bg-danger text-center text-white mt-3"><%= errorMessage %></div>
+            <% } %>
+              <div class="card-body">
+                <h3 class="card-title text-center">Sign Up</h3>
+                <p class="text-center text-danger">[ N:B: Please fill up according to your <b>S.S.C certificate</b> ]</p>
+                <h4 class="mt-5 text-center mb-3"><i>Personal Information</i></h4><hr>
+
+
+
+                <form class="form-signin" id="signupForm" method="POST" action="/signup" novalidate>
+                  <div class="form-label-group">
+                    <input type="text" id="firstName" name="firstname" class="form-control <%= errorState.find(e=> e.param === 'firstname') ? 'bg-danger':''%>" placeholder="First Name" required>
+                   
+                    <label for="firstName">First Name <span style="color: red;">*</span></label>
+                    <div class="invalid-feedback">
+                      Please select a valid name.
+                    </div>
+
+                    
+                  </div>
+
+                  <div class="form-label-group">
+                    <input type="text" id="lastName" name="lastname" class="form-control <%= errorState.find(e=> e.param === 'lastname') ? 'bg-danger':''%>" placeholder="Last Name" required>
+                   
+                    <label for="lastName">Last Name <span style="color: red;">*</span></label>
+
+                     <div class="invalid-feedback">
+                      Please select a valid name.
+                    </div>
+                  </div>
+
+              <h6 class="my-2 <%= errorState.find(e=> e.param === 'gender') ? 'text-danger':''%>">Gender <span style="color: red;">*</span></h6>   
+              <div class="d-block mt-1 mb-3">
+                <div class="custom-control custom-radio">
+                  <input id="male" name="gender" type="radio" class="custom-control-input" value="Male" required>
+                  <label class="custom-control-label" for="male">Male</label>
+                </div>
+                <div class="custom-control custom-radio mb-3">
+                  <input id="female" name="gender" type="radio" class="custom-control-input" value="Female" required>
+                  <label class="custom-control-label" for="female">Female</label>
+                </div>
+                
+                  <div class="form-label-group">
+                    <input type="tel" id="phoneNumber" name="phoneNumber" class="form-control <%= errorState.find(e=> e.param === 'phoneNumber') ? 'bg-danger':''%>" placeholder="Phone Number" required>
+                    <label for="phoneNumber">Phone Number <span style="color: red;">* </span>e.g 017** </label>
+                    <div class="invalid-feedback">
+                      Please select a valid number.
+                    </div>
+                  </div>
+                  <div class="form-label-group">
+                    <input type="email" id="email" name="email" class="form-control" placeholder="Email">
+                    <label for="email">Email Adress (Optional)</label>
+                  </div>
+    
+                  <h4 class="mt-5 text-center mb-3"><i>Academic Information</i></h4><hr>
+
+                  <div class="form-label-group">
+                    <input type="date" id="dateofbirth" name="dateofbirth" class="form-control <%= errorState.find(e=> e.param === 'dateofbirth') ? 'bg-danger':''%>" placeholder="Date Of Birth" required>
+                    <label for="dateofbirth">Date Of Birth <span style="color: red;">*</span></label>
+                  </div>
+                  <div class="form-label-group">
+                    <input type="text" id="roll" name="sscroll" class="form-control <%= errorState.find(e=> e.param === 'sscroll') ? 'bg-danger':''%>" placeholder="SSC Roll Number" required>
+                    <label for="roll">SSC Roll Number <span style="color: red;">*</span></label>
+                    <div class="invalid-feedback">
+                      Please select a valid division.
+                    </div>
+                  </div>
+                  <div class="form-label-group">
+                    <input type="text" id="regi" name="sscregirstration" class="form-control <%= errorState.find(e=> e.param === 'sscregirstration') ? 'bg-danger':''%>" placeholder="SSC Registration Number" required>
+                    <label for="regi">SSC Registration Number <span style="color: red;">*</span></label>
+                    <div class="invalid-feedback">
+                      Please select a valid division.
+                    </div>
+                  </div>
+                  
+                  <div class="mb-3">
+                    <label for="passing_year" class="<%= errorState.find(e=> e.param === 'sscyear') ? 'text-danger':''%>">SSC Passing Year <span style="color: red;">*</span></label>
+                    <select class="custom-select d-block w-100 text-uppercase" name="sscyear" id="passing_year" required>
+                      <option value="">Choose...</option>
+                      <option value="2000">2000</option>
+                      <option value="2001">2001</option>
+                      <option value="2002">2002</option>
+                      <option value="2003">2003</option>
+                      <option value="2004">2004</option>
+                      <option value="2005">2005</option>
+                      <option value="2006">2006</option>
+                      <option value="2007">2007</option>
+                      <option value="2008">2008</option>
+                      <option value="2009">2009</option>
+                      <option value="2010">2010</option>
+                      <option value="2011">2011</option>
+                      <option value="2012">2012</option>
+                      <option value="2013">2013</option>
+                      <option value="2014">2014</option>
+                      <option value="2015">2015</option>
+                      <option value="2016">2016</option>
+                      <option value="2017">2017</option>
+                      <option value="2018">2018</option>
+                      <option value="2019">2019</option>
+                      <option value="2020">2020</option>
+                      <option value="2021">2021</option>
+                      <option value="2022">2022</option>
+                      <option value="2023">2023</option>
+                      <option value="2024">2024</option>
+                      <option value="2025">2025</option>
+                      <option value="2026">2026</option>
+                      <option value="2027">2027</option>
+                      <option value="2028">2028</option>
+                      <option value="2029">2029</option>
+                      <option value="2030">2030</option>
+                    </select>
+                    <div class="invalid-feedback">
+                      Please select a valid student type.
+                    </div>
+                  </div>
+                  <div class="mb-3 ">
+                    <label for="division" class="<%= errorState.find(e=> e.param === 'division') ? 'text-danger':''%>">Education Board <span style="color: red;">*</span></label>
+                    <select class="custom-select d-block w-100 text-uppercase" name="division" id="division" required>
+                      <option value="">CHOOSE...</option>
+                      <option value="BARISAL">BARISAL</option>
+                      <option value="CHITTAGONG">CHITTAGONG</option>
+                      <option value="COMILLA">COMILLA</option>
+                      <option value="DHAKA">DHAKA</option>
+                      <option value="DINAJPUR">DINAJPUR</option>
+                      <option value="JESSORE">JESSORE</option>
+                      <option value="MYMENSINGH">MYMENSINGH</option>
+                      <option value="RAJSHAHI">RAJSHAHI</option> 
+                      <option value="SYLHET">SYLHET</option>
+                      <option value="MADRASAH">MADRASAH</option>
+                      <option value="TECHNICAL">TECHNICAL</option>
+                      <option value="DIBS">DIBS(DHAKA)</option>
+                    </select>
+                    <div class="invalid-feedback">
+                      Please select a valid division.
+                    </div>
+                  </div>
+
+                  <div class="mb-3">
+                    <label for="student_type" class="<%= errorState.find(e=> e.param === 'studentType') ? 'text-danger':''%>">Student Type <span style="color: red;">*</span></label>
+                    <select class="custom-select d-block w-100 text-uppercase" name="studentType" id="studenType" required>
+                      <option value="">Choose...</option>
+                      <option value="HSC">HSC / Alim / Admission</option>
+                      <option value="BCS / BANKJOB / GOVJOB">BCS / Bank Job / Govt Job</option>
+                      
+                    </select>
+                    <div class="invalid-feedback">
+                      Please select a valid student type.
+                    </div>
+                  </div>
+                
+
+                  
+
+              <div class="form-label-group">
+                <input type="password" id="inputPassword" name="password" class="form-control <%= errorState.find(e=> e.param === 'password') ? 'bg-danger':''%>" placeholder="Password" required>
+                <label for="inputPassword">Password <span style="color: red;">*</span></label>
+                <div class="invalid-feedback">
+                  Please select a valid password.
+                </div>
+              </div>
+
+              <div class="form-label-group">
+                <input type="password" id="ConfirmPassword" name="confirmPassword" class="form-control <%= errorState.find(e=> e.param === 'confirmPassword') ? 'bg-danger':''%>" placeholder="Confirm Password" required>
+                <label for="ConfirmPassword">Confirm Password <span style="color: red;">*</span></label>
+                <div class="invalid-feedback">
+                  Please select a valid division.
+                </div>
+              </div>
+             
+    
+                 
+                  <input type="hidden" name="_csrf" value="<%= csrfToken %>">
+                  <button class="btn btn-lg btn-primary btn-block text-uppercase" type="submit">SIGN UP</button>
+                
+                    <label class="mt-3">Do you have an Acount? Please <a href="/login">Sign In</a></label>
+                  
+                  </form>
+                
+
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+     
+
+
+    
+     
+    </body> 
+
+ 
+    
+                              
+
+
+    
+

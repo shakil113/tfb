@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+    <html lang="en">
+       <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <title>Contest Registration</title>
+
+        
+        <meta name="Description" content=" This an online Quiz contest page which is specially for bangladeshi students . This online quiz contest will 
+        help the students to adjust the competitive world.
+        " />
+      
+        
+        <meta name="author" content="tutorialforbeginner.com">
+        <meta property="og:site_name" content="www.tutorialforbeginner.com" />
+        <meta property="og:locale" content="en_US" />
+        <meta property="og:type" content="website" />
+        <link rel="shortcut icon" href="../images/ico.jpg" type="image/x-icon" />
+       
+
+        <%- include('../includes/boostrap-head.ejs') %>
+           <style>
+            .navbar-collapse .navbar-nav{float:none;margin:0 auto;text-align:center}img{max-width:100%}#footer{background:#232323;padding:30px 0 0 0;font-size:12px;color:#999}#footer a{color:#ccc}#footer a:hover{color:#fff}#footer h3.widget-title{font-size:15px;font-size:.9375rem;text-transform:uppercase;color:#fff;margin:0 0 20px}#underfooter{background:#191919;padding:15px 0;color:#777;font-size:12px}#underfooter a{color:#aaa}#underfooter a:hover{color:#fff}@media (min-width:1200px){.container{max-width:1080px}}body{overflow-x:hidden}#sidebar-wrapper{min-height:100vh;margin-left:-15rem;-webkit-transition:margin .25s ease-out;-moz-transition:margin .25s ease-out;-o-transition:margin .25s ease-out;transition:margin .25s ease-out}#sidebar-wrapper .sidebar-heading{padding:.875rem 1.25rem;font-size:1.2rem}#sidebar-wrapper .list-group{width:15rem}#page-content-wrapper{min-width:100vw}#wrapper.toggled #sidebar-wrapper{margin-left:0}@media (min-width:768px){#sidebar-wrapper{margin-left:0}#page-content-wrapper{min-width:0;width:100%}#wrapper.toggled #sidebar-wrapper{margin-left:-15rem}}.row.content{height:auto;width:auto}.sidenav{padding-top:20px;background-color:#f1f1f1;height:cover}footer{background-color:#555;color:#fff;padding:15px}@media screen and (max-width:767px){.sidenav{height:auto;padding:15px}.row.content{height:auto}}
+          </style>
+      
+            <!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-148831263-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-148831263-1');
+</script>
+
+        
+    </head>
+
+
+    
+
+<body class="bg-light" >
+    <%- include('../includes/navigation.ejs') %>
+    
+    
+    <main id="main">
+        
+     
+            <div class="d-flex" id="wrapper">
+
+                <!-- Sidebar -->
+                <div class="bg-light border-right" id="sidebar-wrapper">
+                  <div class="sidebar-heading bg-success text-white text-center"><b>Topic Menu</b> </div>
+                  <div class="list-group list-group-flush ">
+
+                    <%- include('../sitebars/online-quiz-contest-sitebar.ejs') %> 
+                     
+                  </div>
+                </div>
+                <!-- /#sidebar-wrapper -->
+            
+                <!-- Page Content -->
+                <div id="page-content-wrapper">
+            
+                  <nav class="navbar navbar-expand-lg border-bottom" style="background-color: #375028;">
+                    <button class="btn text-white btn-lg" style="background-color: #521212;" id="menu-toggle">&#x2190;QUIZ MENU</button>
+            
+                  </nav>
+            
+                  <div class="container-fluid ">
+                      <div class="row content">
+                          
+                          <div class="col-sm-12 col-lg-9 col-md-8 text-left"> 
+
+                              <div class="row my-4 justify-content-center" >
+
+                                <div class="col-lg-6  col-sm-12 portfolio-item " >
+                                  <div class="card  h-100 text-white "  style="background-color: #fa5b5bea;">
+                                    
+                                    
+                                     
+                                    <div class="card-body my-2" style=" background-color:#1e395c; height: 500px;border-radius: 40px 2px 70px 10px;">
+                                      <h5 class="mt-2 mb-3 p-2 bg-success text-center " style="border-radius: 2px 2px 2px 2px;">Payment</h5>
+                                      <% if( registration === true){%>
+                                        
+                                      <h3>You Already Registered</h3>
+                                      <%}else{%>
+                                      <form action="/confirm-registration" method="POST">
+                                           
+                                            <%if(contestType === false){%>
+                                              <div class="input-group mb-3">
+                                                
+                                                <input type="text" class="form-control" name="paymentNumber" value="FREE" readonly>
+                                              
+                                              </div>
+                                              <div class="input-group mb-3">
+                                                
+                                                <input type="text" class="form-control " name="transactionId"  value="FREE" readonly>
+                                              
+                                              </div>
+                                              <%}else{%>
+
+
+                                                <div class="input-group mb-3">
+                                                
+                                                  <input type="text" class="form-control" name="paymentNumber" placeholder="Your Payment Number"  required>
+                                                
+                                                </div>
+                                                <div class="input-group mb-3">
+                                                  
+                                                  <input type="text" class="form-control" name="transactionId" placeholder="TransactionId Number" required>
+                                                
+                                                </div>
+                                                <%}%>
+
+                                              <input type="hidden" name="_csrf" value="<%= csrfToken %>">
+                                              <input type="hidden" name="contestId" value="<%=contestId%>">
+                                              
+                                              <button type="submit" class="btn btn-outline-success w-100 bg-dark font-weight-bold">Submit</button>
+                                            <%}%>
+                                        </form>
+                                       
+                                          
+                                    </div>
+                                  </div>
+                                </div>
+                                
+                
+                            </div>
+
+                        
+
+                             
+                                    
+                            
+                            
+                            
+                             
+                              
+</div>
+                          <div class="col-sm-12 col-lg-3 col-md-4 sidenav">
+                          
+                            <div class="well my-5">
+                                
+                              <details >
+                                  <summary>আসুন ......</summary>
+                                  <p class="text-tustify">
+                                    দূর্নীতিকে না বলি ,<br> সোনার বাংলাদেশ গড়ি ।
+                                  </p>
+                                </details>
+                          </div>
+
+                          <div class="well my-5">
+                              
+                              <details >
+                                <summary>আসুন ......</summary>
+                                <p class="text-tustify">
+                                   নিজেকে বদলাই তাহলে ,<br> সমাজ আপনা আপনি বদলে যাবে ।
+                                </p>
+                                </details> 
+                          </div>
+                         
+                           
+                           
+
+                          </div>
+                        </div>
+                      </div>
+                    
+                </div>
+               
+            
+              </div>
+              
+              <script>
+                $("#menu-toggle").click(function(e) {
+                  e.preventDefault();
+                  $("#wrapper").toggleClass("toggled");
+                });
+              </script>
+
+
+            
+
+    
+    
+    </main>
+
+    
+
+<%- include('../includes/end.ejs') %>

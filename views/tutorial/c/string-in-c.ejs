@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+    <html lang="en">
+       <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <title>Learn String In C Programming Language</title>
+
+        
+        <meta name="Description" content="A string is a set of character and also it is defined as an array of characters. Difference between character array and string is -- a string is terminated with a special character ‘\0’ but character is not .
+            Declaration: Declaring a string is sam as declaring a one dimensional array." />
+        <meta name="Keywords" content="string in c , c string" />
+        
+        <meta name="author" content="tutorialforbeginner.com">
+        <meta property="og:site_name" content="www.tutorialforbeginner.com" />
+        <meta property="fb:pages" content="340075726591504" />
+        <meta property="fb:pages" content="1524841087795043" />
+        <meta name="viewport" content="width=device-width,initial-scale=1.0,user-scalable=yes">
+        <meta property="og:locale" content="en_US" />
+        <meta property="og:type" content="website" />
+        <link rel="shortcut icon" href="images/ico.jpg" type="image/x-icon" />
+        <link rel="canonical" href="https://tutorialforbeginner.com/string-in-c" />
+
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+        <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+        <style>
+            .navbar-collapse .navbar-nav{float:none;margin:0 auto;text-align:center}img{max-width:100%}#footer{background:#232323;padding:30px 0 0 0;font-size:12px;color:#999}#footer a{color:#ccc}#footer a:hover{color:#fff}#footer h3.widget-title{font-size:15px;font-size:.9375rem;text-transform:uppercase;color:#fff;margin:0 0 20px}#underfooter{background:#191919;padding:15px 0;color:#777;font-size:12px}#underfooter a{color:#aaa}#underfooter a:hover{color:#fff}@media (min-width:1200px){.container{max-width:1080px}}body{overflow-x:hidden}#sidebar-wrapper{min-height:100vh;margin-left:-15rem;-webkit-transition:margin .25s ease-out;-moz-transition:margin .25s ease-out;-o-transition:margin .25s ease-out;transition:margin .25s ease-out}#sidebar-wrapper .sidebar-heading{padding:.875rem 1.25rem;font-size:1.2rem}#sidebar-wrapper .list-group{width:15rem}#page-content-wrapper{min-width:100vw}#wrapper.toggled #sidebar-wrapper{margin-left:0}@media (min-width:768px){#sidebar-wrapper{margin-left:0}#page-content-wrapper{min-width:0;width:100%}#wrapper.toggled #sidebar-wrapper{margin-left:-15rem}}.row.content{height:auto;width:auto}.sidenav{padding-top:20px;background-color:#f1f1f1;height:cover}footer{background-color:#555;color:#fff;padding:15px}@media screen and (max-width:767px){.sidenav{height:auto;padding:15px}.row.content{height:auto}}
+          </style>
+       
+        
+        <script type="text/javascript" src="js/print/run_prettify.js??autoload=true&amp;skin=sunburst&amp;"></script>
+
+        <script data-ad-client="ca-pub-9136564254270725" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+
+
+            <!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-148831263-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-148831263-1');
+</script>
+
+
+        
+
+        
+    </head>
+
+
+    
+
+<body >
+    <%- include('../../includes/navigation.ejs') %>
+    
+    
+    <main id="main">
+        
+        <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+        <!-- home-ads-1 -->
+        <ins class="adsbygoogle"
+             style="display:block"
+             data-ad-client="ca-pub-9136564254270725"
+             data-ad-slot="2619903643"
+             data-ad-format="auto"
+             data-full-width-responsive="true"></ins>
+        <script>
+             (adsbygoogle = window.adsbygoogle || []).push({});
+        </script>
+        
+            
+            
+            <div class="d-flex" id="wrapper">
+
+                <!-- Sidebar -->
+                <div class="bg-light border-right" id="sidebar-wrapper">
+                  <div class="sidebar-heading">Topics</div>
+                  <div class="list-group list-group-flush">
+                    <%- include('../../sitebars/c-sitebar.ejs') %>
+                  </div>
+                </div>
+                <!-- /#sidebar-wrapper -->
+            
+                <!-- Page Content -->
+                <div id="page-content-wrapper">
+            
+                  <nav class="navbar navbar-expand-lg navbar-light bg-light border-bottom ">
+                    <button class="btn btn-primary" id="menu-toggle">Contents</button>
+            
+                  </nav>
+            
+                  <div class="container-fluid">
+                      <div class="row content">
+                          
+                          <div class="col-sm-12 col-lg-9 col-md-8 text-left"> 
+                              <h2 class="bg-dark text-center text-white">String</h2>
+
+
+                              <p class=" text-justify">
+                                  <b>String:</b> A string is a set of character and also it is defined as an array of characters.
+                                   Difference between character array and string is -- a string is terminated with a special character ‘\0’ but character
+                                   is not .  
+                             </p><br>
+                             <p class=" text-justify">
+                                <b>Declaration of strings variable:</b> Declaring a string is 
+                                sam as  declaring a one dimensional array. Below is the basic syntax for declaring a string.
+                           </p>
+<pre class="prettyprint">
+    <code>char string_name[n];//here n is how many character you want to store.</code></pre>  
+    
+    
+    <p class=" text-justify">
+        Above syntax string_name is any name given to the string variable and size is
+        used define the length of the string. <b>[Note:the number of characters strings will store.
+        Please keep in mind that there is an extra terminating character which is the Null character (‘\0’) used to indicate termination of string which differs strings from normal character arrays. ]</b> 
+   </p>
+   <p class=" text-justify"> String can be initialized in several ways.Let's see the following example
+        to declare a string with name as str and initialize it with <b>“tutorial”</b>.</p>
+
+<pre class="prettyprint">
+<code>//1st way 
+char num[] = {'t','u','t','o','r','i','a','l','\0'};
+//2nd way 
+char num[] = "tutorial";
+//3rd way
+char num[8];
+num[0] = 't';
+num[1] = 'u';
+num[2] = 't';
+num[3] = 'o';
+num[4] = 'r';
+num[5] = 'i';
+num[6] = 'a';
+num[7] = 'l';
+ </code></pre>
+     <p class=" text-justify">
+      We must remember that <code>'\0'</code> is call <code>null character</code> and it is also call
+      string terminator. All the above way generate following sring 
+ 
+ </p>
+      <img src="images/c_string.jpg" width="100%" alt="string example">
+      <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<ins class="adsbygoogle"
+     style="display:block; text-align:center;"
+     data-ad-layout="in-article"
+     data-ad-format="fluid"
+     data-ad-client="ca-pub-9136564254270725"
+     data-ad-slot="3553232436"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+
+
+                              <hr><div class="embed-responsive embed-responsive-16by9">
+                                  <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/1lJ8S3nKRls" allowfullscreen></iframe>
+                              </div>
+                            
+                          
+                           
+
+
+                                 <hr><h6>Let's familiar with the String Input:</h6>
+
+<pre class="prettyprint">
+<code>
+char str[100];
+//1st way using scanf
+scanf("%[^\n]%*c", str); 
+
+//2nd way using gets
+gets(str);
+        
+//3rd way using loop
+for(int i=0;i< string_length;i++){
+    scanf("%c", str[i]);
+ }</code></pre>      
+
+
+        <p class=" text-justify">
+               In the first way <b>^\n </b>mean that take input until user press <code>enter button or newline</code>.
+               In the second way <code>gets()</code> is a build in funtion to input the string. In the third way using loops
+               you can also take input as much as you want but one thing I want to mention that string lenght must shoter than 
+               the sting array size . Let's see the following example then everythinh will be clear.
+           
+           </p>                                 
+                                      
+<pre class="prettyprint">
+<code>#include&lt;stdio.h&gt;
+  int main(){
+     char str[30];
+     for (int i=0;i&lt;19;i++){
+         scanf("%c", str[i]);
+     }
+     printf("%s",str);
+     return 0;
+  }</code></pre>  
+ 
+ 
+ 
+ 
+  <h5>Input:</h5>
+  <pre class="prettyprint">
+   tutorialforbeginner</code></pre>
+  <h5>Output:</h5>
+  <pre class="prettyprint">
+    tutorialforbeginner</code></pre>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- ad-3 -->
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-9136564254270725"
+     data-ad-slot="1689965350"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+
+    
+
+                            
+
+
+                              
+                     </div>
+                          <div class="col-sm-12 col-lg-3 col-md-4 sidenav">
+                          
+                            <div class="well my-5">
+                                
+                                <details >
+                                    <summary>Best way of learing</summary>
+                                    <p class="text-tustify">
+                                        Self learing is the best learing in the world.
+                                        Discover yourself first then will get what you are And
+                                        what you want to do .It will push you for self learing.
+                                    </p>
+                                  </details>
+                            </div>
+
+                            <div class="well my-5">
+                                
+                                <details >
+                                    <summary>Why you need to learn coding?</summary>
+                                    <p class="text-tustify">
+                                        Coding will play a vital role in one's life . It will help to open 
+                                        a new window of thinking . You can think better way than past . It 
+                                        helps to organise all the thing in better way .
+                                    </p>
+                                  </details>
+                            </div>
+                           
+                            <div class="well sticky-top">
+                                <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+                                <!-- C-verticle -->
+                                <ins class="adsbygoogle"
+                                     style="display:block"
+                                     data-ad-client="ca-pub-9136564254270725"
+                                     data-ad-slot="1132697628"
+                                     data-ad-format="auto"
+                                     data-full-width-responsive="true"></ins>
+                                <script>
+                                     (adsbygoogle = window.adsbygoogle || []).push({});
+                                </script>
+                              
+                            </div>
+                            
+
+                          </div>
+                        </div>
+                      </div>
+                    
+                </div>
+               
+            
+              </div>
+              
+              <script>
+                $("#menu-toggle").click(function(e) {
+                  e.preventDefault();
+                  $("#wrapper").toggleClass("toggled");
+                });
+              </script>
+            
+        
+    
+    </main>
+
+    
+
+<%- include('../../includes/end.ejs') %>

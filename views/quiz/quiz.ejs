@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+    <html lang="en">
+       <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <title>Quiz</title>
+
+        <meta name="author" content="tutorialforbeginner.com">
+        <meta property="og:site_name" content="www.tutorialforbeginner.com" />
+        <meta property="og:locale" content="en_US" />
+        <meta property="og:type" content="website" />
+        <link rel="shortcut icon" href="../../images/ico.jpg" type="image/x-icon" />
+        
+
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" >
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+      
+
+  
+    </head>
+
+
+    
+
+<body class="bg-light">
+   
+    
+    
+    <main id="main">
+        
+
+            
+      
+          <div class="container">
+             
+                    
+                    <div>
+
+                      <div class="sticky-top mt-3" style="background-color: #9e0808;  padding-top: 10px; padding-left: 10px;padding-right: 10px; border-radius: 10px 10px 10px 10px;">
+                       
+                        <div class="nav d-flex justify-content-between mb-3 ">
+                          <h5 class="text-white" >Time: <%=contestType.contestTypeDuration %> Min  </h5>
+                          <h5 class="text-white" id="timer"></h5>
+                          
+                        </div>
+                       
+                        
+                      </div>
+                     
+                    
+                        
+                      <form action="/answer-evaluate" id="quizForm" method="POST">
+                       
+                        <% var i=1;var q=0;%>
+                        <% if(ContestQuestionSet.length>0) {%>
+                          
+                          <% for(question of ContestQuestionSet) {%> 
+                      <table class="table">
+                       
+                        
+                        <tr class="table-danger">
+                          <th><%=i%>. <%- question.question%></th>
+                        </tr>
+                        <tr class="table-success">
+                          <th><span class="bd-highlight mr-2">A)</span><input class="mr-2" type="radio" name="answer[<%=q%>]" value="A"><%-question.option1%></th>
+                        </tr>
+                      
+                        <tr class="table-success">
+                          <th><span class="bd-highlight mr-2">B)</span><input class="mr-2" type="radio" name="answer[<%=q%>]" value="B"><%-question.option2%></th>
+                        </tr>
+                        <tr class="table-success">
+                          <th><span class="bd-highlight mr-2">C)</span><input class="mr-2" type="radio" name="answer[<%=q%>]" value="C"><%-question.option3%></th>
+                        </tr>
+                        <tr class="table-success ">
+                          <th><span class="bd-highlight mr-2">D)</span><input class="mr-2" type="radio" name="answer[<%=q%>]" value="D"><%-question.option4%></th>
+                        </tr>
+                        <tr class="table-primary ">
+                          <th><span class="bd-highlight mr-2">E)</span><input class="mr-2" type="radio"  name="answer[<%=q%>]" value="E" checked>Avoid this question</th>
+                        </tr>
+                        <input type="hidden" name="questionId[<%=q%>]" value="<%=question.id%>">
+                      </table>
+                      <%i++;q++; }%>
+                      <%}%>
+                      
+                       
+                        
+                       <input type="hidden" name="_csrf" value="<%= csrfToken %>">
+                       <input type="hidden" name="contestId" value="<%= contest.id %>">
+                       <input type="hidden" name="contestTypeId" value="<%= contestType.id %>">
+                       
+                       <input type="hidden" name="minutes" id="min" value="">
+                       <input type="hidden" name="seconds" id="sec" value="">
+                     
+                       
+                       
+                       <hr class="p-2">
+                       <div class="d-flex justify-content-center">
+                        <button type="submit" class="btn btn-success mb-3" id="quiz_submit">Submit Answers</button>
+                       </div>
+                      
+                      </form>
+                      
+
+                        
+                  </div>
+                    
+                  
+              </div>
+              
+    
+    
+        
+      
+     
+</main>
+    
+
+    
+    <script>
+      $(document).ready(function() {
+
+        var minutes;
+        var seconds;
+
+        $("#quiz_submit").click(function(){
+        $("#min").val(minutes);
+        $("#sec").val(seconds);
+    })
+
+       setInterval(() => {
+
+
+       var time = new Date('<%=contest.contestDate %>T<%=contest.contestTime %>').getTime();
+       var exam_time = parseInt('<%=contestType.contestTypeDuration %>')*60*1000;
+       var current = new Date().toLocaleString("en-US", { timeZone: "Asia/Dhaka", timeZoneName: "short", hourCycle: "h24" }).split(' ');
+       var currentDate = current[0].split(',')[0];
+       var currentTime = current[1];
+       var exam_end_time = exam_time + time;
+       var now = new Date(currentDate+' '+currentTime).getTime();
+       var exam = exam_end_time - now; 
+   
+       minutes = Math.floor((exam%(1000*3600))/(1000*60));
+       seconds = Math.floor((exam%(1000*60))/(1000));
+       
+       document.getElementById("timer").innerHTML = minutes+"M : "+seconds+"S";
+       
+      
+       if( minutes === 0 && seconds === 0){
+         
+          $("#quiz_submit").click();;
+
+        }
+     
+       },1000);
+ 
+     });
+
+       
+     </script>
+
+</body>
+
+</html>
+    
+

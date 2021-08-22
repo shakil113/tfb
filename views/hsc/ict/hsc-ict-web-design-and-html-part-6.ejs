@@ -1,0 +1,577 @@
+<!DOCTYPE html>
+    <html lang="en">
+       <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <title>HSC ICT Chapter 4 Part-6 : Introduction to Web Design And Html</title>
+
+        
+        <meta name="Description" content=" In this HSC ICT Chapter 4 Part-6 : Introduction to Web Design And Html we will
+        learn about What is Table,How To Create Tables In Html, Use of different Table Tags, use of different table attributes ,Easy table example. " />
+       
+        
+        <meta name="author" content="tutorialforbeginner.com">
+        <meta property="og:site_name" content="www.tutorialforbeginner.com" />
+        <meta property="og:locale" content="en_US" />
+        <meta property="og:type" content="website" />
+        <link rel="shortcut icon" href="images/ico.jpg" type="image/x-icon" />
+        <link rel="canonical" href="https://tutorialforbeginner.com/hsc-ict-web-design-and-html-part-part-6"/>
+
+        <%- include('../../includes/boostrap-head.ejs') %>
+        <style>
+            .navbar-collapse .navbar-nav{float:none;margin:0 auto;text-align:center}img{max-width:100%}#footer{background:#232323;padding:30px 0 0 0;font-size:12px;color:#999}#footer a{color:#ccc}#footer a:hover{color:#fff}#footer h3.widget-title{font-size:15px;font-size:.9375rem;text-transform:uppercase;color:#fff;margin:0 0 20px}#underfooter{background:#191919;padding:15px 0;color:#777;font-size:12px}#underfooter a{color:#aaa}#underfooter a:hover{color:#fff}@media (min-width:1200px){.container{max-width:1080px}}body{overflow-x:hidden}#sidebar-wrapper{min-height:100vh;margin-left:-15rem;-webkit-transition:margin .25s ease-out;-moz-transition:margin .25s ease-out;-o-transition:margin .25s ease-out;transition:margin .25s ease-out}#sidebar-wrapper .sidebar-heading{padding:.875rem 1.25rem;font-size:1.2rem}#sidebar-wrapper .list-group{width:15rem}#page-content-wrapper{min-width:100vw}#wrapper.toggled #sidebar-wrapper{margin-left:0}@media (min-width:768px){#sidebar-wrapper{margin-left:0}#page-content-wrapper{min-width:0;width:100%}#wrapper.toggled #sidebar-wrapper{margin-left:-15rem}}.row.content{height:auto;width:auto}.sidenav{padding-top:20px;background-color:#f1f1f1;height:cover}footer{background-color:#555;color:#fff;padding:15px}@media screen and (max-width:767px){.sidenav{height:auto;padding:15px}.row.content{height:auto}}
+          </style>
+          <script async type="text/javascript" src="js/print/run_prettify.js??autoload=true&amp;skin=sunburst&amp;"></script>
+        
+
+        
+        
+<script data-ad-client="ca-pub-9136564254270725" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+
+
+            <!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-148831263-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-148831263-1');
+</script>
+
+
+        
+
+        
+        
+    </head>
+
+
+    
+
+<body>
+    <%- include('../../includes/navigation.ejs') %>
+    
+    
+    <main id="main">
+        
+      <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+      <!-- ict-ads-3 -->
+      <ins class="adsbygoogle"
+           style="display:block"
+           data-ad-client="ca-pub-9136564254270725"
+           data-ad-slot="3477296539"
+           data-ad-format="auto"
+           data-full-width-responsive="true"></ins>
+      <script>
+           (adsbygoogle = window.adsbygoogle || []).push({});
+      </script>
+
+        
+            
+            
+<div class="d-flex" id="wrapper">
+
+  <%- include('../../sitebars/ict.ejs') %> 
+  </div>
+</div>
+                <!-- /#sidebar-wrapper -->
+            
+                <!-- Page Content -->
+                <div id="page-content-wrapper">
+            
+                  <nav class="navbar navbar-expand-lg navbar-light bg-light border-bottom">
+                    <button class="btn btn-primary" id="menu-toggle">Contents</button>
+            
+                  </nav>
+            
+                  <div class="container-fluid">
+                      <div class="row content">
+                          
+                          <div class="col-sm-12 col-lg-9 col-md-8 text-left"> 
+                              <h1 class="bg-dark text-center text-white">HSC ICT Chaper 4 Part-6</h1>
+                   
+                              <h3 class="mt-4 text-center">Introduction to Web Design and HTML</h3>
+                              <p class="text-justify text-secondary"><b>
+                                In this HSC ICT Chapter 4 Part-6 : Introduction to Web Design And Html we will
+        learn about What is Table , How To Create Tables In Html, Use of different Table Tags, use of different table attributes ,Easy table example.</b></p><hr>
+
+                              <h4> 51.টেবিল তৈরি করা ( How To Create Tables In Html )?
+                              </h4>
+                              
+                            <p class="text-justify text-dark">
+                        
+                              উঃ ওয়েবপেইজে কীভাবে Table তৈরি করতে হবে তা শেখার আগে টেবিল কী, সে বিষয়ে 
+                              আমাদের কিছুটা ধারণা থাকা প্রয়ােজন। টেবিল হচ্ছে ভিন্ন ধরনের কোনাে বৃহৎ আকারের ডেটাকে 
+                              সুস্থ বা সারিভাবে প্রকাশের একটি পদ্ধতি। প্যারাগ্রাফ বা বক্সের পরিবর্তে যেকোনাে ডেটাকে টেবিল হিসেবে
+                               সাজিয়ে ওয়েবপেইজ উপস্থাপন করা যায় । এমন কিছু তথ্য আছে যা প্যারাগ্রাফ বা বক্সের পরিবর্তে টেবিল
+                                আকারে উপস্থাপিত হলে অধিক অর্থসহ ও মনােরম হয়। HTML এ এই ধরনের তথ্য বা ডেটাকে মার্কআপ 
+                                করার জন্যে টেবিল ব্যবহৃত হয়। যেমন- একটি ক্লাসের ছাত্র ছাত্রীদের রােল, নাম, বিভাগ এবং প্রাপ্ত নম্বর 
+                                ওয়েবে প্রকাশ করার জন্যে টেবিলের কাঠামােতে উপস্থাপন করাই ভালাে। যে সমস্ত উপাদান নিয়ে একটি টেবিল
+                             কাঠামাে গড়ে ওঠে সেগুলাে হলাে- রাে, কলাম, সেল। টেবিল তৈরির জন্যে &lt;table&gt; ট্যাগটি ব্যবহার
+                              করা হয় । এই &lt;table&gt; ট্যাগটি একটি Containe ট্যাগ বিধায় এর Closing ট্যাগ &lt;/table&gt;
+                               ও রয়েছে ।<table> এবং </table> এ ট্যাগ দুটির মধ্যবর্তী স্থানে আরও কিছু ট্যাগ ব্যবহৃত হয়। lets familiar 
+                              with some table Tag <br>
+                             
+                            
+                            </p><hr>
+                              <div class="embed-responsive embed-responsive-16by9">
+                                  <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/sbZpn0i8L0A" allowfullscreen></iframe>
+                              </div>
+                              <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+                                <!-- ict-ads-4 -->
+                                <ins class="adsbygoogle"
+                                    style="display:block"
+                                    data-ad-client="ca-pub-9136564254270725"
+                                    data-ad-slot="9659561509"
+                                    data-ad-format="auto"
+                                    data-full-width-responsive="true"></ins>
+                                <script>
+                                    (adsbygoogle = window.adsbygoogle || []).push({});
+                                </script>
+                        
+                        
+                        
+                            <table class="table table-bordered text-center">
+                              <tr>
+                                <th>Start Tag</th>
+                                <th>End Tag</th>
+                                <th>Description</th>
+                              </tr>
+                        
+                              <tr>
+                                <td>&lt;caption&gt;</td>
+                                <td>&lt;/caption&gt;</td>
+                                <td> টেবিল টাইটেল বা লেবেল প্রদর্শনের জন্যে এটি ব্যবহৃত হয়। &lt;table&gt; ট্যাগ এর পরই টেবিলের Row ট্যাগের আগে &lt;caption&gt; ট্যাগটি ব্যবহৃত হয়। যদি টাইটেল লিখতে চাই তবে &lt;table&gt; ট্যাগটির পরেই
+                                  &lt;caption&gt; ট্যাগটি লিখতে হবে।
+                                  </td>
+                              </tr>
+                              <tr>
+                                <td>&lt;th&gt;</td>
+                                <td>&lt;/th&gt;</td>
+                                <td>টেবিলের মধ্যে হেডিং দেওয়ার জন্যে &lt;th&gt; ট্যাগ ব্যবহার করা হয়ে থাকে।
+                                </td>
+                              </tr>
+                              <tr>
+                                <td>&lt;td&gt;</td>
+                                <td>&lt;/td&gt;</td>
+                                <td>প্রতিটি রাে আবার &lt;td&gt; ট্যাগ দ্বারা ডেটা সেলসমূহ বিভক্ত থাকে। td এর মানে হলাে Table Data যা
+                                  একটি ডেটা সেলের কনটেন্ট। 
+                                  </td>
+                              </tr>
+                              <tr>
+                                <td>&lt;tr&gt;</td>
+                                <td>&lt;/tr&gt;</td>
+                                <td>একটি টেবিল &lt;tr&gt; ট্যাগ দ্বারা Row বিভক্ত থাকে। টেবিলের Row বা সারি ধারণ করার জন্যে &lt;tr&gt; ....&lt;/tr&gt; ট্যাগটি ব্যবহৃত হয়।</td>
+                              </tr>
+                              <tr>
+                                <td>&lt;thead&gt;</td>
+                                <td>&lt;/thead&gt;</td>
+                                <td> &lt;thead&gt; এর ভিতরে &lt;th&gt; গুলোকে রাখা হয় । </td>
+                              </tr>
+                              
+                              <tr>
+                                <td>&lt;tbody&gt;</td>
+                                <td>&lt;/tbody&gt;</td>
+                                <td>&lt;tbody&gt; এর ভিতরে &lt;td&gt; গুলোকে রাখা হয় । 
+                                  </td>
+                              </tr>
+                             
+                              <tr>
+                                <td>&lt;tfoot&gt;</td> 
+                                <td>&lt;/tfoot&gt;</td>
+                                <td>&lt;tbody&gt; এর ভিতরে &lt;td&gt; গুলোকে রাখা হয় কিন্তু এগুলো শেষের লাইনে থাকে ।
+                                  </td>
+                              </tr>
+                              
+                        
+                            </table>
+                            <p class="text-dark text justify">
+                              টেবিলের মধ্যে কিছু অ্যাট্রিবিউট ব্যবহার করা হয়। যেমন- <br>
+                              <ul>
+                                <li><b>border:</b>টেবিলের row colum অনুযায়ী দাগ দেয়ার জন্য border অ্যাট্রিবিউট ব্যাবহার করা হয় । 
+                                
+                                </li> 
+                                <li><b>align:</b> Table Data এর align ঠিক করার জন্য এটা ব্যাবহার করা হয় ।  </li>
+                                <li><b>width:</b> টেবিলের width নির্ধারণ করার জন্য এই অ্যাট্রিবিউট ব্যাবহার করা হয় । </li>
+                                <li><b>cellspacing:</b> টেবিলের cell space নির্ধারণ করার জন্য এই অ্যাট্রিবিউট ব্যাবহার করা হয় । </li>
+                                <li><b>cellpadding:</b> টেবিলের border থেকে ডাটা গুলো কত ফাকা থাকবে তা নির্ধারণ করার জন্য এই অ্যাট্রিবিউট ব্যাবহার করা হয় ।</li>
+                                <li><b>Colspan:</b> টেবিলের column size বড় করার জন্য এই অ্যাট্রিবিউট ব্যাবহার করা হয় । </li>
+                                <li><b>rowspan:</b> টেবিলের row size বড় করার জন্য এই অ্যাট্রিবিউট ব্যাবহার করা হয় ।</li>
+                              </ul> 
+                         
+                            </p>
+                            
+                          
+                        
+                        
+                          
+                            
+                            <h2>52.নিচে কিছু টেবিলের ঊদাহরন দেয়া হলোঃ</h2> <br>
+
+                            
+ <h4>Table example 1</h4>                       
+<pre class="prettyprint"><code>&lt;!DOCTYPE html&gt;
+&lt;html&gt; 
+  &lt;head&gt;
+
+  &lt;/head&gt;
+
+  &lt;body&gt;
+
+    &lt;table border = "1" width = "100%"&gt;
+    &lt;caption&gt; Monthly Income &lt;/caption&gt;
+
+    &lt;thead style="color:#0c0b0b"&gt;
+      &lt;tr&gt;
+        &lt;th>Month&lt;/th&gt;
+        &lt;th&gt;Earnings&lt;/th&gt;
+      &lt;/tr&gt;
+    &lt;/thead&gt;
+
+    &lt;tbody&gt;
+      &lt;tr&gt;
+        &lt;td&gt;January&lt;/td&gt;
+        &lt;td&gt;$1000.00&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+        &lt;td&gt;February&lt;/td&gt;
+        &lt;td&gt;$2000.00&lt;/td&gt;
+      &lt;/tr&gt;
+    &lt;/tbody&gt;
+
+    &lt;tfoot style="color:#cc0808"&gt;
+      &lt;tr&gt;
+        &lt;td&gt;Total&lt;/td&gt;
+        &lt;td&gt;$3000.00&lt;/td&gt;
+      &lt;/tr&gt;
+    &lt;/tfoot&gt;
+
+  &lt;/table&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+                              <h4 class="text-center bg-dark text-white">Output:</h4>
+                              <p class="text-justify text-dark">
+                                <table border = "1" width = "100%" >
+                                  <caption>Monthly Income</caption>
+                        
+                                  <thead style="color:#0c0b0b">
+                                    <tr>
+                                    <th>Month</th>
+                                    <th>Earnings</th>
+                                    </tr>
+                                  </thead>
+                              
+                                  <tbody >
+                                    <tr>
+                                      <td>January</td>
+                                      <td>$1000.00</td>                                      
+                                    </tr>
+                                    <tr>                            
+                                      <td>February</td>
+                                      <td>$2000.00</td>
+                                    </tr>
+                                  </tbody>
+                                  
+                                  <tfoot style="color:#cc0808">
+                                    <tr>
+                                      <td>Total</td>
+                                      <td>$3000.00</td>
+                                    </tr>
+                                  </tfoot>
+                              
+                                </table>
+                              </p><hr>   
+                                 
+                            <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+                            <ins class="adsbygoogle"
+                                style="display:block; text-align:center;"
+                                data-ad-layout="in-article"
+                                data-ad-format="fluid"
+                                data-ad-client="ca-pub-9136564254270725"
+                                data-ad-slot="2687298352"></ins>
+                            <script>
+                                (adsbygoogle = window.adsbygoogle || []).push({});
+                            </script>
+
+
+
+                            </p><br>
+
+
+                          
+                            
+<h4>Table Example 2?</h4>
+<p class="text-justify text-dark">
+    
+  <table border="1" width="100%" style="text-align: center;">
+    
+    <tr>
+        <th colspan="2"> Mark Distribution</th>
+        <th >Total</th>
+     </tr>
+    <tr>
+        <td>CQ</td>
+        <td>50</td>
+        <td rowspan="3">100</td>
+    </tr>
+    <tr>
+        <td>MCQ</td>
+        <td>25</td>
+    </tr>
+    <tr>
+        <td>PC</td>
+        <td>25</td>
+    </tr>
+
+</table> 
+</p>
+
+
+   
+<p class="text-justify text-dark">
+  উপরের টেবিলটির জন্য কোড লিখ?
+</p>
+                              
+
+<pre class="prettyprint"><code>&lt;!DOCTYPE html&gt;
+&lt;html&gt; 
+  &lt;head&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;table border="1" width="100%" style="text-align: center;"&gt;
+      &lt;thead&gt;
+        &lt;tr&gt;
+          &lt;th colspan="2"&gt; Mark Distribution&lt;/th&gt;
+          &lt;th &gt;Total&lt;/th&gt;     
+        &lt;/tr&gt;
+      &lt;/thead&gt;
+      &lt;tbody&gt;
+        &lt;tr&gt;
+          &lt;td&gt;CQ&lt;/td&gt;
+          &lt;td&gt;50&lt;/td&gt;
+          &lt;td rowspan="3"&gt;10&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+          &lt;td&gt;MCQ&lt;/td&gt;
+          &lt;td&gt;25&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+          &lt;td&gt;PC&lt;/td&gt;
+          &lt;td&gt;25&lt;/td&gt;
+        &lt;/tr&gt;
+      &lt;/tbody&gt;
+
+    &lt;/table&gt; 
+  &lt;/body&gt;
+&lt;/html&gt;</code></pre>  <hr>
+  
+ 
+  
+
+                
+
+                           
+
+     
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+  <ins class="adsbygoogle"
+       style="display:block; text-align:center;"
+       data-ad-layout="in-article"
+       data-ad-format="fluid"
+       data-ad-client="ca-pub-9136564254270725"
+       data-ad-slot="2458044125"></ins>
+  <script>
+       (adsbygoogle = window.adsbygoogle || []).push({});
+  </script>
+
+  <h3>Table Example 3 ?</h3>
+
+<table border="1" width="100%">
+   <tr>  
+     <td colspan="6">
+         <Center> ICT Coaching Center </center>
+     </td> </tr> 
+    <tr>  
+      <td colspan="3">   
+        <Center> Student List </center>
+      </td>  
+      <td colspan="3">      
+         <Center> Others Subject GPA </center>  
+      </td>  
+    </tr> 
+    <tr>  
+      <td rowspan="2">2016</td>  
+      <td>Pass</td>  
+      <td>Fail</td>  
+      <td>Ban</td>  
+      <td>Eng</td>  
+      <td>ICT</td>  
+    </tr> 
+    <tr>  
+      <td>93%</td>
+      <td>7%</td>  
+      <td>A+</td>  
+      <td>A+</td>  
+      <td>A+</td> 
+    </tr>                                         
+    <tr>  
+      <td rowspan="2">2015</td>
+      <td>65%</td>  
+      <td>35%</td>  
+      <td>B</td> 
+      <td>A-</td>  
+      <td>A+</td> 
+    </tr> <tr>  
+      <td>70%</td>  
+      <td>30%</td>  
+      <td>A-</td>  
+      <td>F</td>  
+      <td>A</td> 
+    </tr> 
+    <tr>  
+      <td rowspan="2">2014</td>              
+      <td>60%</td>  
+      <td>40%</td>  
+      <td>A</td>  
+      <td>A</td>  
+      <td>A-</td> 
+    </tr> 
+  </table> <br>
+  <p>
+  উপরের টেবিলটির জন্য কোড লিখ?
+  </p>
+ 
+ 
+  <pre class="prettyprint"><code>&lt;!DOCTYPE html&gt;
+&lt;html&gt; 
+  &lt;head&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;table border="1" width="100%" &gt;
+      &lt;tr &gt;  
+      &lt;td colspan="6" &gt;
+      &lt;Center &gt; ICT Coaching Center &lt;/center &gt;
+      &lt;/td &gt;
+      &lt;/tr &gt; 
+      &lt;tr &gt;  
+        &lt;td colspan="3" &gt;   
+        &lt;Center &gt; Student List  &lt;/center&gt;
+        &lt;/td &gt;  
+        &lt;td colspan="3" &gt;       
+            &lt;Center &gt;  Others Subject GPA  &lt;/center&gt;  
+        &lt;/td &gt;  
+      &lt;/tr &gt; 
+      &lt;tr&gt;  
+        &lt;td rowspan="2"&gt;2016 &lt;/td&gt;  
+        &lt;td&gt;Pass &lt;/td&gt;  
+        &lt;td&gt;Fail &lt;/td&gt;  
+        &lt;td&gt;Ban &lt;/td&gt;  
+        &lt;td&gt;Eng &lt;/td&gt;  
+        &lt;td&gt;ICT &lt;/td&gt;  
+      &lt;/tr&gt; 
+      &lt;tr&gt;
+        &lt;td&gt;93% &lt;/td&gt;
+        &lt;td&gt;7% &lt;/td&gt;  
+        &lt;td&gt;A+ &lt;/td&gt;  
+        &lt;td&gt;A+ &lt;/td&gt;
+        &lt;td&gt;A+ &lt;/td&gt; 
+      &lt;/tr&gt;                                         
+      &lt;tr &gt;  
+        &lt;td rowspan="2"&gt;2015 &lt;/td&gt;
+        &lt;td&gt;65% &lt;/td&gt;  
+        &lt;td&gt;35% &lt;/td&gt;  
+        &lt;td&gt;B &lt;/td&gt; 
+        &lt;td&gt;A- &lt;/td&gt;  
+        &lt;td&gt;A+ &lt;/td&gt; 
+      &lt;/tr&gt; 
+      &lt;tr&gt;  
+        &lt;td&gt;70% &lt;/td&gt;  
+        &lt;td&gt;30% &lt;/td&gt;  
+        &lt;td&gt;A- &lt;/td&gt;  
+        &lt;td&gt; F &lt;/td&gt;  
+        &lt;td&gt;A &lt;/td&gt; 
+      &lt;/tr&gt; 
+      &lt;tr&gt;  
+        &lt;td rowspan="2"&gt;2014 &lt;/td&gt;              
+        &lt;td&gt;60% &lt;/td&gt;  
+        &lt;td&gt;40% &lt;/td&gt;  
+        &lt;td&gt;A &lt;/td&gt;  
+        &lt;td&gt;A &lt;/td&gt;  
+        &lt;td&gt;A- &lt;/td&gt; 
+      &lt;/tr&gt; 
+  &lt;/table&gt; 
+  &lt;/body&gt;
+&lt;/html&gt;</code></pre>  <hr>
+ 
+ 
+ 
+ 
+
+
+</div>
+<div class="col-sm-12 col-lg-3 col-md-4 sidenav">
+ <div class="well my-5">
+                                
+         <details >
+            <summary>Best way of learing</summary>
+                <p class="text-tustify">
+                 Self learing is the best learing in the world.
+                 Discover yourself first then will get what you are And
+                 what you want to do .It will push you for self learing.
+                 </p>
+                </details>
+ </div>
+
+                            <div class="well my-5">
+                                
+                                <details >
+                                    <summary>Why you need to learn coding?</summary>
+                                    <p class="text-tustify">
+                                        Coding will play a vital role in one's life . It will help to open 
+                                        a new window of thinking . You can think better way than past . It 
+                                        helps to organise all the thing in better way .
+                                    </p>
+                                  </details>
+                            </div>
+                           
+                            <div class="well sticky-top">
+                                <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+                                <!-- ict-verticle-1 -->
+                                <ins class="adsbygoogle"
+                                     style="display:block"
+                                     data-ad-client="ca-pub-9136564254270725"
+                                     data-ad-slot="1200802774"
+                                     data-ad-format="auto"
+                                     data-full-width-responsive="true"></ins>
+                                <script>
+                                     (adsbygoogle = window.adsbygoogle || []).push({});
+                                </script>
+                             
+                            </div>
+                            
+
+                          </div>
+                        </div>
+                      </div>
+                    
+                </div>
+               
+            
+              </div>
+              
+              <script>
+                $("#menu-toggle").click(function(e) {
+                  e.preventDefault();
+                  $("#wrapper").toggleClass("toggled");
+                });
+              </script>
+            
+        
+    
+    </main>
+
+    
+
+<%- include('../../includes/end.ejs') %>

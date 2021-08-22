@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+    <html lang="en">
+       <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <title>Learn About Pointers In C Programming</title>
+
+        
+        <meta name="Description" content="Pointers is nothing but the memory address of the any variable.
+         When we declare any of variable it takes some memory , the address of this memory is called pointer.
+          Pointers in C are very easy and fun to learn." />
+        <meta name="Keywords" content="C Pointers,Pointer arithmetic,Array of pointers,Pointer to pointers" />
+        
+        <meta name="author" content="tutorialforbeginner.com">
+        <meta property="og:site_name" content="www.tutorialforbeginner.com" />
+    
+         <meta property="og:locale" content="en_US" />
+        <meta property="og:type" content="website" />
+        <link rel="shortcut icon" href="images/ico.jpg" type="image/x-icon" />
+        <link rel="canonical" href="https://tutorialforbeginner.com/pointers-in-c" />
+
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+        <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+        <style>
+            .navbar-collapse .navbar-nav{float:none;margin:0 auto;text-align:center}img{max-width:100%}#footer{background:#232323;padding:30px 0 0 0;font-size:12px;color:#999}#footer a{color:#ccc}#footer a:hover{color:#fff}#footer h3.widget-title{font-size:15px;font-size:.9375rem;text-transform:uppercase;color:#fff;margin:0 0 20px}#underfooter{background:#191919;padding:15px 0;color:#777;font-size:12px}#underfooter a{color:#aaa}#underfooter a:hover{color:#fff}@media (min-width:1200px){.container{max-width:1080px}}body{overflow-x:hidden}#sidebar-wrapper{min-height:100vh;margin-left:-15rem;-webkit-transition:margin .25s ease-out;-moz-transition:margin .25s ease-out;-o-transition:margin .25s ease-out;transition:margin .25s ease-out}#sidebar-wrapper .sidebar-heading{padding:.875rem 1.25rem;font-size:1.2rem}#sidebar-wrapper .list-group{width:15rem}#page-content-wrapper{min-width:100vw}#wrapper.toggled #sidebar-wrapper{margin-left:0}@media (min-width:768px){#sidebar-wrapper{margin-left:0}#page-content-wrapper{min-width:0;width:100%}#wrapper.toggled #sidebar-wrapper{margin-left:-15rem}}.row.content{height:auto;width:auto}.sidenav{padding-top:20px;background-color:#f1f1f1;height:cover}footer{background-color:#555;color:#fff;padding:15px}@media screen and (max-width:767px){.sidenav{height:auto;padding:15px}.row.content{height:auto}}
+          </style>
+  
+        
+        <script type="text/javascript" src="js/print/run_prettify.js??autoload=true&amp;skin=sunburst&amp;"></script>
+        <script data-ad-client="ca-pub-9136564254270725" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+
+
+           <!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-148831263-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-148831263-1');
+</script>
+
+
+        
+
+        
+    </head>
+
+
+    
+
+<body >
+    <%- include('../../includes/navigation.ejs') %>
+    
+    
+    <main id="main">
+        
+        <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- c-ads-1 -->
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-9136564254270725"
+     data-ad-slot="8711842734"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+
+        
+            
+            
+            <div class="d-flex" id="wrapper">
+
+                <!-- Sidebar -->
+                <div class="bg-light border-right" id="sidebar-wrapper">
+                  <div class="sidebar-heading">Topics</div>
+                  <div class="list-group list-group-flush">
+                    <%- include('../../sitebars/c-sitebar.ejs') %>
+                  </div>
+                </div>
+                <!-- /#sidebar-wrapper -->
+            
+                <!-- Page Content -->
+                <div id="page-content-wrapper">
+            
+                  <nav class="navbar navbar-expand-lg navbar-light bg-light border-bottom ">
+                    <button class="btn btn-primary" id="menu-toggle">Contents</button>
+            
+                  </nav>
+            
+                  <div class="container-fluid">
+                      <div class="row content">
+                          
+                          <div class="col-sm-12 col-lg-9 col-md-8 text-left"> 
+                              <h2 class="bg-dark text-center text-white">C Pointers</h2>
+
+
+                              <p class=" text-justify">
+                                  <b>Pointers:</b> Pointers is nothing but the memory address of the any variable. When we declare
+                                  any of variable it takes some memory , the address of this memory is called pointer.
+                                   Pointers in C are very easy and fun to learn. Some C programming tasks are performed more easily with the pointers,
+                                  and other tasks, such as the dynamic memory allocation, cannot be performed without using pointers.
+                                   So it is very necessary to learn the pointers to become a perfect C programmer. We can easily find the memory
+                                   address using  <b>&</b> operator. 
+                                   
+                             </p>
+
+<pre class="prettyprint">
+<code>#include&lt;stdio.h&gt;
+int main(){
+    int a,b;
+    printf("%\n",&a);
+    printf("%\n",&b);
+
+    return 0;
+  }</code></pre> 
+    <h6>Output:</h6>
+   
+<pre class="prettyprint">
+<code>6356725
+6356728   
+</code></pre> 
+    
+         
+
+<pcl></p>Declaration of pointer variable:</h6>                             
+<pre class="prettyprint">
+<code>data_type *variable_name;
+//see following example
+int    *a;/* pointer to an integer */
+double *b;/* pointer to a double */
+float  *c;/* pointer to a float */
+char   *d;/* pointer to a character */
+</code></pre>
+<div class="embed-responsive embed-responsive-16by9">
+        <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/1lJ8S3nKRls" allowfullscreen></iframe>
+    </div>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<ins class="adsbygoogle"
+     style="display:block; text-align:center;"
+     data-ad-layout="in-article"
+     data-ad-format="fluid"
+     data-ad-client="ca-pub-9136564254270725"
+     data-ad-slot="9525057491"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+  
+  
+   
+
+    
+    
+    <p class=" text-justify">
+       <b>You must remember that <code>*</code> sign always point the value of particular memory address.</b>
+   </p>
+<pre class="prettyprint"><code>#include&lt;stdio.h&gt;
+int main(){
+  int *p;
+  int v;
+  v = 5;
+  
+  p = &v//insert the address v 
+  printf("%d\n",&v);//address of v
+  printf("%d\n",&p);//address of pointer
+  printf("%d\n",p);//inserted address of v 
+  printf("%d\n",*p);// * sign point the value  
+
+  return 0;
+}</code></pre> 
+
+<h5>Output:</h5>
+<pre class="prettyprint">
+  6356732
+  6356734
+  6356732
+  5</code></pre>
+<p><b>[Note:Address will be changed each time you run the code]</b></p>
+  <p class="text-justify">
+    Let's analize the above code. First line we have declare pointer variable. We know that every variable 
+    have a address so <b>*p and v</b> have also different address and <b>6356734</b> is the address of pointer p and <b>6356732</b> is the
+    address of variable <b>v</b> . Then <b>v = 5;</b> it means that in the address of <b>6356732</b> we put 5 .Then we written <b>p = &v;</b> it means we insert the address of v <b>6356732</b>
+    in the pointer address(6356734) as a value . Now if you print <b>p</b> it will show the address of <b>v</b> because of
+    it holds the address of <b>v</b>. So when we print <b>&v</b> it shows <b>6356732</b> , then for <b>&p</b> it shows <b>6356734</b>
+    , for <b>p</b> it shows <b>6356732</b> then finally when we print <b>*p</b> it point the value in the address of <b>6356732</b> and it shows 5.
+  </p>
+
+
+
+
+                             
+
+<h4>1. Pointer arithmetic:</h4>
+<p class="text-justify">
+  We can perform arithmetic operation with pointer because memory address is a numeric value . There are four arithmetic
+  operation that we can perform with pointer these are <b>+, -, ++, -- </b>. If we add 1 with a pointer variable it will change
+  accroding to its data type . Let's Assume <b>P</b> is an <b>int</b> type pointer variable and it holds <b>1000</b> address
+  if we add 1 with P the address become <b>1004</b> because <b>int</b> takes <b>4</b> bytes of memory if it is an <b>double</b>
+  type pointer variable then it will become <b>1008</b> because double takes 8 bytes of memory and it will do the same 
+  with rest of the operators as well . Let's see the following example:
+</p>
+                      
+<pre class="prettyprint">
+<code>#include&lt;stdio.h&gt;
+int main(){
+  int *p, v;
+  p = &v;
+  printf("%d\n",p);
+  p = p+1; //same as p++
+  printf("%d\n",p);
+  return 0;
+}</code></pre>  
+ 
+<h5>Output:</h5>
+  <pre class="prettyprint">
+  6356720
+  6356724</code></pre>
+
+
+  <h4>2. Array of pointers:</h4>
+<p class="text-justify">
+   Array pointer is same as normal array but an array pointer reffers to an address and array reffers to a value. Let's see the example:
+</p>
+                      
+<pre class="prettyprint">
+<code>#include&lt;stdio.h&gt;
+int main(){
+  int *p[3], v[3]= {10,20,30};
+  for(int i = 0;i++){
+   p[i] = &v[i];
+  }
+  for(int i = 0;i++){
+    printf("%d ",*p[i]);
+  }
+  return 0;
+}</code></pre>  
+ 
+<h5>Output:</h5>
+  <pre class="prettyprint">
+  10 20 30 </pre>
+  <h4>3. Pointer to pointers:</h4>
+<p class="text-justify">
+   When we deal with pointer to pointer we must use <b>**</b> instead of single <b>*</b>. Let's see the example:
+</p>
+                      
+<pre class="prettyprint">
+<code>#include&lt;stdio.h&gt;
+int main(){
+  int v = 3; //v reffer to value
+  int *p;
+  int **ptp; //use for pointer to pointer
+  p = &v;
+  ptp = &p;
+  printf("%d\n",v);
+  printf("%d\n",*p);
+  printf("%d\n",**ptp);
+  
+  return 0;
+}</code></pre>  
+ 
+<h5>Output:</h5>
+<pre class="prettyprint">
+  3
+  3
+  3
+</pre>
+<p class="text-justify">
+  Let's analize the above code and  assume address of <b>v</b> is <b>1000</b> and address of <b>&p</b> is <b>2000</b>
+   that means <b>p or 2000</b> </b> hold <b>1000</b> and <b>*(1000) is 3</b>. Side by side address of the pointer variable is 
+  <b>2000</b> and <b>ptp</b> hold <b>2000</b> So, <b>**ptp</b> is <b>*(*(2000))</b> but <b>*(2000)</b> is <b>1000</b> so ptp becomes <b>*(1000)</b>
+  which is 3.
+</p>
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- page-1 -->
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-9136564254270725"
+     data-ad-slot="1390582452"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+              
+
+
+                              
+                     </div>
+                          <div class="col-sm-12 col-lg-3 col-md-4 sidenav">
+                          
+                            <div class="well my-5">
+                                
+                                <details >
+                                    <summary>Best way of learing</summary>
+                                    <p class="text-tustify">
+                                        Self learing is the best learing in the world.
+                                        Discover yourself first then will get what you are And
+                                        what you want to do .It will push you for self learing.
+                                    </p>
+                                  </details>
+                            </div>
+
+                            <div class="well my-5">
+                                
+                                <details >
+                                    <summary>Why you need to learn coding?</summary>
+                                    <p class="text-tustify">
+                                        Coding will play a vital role in one's life . It will help to open 
+                                        a new window of thinking . You can think better way than past . It 
+                                        helps to organise all the thing in better way .
+                                    </p>
+                                  </details>
+                            </div>
+                           
+                            <div class="well sticky-top">
+                                <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+                                <!-- c-h-ads-1 -->
+                                <ins class="adsbygoogle"
+                                     style="display:block"
+                                     data-ad-client="ca-pub-9136564254270725"
+                                     data-ad-slot="1418023682"
+                                     data-ad-format="auto"
+                                     data-full-width-responsive="true"></ins>
+                                <script>
+                                     (adsbygoogle = window.adsbygoogle || []).push({});
+                                </script>
+                            </div>
+                            
+
+                          </div>
+                        </div>
+                      </div>
+                    
+                </div> 
+              </div>
+              
+              <script>
+                $("#menu-toggle").click(function(e) {
+                  e.preventDefault();
+                  $("#wrapper").toggleClass("toggled");
+                });
+              </script>
+            
+        
+    
+    </main>
+
+    
+
+<%- include('../../includes/end.ejs') %>

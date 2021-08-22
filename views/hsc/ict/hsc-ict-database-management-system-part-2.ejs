@@ -1,0 +1,502 @@
+<!DOCTYPE html>
+    <html lang="en">
+       <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <title>HSC ICT Chapter 6 Part-2: Database Management System</title>
+
+        
+        <meta name="Description" content=" In this HSC ICT Chapter 6 Part-2: Database Management System we will learn about Defination of key Field .Difference between Primary Key and Foreign Key?
+        What is database software? what is Query , form , report ,sQL Query  ? Difference between Indexing and Sorting ?
+        What is relational database ? " />
+        
+        
+        <meta name="author" content="tutorialforbeginner.com">
+        <meta property="og:site_name" content="www.tutorialforbeginner.com" />
+        <meta property="og:locale" content="en_US" />
+        <meta property="og:type" content="website" />
+        <link rel="shortcut icon" href="images/ico.jpg" type="image/x-icon" />
+        <link rel="canonical" href="https://tutorialforbeginner.com/hsc-ict-database-management-system-part-2"/>
+
+
+        <%- include('../../includes/boostrap-head.ejs') %>
+        <style>
+            .navbar-collapse .navbar-nav{float:none;margin:0 auto;text-align:center}img{max-width:100%}#footer{background:#232323;padding:30px 0 0 0;font-size:12px;color:#999}#footer a{color:#ccc}#footer a:hover{color:#fff}#footer h3.widget-title{font-size:15px;font-size:.9375rem;text-transform:uppercase;color:#fff;margin:0 0 20px}#underfooter{background:#191919;padding:15px 0;color:#777;font-size:12px}#underfooter a{color:#aaa}#underfooter a:hover{color:#fff}@media (min-width:1200px){.container{max-width:1080px}}body{overflow-x:hidden}#sidebar-wrapper{min-height:100vh;margin-left:-15rem;-webkit-transition:margin .25s ease-out;-moz-transition:margin .25s ease-out;-o-transition:margin .25s ease-out;transition:margin .25s ease-out}#sidebar-wrapper .sidebar-heading{padding:.875rem 1.25rem;font-size:1.2rem}#sidebar-wrapper .list-group{width:15rem}#page-content-wrapper{min-width:100vw}#wrapper.toggled #sidebar-wrapper{margin-left:0}@media (min-width:768px){#sidebar-wrapper{margin-left:0}#page-content-wrapper{min-width:0;width:100%}#wrapper.toggled #sidebar-wrapper{margin-left:-15rem}}.row.content{height:auto;width:auto}.sidenav{padding-top:20px;background-color:#f1f1f1;height:cover}footer{background-color:#555;color:#fff;padding:15px}@media screen and (max-width:767px){.sidenav{height:auto;padding:15px}.row.content{height:auto}}
+          </style>
+        <script data-ad-client="ca-pub-9136564254270725" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+
+
+       <!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-148831263-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-148831263-1');
+</script>
+
+    </head>
+
+
+    
+
+<body>
+    <%- include('../../includes/navigation.ejs') %>
+    
+    
+    <main id="main ">
+        
+        <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+        <!-- ict-ads-4 -->
+        <ins class="adsbygoogle"
+             style="display:block"
+             data-ad-client="ca-pub-9136564254270725"
+             data-ad-slot="9659561509"
+             data-ad-format="auto"
+             data-full-width-responsive="true"></ins>
+        <script>
+             (adsbygoogle = window.adsbygoogle || []).push({});
+        </script>
+
+        
+            
+            
+                  <div class="d-flex" id="wrapper">
+
+                    <%- include('../../sitebars/ict.ejs') %> 
+          </div>
+       </div>
+                <!-- /#sidebar-wrapper -->
+            
+                <!-- Page Content -->
+                <div id="page-content-wrapper">
+            
+                  <nav class="navbar navbar-expand-lg navbar-light bg-light border-bottom">
+                    <button class="btn btn-primary" id="menu-toggle">Contents</button>
+            
+                  </nav>
+            
+                  <div class="container-fluid">
+                      <div class="row content">
+                          
+                          <div class="col-sm-12 col-lg-9 col-md-8 text-left"> 
+                              <h1 class="bg-dark text-center text-white">HSC ICT Chaper 6 Part-2</h1>
+                   
+                              <h3 class="mt-4 text-center"> Database Management System</h3> <p class="text-justify text-secondary"><b>
+                                  In this HSC ICT Chapter 6 Part-2 : Database Management System we will
+                                  learn about What is Defination of key Field .Difference between Primary Key and Foreign Key?
+                                  What is database software? what is Query , form , report ,sQL Query  ? Difference between Indexing and Sorting ?
+                                  What is relational database ? </b></p><hr>
+                              <h4>১৮.কী ফিল্ড কাকে বলে (What is key Field)? 
+                            </h4>
+                            <p class="text-justify text-dark">
+                              উঃ ফাইল ও ডেটাবেজের রেকর্ড শনাক্তকরনের জন্য যেটা ব্যবহার করা হয় তাকে কী ফিল্ড বলে।
+                            </p><hr>
+
+
+                              <div class="embed-responsive embed-responsive-16by9">
+                                  <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/sbZpn0i8L0A" allowfullscreen></iframe>
+                              </div>
+                              <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+                              <!-- ict-ads-3 -->
+                              <ins class="adsbygoogle"
+                                   style="display:block"
+                                   data-ad-client="ca-pub-9136564254270725"
+                                   data-ad-slot="3477296539"
+                                   data-ad-format="auto"
+                                   data-full-width-responsive="true"></ins>
+                              <script>
+                                   (adsbygoogle = window.adsbygoogle || []).push({});
+                              </script>
+                            
+
+
+                            
+                           
+                            
+                            <h4>১৯. কী ফিল্ড (key Field)কত প্রকার ও কী কী ব্যাখ্যা কর?
+                            </h4>
+                            <p class="text-justify text-dark">
+                            
+                              উঃ কী ফিল্ড সাধারনত ৩ প্রকার যথাঃ<br> ক) প্রাইমারি কী ফিল্ড (Primary Key Field)। <br> খ) কম্পােজিট প্রাইমারি কী ফিল্ড (Composite Primary Key) |<br> গ) ফরেন কী ফিল্ড (Foreign Key Field)। <br>
+                              <br> ক) প্রাইমারি কী ফিল্ড: ডেটা টেবিলের যে ফিল্ডের মান সমূহ  দ্বারা একটি রেকর্ডকে অন্যান্য রেকর্ড থেকে সম্পূর্নরুপে আলাদা করা যায় সেই ফিল্ডকে প্রাইমারি কী বলা হয়। <br>
+                               অথবা, | যে সকল ফিল্ড কোনাে একটি রেকর্ডকে অদ্বিতীয়ভাবে শনাক্ত করে তাকে প্রাইমারি কী বলে। <br> অথবা,<br>
+                               <img src="images/ch6p2.PNG" alt="examample of Primary Key Field"><br>
+                               খ) কম্পােজিট প্রাইমারি কী ফিল্ড ঃ দুই বা ততােধিক এট্রিবিউট | বা কি এর সমষ্টি সম্মিলিতভাবে কোন এনটিটি সেটকে সনাক্ত
+                                    করতে পারে তবে তাদেরকে কম্পােজিট প্রাইমারি কী বলে। <br> অথবা,
+                                    একাধিক ফিল্ডের সমন্বয়ে যে প্রাইমারি কি গঠন করা হয় তাকে কম্পােজিট প্রাইমারি কী বলে।
+                                    যেমনঃ কোনাে ছাত্রের নামের সাথে তার পিতার নাম সনাক্ত করা বা যুক্ত করাই হচ্ছে কম্পােজিট প্রাইমারি কী।<br>
+                                    <img src="images/ch6p3.PNG" alt="compogit Primary Key"><br><br>
+                                    গ) ফরেন কী ফিল্ডঃ ডেটাবেজের একটি ফাইলের প্রাইমারি কী | ফিল্ড অন্য কোনাে ডেটা ফাইলের সাধারন ফিল্ড হিসেবে ব্যবহার
+                                     করা হয়, তা হলে ঐ ফিল্ডকে ফরেন কী ফিল্ড বলে।<br> অথবা,<br> একটি টেবিলের প্রাইমারী কী অন্য ডেটা টেবিলে সাধারন
+                                      কী হিসেবে ব্যবহৃত হয় তাহলে এ কী-কে ফরেন কী বলা হয়। <br> অথবা,<br>
+                                      রিলেশনাল টেবিলের ক্ষেত্রে কোনাে একটি টেবিলের প্রাইমারি কি যদি অন্য টেবিলে ব্যবহৃত হয় তখন ঐ কি
+                                       কে প্রথম টেবিলের সাপেক্ষে দ্বিতীয় টেবিলের ফরেন কি বলে। যেমনঃ একজন ছাত্র/ছাত্রীর স্কুলের রােল নং তার স্কুলে
+                                        প্রাইমারি কী এবং বাের্ডের রেজিঃ নং ফরেন কি, আর বাের্ডের কাছে রেজিঃ নং প্রাইমারি কি আর স্কুলের রােল ফরেন কী।<br> <br>
+                                        <img src="images/ch6p4.PNG" alt="Foreign Key Field">
+                                       
+
+                              
+                            </p>
+
+
+                            
+
+                            <hr>
+                            <h4>২০. প্রাইমারী (Primary key) ও ফরেন  (Foreign key)কি এর মধ্যে পার্থক্য লিখ (Difference between Primary Key and Foreign Key )?</h4>
+                            <table class="table table-bordered">
+                              <thead>
+                                <tr>
+                                  <th scope="col">  প্রাইমারি কী(Primary Key)</th>
+                                  <th scope="col">ফরেন কী(Foreign Key)</th>
+                                  
+                                  
+                                </tr>
+                              </thead>
+                              <tbody>
+                                <tr>
+                               
+                                  <td>  ১। যে কী দিয়ে নির্দিষ্ট এনটিটির কোন এনটিটি সেটকে সম্পূর্নরুপে শনাক্ত করা যায় তাকে প্রাইমারি কী বলে।</td>
+                                  <td> ১। একটি টেবিলের প্রাইমারী কী অন্য ডেটা টেবিলে সাধারন কী হিসেবে ব্যবহৃত হয় তাহলে এ কী-কে ফরেন কী বলা হয়।</td>
+                                </tr>    
+                                    
+                                <tr>
+                                      <td>২। এ ফিল্ডের প্রত্যেকটি ভেলু Unique NULL বা অদ্বিতীয়। </td>
+                                      <td>২। এটি সর্বদা প্রাইমারি কী কে রেফার করে।
+                                      </td>
+                                      
+                                </tr>
+                                <tr>
+                                    <td> ৩। এটি NULL নয়।</td>
+                                    <td>৩। এটি NULL। </td>
+                                    </tr>
+                                <tr>
+                                    <td>৪।এটি Parent অর্থাৎ পিতা।
+                                    </td>
+                                    <td> ৪। এটি Child অর্থাৎ শিশু।
+
+                                    </td>
+                                      
+                                </tr>
+                                <tr>
+                                  <td>৫। ডেটা সনাক্তকরনে ব্যবহৃত হয়।
+                                  </td>
+                                  <td>৫। দুটি টেবিলের মধ্যে রিলেশন তৈরি করতে ব্যবহৃত হয়।</td>
+                                  </tr>
+                              <tr>
+                                  <td>৬। একটি টেবিলে একটি মাত্র প্রাইমারি কী থাকে।
+                                  </td>
+                                  <td>৬। একটি টেবিলে বিভিন্ন টেবিলের একাধিক ফরেন কী থাকতে পারে।</td>
+                                    
+                              </tr>
+                         
+                              </tbody>
+                            </table> <hr>
+                            <h4>২১. পেরেন্ট(Parent) ও চাইল্ড(Child) টেবিল কাকে বলে?
+                            </h4>
+                            <p class="text-justify text-dark">
+                              উঃ একটি টেবিলের প্রাইমারি কী যদি অন্য টেবিলে ব্যবহৃত হয় তখন ঐ কী-কে প্রথম টেবিলের সাপেক্ষে দ্বিতীয় টেবিলের ফরেন কী বলে। এখানে প্রথম টেবিলকে পেরেন্ট এবং দ্বিতীয়
+                                টেবিলকে চাইল্ড টেবিল বলে।
+
+                            </p><hr>
+                            <h4>২২. DBMS বা ডেটাবেস ম্যানেজমেন্ট সিস্টেম কাকে বলে?</h4>
+                            <p class="text-justify text-dark">
+                              উঃ DBMS এর পূর্নরুপ হলাে DataBase Management
+                                System। DBMS হচ্ছে পরস্পর সম্পর্কযুক্ত তথ্য একসেস,
+                                সংরক্ষন, নিয়ন্ত্রন এবং পরিচালনা করার জন্য প্রয়ােজনীয় | প্রােগ্রামের সমষ্টিকে ডেটাবেস ম্যানেজমেন্ট সিস্টেম বলে। 
+
+                            </p><hr>
+                            <h4> ২৩.ডেটাবেস সফ্টওয়্যার কাকে বলে (What is database software)?</h4>
+                            <p class="text-justify text-dark">
+                              উঃ যে সফ্টওয়্যারের সাহায্যে কোন ডেটা সংরক্ষন করে প্রয়ােজনানুসারে ঐগুলাে সাজানাে বা কাজে লাগানাে যায় তাকে
+                                  ডেটাবেজ সফ্টওয়্যার বলে। 
+
+                            </p><hr>
+                            <h4>২৪.DBMS এর প্রধান কাজ সমূহ কী কী?</h4>
+                            <p class="text-justify text-dark">
+                              উঃ DBMS এর প্রধান তিনটি কাজ হচ্ছে : <br>
+                              ক) ডেটবেজ সৃজন। <br> খ) ডেটাবেজ ইন্টারােগেশন ও <br>
+                              গ) ডেটবেজ রক্ষনাবেক্ষন। 
+                              
+
+                            </p><hr>
+                            <h4>২৫.DBMS কে কয়টি ভাগে ভাগ করা যায়?
+                            </h4>
+                            <p class="text-justify text-dark">
+                              উঃ DBMS কে ৩ ভাগে ভাগ করা যায়। যথাঃ <br>
+                              ক)ক্লায়েন্ট সার্ভার ডেটাবেজ(Client Server Database)। <br> খ) ডিস্ট্রিবিউটেড ডেটবেজ (Distributed Database)।<br>
+                              গ) ওয়েব এনাবল ডেটাবেজ (Web Enable Database)।
+                                                                              
+                            </p><hr>
+                            <h4>২৬.DBMS কোন কোন সফটওয়্যারের মাধ্যমে কাজ করে?
+                            </h4>
+                            <p class="text-justify text-dark">
+                              উঃ ওরাকল (Oracle), মাইএসকিউএল(MySql), এমএস| কিউএল(Ms-Sql), মাইক্রোসফট এক্সেস (Microsoft Access),ফক্সপ্রাে(FoxPro) ইত্যাদি।
+
+                            </p><hr>
+
+                            <h4>২৭. DBMS এর প্রাথমিক কাজসমূহ কী কী?
+                            </h4>
+                            <p class="text-justify text-dark">
+                              উঃ DBMS এর প্রাথমিক কাজগুলাে হলাে <br> ১) ডেটাবেজ তৈরি করা, ডেটা এন্ট্রি করা এবং ডেটা সংরক্ষন
+                              করা।<br> ২) ডেটার ভুল অনুসন্ধান ও সংশােধন করা ।<br> ৩) অপ্রয়ােজনীয় ডেটা/রেকর্ড ডিলিট করা।<br> ৪) নির্দিষ্ট ডেটা/রেকর্ড সার্চিং বা অনুসন্ধান এবং কুয়েরি করা।<br> ৫) রিপাের্ট তৈরি ও প্রিন্ট করা।<br> ৬) ডেটাবেজকে কোন ফিল্ডের ভিত্তিতে সাজানাে।<br> ৭) ডেটা ডুপ্লিকেশন কমানাে ।<br> ৮) প্রয়ােজনে সম্পূর্ন ডেটাবেজ বা ডেটাবেজের অংশবিশেষ
+                              প্রিন্ট করা।<br> ৯) ডেটাবেজ আপডেট করা।<br> ১০) ডেটার নিরাপত্তা বিধান করা এবং ব্যবহারকারী নিয়ন্ত্রন
+                              করা।<br> ১১) ডেটার Backup ও Recovery করা । 
+
+                            </p><hr>
+                            <h4>২৮. রিলেশান ডেটাবেজ ম্যানেজমেন্ট সিস্টেম(RDBMS) কাকে বলে?</h4>
+                            <p class="text-justify text-dark">
+                              উঃ ডেটাবেজে একাধিক টেবিলে একটি নির্দিষ্ট ফিল্ডের (প্রাইমারি ও ফরেন কী) উপর ভিত্তি করে সম্পর্ক স্থাপন করাকে RDBMS বলে। যেমনঃ ওরাকল (Oracle), মাইএসকিউএল(MySql), এমএস-এসকিউএল(Ms-Sql), মাইক্রোসফট এক্সেস (Microsoft Access), sicett(FoxPro) Conin আবিস্কারকঃ 1960 সালে ড. এডগার কোড (Dr. Edger
+                                      Codd)।
+
+                                      <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+                                      <ins class="adsbygoogle"
+                                           style="display:block; text-align:center;"
+                                           data-ad-layout="in-article"
+                                           data-ad-format="fluid"
+                                           data-ad-client="ca-pub-9136564254270725"
+                                           data-ad-slot="2687298352"></ins>
+                                      <script>
+                                           (adsbygoogle = window.adsbygoogle || []).push({});
+                                      </script>
+                            </p><hr>
+                            <h4>২৯. ডেটাবেজ প্রােগ্রাম কতভাবে তৈরি করা যায়?
+                            </h4>
+                            <p class="text-justify text-dark">
+                              উঃ ডেটাবেজ প্রােগ্রাম তিনভাবে তৈরি করা যায়যথাঃ<br> ক) Database Wizard থেকে ডেটাবেজ তৈরি করা। <br>
+
+                              খ) মেনু থেকে ডেটবেজ তৈরি করা। <br>
+                              গ) ডেটাবেজ ল্যাংগুয়েজ দিয়ে ডেটাবেজ তৈরি করা।
+                              
+                            </p><hr>
+                            <h4>৩০.RDBMS কী?
+                            </h4>
+                            <p class="text-justify text-dark">
+                              
+                                উঃ RDBMS এর পূর্নরুপ হলাে Relation DataBase Management System। RDBMS হচ্ছে পরস্পর সম্পর্কযুক্ত তথ্য ও সেই তথ্যগুলাে পর্যালােচনা করার জন্যে প্রয়ােজনীয় জটিল গ্রোগ্রামের সমষ্টিকে RDBMS বলে।
+
+                            </p><hr>
+                            <h4>৩১. RDBMS এর বৈশিষ্ট্য সমূহ লেখ?
+                            </h4>
+                            <p class="text-justify text-dark">
+                              উঃ RDBMS এর বৈশিষ্ট্য সমূহ হলাে  <br>১) সহজে এক ডেটাবেজ হতে অন্য ডেটাবেজে তথ্য আদানপ্রদান করা যায়। <br>২) সহজে ডেটাবেজ তৈরি করা যায়। <br>৩) সহজে টেবিলে তৈরি করে ডেটা এন্ট্রি করা যায় ।<br> ৪) প্রাইমারি কী ফিল্ডের মাধ্যমে ডেটাবেজের ফাইলসমূহের মধ্যে রিলেশন তৈরি করা যায়।<br> ৫) অসংখ্য ডেটার মধ্য থেকে যেকোনাে তথ্য খুঁজে পাওয়া যায়।<br> ৬) পছন্দমত রিপাের্ট তৈরি করা যায়।<br>
+                            ৭) ডেটা এন্ট্রির জন্য কাস্টমাইজ ফরম ডিজাইন করা যায়।<br>৮) মেনু বিল্ডারের সাহায্যে সহজে মেনু তৈরি করা যায়।<br>
+                            ৯) রিপাের্ট সহজে চার্ট,গ্রাফ, প্রদর্শন করা যায়। <br>১০) বিভিন্ন গ্যানিতিক ও লজিক্যাল কাজ করা যায়। 
+
+                            </p><hr>
+                            <h4>৩২. ডেটা টাইপ কী (What is data type )? এর ব্যাখ্যা দাও?
+                            </h4>
+                            <p class="text-justify text-dark">
+                              উঃ ডেটাবেজ প্রতিটি ফিল্ডের ধরনের বা তার বৈশিষ্ট্য হচ্ছে ডেটা টাইপ। নিচে ডেটা টাইপের বর্ণনা দেওয়া হলাে<br>
+                              ১) টেক্সট ক্যারেক্টার(Text Character): টেক্সট ক্যারেক্টার। ফিল্ডে অক্ষর, সংখ্যা, চিহ্ন, ইত্যাদির ব্যবহার করা যায়।
+                               সাধারনত এ ফিল্ডে সর্বোচ্চ ২৫৫ বর্ণ বা অঙ্ক বা চিহ্ন
+                                  এককভাবে বা সম্মিলিতভাবে ব্যাবহার করা যায়।<br>
+                                   ২) নাম্বার বা নিউমেরিক(Number Numeric) নাম্বার বা নিউমেরিক ফিল্ডে যােগ বা বিয়ােগ চিহৃসহ পূর্ন সংখ্যা যােগ,
+                                    বিয়ােগ, গুন ও ভাগ করা যায়।<br>
+                                     ৩) হা/না বা যুক্তিমূলক(Yes/No or Logical): কোনাে ফিল্ডের মান “হ্যা” অথবা “না” এ দুটি তথ্য 
+                                     ফিল্ডে সংরক্ষন করা যায়। সত্যমিথ্যা বা হা/না তথ্যের জন্য ।<br>
+                                  • True/False<br> • Yes/No.<br>
+                                  • On/Off <br>
+                                  <br> ৪) তারিখ বা সময়(Date/Time): এ ফিল্ডটি তারিখ বা সময়ের জন্য ব্যবহার করা হয় । 100 থেকে 9999 তারিখ
+                                   ও সময়ের জন্য এ ফিল্ড ব্যবহৃত হয়।<br>
+
+                                   ৫) মেমাে(Memo): সাধারনত বিবরনমূলক লেখা বা বর্ণনার
+                                      জন্য এ ফিল্ডের ব্যবহার করা হয়। সাধারনত এ ফিল্ডে
+                                      65,535টি ক্যারেক্টার লেখা যায়। <br> ৬) ক্যারেন্সি(Currency): শুধু মুদ্রা বা টাকা সংক্রান্ত ডেটা 
+                                       এন্ট্রি করার জন্য Currency টাইপ সিলেক্ট করতে হয়। <br> ৭) OLE Object: OLE এর পূর্নরুপ হলাে Object
+                                      Linking and Embedding। এম.এস.ওয়ার্ড, ফটোশপ, সহ বিভিন্ন প্রােগ্রামের ফাইল, ছবি, গ্রাফ, ইত্যাদি যুক্ত করা
+                                      যায়।<br> ৮) Lookup Wizard : এর সাহায্যে কোনাে ডেটা টাইপ দ্বারা
+                                      টেবিল হতে কোনাে মান সংযােজন করা যায়।<br> ৯) Auto Number :এ এন্ট্রিকৃত রেকর্ডের পরিমান
+                                      সংক্রিয়ভাবে গণনা করার জন্য ব্যবহার করা হয়।
+                                     
+                           
+
+
+                            </p><hr>
+                            <h4>৩৩.ফর্ম(Form) কী?
+                            </h4>
+                            <p class="text-justify text-dark">
+                              উঃ কোনাে ডেটাবেজের সফটওয়্যারে ডেটা ইনপুট করার জন্য অথবা সাময়িক কোনাে ম্যাসেজ প্রদর্শনের করে তাকে ফর্ম | বলে। এছাড়া অনেক ফরমের লেবেলে আমারা রিপাের্ট প্রদর্শন করতে পারি। সুতরাং ফরম ডেটাবেজের একটি অত্যাবশ্যকীয়।
+                                  অংশ।
+
+                            </p><hr>
+                            <h4>৩৪. রিপাের্ট(Report) কী?
+                            </h4>
+                            <p class="text-justify text-dark">
+                              উঃ ডেটাবেজ টেবিলে ইনপুটকৃত রেকর্ড প্রতিবেদন আকারে | প্রকাশ করার প্রক্রিয়াকে রিপাের্ট বলে।
+                            </p><hr>
+                            <h4>৩৫. কুয়েরি(Query) কী?
+                            </h4>
+                            <p class="text-justify text-dark">
+                              উঃ কোনাে ডেটাবেজে সংরক্ষিত বিপুল ডেটা থেকে খুব দ্রুত ও সহজ উপায়ে যেকোনাে ডেটা খুঁজে বের করার পদ্ধতিকে Query বলে।
+
+                            </p>
+                            <h4>৩৬।ফর্ম(Form) ও রিপাের্ট (Report)এর মধ্যে পার্থক্য ?</h4>
+                            <p class="text-justify text-dark">
+                               <img src="images/ch6p5.PNG" alt="Difference between form and Report">
+                            </p>
+                            
+                            <h4>৩৭. ডেটাবেজ মডেল কাকে বলে?এটি কত প্রকার ও কী কী?</h4>
+                            <p class="text-justify text-dark">
+                               উঃ ডেটাবেজ এ বিন্যাসকে সঠিকভাবে বাস্তবায়নের জন্য বিভিন্ন গঠনে ডেটাসমূহ সংরক্ষন করা হয়।
+                                এই গঠনগুলােকে ডেটা মডেল বলা হয়। ডেটাবেজে মডেল ৪ প্রকার যথাঃ <br> ক) লিস্ট স্ট্রকচার মডেল। <br>
+                              খ) ট্রি মডেল। <br> গ) নেটওয়ার্ক মডেল। <br>
+                              ঘ) রিলেশনাল মডেল। 
+
+                            </p><hr>
+                            <h4>৩৮.ডেটাবেজ অ্যাডমিনিস্ট্রেটর(DBA) কাকে বলে?
+                            </h4>
+                            <p class="text-justify text-dark">
+                              উঃ কোনাে DBMS এ যে ব্যাক্তি বা প্রতিষ্ঠানে ডেটাবেজ ব্যবস্থাপনার সার্বিক দায়িত্ব পালন করে তাকে Database Administrator বলা হয়।
+                            </p><hr>
+                            <h4>৩৯. sQL Query কী?</h4>
+                            <p class="text-justify text-dark">
+                              উঃ SQL শব্দের পূর্নরুপ হলাে Structure Query | Language। এটি অত্যন্ত শক্তিশালী ডেটা ম্যানিপিউলেশন, | ডেটা ডেফিনিশন, ডেটা কন্ট্রোল, ডেটা ট্রানজেকশন ভাষা।
+                              এটি বিভিন্ন শ্রেনীর কার্য সম্পাদনের জন্য ব্যবহৃত হয়। যেমনঃ ডেটা সন্নিবেশন করা, পরিবর্তন ও মুছে ফেলা, ডেটাবেজে অবজেক্ট তৈরি করা, সংশােধন করা ও ডেটাবেজে নিশ্চয়তা প্রদান করা ইত্যাদি।
+
+                              <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+                              <ins class="adsbygoogle"
+                                   style="display:block; text-align:center;"
+                                   data-ad-layout="in-article"
+                                   data-ad-format="fluid"
+                                   data-ad-client="ca-pub-9136564254270725"
+                                   data-ad-slot="2458044125"></ins>
+                              <script>
+                                   (adsbygoogle = window.adsbygoogle || []).push({});
+                              </script>
+                            </p><hr>
+                            <h4>৪০. সর্টিং (Sorting) কাকে বলে?
+                            </h4>
+                            <p class="text-justify text-dark">
+                              উঃ Sorting হলাে সাজানাে প্রক্রিয়া। ডেটাবেজের ডেটাকে নিম্নক্রম (Ascending) বা উর্ধ্বক্রম (Descending) অর্ডারে
+                               সাজানাের প্রক্রিয়াকে Sorting বলে।
+
+                            </p><hr>
+                            <h4>৪১.ইনডেক্সিং(Indexing) কী?</h4>
+                            <p class="text-justify text-dark">
+                              উঃ ডেটা ফাইলের ইনপুটকৃত রেকর্ডের ক্রমিক নং এর কোনাে
+                                রুপ পরিবর্তন ছাড়া নির্দিষ্ট নিয়মে রেকর্ডকে সাজানাের পদ্ধতিকে ইনডেক্সিং বলে। 
+
+                            </p><hr>
+                            <h4>৪২. ইনডেক্সিং(Indexing) ও সর্টিং(Sorting) এর পার্থক্য লিখ?</h4>
+                            <p class="text-justify text-dark">
+
+                                <table class="table table-bordered">
+                                    <thead>
+                                      <tr>
+                                        <th scope="col">ইনডেক্সিং(Indexing)</th>
+                                        <th scope="col">সর্টিং(Sorting)</th>
+                                        
+                                        
+                                      </tr>
+                                    </thead>
+                                    <tbody>
+                                      <tr>
+                                     
+                                        <td> ১। ইনডেক্সিং হলাে মূল টেবিল অপরিবর্তিত রেখে এক বা একাধিক ফিল্ড অনুসারে রেকর্ড গুলাে সাজানাের প্রক্রিয়া।</td>
+                                        <td> ১। সর্টিং হলাে ডেটা টেবিলের রেকর্ডগুলােকে কোন নির্ধারিত ফিল্ড অনুসারে নিম্নক্রম বা উর্ধ্বক্রম অনুসারে সাজানাে।
+                                          </td>
+                                      </tr>    
+                                          
+                                      <tr>
+                                            <td>২। মূল ডেটা ফাইলের রেকর্ডের ক্রমিক নাম্বার পরিবর্তন হয় না।  </td>
+                                            <td>মূল ডেটা ফাইলের রেকর্ডের ক্রমিক নাম্বার পরিবর্তন হয়।
+                                            </td>
+                                            
+                                      </tr>
+                                      <tr>
+                                          <td> ৩। ডেটাবেজ ফাইলের এলােমেলাে রেকর্ডগুলাে তুলনামূলকভাবে দ্রুত সাজানাে যায়।</td>
+                                          <td>৩। ডেটাবেজ ফাইলের। এলােমেলাে রেকর্ডগুলাে সাজানাের তুলনামূলকভাবে বেশি সময়ের প্রয়ােজন হয়।</td>
+                                          </tr>
+                                      <tr>
+                                          <td>৪। ডেটাবেজ ফাইলের ইনডেক্স করলে নতুন ইনডেক্স ফাইল তৈরি হয় এবং মূল ডেটাবেজ ফাইল অপরিবর্তিত থাকে।
+                                          </td>
+                                          <td>৪। সর্টকৃত মূল ডেটাবেজ ফাইলটি বিন্যাসকৃত অবস্থায় মেমােরিতে সংরক্ষিত হয়।
+
+      
+                                          </td>
+                                            
+                                      </tr>
+                                      <tr>
+                                        <td>৫। ইনডেক্সকৃত ডেটাবেজে | নতুন কোন রেকর্ড সন্নিবেশিত করলে অথবা সংশােধন করলে স্বয়ংক্রিয়ভাবে আপডেট হয়।
+                                        </td>
+                                        <td> ৫। সর্টিং করা ডেটাবেজে নতুন কোন রেকর্ড সন্নিবেশিত করলে অথবা সংশােধন করলে। স্বয়ংক্রিয়ভাবে আপডেট হয় না।</td>
+                                        </tr>
+                                    
+                               
+                                    </tbody>
+                                  </table>
+                              
+                            </p>
+                            
+                            
+
+                            
+                           
+                                 
+                     </div>
+                          <div class="col-sm-12 col-lg-3 col-md-4 sidenav">
+                              
+
+                            <div class="well my-5">
+                                
+                                <details >
+                                    <summary>Best way of learing</summary>
+                                    <p class="text-tustify">
+                                        Self learing is the best learing in the world.
+                                        Discover yourself first then will get what you are And
+                                        what you want to do .It will push you for self learing.
+                                    </p>
+                                  </details>
+                            </div>
+                            
+
+                            <div class="well my-5">
+                                
+                                <details >
+                                    <summary>Why you need to learn coding?</summary>
+                                    <p class="text-tustify">
+                                        Coding will play a vital role in one's life . It will help to open 
+                                        a new window of thinking . You can think better way than past . It 
+                                        helps to organise all the thing in better way .
+                                    </p>
+                                  </details>
+                            </div>
+                            <div class="well sticky-top">
+                                <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+                                <!-- ict-verticle-1 -->
+                                <ins class="adsbygoogle"
+                                     style="display:block"
+                                     data-ad-client="ca-pub-9136564254270725"
+                                     data-ad-slot="1200802774"
+                                     data-ad-format="auto"
+                                     data-full-width-responsive="true"></ins>
+                                <script>
+                                     (adsbygoogle = window.adsbygoogle || []).push({});
+                                </script>
+                            </div>
+
+                          </div>
+                        </div>
+                      </div>
+                    
+                </div>
+               
+            
+              </div>
+              
+              <script>
+                $("#menu-toggle").click(function(e) {
+                  e.preventDefault();
+                  $("#wrapper").toggleClass("toggled");
+                });
+              </script>
+            
+        
+    
+    </main>
+
+    
+
+<%- include('../../includes/end.ejs') %>

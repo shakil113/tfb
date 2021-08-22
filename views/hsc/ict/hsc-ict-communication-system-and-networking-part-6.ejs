@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+    <html lang="en">
+       <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <title> HSC ICT Chapter 2 Part-6: Communication System And Networking</title>
+
+        
+        <meta name="Description" content=" HSC ICT Chapter 2 Part-6 : Communication System And Networking we will
+        learn about What is Network Topology? what is Bus Topology,Ring Topology,Star Topology,Tree Topology,Mesh Topology,Hybrid Topology Ringing? what is protocol?"/>
+        
+        <meta name="author" content="tutorialforbeginner.com">
+        <meta property="og:site_name" content="www.tutorialforbeginner.com" />
+        <meta property="og:locale" content="en_US" />
+        <meta property="og:type" content="website" />
+        <link rel="shortcut icon" href="images/ico.jpg" type="image/x-icon" />
+        <link rel="canonical" href="https://tutorialforbeginner.com/hsc-ict-communication-system-and-networking-part-6"/>
+        
+       
+
+        
+        <%- include('../../includes/boostrap-head.ejs') %>
+        <style>
+            .navbar-collapse .navbar-nav{float:none;margin:0 auto;text-align:center}img{max-width:100%}#footer{background:#232323;padding:30px 0 0 0;font-size:12px;color:#999}#footer a{color:#ccc}#footer a:hover{color:#fff}#footer h3.widget-title{font-size:15px;font-size:.9375rem;text-transform:uppercase;color:#fff;margin:0 0 20px}#underfooter{background:#191919;padding:15px 0;color:#777;font-size:12px}#underfooter a{color:#aaa}#underfooter a:hover{color:#fff}@media (min-width:1200px){.container{max-width:1080px}}body{overflow-x:hidden}#sidebar-wrapper{min-height:100vh;margin-left:-15rem;-webkit-transition:margin .25s ease-out;-moz-transition:margin .25s ease-out;-o-transition:margin .25s ease-out;transition:margin .25s ease-out}#sidebar-wrapper .sidebar-heading{padding:.875rem 1.25rem;font-size:1.2rem}#sidebar-wrapper .list-group{width:15rem}#page-content-wrapper{min-width:100vw}#wrapper.toggled #sidebar-wrapper{margin-left:0}@media (min-width:768px){#sidebar-wrapper{margin-left:0}#page-content-wrapper{min-width:0;width:100%}#wrapper.toggled #sidebar-wrapper{margin-left:-15rem}}.row.content{height:auto;width:auto}.sidenav{padding-top:20px;background-color:#f1f1f1;height:cover}footer{background-color:#555;color:#fff;padding:15px}@media screen and (max-width:767px){.sidenav{height:auto;padding:15px}.row.content{height:auto}}
+          </style>
+        
+        
+
+        
+        
+        <script data-ad-client="ca-pub-9136564254270725" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+
+        
+
+          <!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-148831263-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-148831263-1');
+</script>
+
+
+        
+    </head>
+
+
+    
+
+<body>
+    <%- include('../../includes/navigation.ejs') %>
+    
+    
+    <main id="main">
+        
+            <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+            <!-- ict-ads-4 -->
+            <ins class="adsbygoogle"
+                 style="display:block"
+                 data-ad-client="ca-pub-9136564254270725"
+                 data-ad-slot="9659561509"
+                 data-ad-format="auto"
+                 data-full-width-responsive="true"></ins>
+            <script>
+                 (adsbygoogle = window.adsbygoogle || []).push({});
+            </script>
+            
+                  <div class="d-flex" id="wrapper">
+           <!-- Sidebar -->
+           <%- include('../../sitebars/ict.ejs') %> 
+          </div>
+       </div>
+                <!-- /#sidebar-wrapper -->
+            
+                <!-- Page Content -->
+                <div id="page-content-wrapper">
+            
+                  <nav class="navbar navbar-expand-lg navbar-light bg-light border-bottom">
+                    <button class="btn btn-primary" id="menu-toggle">Contents</button>
+            
+                  </nav>
+            
+                  <div class="container-fluid">
+                      <div class="row content">
+                          
+                          <div class="col-sm-12 col-lg-9 col-md-8 text-left"> 
+                              <h2 class="bg-dark text-center text-white">HSC ICT Chaper 2 Part-6</h2>
+                   
+                              <h3 class="mt-4 text-center">Communication System And Networking</h3><p class="text-justify text-secondary"><b>
+                                In this HSC ICT Chapter 2 Part-6 : Communication System And Networking we will
+                                learn about What is Network Topology? what is Bus Topology, Ring Topology, Star Topology, Tree Topology, Mesh Topology, Hybrid Topology, Ringing? what is protocol?
+
+                              </b></p><hr>
+          
+                              <h4>৮৪.নেটওয়ার্কের কাজ সমূহ লেখ।
+
+                                </h4>
+                                <p class="text-justify text-dark">
+                                    
+                                  উঃ ক) কম্পিউটার নেটওয়ার্ক এর সাথে সংযুক্ত ডিভাইসগুলাের মধ্যে ডেটা আদান-প্রদানে সহায়তা করে।<br> খ) নেটওয়ার্কভুক্ত প্রতিটি কম্পিউটারগুলােকে কোনাে দামি যন্ত্রপাতি ব্যবহারের সুযােগ প্রদান করে। <br> গ) কোনাে কম্পিউটারে প্রয়ােজনীয় ডেটা বা সফ্টওয়্যার না থাকলে অন্য কম্পিউটার থেকে সেগুলাে ব্যবহারের সুযােগ করে দেয়।<br>  ঘ) নেটওয়ার্ক বিশ্বের যে কোনাে প্রান্তের অবস্থানরত বন্ধুবান্ধবের সাথে অত্যন্ত অল্প সময়ের মধ্যে যােগাযােগে সহায়তা করে।<br>  ঙ) স্কুল, কলেজ, বিশ্ববিদ্যালয়ের ভর্তির আবেদন, পরীক্ষার ফলাফল সহ ক্লাস করার প্রক্রিয়া সম্পন্ন করতে সহায়তা করে।<br>  চ) ঘরে বসেই চাকরি, চিকিৎসা, ব্যবসা-বানিজ্য, পন্য ক্রয়বিক্রয় ইত্যাদি সেবা পাওয়া যায়।
+                                </p><hr>
+                                <h4>৮৫.নেটওয়ার্কের ব্যাকবােন হিসেবে অপটিক্যাল ফাইবার
+                                  সুবিধাজনক কেন? ব্যাখ্যা কর।
+                                  
+                                </h4>
+                                <p class="text-justify text-dark">
+                                    
+                                  উঃ ফাইবার অপটিক্যাল ক্যাবল হচ্ছে কাচের তন্তুর তৈরি এক ধরনের ক্যাবল এবং আলােকরশ্মি পরিবাহী। এর মধ্য দিয়ে আলাের গতিতে ডেটা স্থানান্তরিত হয়। ইহার ব্যান্ডউইথ উচ্চ এবং বৈদ্যুতিক ও চুম্বক প্রবাহ হতে মুক্ত। তাছাড়া ডেটা ট্রান্সফারে অধিক নিরাপত্তা প্রদান করে। অর্থাৎ পরিবেশের চাপ তাপ দ্বারা ডেটা আদান-প্রদানে বাধাগ্রস্থ হয় না। এজন্য ফাইবার অপটিক্যাল নেটওয়ার্কের ব্যাকবােন হিসেবে কাজ
+                                  করে।
+                                  
+                  
+                                </p><hr>
+          
+                             
+                              <div class="embed-responsive embed-responsive-16by9">
+                                  <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/bEQ1zW9d7wk" allowfullscreen></iframe>
+                              </div>
+                            
+                    
+                              <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+                              <!-- ict-ads-3 -->
+                              <ins class="adsbygoogle"
+                                   style="display:block"
+                                   data-ad-client="ca-pub-9136564254270725"
+                                   data-ad-slot="3477296539"
+                                   data-ad-format="auto"
+                                   data-full-width-responsive="true"></ins>
+                              <script>
+                                   (adsbygoogle = window.adsbygoogle || []).push({});
+                              </script>
+                           
+                           
+                          
+                            
+
+              
+              
+              <h4>৮৬. নেটওয়ার্ক টপােলজি কাকে বলে?
+
+              </h4>
+              <p class="text-justify text-dark">
+                  
+                উঃ একটি নেটওয়ার্কে কম্পিউটার এবং আনুষঙ্গিক একে অপরের সাথে সংযুক্ত থাকার পদ্ধতিতে নেটওয়ার্ক টপােলজি বলে। অথবা, নেটওয়ার্কভুক্ত কম্পিউটারগুলাের ভৌত সংযােগ বিন্যাস এবং নির্বিঘ্নে ডেটা আদান-প্রদানের যুক্তিনির্ভর সুনিয়ন্ত্রিত পথের পরিকল্পনা, এ দুয়ের সমন্বিত ধারণাকে বলা হয় নেটওয়ার্ক টপােলজি।
+
+              </p><hr>
+              <h4>৮৭.নেটওয়ার্ক টপােলজি (Network Topology) বর্ণনা কর।
+ 
+              </h4>
+              <p class="text-justify text-dark">
+                  
+                  উঃ কম্পিউটার নেটওয়ার্ক টপােলজি ৬ ধরনের যথাঃ <br>ক) বাস টপােলজি (Bus Topology)।<br>
+                  খ) রিং টপােলজি (Ring Topology)।<br> গ) স্টার টপােলজি (Star Topology)।<br> ঘ) ট্রি টপােলজি (Tree Topology)। <br>ঙ) মেশ টপােলজি (Mesh Topology)।<br>
+                  চ) হাইব্রিড টপােলজি (Hybrid Topology)।<br><br> ক) বাস টপােলজিঃ একটি ক্যাবলের সাথে যদি সবকটি কম্পিউটার নেটওয়ার্ক করা থাকে তাকে বাস টপােলজি বলেবাস টপােলজির ক্যাবলটিকে প্রধান মেরুদন্ড(Backbone)। বলা হয়। সিগন্যাল যখন ব্যাকবােনের মধ্য দিয়ে চলাফেরা করে তখন শুধু প্রাপক কম্পিউটার সিগন্যাল গ্রহন করে, বাকি কম্পিউটারগুলাে গ্রহন করে না। এই সংগঠনে কোনাে কম্পিউটার নষ্ট হয়ে গেলে সম্পূর্ন সিস্টেম নষ্ট হয়ে যায় না।
+                  <br><img src="images/ch2p2.PNG" alt="Bus Topology"><br>
+
+                  খ) রিং টপােলজিঃ একাধিক কম্পিউটার বৃত্তাকার পথে পরস্পর সংযুক্ত হয়ে নেটওয়ার্কভুক্ত হওয়াকে রিং টপােলজি বলে।
+                এ টপােলজিতে রিংয়ের সর্বশেষে কম্পিউটারটি প্রথমটির সাথে যুক্ত থাকে। এ টপােলজিতে কোনাে কম্পিউটার ডেটা পাঠানাে তা বৃত্তাকার পথে কম্পিউটারগুলাে মধ্যে পর পর ঘুরতে থাকে, যতক্ষন নির্দিষ্ট কম্পিউটার ডেটা প্রদান না করে ততক্ষন প্রক্রিয়া চলতে থাকে। এতে কোনাে কেন্দ্রিয় কম্পিউটার থাকে না। এতে প্রতিটি কম্পিউটারের গুরত্ব সমান।
+                <br><img src="images/ch2p3.PNG" alt="Ring Topology">
+                
+                <br>
+                
+                 গ) স্টার টপােলজিঃ একটি কেন্দ্রীয় নিয়ন্ত্রনকারী কম্পিউটার বা হােস্ট কম্পিউটারের সাথে অন্যান্য কম্পিউটার হাব বা সুইচের মাধ্যমে সংযুক্ত করে যে নেটওয়ার্ক গড়া হয় তাকে স্টার টপােলজি বলে।
+                  এক্ষেত্রে একটি কম্পিউটার কেন্দ্রীয় কম্পিউটারের (সার্ভরের) মাধ্যমে আদান-প্রদান করে থাকে।
+                  <br><img src="images/ch2p4.PNG" alt="Star Topology"><script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+                  <ins class="adsbygoogle"
+                       style="display:block; text-align:center;"
+                       data-ad-layout="in-article"
+                       data-ad-format="fluid"
+                       data-ad-client="ca-pub-9136564254270725"
+                       data-ad-slot="9525057491"></ins>
+                  <script>
+                       (adsbygoogle = window.adsbygoogle || []).push({});
+                  </script>
+                  ঘ) ট্রি টপােলজিঃ যে টপােলজিতে কম্পিউটারগুলাে পরস্পরের সাথে যুক্ত হয়ে গাছের শাখা-প্রশাখার মতাে বিন্যস্ত থাকে তাকে ট্রি টপােলজি বলে।
+                  এ সংগঠনে এক বা একাধিক স্তরের নােড হােস্ট কম্পিউটারের সাথে যুক্ত থাকে। অর্থাৎ প্রথম স্তরের কম্পিউটারগুলাে দ্বিতীয় স্তরের কম্পিউটারগুলাের হােস্ট হয়। একইভাবে দ্বিতীয় স্তরের কম্পিউটারগুলাে তৃতীয় স্তরের কম্পিউটারগুলাের হােস্ট হয়।
+                  <br><img src="images/ch2p5.PNG" alt="Tree Topology"><br>
+                  ঙ) মেশ টপােলজিঃ মেশ টপােলজিতে একটি কম্পিউটার নেটওয়ার্কভুক্ত অন্য প্রতিটি কম্পিউটারের সাথে সরাসরি যুক্ত থাকে। ফলে যেকোনাে কম্পিউটার নেটওয়ার্কভুক্ত অন্য যে কোনাে কম্পিউটারের সাথে সরাসরি দ্রুত ডেটা আদান-প্রদান করতে পারে। এ ধরনের সংগঠনে নেটওয়ার্কভুক্ত কম্পিউটারগুলাের মধ্যে পারস্পরিক সংযােগকে পয়েন্ট-টুপয়েন্ট লিংক নামে অভিহিত করা হয়।
+
+                  <br><img src="images/ch2p6.PNG" alt="Mesh Topology"><br>
+                  চ) হাইব্রিড টপােলজিঃ বিভিন্ন টপােলজি অর্থাৎ স্টার, রিং, বাস ইত্যাদি নেটওয়ার্কের সমন্বয়ে যে নেটওয়ার্ক গঠিত হয়
+                  তাকে হাইব্রিড টপােলজি বলে। ইন্টারনেট একটি হাইব্রিড নেটওয়ার্ক, কেননা এতে প্রায় সব ধরনের নেটওয়ার্ক সংযুক্ত আছে। কোনাে কাজের একটি নেটওয়ার্ক টপােলজি স্বয়ংসম্পূর্ন নাও হতে পারে। এ জন্য এসব ক্ষেত্রে হাইব্রিড টপােলজি ব্যবহার করা হয়।
+                     <br><img src="images/ch2p7.PNG" alt="Hybrid Topology">
+                    
+                     <br>
+
+              </p><hr>
+              <h4>৮৮.ক্লাউড কম্পিউটিং কাকে বলে?
+
+
+              </h4>
+              <p class="text-justify text-dark">
+                  
+                  উঃ ক্লাউড মম্পিউটিং হলাে এমন এক প্রকার সাবস্ক্রিপশন ভিত্তিক পরিসেবা বা সার্ভিস, যা নেটওয়ার্ক স্টোরেজ স্পেস এবং কম্পিউটারের বিভিন্ন যন্ত্রাংশের দ্রুত ও সুবিধাজনক ব্যবহার নিশ্চিত করে। অথবা,
+                  এটি এমন একটি প্রযুক্তি যা সহজতরভাবে কম সময়ে অধিক ক্ষমতাসম্পন্ন অনলাইন কম্পিউটিং সেবা প্রদান করে থাকে। কম্পিউটার ও ডেটা স্টোরেজ সহজে, ক্রেতার সুবিধামত চাহিবামাত্র এবং ব্যবহার অনুযায়ী ভাড়া দেওয়ার
+                  সিস্টেম হলাে ক্লাউড কম্পিউটিং বলে।
+                  
+              </p><hr>
+              <h4>৮৯. ক্লাউড কম্পিউটিং কত প্রকার ও কী কী?
+
+
+              </h4>
+              <p class="text-justify text-dark">
+                  
+                  উঃ ক্লাউড কম্পিউটিং ৪ প্রকার যথা ঃ<br> ক) পাবলিক ক্লাউড।<br> 
+                  খ) কমিউনিটি ক্লাউড।<br>  গ) প্রাইভেট ক্লাউড।<br> 
+                  ঘ) হাইব্রিড ক্লাউড।
+                  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- ict-verticle-1 -->
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-9136564254270725"
+     data-ad-slot="1200802774"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+                  
+              </p><hr>
+              
+              <h4>৯১. ক্লাউড কম্পিউটিং(cloud computing) এর সুবিধা ও অসুবিধা লেখ।
+
+
+              </h4>
+              <p class="text-justify text-dark">
+                  
+                  উঃ ক্লাউড কম্পিউটিং এর সুবিধাঃ<br> ১) এ পদ্ধতিতে স্বয়ংক্রিয়ভাবে সফটওয়্যার আপডেট করা যায়। <br>২) কম্পিউটার নেটওয়ার্ক তৈরি ও রক্ষনাবেক্ষন খরচ অনেক কম।<br> ৩) এত কম হার্ডওয়্যার ব্যবহার করে বেশি আউটপুট পাওয়া যায়। <br>৪) দ্রুতগতিতে সেবা দেওয়া যায়। <br>৫) ব্যবহার অনুযায়ী খরচ কম। <br>৬) বিশ্বের যেকোনাে স্থানে দ্রুত ইন্টারনেট এক্সেস করার সুযােগ সৃষ্টি হয়েছে। <br>৭) নতুন সফটওয়্যার লাইসেন্স করতে হয় না। <br>৮) অপারেটিং সিস্টেম খরচ কম। <br><br>ক্লাউড কম্পিউটিং এর অসুবিধাঃ<br> ১) সর্বদা ব্যবহারকারীকে নিয়ন্ত্রন করা যায় না।<br> ২) অনেক সময় ব্যবহারকারীর গােপনীয় তথ্যের নিরাপত্তা থাকে না। <br>৩) এতে অনেক সময় ভুল বা মিথ্যা তথ্য দিয়ে বিভ্রান্ত ছড়ানাে হয়। <br>৪) এতে ভেন্ডরদের প্রতি নির্ভরতা বৃদ্ধি পায়, যা Vendor Lock নামে পরিচিত।<br> ৫) মেইনটেন্যান্স বা হ্যাকিং বা অন্য কারনে সার্ভার ডাউন হলে কাজ বন্ধ হয়ে যায়।<br> ৬) নির্ধারিত সময় অন্তর নির্ধারিত ফি দিয়ে হয়, না দিলে
+                  সার্ভিস বন্ধ হয়ে যায়।
+                  
+              </p><hr>
+              <h4>৯২. রিংগিং(Ringing) কী?
+
+
+              </h4>
+              <p class="text-justify text-dark">
+                  উঃ ক্যাবলের এক প্রান্ত থেকে সিগন্যাল পাঠালে এবং অন্য প্রান্তে টার্মিনেটর না থাকলে তা ক্যাবলের অন্য প্রান্তে ধাক্কা খেয়ে আবার ফেরত আসে। এ সিগন্যাল ফেরত আসাকে
+                  রিংগিং বলে। 
+                  
+              </p><hr>
+              <h4>৯৩.প্রটোকল(what is protocol) কী?
+
+
+              </h4>
+              <p class="text-justify text-dark">
+                  
+                  উঃ তথ্য আদান প্রদানের যে নিয়ম কানুন আছে, তা আসলে সফটওয়্যার আকারে থাকে তাকে প্রটোকল বলে।
+
+              </p>
+
+              
+
+                            
+
+
+                           
+                     </div>
+                          <div class="col-sm-12 col-lg-3 col-md-4 sidenav">
+                              
+                        
+                            <div class="well my-5">
+                                
+                                <details >
+                                    <summary>Best way of learing</summary>
+                                    <p class="text-tustify">
+                                        Self learing is the best learing in the world.
+                                        Discover yourself first then will get what you are And
+                                        what you want to do .It will push you for self learing.
+                                    </p>
+                                  </details>
+                            </div>
+
+                           
+                            <div class="well my-5">
+                                
+                                <details >
+                                    <summary>Why you need to learn coding?</summary>
+                                    <p class="text-tustify">
+                                        Coding will play a vital role in one's life . It will help to open 
+                                        a new window of thinking . You can think better way than past . It 
+                                        helps to organise all the thing in better way .
+                                    </p>
+                                  </details>
+                            </div>
+                            <div class="well mt-5 sticky-top">
+                                    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+                                    <!-- ict-verticle-1 -->
+                                    <ins class="adsbygoogle"
+                                         style="display:block"
+                                         data-ad-client="ca-pub-9136564254270725"
+                                         data-ad-slot="1200802774"
+                                         data-ad-format="auto"
+                                         data-full-width-responsive="true"></ins>
+                                    <script>
+                                         (adsbygoogle = window.adsbygoogle || []).push({});
+                                    </script>
+                                
+                            </div>
+
+                          </div>
+                        </div>
+                      </div>
+                    
+                </div>
+               
+            
+              </div>
+              
+              <script>
+                $("#menu-toggle").click(function(e) {
+                  e.preventDefault();
+                  $("#wrapper").toggleClass("toggled");
+                });
+              </script>
+            
+        
+    
+    </main>
+
+    
+
+<%- include('../../includes/end.ejs') %>

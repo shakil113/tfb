@@ -1,0 +1,14 @@
+User-agent: Googlebot
+Disallow: /admin/
+Disallow: /moderator/
+Disallow: /accountant/
+Disallow: /detail/
+Disallow: /registration/
+Disallow: /enter-contest/
+
+
+User-agent: *
+Allow: /
+
+
+Sitemap: https://www.tutorialforbeginner.com/sitemap.xml

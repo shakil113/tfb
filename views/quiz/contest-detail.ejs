@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+    <html lang="en">
+       <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <title>Contest Details</title>
+
+        
+        <meta name="Description" content="This contest Detail page, here you can see the contest detail.To more specific you can know about the detail about the contest." />
+        <meta name="author" content="tutorialforbeginner.com">
+        <meta property="og:site_name" content="www.tutorialforbeginner.com" />
+        <meta property="og:locale" content="en_US" />
+        <meta property="og:type" content="website" />
+        <link rel="shortcut icon" href="../images/ico.jpg" type="image/x-icon" />
+       
+
+        <%- include('../includes/boostrap-head.ejs') %>
+        <style>
+          .navbar-collapse .navbar-nav{float:none;margin:0 auto;text-align:center}img{max-width:100%}#footer{background:#232323;padding:30px 0 0 0;font-size:12px;color:#999}#footer a{color:#ccc}#footer a:hover{color:#fff}#footer h3.widget-title{font-size:15px;font-size:.9375rem;text-transform:uppercase;color:#fff;margin:0 0 20px}#underfooter{background:#191919;padding:15px 0;color:#777;font-size:12px}#underfooter a{color:#aaa}#underfooter a:hover{color:#fff}@media (min-width:1200px){.container{max-width:1080px}}body{overflow-x:hidden}#sidebar-wrapper{min-height:100vh;margin-left:-15rem;-webkit-transition:margin .25s ease-out;-moz-transition:margin .25s ease-out;-o-transition:margin .25s ease-out;transition:margin .25s ease-out}#sidebar-wrapper .sidebar-heading{padding:.875rem 1.25rem;font-size:1.2rem}#sidebar-wrapper .list-group{width:15rem}#page-content-wrapper{min-width:100vw}#wrapper.toggled #sidebar-wrapper{margin-left:0}@media (min-width:768px){#sidebar-wrapper{margin-left:0}#page-content-wrapper{min-width:0;width:100%}#wrapper.toggled #sidebar-wrapper{margin-left:-15rem}}.row.content{height:auto;width:auto}.sidenav{padding-top:20px;background-color:#f1f1f1;height:cover}footer{background-color:#555;color:#fff;padding:15px}@media screen and (max-width:767px){.sidenav{height:auto;padding:15px}.row.content{height:auto}}
+        </style>
+      
+        <!-- Global site tag (gtag.js) - Google Analytics -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=UA-148831263-1"></script>
+        <script>
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+
+          gtag('config', 'UA-148831263-1');
+        </script>
+
+        
+
+    </head>
+
+
+    
+
+<body  >
+    <%- include('../includes/navigation.ejs') %>
+    
+    
+    <main id="main">
+        
+     
+            <div class="d-flex" id="wrapper">
+
+                <!-- Sidebar -->
+                <div class="bg-light border-right" id="sidebar-wrapper">
+                  <div class="sidebar-heading bg-success text-white text-center"><b>Topic Menu</b> </div>
+                  <div class="list-group list-group-flush ">
+
+                    <%- include('../sitebars/online-quiz-contest-sitebar.ejs') %> 
+                     
+                  </div>
+                </div>
+                <!-- /#sidebar-wrapper -->
+            
+                <!-- Page Content -->
+                <div id="page-content-wrapper">
+            
+                  <nav class="navbar navbar-expand-lg border-bottom" style="background-color: #375028;">
+                    <button class="btn text-white btn-lg" style="background-color: #521212;" id="menu-toggle">&#x2190;QUIZ MENU</button>
+            
+                  </nav>
+            
+                  <div class="container-fluid ">
+                      <div class="row content">
+                          
+                          <div class="col-sm-12 col-lg-9 col-md-8 text-left"  style="background-color: #191919;"> 
+                              
+                                  
+                                      <h3 class="my-2 mb-3 p-2 bg-success text-center text-white" style="border-radius: 2px 2px 2px 2px;"><b>Name: </b><%= contestDetail.contestdetail.contestName %></h3>
+                                      <h3 class="my-2 mb-3 p-2 bg-danger text-center text-white" style="border-radius: 2px 2px 2px 2px;"><b>For: </b><% if(contestDetail.contestTypeDetail.eligiblity === 'HSC') { %>HSC / ALIM / ADMISSION<% } else { %>BCS / BANKJOB<% } %></h3>
+
+                                      <div style="background-color: #f1f1f1; border-radius: 10px 10px 10px 10px; padding: 20px;">
+                                      <h5 class="text-danger text-justify">
+                                        বিঃদ্রঃ আপনি অবশ্যই আপনার স্ব স্ব বিভাগের বিষয়ের প্রতিযোগিতায় অংশ গ্রহন করুন । স্নাতক অধ্যায়নরত বা স্নাতকত্তর
+                                        ছাত্র ছাত্রীগণ HSC / ALIM / ADMISSION এর কোন বিষয়ের প্রতিযোগিতায় অংশ নিতে পারবেন না ।
+
+                                      </h5>                               
+                                      </div><hr>
+                                      <h4 class="text-center text-white mt-3">Contest About</h4>
+                                      <div style="background-color: #f1f1f1; border-radius: 10px 10px 10px 10px; padding: 20px;">
+                                      <h5>
+                                        <%= contestDetail.contestTypeDetail.contestAbout %>
+
+                                      </h5>                               
+                                      </div><hr>
+                                      
+                                      <h4 class="text-center text-white mt-3">Rewards</h4>
+                                      
+                                      <div style="background-color: #f1f1f1; border-radius: 10px 10px 10px 10px; padding: 20px;">
+                                        <% if(contestDetail.contestdetail.contestType === true){%>
+                                        <h5 class="text-center h4 mt-2 mb-3">
+                                       <b>পুরষ্কার শুধু মাত্র প্রথম ১০ জনের জন্য প্রজোয্য হবে । </b>
+                                       </h5>
+                                        <table class="table h5">
+                                        <tr>
+                                         
+                                          <th>Items</th>
+                                          <th>Items Photo</th>
+                                        </tr> 
+                                        <tr>
+                                         
+                                          <td>৫০০ টাকা থেকে ১২,০০০ টাকা নগত অর্থ । </td>
+                                          <td ><img src="/images/cash.PNG" height="150px" width="150px" alt="Cash Reward"></td>
+                                        </tr>
+                                        <tr> 
+                                          
+                                          <td>একটি সুন্দর কফি মগ । </td>
+                                          <td ><img src="/images/mug.PNG" height="150px" width="150px" alt="Mug Reward"></td>
+                                        </tr>
+                                        <tr>
+                                          
+                                          <td>একটি সুন্দর T-Shirt । </td>
+                                          <td ><img src="/images/tshirt.PNG" height="150px" width="150px" alt="T-shirt Reward"></td>
+                                        </tr>
+                                       </table>
+                                       <%}else {%>
+
+                                        
+
+                                        <table class="table h5">
+                                          <tr>
+                                            
+                                            <th>Amount</th>
+                                            <th>Prize</th>
+                                          </tr>
+                                          <tr>
+                                           
+                                            <td> <ul><li>মেধা তালিকায় ১ম জনঃ ৩০০ টাকা।</li> <li>মেধা তালিকায় ২য় জনঃ ২০০ টাকা।</li></ul></td>
+                                            <td class="text-center"><img src="/images/contest/cash.png" height="150px" width="150px" alt="Cash Reward"></td>
+                                          </tr>
+                                          
+                                          </table>
+                                      <%}%>
+                                       
+                                      </div>
+
+                                      <h4 class="text-center text-white mt-5 mb-3">Contest Details</h4>
+                                      <div style="background-color: #f1f1f1; border-radius: 10px 10px 10px 10px; padding: 20px;">
+                                        
+                                        <table class="table ">
+                                          <tr class="h5">
+                                            <th ><b>Contest Time: </b></th>
+                                            <td ><span id="cTtime"></span></td>
+                                          </tr>
+                                          <tr class="h5">
+                                            <th ><b>Contest Date: </b></th>
+                                            <td ><span id="cTdate"></span></td>
+                                          </tr>
+                                          <tr class="h5 mt-3">
+                                            <th ><b>Contest Fee: </b></th>
+                                            <td > <%= contestDetail.contestdetail.contestFee %> Taka</td>
+                                          </tr>
+                                          <tr class="h5">
+                                            <th ><b>Chapter / Topic: </b></th>
+                                            <td>  <%= contestDetail.contestdetail.chapter %></td>
+                                          </tr>
+                                          <tr class="h5">
+                                            <th ><b>Contest Duration: </b></th>
+                                            <td> <%= contestDetail.contestTypeDetail.contestTypeDuration %> Minutes</td>
+                                          </tr>
+                                         
+                                          <tr class="h5">
+                                            <th ><b>Number Of Question: </b></th>
+                                            <td> <%= contestDetail.contestTypeDetail.questionQuantity %> </td>
+                                          </tr>
+                                          <tr class="h5">
+                                            <th ><b>Total Marks: </b></th>
+                                            <td> <%= parseInt(contestDetail.contestTypeDetail.questionQuantity)*parseInt(contestDetail.contestTypeDetail.markPerRightAns) %></td>
+                                          </tr>
+                                          <tr class="h5">
+                                            <th ><b>Negative Mark: </b></th>
+                                            <td> <%= contestDetail.contestTypeDetail.minusPerWrongAns %></td>
+                                          </tr>
+
+                                          <tr class="h5">
+                                            <th ><b>Subjects: </b></th>
+                                           
+                                            <td> 
+                                              <ul style="list-style-type: square;">
+                                                <% for(subjects of subjectNames){%>
+                                                <li> <%=subjects%></li>
+                                               
+                                                <%}%></td>
+                                              </ul>
+                                             
+                                              
+                                          </tr>
+                                          
+
+                                        </table>
+
+
+                               
+                                      </div><hr>
+
+                                      <script>
+                          
+                                        var cdate = '<%=contestDetail.contestdetail.contestDate%>';
+                                        
+                                        var splitDate = cdate.split('-');
+                                        document.getElementById("cTdate").innerHTML = splitDate[2]+'-'+splitDate[1]+'-'+splitDate[0];
+                                     
+                                        var ctime = '<%=contestDetail.contestdetail.contestTime%>';
+                                        var splitTime = ctime.split(':');
+                                        if(parseInt(splitTime[0])>12){
+                                          var chour = parseInt(splitTime[0]) - 12 ;
+                                          document.getElementById("cTtime").innerHTML = chour+ ' : ' +splitTime[1] + ' : ' + splitTime[2] + ' PM ';
+                                        }
+                                        else if(parseInt(splitTime[0])==12){
+                                         
+                                          document.getElementById("cTtime").innerHTML = splitTime[0]+ ' : ' +splitTime[1] + ' : ' + splitTime[2] + ' PM ';
+                                        }else{
+                                          document.getElementById("cTtime").innerHTML = splitTime[0]+' : '+splitTime[1] + ' : ' + splitTime[2] + ' AM ';
+                                        }
+                                        
+                                 </script>
+                                    
+
+
+                                   
+
+                                     <div class="d-flex justify-content-center">
+                                      <a href="/registration/<%=contestDetail.contestdetail.id%>"class="btn bg-dark font-weight-bold my-4 btn-outline-success"  >Register</a>
+                                     </div> 
+                                      
+                                          
+                                       
+                              
+</div>
+                          <div class="col-sm-12 col-lg-3 col-md-4 sidenav">
+                          
+                            <div class="well my-5">
+                                
+                              <details >
+                                  <summary>আসুন ......</summary>
+                                  <p class="text-tustify">
+                                    দূর্নীতিকে না বলি ,<br> সোনার বাংলাদেশ গড়ি ।
+                                  </p>
+                                </details>
+                          </div>
+
+                          <div class="well my-5">
+                              
+                              <details >
+                                <summary>আসুন ......</summary>
+                                <p class="text-tustify">
+                                   নিজেকে বদলাই তাহলে ,<br> সমাজ আপনা আপনি বদলে যাবে ।
+                                </p>
+                                </details> 
+                          </div>
+                         
+                           
+                           
+
+                          </div>
+                        </div>
+                      </div>
+                    
+                </div>
+               
+            
+              </div>
+              
+              <script>
+                $("#menu-toggle").click(function(e) {
+                  e.preventDefault();
+                  $("#wrapper").toggleClass("toggled");
+                });
+              </script>
+
+
+            
+
+    
+    
+    </main>
+
+    
+
+<%- include('../includes/end.ejs') %>

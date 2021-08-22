@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+    <html lang="en">
+       <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <title>Update Profile</title>
+        
+        <meta name="author" content="tutorialforbeginner.com">
+        <meta property="og:site_name" content="www.tutorialforbeginner.com" />
+      
+        <meta property="og:locale" content="en_US" />
+        <meta property="og:type" content="website" />
+        <link rel="shortcut icon" href="../images/ico.jpg" type="image/x-icon" />
+
+        <%- include('../includes/boostrap-head.ejs') %>
+       
+        <style>
+            .navbar-collapse .navbar-nav{float:none;margin:0 auto;text-align:center}img{max-width:100%}#footer{background:#232323;padding:30px 0 0 0;font-size:12px;color:#999}#footer a{color:#ccc}#footer a:hover{color:#fff}#footer h3.widget-title{font-size:15px;font-size:.9375rem;text-transform:uppercase;color:#fff;margin:0 0 20px}#underfooter{background:#191919;padding:15px 0;color:#777;font-size:12px}#underfooter a{color:#aaa}#underfooter a:hover{color:#fff}@media (min-width:1200px){.container{max-width:1080px}}body{overflow-x:hidden}#sidebar-wrapper{min-height:100vh;margin-left:-15rem;-webkit-transition:margin .25s ease-out;-moz-transition:margin .25s ease-out;-o-transition:margin .25s ease-out;transition:margin .25s ease-out}#sidebar-wrapper .sidebar-heading{padding:.875rem 1.25rem;font-size:1.2rem}#sidebar-wrapper .list-group{width:15rem}#page-content-wrapper{min-width:100vw}#wrapper.toggled #sidebar-wrapper{margin-left:0}@media (min-width:768px){#sidebar-wrapper{margin-left:0}#page-content-wrapper{min-width:0;width:100%}#wrapper.toggled #sidebar-wrapper{margin-left:-15rem}}.row.content{height:auto;width:auto}.sidenav{padding-top:20px;background-color:#f1f1f1;height:cover}footer{background-color:#555;color:#fff;padding:15px}@media screen and (max-width:767px){.sidenav{height:auto;padding:15px}.row.content{height:auto}}
+            
+          </style>
+     
+    </head>
+
+
+    
+
+<body >
+    <%- include('../includes/navigation.ejs') %>
+    
+    
+    <main id="main">
+        
+      
+        
+            
+            
+            <div class="d-flex w-100" id="wrapper">
+
+                <!-- Sidebar -->
+                <div class="bg-light border-right" id="sidebar-wrapper">
+                  <div class="sidebar-heading bg-success text-center text-white rounded-top border-top "><b>Check Out</b></div>
+                    <div class="list-group list-group-flush mt-5">
+                       <%- include('../sitebars/user-menu.ejs') %>
+                    </div>
+                  </div>
+                <!-- /#sidebar-wrapper -->
+            
+                <!-- Page Content -->
+                <div id="page-content-wrapper">
+            
+                  <nav class="navbar navbar-expand-lg border-bottom" style="background-color: #375028;">
+                    <button  class="btn text-white btn-lg" style="background-color: #521212;" id="menu-toggle"><b>&#x2190;MENU</b></button>
+            
+                  </nav>
+            
+                  <div class="container-fluid">
+                      <div class="mb-5" style="background-color: rgb(221, 15, 15);">
+                        <h3 class="text-center text-white py-2"> <% if (userDetail) { %>Update Information<% } else { %>Add Information<% } %></h3>
+                      </div>
+                     
+                        <form method="POST" action="/edit-profile" >
+                          <div class="form-row">
+
+                            <div class="form-group col-md-6">
+                              <label for="payoutMethod">Select Payout Method <span style="color: red;">*</span></label>
+                              <select class="custom-select d-block w-100" name="payoutMethod" id="payoutMethod" required>
+                                <option value="">Choose...</option>
+                                <option value="bKash">bKash(Personal)</option>
+                                <option value="Rocket">Rocket(Personal)</option>
+                                <option value="Nagad">Nagad(Personal)</option>
+                                
+                               
+                              </select>
+                              <div class="invalid-feedback">
+                                Please select a valid student type.
+                              </div>
+                            </div>
+                            
+                            <div class="form-group col-md-6">
+                              <label for="payoutNumber">Payout Number <span style="color: red;">*</span></label>
+                              <input type="text" class="form-control" id="payoutNumber" value="<% if (userDetail) { %><%=userDetail.payoutNumber%><% }%>" name="payoutNumber" placeholder="Enter Number" required>
+                            </div>
+                          
+                          </div>
+                          <div class="form-group">
+                            <label for="presentAddress">Present Address <span style="color: red;">*</span></label>
+                            <textarea class="form-control" id="presentAddress" name="presentAddress" rows="2" placeholder="Please Enter your Full Adress"  required><% if (userDetail) { %><%= userDetail.presentAddress %><% }%></textarea>
+                          </div>
+                          <div class="form-group">
+                            <label for="courierAddress">Courier Address <span style="color: red;">*</span></label>
+                            <textarea class="form-control" id="courierAddress" name="courierAddress" rows="2" placeholder="e.g Sundarban Courier Service Mirpur 10" required><% if (userDetail) { %><%=userDetail.courierAddress%><% }%></textarea>
+                          </div>
+                        
+                          <div class="form-group">
+                            <label for="tshirtsize">T-Shirt Size <span style="color: red;">*</span></label>
+                            <select class="custom-select d-block w-100" name="tshirtsize" id="tshirtsize" required>
+                              <option value="">Choose...</option>
+                              <option value="Bsmall">Small(Boy)</option>
+                              <option value="Bmedium">Medium(Boy)</option>
+                              <option value="Blarge">Large(Boy)</option>
+                              <option value="Bxlarge">Xtra Large(Boy)</option>
+                              <option value="Gsmall">Small(Girl)</option>
+                              <option value="Gmedium">Medium(Girl)</option>
+                              <option value="Glarge">Large(Girl)</option>
+                              <option value="Gxlarge">Xtra Large(Girl)</option>
+                              
+                             
+                            </select>
+                            <div class="invalid-feedback">
+                              Please select a valid student type.
+                            </div>
+                          </div>
+                         
+                          
+                            <input type="hidden" name="_csrf" value="<%= csrfToken %>">
+                            <div class="d-flex justify-content-center">
+                              <button type="submit" class="btn btn-primary btn-lg"><% if (userDetail) { %>Update<% } else { %>Add<% } %></button>
+                            </div>
+                         
+                           </form>
+  
+                        
+                   
+                              
+                        
+                            
+                              
+  
+    
+                         
+                     </div>
+               
+            
+
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+
+</div>
+              
+              <script>
+                $("#menu-toggle").click(function(e) {
+                  e.preventDefault();
+                  $("#wrapper").toggleClass("toggled");
+                });
+              </script>
+            
+        
+    
+    </main>
+
+    
+
+<%- include('../includes/end.ejs') %>

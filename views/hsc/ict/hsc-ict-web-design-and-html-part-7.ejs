@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+    <html lang="en">
+       <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <title>HSC ICT Chapter 4 Part-7 : Introduction to Web Design And Html</title>
+
+        
+        <meta name="Description" content=" In this HSC ICT Chapter 4 Part-7 : Introduction to Web Design And Html we will
+        learn about What is Html Form,Tags of form, How to Creat a form , hsc ict chapter 6 . " />
+       
+        
+        <meta name="author" content="tutorialforbeginner.com">
+        <meta property="og:site_name" content="www.tutorialforbeginner.com" />
+        <meta property="og:locale" content="en_US" />
+        <meta property="og:type" content="website" />
+        <link rel="shortcut icon" href="images/ico.jpg" type="image/x-icon" />
+        <link rel="canonical" href="https://tutorialforbeginner.com/hsc-ict-web-design-and-html-part-part-7"/>
+
+        <%- include('../../includes/boostrap-head.ejs') %>
+        <style>
+            .navbar-collapse .navbar-nav{float:none;margin:0 auto;text-align:center}img{max-width:100%}#footer{background:#232323;padding:30px 0 0 0;font-size:12px;color:#999}#footer a{color:#ccc}#footer a:hover{color:#fff}#footer h3.widget-title{font-size:15px;font-size:.9375rem;text-transform:uppercase;color:#fff;margin:0 0 20px}#underfooter{background:#191919;padding:15px 0;color:#777;font-size:12px}#underfooter a{color:#aaa}#underfooter a:hover{color:#fff}@media (min-width:1200px){.container{max-width:1080px}}body{overflow-x:hidden}#sidebar-wrapper{min-height:100vh;margin-left:-15rem;-webkit-transition:margin .25s ease-out;-moz-transition:margin .25s ease-out;-o-transition:margin .25s ease-out;transition:margin .25s ease-out}#sidebar-wrapper .sidebar-heading{padding:.875rem 1.25rem;font-size:1.2rem}#sidebar-wrapper .list-group{width:15rem}#page-content-wrapper{min-width:100vw}#wrapper.toggled #sidebar-wrapper{margin-left:0}@media (min-width:768px){#sidebar-wrapper{margin-left:0}#page-content-wrapper{min-width:0;width:100%}#wrapper.toggled #sidebar-wrapper{margin-left:-15rem}}.row.content{height:auto;width:auto}.sidenav{padding-top:20px;background-color:#f1f1f1;height:cover}footer{background-color:#555;color:#fff;padding:15px}@media screen and (max-width:767px){.sidenav{height:auto;padding:15px}.row.content{height:auto}}
+          </style>
+          <script async type="text/javascript" src="js/print/run_prettify.js??autoload=true&amp;skin=sunburst&amp;"></script>
+        
+
+        
+        
+<script data-ad-client="ca-pub-9136564254270725" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+
+
+            <!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-148831263-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-148831263-1');
+</script>
+
+
+        
+
+        
+        
+    </head>
+
+
+    
+
+<body>
+    <%- include('../../includes/navigation.ejs') %>
+    
+    
+    <main id="main ">
+        
+      <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+      <!-- ict-ads-3 -->
+      <ins class="adsbygoogle"
+           style="display:block"
+           data-ad-client="ca-pub-9136564254270725"
+           data-ad-slot="3477296539"
+           data-ad-format="auto"
+           data-full-width-responsive="true"></ins>
+      <script>
+           (adsbygoogle = window.adsbygoogle || []).push({});
+      </script>
+
+        
+            
+            
+<div class="d-flex" id="wrapper">
+
+  <%- include('../../sitebars/ict.ejs') %> 
+  </div>
+</div>
+                <!-- /#sidebar-wrapper -->
+            
+                <!-- Page Content -->
+                <div id="page-content-wrapper">
+            
+                  <nav class="navbar navbar-expand-lg navbar-light bg-light border-bottom">
+                    <button class="btn btn-primary" id="menu-toggle">Contents</button>
+            
+                  </nav>
+            
+                  <div class="container-fluid">
+                      <div class="row content">
+                          
+                          <div class="col-sm-12 col-lg-9 col-md-8 text-left"> 
+                              <h1 class="bg-dark text-center text-white">HSC ICT Chaper 4 Part-7</h1>
+                   
+                              <h3 class="mt-4 text-center">Introduction to Web Design and HTML</h3>
+                              <p class="text-justify text-secondary"><b>
+                                In this HSC ICT Chapter 4 Part-7 : Introduction to Web Design And Html we will
+                                learn about What is Html Form,Tags of form, How to Creat a form .</b></p><hr>
+
+                              <h4> 53. HTML নকশা ফর্ম (HTML design FORM) ফর্ম (Forms)?
+                              </h4>
+                              
+                            <p class="text-justify text-dark">
+                        
+                              উঃ  HTML ফর্মসমূহ বিভিন্ন ধরনের ইউজার ইনপুট সিলেক্ট কার জন্য ব্যবহৃত হয়ে থাকে। 
+                              ফর্ম হলাে একটি এলাকা যা কোনাে কর্মের উপাদান বা এলিমেন্টগুলােকে ধারণ করতে পারে। 
+                              ফর্ম এলিমেন্ট হলাে এমন ধরনের এলিমেন্ট যা ব্যবহারকারীকে কোনাে ফর্মের ভেতর 
+                              তথ্য (যেমন: টেক্সট ফিল্ড, টেক্সট এরিয়া ফিল্ড, ড্রপ-ডাউন মেনু, রেডিও বাটন, চেক বক্স ইত্যাদি)
+                               প্রবেশ করানাের সুযোগ দেয়। একটি ফর্মকে &lt;form&gt; ট্যাগ দ্বারা নির্ধারণ করা হয়ে থাকে। যেমন: <br>
+                               &lt;form&gt;
+                                input elements  &lt;/form&gt;
+                            
+                            </p><hr>
+                              <div class="embed-responsive embed-responsive-16by9">
+                                  <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/sbZpn0i8L0A" allowfullscreen></iframe>
+                              </div>
+                              <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+                                <!-- ict-ads-4 -->
+                                <ins class="adsbygoogle"
+                                    style="display:block"
+                                    data-ad-client="ca-pub-9136564254270725"
+                                    data-ad-slot="9659561509"
+                                    data-ad-format="auto"
+                                    data-full-width-responsive="true"></ins>
+                                <script>
+                                    (adsbygoogle = window.adsbygoogle || []).push({});
+                                </script>
+                        
+                        
+                        
+                            <p class="text-dark text justify">
+                                &lt;form&gt;... &lt;/form&gt; সমন্ত কন্ট্রোল গুলোতেই ধারণ ত পারে। শুধু পারে না আর একটি 
+                                কর্মকে ধারণ করতে অর্থাৎ কর্মের ভিতর ফর্ম তৈরি করা যায় না।&lt;form&gt;
+                                 ট্যাগের অন্তরেই Action এবং Method নামে দুটি অ্যাট্রিবিউট ব্যবহার করে নির্দেশ দিতে হয়।
+                                  কর্ম এর ফিল্ড তৈরির জন্য তিন ধরনের ট্যাগ ব্যবহৃত হয়। যথা:
+
+                        
+                              <ul>
+                                <li>&lt;Text Area&gt;</li> 
+                                <li>&lt;Select&gt; </li>
+                                <li>&lt;Input&gt; </li>
+                                 </ul> <br>
+
+
+                            <b>&lt;Text Area&gt;  ট্যাগ:</b> এটি একটি কনটেইনার ট্যাগ। এই ট্যাগটি কর্মে এমন একটি ফিড তৈরি করে , যেখানে
+                            ব্যবহারকারীর তথ্যপ্রদানের জন্য একাধিক টেক্সটলাইন টাইপ করতে পারবে। ভিন্ট মান অনুযায়ী €Text Area> | দ্বারা তৈরিকৃত কর্ম ৪টি ক্লে এর পরিমান দীর্ঘ ও 4০ টি ক্যারেক্টার পর্যন্ত প্রশস্ত হয়। তবে এই ট্যাগে row এবং cols অ্যাট্রিবিউট ব্যবহার করে যেকোনাে মাপেই ফর্ম তৈরি করা যায়। যেটাকে নামকরণ করার জন্য এই ট্যাগের মধ্যে  Name 'অ্যাট্রিবিউট ব্যবহৃত হয়।
+                             <br>
+                             <b> &lt;Select&gt; ট্যাগ:</b>   এটি একটি কনটেইনার ট্যাগ। এই ট্যাগ ব্যবহার করে Popup Menu 
+                             অথবা Scrolling List  উতই তৈরি করা যায়। এখানেও ছেটাকে নামকরণ করার জন্য Name
+                              অ্যাট্রিবিউট ব্যবহূত হয়। এবাও এখানে size, Method, multiple, option, value, selected 
+                              অ্যাট্রিবিউট ব্যবহূত হতে পারে। <br>
+                              <b>&lt;Input&gt; ট্যাগঃ</b> Input ট্যাগটি Text Area এবং Select ট্যাগের মতই তথ্য একত্রিকরণের জন্য ব্যবহূত হয়। এটি  একটি এম্পটি ট্যাগ। তথ্য আহরণ করার জন্য Input ট্যাগ অন্যান্য সব Option গুলােকেই ধারণ করে। Input
+                              ট্যাগের সাথে 'Type ও Name এই দুটি অ্যাট্রিবিউট অবশ্যই থাকতে হবে এবং অন্যান্য আরও ঐচ্ছিক অ্যাবিত Size, Maxlength, Value, Checked, Text ব্যবহার করা যেতে পারে। Type অ্যাট্রিবিউটের তেল হতে পারেtext, Password , Radio, Check, Submit, Reset ইত্যাদি। ফলে Input ট্যাগ ব্যবহার করে text field,
+                              Password field, Radio button, Check mark button, Submit button, Reset button <br> <ul>
+                                  <li> <b>Text Fields:</b> কোনাে ব্যবহারকারী একটি ফর্মে অক্ষর, সংখ্যা ইত্যাদি style করবে, সে ক্ষেত্রে আপনাকে টেয়ট কিন্তু ব্যবহার করতে হবে। বমটি নিলে ব্রাউরে সৃশ্যমান হয় না। অধিকাংশ ব্রাউজারই হাইতি ২০ ক্যারেক্টার পর্যন্ত প্রস্থের হয়ে থাকে।
+                                  </li>
+                                  <li><b>রেডিও বাটন (Radio Buttons): </b>ব্যবহারকারী সীমিত কিছু পক্ষ থেকে একটিকে বেছে নেবে সেক্ষেত্রে আপনাকে রেতিও বাটনগুলাে ব্যবহার করতে হবে।</li>
+                              <li><b>চেকবক্স (Checkboxes): </b>আপনি যখন চান user সীমিত কিছু খেতে এক বা একাধিক বিষয়কে পছন্দ করে তাহলে আপনাকে চেকবক্স ব্যবহার শুরতে হবে। </li>
+                                <li><b>ফর্ম এর অ্যাকশন অ্যাট্রিবিউট ও সাবমিট বাটন (The Forms Action Attribute and the submit Button):</b> ব্যবহারকারী যখন কোনাে "Submit" বাটনে ক্লিক করে তখন কর্মের শুনশটি সার্ভারে প্রেরিত হয়। কর্মের অ্যাকশন অ্যাট্রিবিউটটি কনটেন্টটিকে পাঠানাের ক্ষেত্রে ফাইলের নামটি কি হবে সেটি নির্ধারণ করে।
+                                </li>
+                            </ul> 
+
+                            </p>
+                            <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+                            <ins class="adsbygoogle"
+                                style="display:block; text-align:center;"
+                                data-ad-layout="in-article"
+                                data-ad-format="fluid"
+                                data-ad-client="ca-pub-9136564254270725"
+                                data-ad-slot="2687298352"></ins>
+                            <script>
+                                (adsbygoogle = window.adsbygoogle || []).push({});
+                            </script>
+                            
+                          
+                        
+                        
+                          <h2>Form Example </h2>
+                            
+                            <h4>54. Creat An Admission Page?</h4> 
+
+                            
+                        
+<pre class="prettyprint"><code>&lt;!DOCTYPE html&gt;
+&lt;html&gt; 
+  &lt;head&gt;
+  &lt;title&gt; Admission Page &lt;/title&gt;
+  &lt;/head&gt;
+
+  &lt;body&gt;
+    &lt;h2&gt;
+    &lt;i&gt;
+    &lt;center&gt;tutorialforbeginner&lt;br&gt;
+    &lt;small&gt;Free learing site&lt;br&gt;       
+    &lt;a href="www.tutorialforbeginner.com"&gt;www.tutorialforbeginner.com&lt;/a&gt;     
+    &lt;/small&gt;
+    &lt;/center&gt;  
+    &lt;/i&gt;
+    &lt;/h2&gt;
+    &lt;fieldset&gt; 
+    &lt;h3&gt;Admission Form&lt;/h3&gt; 
+    &lt;form>  
+    First Name: &lt;input type="text"&gt;    &lt;br&gt;&lt;br&gt;
+    Last Name:  &lt;input type="text"&gt;     &lt;br>&lt;br&gt;
+    Class : &lt;select&gt;     
+            &lt;option&gt;XI&lt;/option&gt;
+            &lt;option&gt;XII&lt;/option&gt;
+            &lt;/select&gt;&lt;br&gt;&lt;br&gt;
+    ROLL: &lt;input type="number"&gt;    &lt;br&gt;&lt;br&gt;
+    Gender: &lt;input type="radio" name="gender" &gt;Male 
+            &lt;input type="radio" name="gender" &gt;Female &lt;br&gt;&lt;br&gt;
+
+    Category:  &lt;input type="checkbox"&gt;ICT   
+               &lt;input type="checkbox"&gt;Math &lt;br&gt;&lt;br&gt;
+               
+    Upload Your Photo: &lt;input type="file" name="img"&gt;    &lt;br&gt;&lt;br&gt;
+    User Name:   &lt;input type="text"&gt;    &lt;br&gt;&lt;br&gt; 
+    Password :   &lt;input type="password" value="password"&gt;    &lt;br>&lt;br&gt; 
+                  &lt;input type="Submit" value="Save"&gt;
+    &lt;/form&gt;  
+&lt;/fieldset&gt; 
+    
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+                              <h4 class="text-center bg-dark text-white">Output:</h4>
+                              <p class="text-justify text-dark">
+                                <h2>
+                                    <i>
+                                    <center>tutorialforbeginner<br>
+                                    <small>Free learing site<br>       
+                                    <a href="www.tutorialforbeginner.com">www.tutorialforbeginner.com</a>     
+                                    </small>
+                                    </center>  
+                                    </i>
+                                    </h2>
+                                    <fieldset> 
+                                    <h3>Admission Form</h3> 
+                                    <form>  
+                                    First Name: <input type="text">    <br><br>
+                                    Last Name:  <input type="text">     <br><br>
+                                    Class : <select>     
+                                            <option>XI</option>
+                                            <option>XII</option>
+                                            </select><br><br>
+                                    ROLL: <input type="number">    <br><br>
+                                    Gender: <input type="radio" name="gender" >Male 
+                                            <input type="radio" name="gender" >Female <br><br>
+                                
+                                    Category:  <input type="checkbox">ICT   
+                                               <input type="checkbox">Math <br><br>
+                                               
+                                    Upload Your Photo: <input type="file" name="img">    <br><br>
+                                    User Name:   <input type="text">    <br><br> 
+                                    Password :   <input type="password" value="password">    <br><br> 
+                                                  <input type="Submit" value="Save">
+                                    </form>  
+                                </fieldset>
+                              </p><hr>   
+                                 
+                              <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+                              <ins class="adsbygoogle"
+                                   style="display:block; text-align:center;"
+                                   data-ad-layout="in-article"
+                                   data-ad-format="fluid"
+                                   data-ad-client="ca-pub-9136564254270725"
+                                   data-ad-slot="2458044125"></ins>
+                              <script>
+                                   (adsbygoogle = window.adsbygoogle || []).push({});
+                              </script>
+  
+
+
+</div>
+<div class="col-sm-12 col-lg-3 col-md-4 sidenav">
+ <div class="well my-5">
+                                
+         <details >
+            <summary>Best way of learing</summary>
+                <p class="text-tustify">
+                 Self learing is the best learing in the world.
+                 Discover yourself first then will get what you are And
+                 what you want to do .It will push you for self learing.
+                 </p>
+                </details>
+ </div>
+
+                            <div class="well my-5">
+                                
+                                <details >
+                                    <summary>Why you need to learn coding?</summary>
+                                    <p class="text-tustify">
+                                        Coding will play a vital role in one's life . It will help to open 
+                                        a new window of thinking . You can think better way than past . It 
+                                        helps to organise all the thing in better way .
+                                    </p>
+                                  </details>
+                            </div>
+                           
+                            <div class="well sticky-top">
+                                <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+                                <!-- ict-verticle-1 -->
+                                <ins class="adsbygoogle"
+                                     style="display:block"
+                                     data-ad-client="ca-pub-9136564254270725"
+                                     data-ad-slot="1200802774"
+                                     data-ad-format="auto"
+                                     data-full-width-responsive="true"></ins>
+                                <script>
+                                     (adsbygoogle = window.adsbygoogle || []).push({});
+                                </script>
+                             
+                            </div>
+                            
+
+                          </div>
+                        </div>
+                      </div>
+                    
+                </div>
+               
+            
+              </div>
+              
+              <script>
+                $("#menu-toggle").click(function(e) {
+                  e.preventDefault();
+                  $("#wrapper").toggleClass("toggled");
+                });
+              </script>
+            
+        
+    
+    </main>
+
+    
+
+<%- include('../../includes/end.ejs') %>

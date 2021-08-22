@@ -1,0 +1,77 @@
+
+	
+	<nav class="navbar navbar-expand-md navbar-dark bg-dark text-uppercase font-weight-bold" >
+        <a href="/modaretor/home"><img src="../../images/logo.svg" alt="site logo" style="height: 60px;"></a>
+        <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse justify-content-between" id="navbarCollapse">
+            <div class="navbar-nav ">
+                <a href="/moderatior/home" class="nav-link">Home</a>
+                <div class="nav-item dropdown">
+                        <a href="#" class="nav-link  dropdown-toggle" data-toggle="dropdown">Create</a>
+                        <div class="dropdown-menu">
+                            <a href="/moderator/create-contest-subjects" class="dropdown-item">Create Subject</a>
+                            <a href="/moderator/create-contest-type" class="dropdown-item">Create Contest Type</a>
+                            <a href="/moderator/create-contest" class="dropdown-item">Create Contest</a>                        
+                            <a href="/moderator/create-hsc-suggestion" class="dropdown-item">Create HSC Suggestion</a>
+
+                      </div>
+                </div>
+               
+
+               
+                
+                
+                <div class="nav-item dropdown">
+                    <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">View</a>
+                    <div class="dropdown-menu">
+                        <a href="/moderator/view-all-subjects" class="dropdown-item">View All Subjects</a>
+                        <a href="/moderator/view-all-contest-topics" class="dropdown-item">View All Contest Types</a>
+                        <a href="/moderator/view-all-contest" class="dropdown-item">View All Contest</a>
+                    </div>
+                </div>
+                
+               
+
+       
+               
+                
+                 
+                 <div class="nav-item dropdown">
+                    <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Blog</a>
+                    <div class="dropdown-menu">
+                            
+                        <a href="/graduate-admission" class="dropdown-item">Create A Post</a>
+                        <a href="/graduate-admission" class="dropdown-item">Update A Post</a>
+                        
+                    </div>
+                 </div> 
+        </div>
+     <% if(!isModeratorAuthenticated) { %>
+        
+            <a class="btn btn-outline-success nav-item nav-link mr-sm-2 " href="/moderator/moderator-login" >Login</a>
+          
+            <%  } else {%>
+            <a class=" btn btn-outline-success nav-item nav-link mr-sm-2 " href="/moderator/moderator-profile" >My Profile</a>
+            <form action="/moderator/moderator-logout" method="post">
+                <input type="hidden" name="_csrf" value="<%= csrfToken %>">
+                <button class="btn btn-outline-success nav-item nav-link my-2 my-sm-0 w-100" >Logout</button>
+            </form>
+            <%  }%>
+            
+        
+        
+    </div>
+</nav>
+
+
+
+
+
+
+
+
+
+

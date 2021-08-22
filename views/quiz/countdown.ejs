@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+    <html lang="en">
+       <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <title>Wait</title>
+
+        <meta name="author" content="tutorialforbeginner.com">
+        <meta property="og:site_name" content="www.tutorialforbeginner.com" />
+        <meta property="og:locale" content="en_US" />
+        <meta property="og:type" content="website" />
+        <link rel="shortcut icon" href="../images/ico.jpg" type="image/x-icon" />
+       
+        <%- include('../includes/boostrap-head.ejs') %>
+      
+  
+       
+     
+      
+
+        
+    </head>
+
+
+    
+
+    <body style="background:#1d2229;" >
+     <div class="container">
+      <div class="text-center text-white">
+        <h1 class="my-5" id="timer" ></h1>
+
+        <center><a href="/running-contest" class="btn btn-lg btn-dark btn-outline-success">Back</a></center>
+      </div>
+       
+     </div>   
+
+      <script>
+       $(document).ready(function(){var e=parseInt("<%=diff%>");setInterval(()=>{var t=Math.floor(e%864e5/36e5),r=Math.floor(e%36e5/6e4),n=Math.floor(e%6e4/1e3);document.getElementById("timer").innerHTML=t+"H : "+r+"M : "+n+"S",e-=1e3},1e3)});
+       </script>
+    </body>
+
+   

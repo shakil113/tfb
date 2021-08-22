@@ -1,0 +1,55 @@
+const sequelize = require('../util/database');
+const Sequelize = require('sequelize');
+
+
+
+const BankJobMCQpractice = sequelize.define( 'bankjobmcqpractice', {
+
+
+    id: {
+        type: Sequelize.INTEGER,
+        autoIncrement: true,
+        allowNull: false,
+        primaryKey: true
+       
+    },
+
+    bankExamType:{
+        type: Sequelize.STRING,
+        allowNull: true
+    },
+    bankExamYear:{
+        type: Sequelize.STRING,
+        allowNull: true
+    },
+
+    question:{
+        type: Sequelize.TEXT,
+        allowNull: false
+    },
+    option1:{
+        type: Sequelize.STRING,
+        allowNull: false
+    },
+    option2:{
+        type: Sequelize.STRING,
+        allowNull: false
+    },
+    option3:{
+        type: Sequelize.STRING,
+        allowNull: false
+    },
+    option4:{
+        type: Sequelize.STRING,
+        allowNull: false
+    },
+    answer:{
+        type: Sequelize.STRING,
+        allowNull: false
+    }
+
+});
+
+
+
+module.exports = BankJobMCQpractice;

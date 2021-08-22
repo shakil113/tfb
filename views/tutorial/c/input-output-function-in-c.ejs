@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+    <html lang="en">
+       <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <title>Learn About Input and Output Function In C Programming language</title>
+
+        
+        <meta name="Description" content="
+        In here we will learn about Input and Output in c programming language . What is input and Output 
+        in c programming ? Use of scanf() , print(),getchar(), putchar() ,.gets() and puts() functions in c program .  </b> </p>
+
+        " />
+        <meta name="Keywords" content="C Input and Output,scanf in c,scanf,printf in c,printf,
+        getchar and putchar in c,getchar,putchar,gets,puts
+        " />
+        
+        <meta name="author" content="tutorialforbeginner.com">
+        <meta property="og:site_name" content="www.tutorialforbeginner.com" />
+        <meta property="fb:pages" content="340075726591504" />
+        <meta property="fb:pages" content="1524841087795043" />
+        <meta name="viewport" content="width=device-width,initial-scale=1.0,user-scalable=yes">
+        <meta property="og:locale" content="en_US" />
+        <meta property="og:type" content="website" />
+        <link rel="shortcut icon" href="images/ico.jpg" type="image/x-icon" />
+        <link rel="canonical" href="https://tutorialforbeginner.com/input-output-function-c" />
+
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+        <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+        <style>
+            .navbar-collapse .navbar-nav{float:none;margin:0 auto;text-align:center}img{max-width:100%}#footer{background:#232323;padding:30px 0 0 0;font-size:12px;color:#999}#footer a{color:#ccc}#footer a:hover{color:#fff}#footer h3.widget-title{font-size:15px;font-size:.9375rem;text-transform:uppercase;color:#fff;margin:0 0 20px}#underfooter{background:#191919;padding:15px 0;color:#777;font-size:12px}#underfooter a{color:#aaa}#underfooter a:hover{color:#fff}@media (min-width:1200px){.container{max-width:1080px}}body{overflow-x:hidden}#sidebar-wrapper{min-height:100vh;margin-left:-15rem;-webkit-transition:margin .25s ease-out;-moz-transition:margin .25s ease-out;-o-transition:margin .25s ease-out;transition:margin .25s ease-out}#sidebar-wrapper .sidebar-heading{padding:.875rem 1.25rem;font-size:1.2rem}#sidebar-wrapper .list-group{width:15rem}#page-content-wrapper{min-width:100vw}#wrapper.toggled #sidebar-wrapper{margin-left:0}@media (min-width:768px){#sidebar-wrapper{margin-left:0}#page-content-wrapper{min-width:0;width:100%}#wrapper.toggled #sidebar-wrapper{margin-left:-15rem}}.row.content{height:auto;width:auto}.sidenav{padding-top:20px;background-color:#f1f1f1;height:cover}footer{background-color:#555;color:#fff;padding:15px}@media screen and (max-width:767px){.sidenav{height:auto;padding:15px}.row.content{height:auto}}
+          </style>
+        
+        
+        <script async type="text/javascript" src="js/print/run_prettify.js??autoload=true&amp;skin=sunburst&amp;"></script>
+        <script data-ad-client="ca-pub-9136564254270725" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+
+
+           <!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-148831263-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-148831263-1');
+</script>
+
+
+        
+
+        
+        
+    </head>
+
+
+    
+
+<body >
+    <%- include('../../includes/navigation.ejs') %>
+    
+    
+    <main id="main">
+        
+        <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+        <!-- c-ads-2 -->
+        <ins class="adsbygoogle"
+             style="display:block"
+             data-ad-client="ca-pub-9136564254270725"
+             data-ad-slot="7105943560"
+             data-ad-format="auto"
+             data-full-width-responsive="true"></ins>
+        <script>
+             (adsbygoogle = window.adsbygoogle || []).push({});
+        </script>
+
+        
+            
+            
+            <div class="d-flex" id="wrapper">
+
+                <!-- Sidebar -->
+                <div class="bg-light border-right" id="sidebar-wrapper">
+                  <div class="sidebar-heading">Topics</div>
+                  <div class="list-group list-group-flush">
+                    <%- include('../../sitebars/c-sitebar.ejs') %>
+                  </div>
+                </div>
+                <!-- /#sidebar-wrapper -->
+            
+                <!-- Page Content -->
+                <div id="page-content-wrapper">
+            
+                  <nav class="navbar navbar-expand-lg navbar-light bg-light border-bottom ">
+                    <button class="btn btn-primary" id="menu-toggle">Contents</button>
+                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                      <span class="navbar-toggler-icon"></span>
+                    </button>
+            
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                      <ul class="navbar-nav ml-auto mt-2 mt-lg-0">
+                       
+                        <li class="nav-item dropdown">
+                          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Example
+                          </a>
+                          <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+                            
+                            <a class="dropdown-item" href="#">Example Set 1</a>
+                            <div class="dropdown-divider"></div>
+                            <a class="dropdown-item" href="#">Example Set 2</a>
+                            <div class="dropdown-divider"></div>
+                            <a class="dropdown-item" href="#">Example Set 3</a>
+                          </div>
+                        </li>
+                        <li class="nav-item dropdown">
+                          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Practice Set
+                          </a>
+                          <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+                            
+                            <a class="dropdown-item" href="#">Practice Set 1</a>
+                            <div class="dropdown-divider"></div>
+                            <a class="dropdown-item" href="#">Practice Set 2</a>
+                            <div class="dropdown-divider"></div>
+                            <a class="dropdown-item" href="#">Practice Set 3</a>
+                          </div>
+                        </li>
+                        <li class="nav-item dropdown">
+                          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Solution
+                          </a>
+                          <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+                            
+                            <a class="dropdown-item" href="#">Solution Set 1</a>
+                            <div class="dropdown-divider"></div>
+                            <a class="dropdown-item" href="#">Solution Set 2</a>
+                            <div class="dropdown-divider"></div>
+                            <a class="dropdown-item" href="#">Solution Set 3</a>
+                          </div>
+                        </li>
+                      </ul>
+                    </div>
+            
+                  </nav>
+            
+                  <div class="container-fluid">
+                      <div class="row content">
+                          
+                          <div class="col-sm-12 col-lg-9 col-md-8 text-left"> 
+                              <h1 class="bg-dark text-center text-white">Input And Output In C</h1>
+                              <p class=" text-justify text-secondary"><b>
+                                In here we will learn about Input and Output in c programming language . What is input and Output 
+                              in c programming ? Use of scanf() , print(),getchar(), putchar() ,.gets() and puts() functions in c program . 
+                            We provide a lots of example please see this.... </b> </p>
+
+
+                              <h2 class="mt-5 mb-3">Input and Output:</h2>
+
+                              <p class=" text-justify">
+                                  <b>Input:</b> It means feed some data into a program . It can be from a file or from command line.
+                                  C program have a set of build-in function to <b>read/input</b>  from a file or command line and feed to the program.
+                               
+                              </p><br>
+                              <p class=" text-justify">
+                                    <b>Output:</b> It means display the program data on the screen, comman line or in any file. C program have a set of build-in
+                                    function to display the data on the screen, comman line or in any file.
+                                
+                                </p>
+                                <p class=" text-justify">
+                                       <b>[Note: C program counts all the devices as files.]</b> 
+                                         
+                                    </p>
+
+                                <table class="table table-bordered">
+                                        <thead>
+                                          <tr>
+                                            <th scope="col">Standard File</th>
+                                            <th scope="col">File Pointer</th>
+                                            <th scope="col">From</th>
+                                            
+                                          </tr>
+                                        </thead>
+                                        <tbody>
+                                          <tr>
+                                            <td>Standard Input</td>
+                                            <td>stdin</td>
+                                            <td>keyboard</td>
+                                            
+                                          </tr>
+                                          <tr>
+                                                <td>Standard Output</td>
+                                                <td>stdout</td>
+                                                <td>Screen</td>
+                                                
+                                              </tr>
+                                             
+                                          
+                                        </tbody>
+                                      </table>
+                                      <p>
+                                       <b>For that the basic library of c is &lt;stdio.h&gt; 
+                                        'std' is for Standard 'i' for input 'o' for output and 'h' for head .</b> 
+                                      </p>
+          
+
+
+
+                              
+                                  <hr><div class="embed-responsive embed-responsive-16by9">
+                                        <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/1lJ8S3nKRls" allowfullscreen></iframe>
+                                    </div>
+                                  
+                                    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+                                    <!-- ad-2 -->
+                                    <ins class="adsbygoogle"
+                                         style="display:block"
+                                         data-ad-client="ca-pub-9136564254270725"
+                                         data-ad-slot="8826219349"
+                                         data-ad-format="auto"
+                                         data-full-width-responsive="true"></ins>
+                                    <script>
+                                         (adsbygoogle = window.adsbygoogle || []).push({});
+                                    </script>
+
+                                  <h3 class="mb-3">Lets have a look some of build-in Input & Output function:</h3>
+                                  <h4 class="h5">1.The scanf() and printf() function:</h4>
+                                  <p class="text-justify"><b>scanf():</b> This function <b>scanf()</b> function can takes 
+                                    sevaral types of data from keyboard.
+                                </p>
+                                <p class="text-justify"><b>printf():</b> This function <b>printf()</b> function can 
+                                  display avobe data of data from keyboard.
+                                 </p>
+                                <h5>Use of <b>scanf()</b> and <b>printf()</b>:</h5>
+<pre class="prettyprint"><code>scanf("format_specifier", &variable_name);
+printf("format_specifier", variable_name);
+</code></pre>
+ <h6>Let's see an example:</h6>                                                                  
+ <pre class="prettyprint">
+<code>#include&lt;stdio.h&gt;
+int main() {
+  int a;
+  char b;
+  double g;
+  scanf("%d", &a);
+  scanf("%c", &b); 
+  scanf("%lf", &g);
+  printf("%d", a);
+  printf("%c", b);
+  printf("%lf", g); 
+}
+</code></pre>
+<p class="text-justify">
+  Instead of taking and printing sevaral lines you can take multiple input and output in single line.See the following 
+  example:
+ </p>
+<pre class="prettyprint">
+<code>#include&lt;stdio.h&gt;
+int main() {
+  int a;
+  char b;
+  double g;
+  scanf("%d%c%lf", &a, &b, &g);
+  printf("%d %c %lf", a, b, g);
+}
+</code></pre>
+<h4 class="h5">2.getchar() and putchar() Functions:</h4>
+ <p class="text-justify">
+     <b>getchar() and putchar() functions:</b> The <b>getchar()</b> can take a single character input and <b>putchar()</b>
+    function can display a single character at a time.
+    </p>
+    
+<pre class="prettyprint"><code>#include&lt;stdio.h&gt;
+int main() {
+    variable_name = getchar();//for input a single character
+    putchar(variable_name);//display a single character
+    }</code></pre>
+    <h4 class="h5">2.gets() and puts() functions:</h4>
+    <p class="text-justify">
+        <b>gets() and puts() functions:</b> The <b>gets()</b> can take a line input or more than one character and <b>puts()</b>
+       function can display a line input or more than one character at a time.
+       </p>
+       
+<pre class="prettyprint"><code>#include&lt;stdio.h&gt;
+int main() {
+    gets(variable_name);//for taking a line input or more than one character
+    puts(variable_name);//display a line input or more than one character
+}</code></pre>
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<ins class="adsbygoogle"
+     style="display:block; text-align:center;"
+     data-ad-layout="in-article"
+     data-ad-format="fluid"
+     data-ad-client="ca-pub-9136564254270725"
+     data-ad-slot="9525057491"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+   
+
+                              
+
+
+                            
+
+
+                            
+
+
+                              
+                     </div>
+                          <div class="col-sm-12 col-lg-3 col-md-4 sidenav">
+                         
+
+                            <div class="well my-5">
+                                
+                                <details >
+                                    <summary>Best way of learing</summary>
+                                    <p class="text-tustify">
+                                        Self learing is the best learing in the world.
+                                        Discover yourself first then will get what you are And
+                                        what you want to do .It will push you for self learing.
+                                    </p>
+                                  </details>
+                            </div>
+
+                            <div class="well my-5">
+                                
+                                <details >
+                                    <summary>Why you need to learn coding?</summary>
+                                    <p class="text-tustify">
+                                        Coding will play a vital role in one's life . It will help to open 
+                                        a new window of thinking . You can think better way than past . It 
+                                        helps to organise all the thing in better way .
+                                    </p>
+                                  </details>
+                            </div>
+                            
+                            <div class="well sticky-top">
+                                <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+                                <!-- C-verticle -->
+                                <ins class="adsbygoogle"
+                                     style="display:block"
+                                     data-ad-client="ca-pub-9136564254270725"
+                                     data-ad-slot="1132697628"
+                                     data-ad-format="auto"
+                                     data-full-width-responsive="true"></ins>
+                                <script>
+                                     (adsbygoogle = window.adsbygoogle || []).push({});
+                                </script>
+                            </div>
+                            
+
+                          </div>
+                        </div>
+                      </div>
+                    
+                </div>
+               
+            
+              </div>
+              
+              <script>
+                $("#menu-toggle").click(function(e) {
+                  e.preventDefault();
+                  $("#wrapper").toggleClass("toggled");
+                });
+              </script>
+            
+        
+    
+    </main>
+
+    
+
+<%- include('../../includes/end.ejs') %>

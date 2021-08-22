@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+    <html lang="en">
+       <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <title>Learn loops in c programming</title>
+
+        
+        <meta name="Description" content="Loops in programming comes into use when we need to execute same codes in sevaral times.
+        For, While and Do While loop is a repetition control of a structure which allows us to write a loop that is executed a fixed number of times as you want.
+        " />
+        <meta name="Keywords" content="loops in c programming,for loop, while loop, do while loop " />
+        
+        <meta name="author" content="tutorialforbeginner.com">
+        <meta property="og:site_name" content="www.tutorialforbeginner.com" />
+        <meta property="fb:pages" content="340075726591504" />
+        <meta property="fb:pages" content="1524841087795043" />
+        <meta name="viewport" content="width=device-width,initial-scale=1.0,user-scalable=yes">
+        <meta property="og:locale" content="en_US" />
+        <meta property="og:type" content="website" />
+        <link rel="shortcut icon" href="images/ico.jpg" type="image/x-icon" />
+        <link rel="canonical" href="https://tutorialforbeginner.com/loops-in-c" />
+
+        <link async rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+        <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+        <style>
+            .navbar-collapse .navbar-nav{float:none;margin:0 auto;text-align:center}img{max-width:100%}#footer{background:#232323;padding:30px 0 0 0;font-size:12px;color:#999}#footer a{color:#ccc}#footer a:hover{color:#fff}#footer h3.widget-title{font-size:15px;font-size:.9375rem;text-transform:uppercase;color:#fff;margin:0 0 20px}#underfooter{background:#191919;padding:15px 0;color:#777;font-size:12px}#underfooter a{color:#aaa}#underfooter a:hover{color:#fff}@media (min-width:1200px){.container{max-width:1080px}}body{overflow-x:hidden}#sidebar-wrapper{min-height:100vh;margin-left:-15rem;-webkit-transition:margin .25s ease-out;-moz-transition:margin .25s ease-out;-o-transition:margin .25s ease-out;transition:margin .25s ease-out}#sidebar-wrapper .sidebar-heading{padding:.875rem 1.25rem;font-size:1.2rem}#sidebar-wrapper .list-group{width:15rem}#page-content-wrapper{min-width:100vw}#wrapper.toggled #sidebar-wrapper{margin-left:0}@media (min-width:768px){#sidebar-wrapper{margin-left:0}#page-content-wrapper{min-width:0;width:100%}#wrapper.toggled #sidebar-wrapper{margin-left:-15rem}}.row.content{height:auto;width:auto}.sidenav{padding-top:20px;background-color:#f1f1f1;height:cover}footer{background-color:#555;color:#fff;padding:15px}@media screen and (max-width:767px){.sidenav{height:auto;padding:15px}.row.content{height:auto}}
+          </style>
+
+        
+        <script async type="text/javascript" src="js/print/run_prettify.js??autoload=true&amp;skin=sunburst&amp;"></script>
+        <script data-ad-client="ca-pub-9136564254270725" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+
+
+            <!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-148831263-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-148831263-1');
+</script>
+
+
+        
+
+        
+    </head>
+
+
+    
+
+<body >
+    <%- include('../../includes/navigation.ejs') %>
+    
+    
+    <main id="main">
+        
+        <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+        <!-- page-1 -->
+        <ins class="adsbygoogle"
+             style="display:block"
+             data-ad-client="ca-pub-9136564254270725"
+             data-ad-slot="1390582452"
+             data-ad-format="auto"
+             data-full-width-responsive="true"></ins>
+        <script>
+             (adsbygoogle = window.adsbygoogle || []).push({});
+        </script>
+
+        
+            
+            
+            <div class="d-flex" id="wrapper">
+
+                <!-- Sidebar -->
+                <div class="bg-light border-right" id="sidebar-wrapper">
+                  <div class="sidebar-heading">Topics</div>
+                  <div class="list-group list-group-flush">
+                    <%- include('../../sitebars/c-sitebar.ejs') %>
+                  </div>
+                </div>
+                <!-- /#sidebar-wrapper -->
+            
+                <!-- Page Content -->
+                <div id="page-content-wrapper">
+            
+                  <nav class="navbar navbar-expand-lg navbar-light bg-light border-bottom ">
+                    <button class="btn btn-primary" id="menu-toggle">Contents</button>
+            
+                  </nav>
+            
+                  <div class="container-fluid">
+                      <div class="row content">
+                          
+                          <div class="col-sm-12 col-lg-9 col-md-8 text-left"> 
+                              <h2 class="bg-dark text-center text-white">Loops in c programming</h2>
+
+
+                              <p class=" text-justify">
+                                Loops in programming comes into use when we need to execute same codes in sevaral times.
+                                Suppose you need to print your name in 100 times normally you need write <code>printf()</code>
+                                function 100 times but it is very difficult.Instead of that you can use loops. Loops
+                                are three types. These are --
+                              </p>
+                              <ol>
+                                  <li>For Loops</li>
+                                  <li>While Loops</li>
+                                  <li>Do While Loops</li>
+                              </ol>
+                              <p class=" text-justify">
+                                <b>For Loop:</b> For loop is a repetition control of a structure which allows us to write a loop that is executed a fixed number of times as you want. For loop is 
+                                easy to write and easy to understand.Basically there are three parts in for loop these are starting point ,
+                                condition or end point and increment or how fast it will go to the end point.
+                              </p>
+                              <h3>Syntax of For Loops:</h3>
+     <pre class="prettyprint">
+     <code>for(start; condition; increment){
+         statement ;
+     }
+</code></pre><br>
+<h5>Let's implement a full code:</h5>
+<p class="text-justify"><b>Description:</b>
+    Write a program which pirint "www.tutorialforbeginner.com" 10 times using for loop.
+</p>
+
+<pre class="prettyprint">
+ <code>#include&lt;stdio.h&gt;
+ int main(){
+        int i;
+        for( i = 1; i <= 10 ; i++){
+            printf("www.tutorialforbeginner.com");
+        }
+        return 0;
+    }</code></pre><br>
+        
+<h5>Output:</h5>
+<pre class="prettyprint">
+<code>www.tutorialforbeginner.com
+www.tutorialforbeginner.com
+www.tutorialforbeginner.com
+www.tutorialforbeginner.com
+www.tutorialforbeginner.com
+www.tutorialforbeginner.com
+www.tutorialforbeginner.com
+www.tutorialforbeginner.com
+www.tutorialforbeginner.com
+www.tutorialforbeginner.com</code></pre><br>
+
+
+                              
+                      <hr>
+                          <div class="embed-responsive embed-responsive-16by9">
+                                <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/1lJ8S3nKRls" allowfullscreen></iframe>
+                            </div>
+                          
+                            <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+                            <ins class="adsbygoogle"
+                                 style="display:block; text-align:center;"
+                                 data-ad-layout="in-article"
+                                 data-ad-format="fluid"
+                                 data-ad-client="ca-pub-9136564254270725"
+                                 data-ad-slot="5078546027"></ins>
+                            <script>
+                                 (adsbygoogle = window.adsbygoogle || []).push({});
+                            </script>
+
+<p class=" text-justify">
+        <b>While Loop:</b> While loop also a repetition control of a structure which allows us to write a loop that 
+        is executed a fixed number of times as you want. While loop is also
+        easy to write and easy to understand.Basically there are two parts in for loop these are 
+        condition or end point and increment or how fast it will go to the end point.
+      </p>
+      <h3>Syntax of While Loops:</h3>
+<pre class="prettyprint">
+<code>   initialization;
+   while(condition){
+   statement ;
+   increment;
+}
+</code></pre><br>
+<h5>Let's implement a full code:</h5>
+<p class="text-justify"><b>Description:</b>
+Write a program which pirint 1 to 10 using while loop.
+</p>
+
+<pre class="prettyprint">
+<code>#include&lt;stdio.h&gt;
+int main(){
+    int i=1;
+    while( i<=10 ){
+      printf("%d ",i);
+      i++;
+    }
+return 0;
+}</code></pre><br>
+
+<h5>Output:</h5>
+<pre class="prettyprint">
+<code>1 2 3 4 5 6 7 8 9 10 </code></pre><br>
+
+<p class=" text-justify">
+        <b>Do While Loop:</b> Do while loop also a repetition control of a structure which allows us to write a loop that 
+        is executed a fixed number of times as you want. Do while loop is also
+        easy to write and easy to understand.
+      </p>
+      <h3>Syntax of Do While Loops:</h3>
+<pre class="prettyprint">
+<code>initialization expression;
+do{
+   statements;
+   increment;
+} while (condition);
+</code></pre><br>
+
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- c-ads-1 -->
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-9136564254270725"
+     data-ad-slot="8711842734"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+<h5>Let's implement a full code:</h5>
+<p class="text-justify"><b>Description:</b>
+    Write a program which pirint 1 to 10 using Do While loop.
+</p>
+
+<pre class="prettyprint">
+<code>#include&lt;stdio.h&gt;
+int main(){
+    int i=1;
+    do{
+      printf("%d ",i);
+      i++;
+    }while( i<=10 );
+return 0;
+}</code></pre><br>
+
+<h5>Output:</h5>
+<pre class="prettyprint">
+<code>1 2 3 4 5 6 7 8 9 10 </code></pre><br>
+
+
+                          
+<p class="text-justify"><b>break Statement:</b> Break statement is only used for stop a excuting code for in a certain time.
+    When a Compiler got the <code>break;</code> statement the it stops to execute thak blocks of code or loops.Genarally it is used
+    in switch case statement or inside the loop.
+</p>
+
+  <pre class="prettyprint">
+    <code>#include&lt;stdio.h&gt;
+     int main(){
+        int i;
+        for( i = 1; i <= 10 ; i++){
+            printf("%d ",i);
+            if(i==5){
+                break;
+            }
+        }    
+    return 0;
+    }</code></pre><br>
+    <h5>Output:</h5>
+    <pre class="prettyprint">
+      <code>1 2 3 4 5 </code></pre>
+      <p><b>[Note: loop stop after print 5 because of <code>break</code> statement]</b></p><br>
+<a href=""></a>
+<p class="text-justify"><b>continue Statement:</b> continue statement is only used for skip a statement.
+    When a Compiler got the <code>continue;</code> statement it skip that statement.Genarally it used inside the loop.
+</p>
+
+  <pre class="prettyprint">
+    <code>#include&lt;stdio.h&gt;
+     int main(){
+        int i;
+        for( i = 1; i &lt;= 10 ; i++){
+            
+            if(i==5){
+                continue;
+            }
+            else{
+                printf("%d ",i);
+            }
+         }    
+    return 0;
+    }</code></pre><br>
+    <h5>Output:</h5>
+    <pre class="prettyprint">
+      <code>1 2 3 4 6 7 8 9 10 </code></pre>
+      <p><b>[Note: 5 is not present because of <code>continue</code> statement]</b></p>
+
+
+  
+
+ 
+                              
+
+                             
+
+<h4>Nasted loop:</h4>
+<p class="text-justify"><b>Nasted loop:</b> Nasted loop is nothing but a loop inside another loop. See the following example:
+</p>
+
+<pre class="prettyprint">
+  <code>#include&lt;stdio.h&gt;
+   int main(){
+      int i,j;
+      for( i = 1; i &lt;= 5 ; i++){
+        for( j = 1; j &lt;= 5 ; j++){
+          printf("%d ",j);
+        }   
+        printf("\n");
+       }    
+  return 0;
+  }</code></pre><br>
+  <h5>Output:</h5>
+  <pre class="prettyprint">
+    <code>1 2 3 4 5
+    1 2 3 4 5
+    1 2 3 4 5
+    1 2 3 4 5
+    1 2 3 4 5
+         </code></pre>
+         <p class="text-justify">
+           Lets analize the above code . In the outer loop when <b>i=1</b> then it goes to the inner loop to excute the whole 
+           loop once that means it is looping <b> 5 times </b> value is print <b>1 2 3 4 5</b> and getout of the inner loop.
+           after that Compiler found <b>"\n"</b>(newline) so it goes to the next line. Then <b>i become 2</b> and inner loop do the same.
+           Eventualy, we got the result.
+         </p>
+         <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- c-new -->
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-9136564254270725"
+     data-ad-slot="7916462357"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+         
+
+
+
+
+                            
+
+
+                      </div>
+                          <div class="col-sm-12 col-lg-3 col-md-4 sidenav">
+                          
+                            <div class="well my-5">
+                                
+                                <details >
+                                    <summary>Best way of learing</summary>
+                                    <p class="text-tustify">
+                                        Self learing is the best learing in the world.
+                                        Discover yourself first then will get what you are And
+                                        what you want to do .It will push you for self learing.
+                                    </p>
+                                  </details>
+                            </div>
+
+                            <div class="well my-5">
+                                
+                                <details >
+                                    <summary>Why you need to learn coding?</summary>
+                                    <p class="text-tustify">
+                                        Coding will play a vital role in one's life . It will help to open 
+                                        a new window of thinking . You can think better way than past . It 
+                                        helps to organise all the thing in better way .
+                                    </p>
+                                  </details>
+                            </div>
+                           
+                            <div class="well sticky-top">
+                                <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+                                <!-- C-verticle -->
+                                <ins class="adsbygoogle"
+                                     style="display:block"
+                                     data-ad-client="ca-pub-9136564254270725"
+                                     data-ad-slot="1132697628"
+                                     data-ad-format="auto"
+                                     data-full-width-responsive="true"></ins>
+                                <script>
+                                     (adsbygoogle = window.adsbygoogle || []).push({});
+                                </script>
+                                
+                                    
+                            </div>
+                            
+
+                          </div>
+                        </div>
+                      </div>
+                    
+                </div>
+               
+            
+              </div>
+              
+              <script>
+                $("#menu-toggle").click(function(e) {
+                  e.preventDefault();
+                  $("#wrapper").toggleClass("toggled");
+                });
+              </script>
+            
+        
+    
+    </main>
+
+    
+
+<%- include('../../includes/end.ejs') %>

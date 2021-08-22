@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+    <html lang="en">
+       <head>
+          <meta charset="utf-8">
+          <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+          <title>For Loop In Java | tutorialforbeginner.com</title>
+
+          <meta name="Description" content="Java Variables | What is Java Variables? | What is Local Variable? | What is Instance Variable? | What is Static Variable? | 
+          Local Variable Example | Instance Variable Example | Static Variable Example " />
+           
+          <meta name="author" content="tutorialforbeginner.com">
+          <meta property="og:site_name" content="www.tutorialforbeginner.com" />
+          <meta property="og:locale" content="en_US" />
+          <meta property="og:type" content="website" />
+          <link rel="shortcut icon" href="images/ico.jpg" type="image/x-icon" />
+          <link rel="canonical" href="https://tutorialforbeginner.com/for-loop-in-java" />
+          <%- include('../../includes/boostrap-head.ejs') %>
+          <style>
+              .navbar-collapse .navbar-nav{float:none;margin:0 auto;text-align:center}img{max-width:100%}#footer{background:#232323;padding:30px 0 0 0;font-size:12px;color:#999}#footer a{color:#ccc}#footer a:hover{color:#fff}#footer h3.widget-title{font-size:15px;font-size:.9375rem;text-transform:uppercase;color:#fff;margin:0 0 20px}#underfooter{background:#191919;padding:15px 0;color:#777;font-size:12px}#underfooter a{color:#aaa}#underfooter a:hover{color:#fff}@media (min-width:1200px){.container{max-width:1080px}}body{overflow-x:hidden}#sidebar-wrapper{min-height:100vh;margin-left:-15rem;-webkit-transition:margin .25s ease-out;-moz-transition:margin .25s ease-out;-o-transition:margin .25s ease-out;transition:margin .25s ease-out}#sidebar-wrapper .sidebar-heading{padding:.875rem 1.25rem;font-size:1.2rem}#sidebar-wrapper .list-group{width:15rem}#page-content-wrapper{min-width:100vw}#wrapper.toggled #sidebar-wrapper{margin-left:0}@media (min-width:768px){#sidebar-wrapper{margin-left:0}#page-content-wrapper{min-width:0;width:100%}#wrapper.toggled #sidebar-wrapper{margin-left:-15rem}}.row.content{height:auto;width:auto}.sidenav{padding-top:20px;background-color:#f1f1f1;height:100%}footer{background-color:#555;color:#fff;padding:15px}@media screen and (max-width:767px){.sidenav{height:auto;padding:15px}.row.content{height:auto}}
+            </style>
+
+          <script data-ad-client="ca-pub-9136564254270725" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+          <script async src="js/print/run_prettify.js?lang=css&amp;skin=desert"></script>
+            <!-- Global site tag (gtag.js) - Google Analytics -->
+          <script async src="https://www.googletagmanager.com/gtag/js?id=UA-148831263-1"></script>
+          <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+
+            gtag('config', 'UA-148831263-1');
+          </script>
+      
+        </head>
+
+
+    
+
+<body>
+    <%- include('../../includes/navigation.ejs') %>
+    
+    
+    <main id="main">
+        
+        <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+        <!-- home-last -->
+        <ins class="adsbygoogle"
+             style="display:block"
+             data-ad-client="ca-pub-9136564254270725"
+             data-ad-slot="7126124861"
+             data-ad-format="auto"
+             data-full-width-responsive="true"></ins>
+        <script>
+             (adsbygoogle = window.adsbygoogle || []).push({});
+        </script>
+        
+            
+            
+            <div class="d-flex w-100" id="wrapper">
+
+                <!-- Sidebar -->
+                <div class="bg-light border-right" id="sidebar-wrapper">
+                    <div class="sidebar-heading bg-success text-center text-white rounded-top border-to"><b>Topics</b></div>
+                    <div class="list-group list-group-flush">
+                        <%- include('../../sitebars/java.ejs') %>
+                    </div>
+                </div>
+                <!-- /#sidebar-wrapper -->
+            
+                <!-- Page Content -->
+                <div id="page-content-wrapper">
+            
+                    <nav class="navbar navbar-expand-lg border-bottom" style="background-color: #375028;">
+                        <button class="btn text-white btn-lg" style="background-color: #521212;" id="menu-toggle">&#x2190;TOPICS</button>
+                
+                      </nav>
+            
+                  <div class="container-fluid">
+                      <div class="row content ">
+                          
+                          <div class="col-sm-12 col-lg-9 col-md-8 text-left w-100"> 
+                              <h1 class="bg-dark text-center text-white">For Loop In Java</h1>
+                              <p class="text-justify"><b>
+                               In this page, We will learn about Java Variables | What is Java Variables? | What is Local Variable? | What is Instance Variable? | What is Static Variable? | 
+                               Local Variable Example | Instance Variable Example | Static Variable Example</b></p><hr>
+
+                              <h2 class="my-3">What is for loop in Java?</h2>
+
+                               
+                            <p class="text-justify">
+                                The Java for loop is employed to repeat a region of the program many times. If the quantity of iteration is known, then it's suggested to use for loop.
+                              </p>
+
+                              
+                              <div class="text-center my-3">
+                                <img src="images/tutorial/for-loop.png" alt="For Loop In Java">
+                              </div> 
+                              <hr>
+
+                              <h2>There are 3 types of for loop in java.</h2>
+                              <p class="text-justify">
+                                Variable is name of reserved space allotted in memory. In alternative words, it’s a reputation of memory location. It’s a mix of “vary + able” meaning its worth can be modified.
+                              </p>
+                              <ul class="font-weight-bold" type="square">
+                                <li>Simple For Loop</li> <li>For-each or Enhanced For Loop</li> <li>Labeled For Loop</li>
+                            </ul>   
+
+<h3>Example:</h3>
+<pre class="prettyprint">
+<code>
+ import java.io.*;
+  Class Simple{  
+    Public static void main(String args[]){  
+    int x = 20; // x is a variable
+    }  
+  }  
+</code>
+</pre><hr> 
+                      
+<h2 class="mt-4">What is Local Variable?</h2>
+<p class="text-justify">
+    A variable declared within the body of the strategy is named native variable. You’ll use this variable solely at intervals that technique and also the different strategies within the category are not even aware that the variable exists. 
+</p> <h5>[N:B: A local variable can not be outlined with “static” keyword.]</h5>
+<ul>
+  <li>These variable are created when the block is entered or that function is called and destroyed after finishing the task or when the call returns from the function.</li>
+  <li>The scope of these variables exists only within the function or block in which the variable is declared. i.e. You can access these variable only within that block or function.</li>
+  <li>Initialization of Local Variable is the must.</li>
+</ul>
+
+<h3>Local Variable Example :-</h3>
+<pre class="prettyprint">
+<code>
+  import java.io.*;
+  public class A {
+    public void TeacherAge(){
+      // local variable age
+      int age = 25;
+      System.out.println("a = " + age);
+    }
+
+    public static void main(String args[]){
+      Teacher obj = new TeacherAge();
+      obj.TeacherAge();
+    }
+  }
+</code>
+</pre> 
+<h4>Output:</h4>
+<pre class="prettyprint"><code>
+  a = 25
+</code>
+</pre><hr>
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- ad-2 -->
+<ins class="adsbygoogle"
+style="display:block"
+data-ad-client="ca-pub-9136564254270725"
+data-ad-slot="8826219349"
+data-ad-format="auto"
+data-full-width-responsive="true"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+<h2 class="mt-4">What is Instance Variable?</h2>
+<p class="text-justify">
+    A variable declared within the category however outside the body of the tactic, is named instance variable. It’s not declared as static. <br><br>
+    It is referred to as instance variable as a result of its worth is instance specific and isn’t shared among instances.
+</p>
+<ul>
+  <li>As instance variables are declared within a class, these variables are created when an object of the class is created as wel as destroyed when the object is destroyed.</li>
+  <li>Unlike local variables, you may use access specifiers for instance variables. If you don't specify any access specifier then the default access specifier will be used.</li>
+  <li>Initialization of Instance Variable isn't Mandatory. By default Its value is 0</li>
+  <li>Instance Variable can be accessed only by creating its object.</li>
+</ul>
+<h3>Instance Variable Example :-</h3>
+<pre class="prettyprint">
+<code>
+  import java.io.*;
+  class Marks {
+    int banMarks;    
+  }
+  class MarksDemo {
+    public static void main(String args[]){
+      // first object
+      Marks obj1 = new Marks();
+      obj1.engMarks = 50;
+      System.out.println("Marks = " + obj1.banMarks);
+    }
+  }
+</code>
+</pre> 
+  <h4>Output:</h4>
+<pre class="prettyprint"><code>
+  Marks = 50
+</code>
+</pre><hr>
+
+<h2 class="mt-4">What is Static Variable?</h2>
+<p class="text-justify">
+    A variable which is declared as static is termed static variable. It cannot be native. You can produce a single copy of static variable and share among all the instances of the category . Memory allocation for static variable happens just once when the category is loaded in the memory. 
+</p>
+<ul>
+  <li>These variables are declared is same as instance variables, the main difference is that static variables are declared using the static keyword within a class outside any method, constructor, or a block .</li>
+  <li>Unlike instance variables, you can only have one copy of a static variable per class irrespective of how many objects you create.</li>
+  <li>Static variables are created at the beginning of program execution and destroyed automatically when its execution ends.</li>
+  <li>Initialization is not Mandatory for Static Variable. By default its value is 0.</li>
+  <li>If you try to access the static variable as like as Instance variable (through an object), the compiler will show the warning message and it will not halt the program. The compiler will replace the object name to the class name automatically.</li>
+  <li>If you try to access the static variable without the class name, Compiler will automatically add the class name.</li>
+</ul>
+<p class="text-justify">
+  To access static variables, you don't need to create an object of that class, you can simply access the variable as <code>class_name.variable_name;</code>.
+</p>
+
+<h3>Static Variable Example :-</h3>
+<pre class="prettyprint">
+<code>
+  import java.io.*;
+  class Emp {
+    public static double salary;
+    public static String name = "Tuhin";
+  }
+
+  public class EmpDemo {
+    public static void main(String args[]){
+      Emp.salary = 1000;
+      System.out.println(Emp.name);
+      System.out.println(Emp.salary);
+    }
+  }
+</code>
+</pre>
+                        
+<h4>Output:</h4>
+<pre class="prettyprint"><code>
+  Tuhin
+  1000
+</code> 
+</pre><hr>
+                            
+                           
+                           
+                            
+                            
+                            
+                     </div>
+                          <div class="col-sm-12 col-lg-3 col-md-4 sidenav">
+                
+
+                            <div class="well my-5">
+                                
+                                <details >
+                                    <summary>Best way of learing</summary>
+                                    <p class="text-tustify">
+                                        Self learing is the best learing in the world.
+                                        Discover yourself first then will get what you are And
+                                        what you want to do .It will push you for self learing.
+                                    </p>
+                                  </details>
+                            </div>
+
+                            <div class="well my-5">
+                                
+                                <details >
+                                    <summary>Why you need to learn coding?</summary>
+                                    <p class="text-tustify">
+                                        Coding will play a vital role in one's life . It will help to open 
+                                        a new window of thinking . You can think better way than past . It 
+                                        helps to organise all the thing in better way .
+                                    </p>
+                                  </details>
+                            </div>
+                           
+                            <div class="well sticky-top">
+                                <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+                                <!-- h-ad1 -->
+                                <ins class="adsbygoogle"
+                                     style="display:block"
+                                     data-ad-client="ca-pub-9136564254270725"
+                                     data-ad-slot="9841091579"
+                                     data-ad-format="auto"
+                                     data-full-width-responsive="true"></ins>
+                                <script>
+                                     (adsbygoogle = window.adsbygoogle || []).push({});
+                                </script>
+                            </div>
+                            
+
+                          </div>
+                        </div>
+                      </div>
+                    
+                </div>
+               
+            
+              </div>
+              
+              <script>
+                $("#menu-toggle").click(function(e) {
+                  e.preventDefault();
+                  $("#wrapper").toggleClass("toggled");
+                });
+              </script>
+            
+        
+    
+    </main>
+
+    
+
+<%- include('../../includes/end.ejs') %>

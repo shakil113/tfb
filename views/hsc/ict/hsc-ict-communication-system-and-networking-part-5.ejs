@@ -1,0 +1,442 @@
+<!DOCTYPE html>
+    <html lang="en">
+       <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <title>HSC ICT Chapter 2 Part-5: Communication System And Networking</title>
+
+        
+        <meta name="Description" content="HSC ICT Chapter 2 Part-5 : Communication System And Networking we will
+        learn about What is Computer Networking, hosting ,Node? Difference between public and private network
+        What is hub, Switch, Repeater, Gateway, Router, Bridge?"/>
+        
+        
+        
+        <meta name="author" content="tutorialforbeginner.com">
+        <meta property="og:site_name" content="www.tutorialforbeginner.com" />
+        <meta property="og:locale" content="en_US" />
+        <meta property="og:type" content="website" />
+        <link rel="shortcut icon" href="images/ico.jpg" type="image/x-icon" />
+        <link rel="canonical" href="https://tutorialforbeginner.com/hsc-ict-communication-system-and-networking-part-5"/>
+        
+       
+
+        
+        <%- include('../../includes/boostrap-head.ejs') %>
+        <style>
+            .navbar-collapse .navbar-nav{float:none;margin:0 auto;text-align:center}img{max-width:100%}#footer{background:#232323;padding:30px 0 0 0;font-size:12px;color:#999}#footer a{color:#ccc}#footer a:hover{color:#fff}#footer h3.widget-title{font-size:15px;font-size:.9375rem;text-transform:uppercase;color:#fff;margin:0 0 20px}#underfooter{background:#191919;padding:15px 0;color:#777;font-size:12px}#underfooter a{color:#aaa}#underfooter a:hover{color:#fff}@media (min-width:1200px){.container{max-width:1080px}}body{overflow-x:hidden}#sidebar-wrapper{min-height:100vh;margin-left:-15rem;-webkit-transition:margin .25s ease-out;-moz-transition:margin .25s ease-out;-o-transition:margin .25s ease-out;transition:margin .25s ease-out}#sidebar-wrapper .sidebar-heading{padding:.875rem 1.25rem;font-size:1.2rem}#sidebar-wrapper .list-group{width:15rem}#page-content-wrapper{min-width:100vw}#wrapper.toggled #sidebar-wrapper{margin-left:0}@media (min-width:768px){#sidebar-wrapper{margin-left:0}#page-content-wrapper{min-width:0;width:100%}#wrapper.toggled #sidebar-wrapper{margin-left:-15rem}}.row.content{height:auto;width:auto}.sidenav{padding-top:20px;background-color:#f1f1f1;height:cover}footer{background-color:#555;color:#fff;padding:15px}@media screen and (max-width:767px){.sidenav{height:auto;padding:15px}.row.content{height:auto}}
+          </style>
+        
+        <script data-ad-client="ca-pub-9136564254270725" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+
+          <!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-148831263-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-148831263-1');
+</script>
+
+
+        
+    </head>
+
+
+    
+
+<body>
+    <%- include('../../includes/navigation.ejs') %>
+    
+    
+    <main id="main">
+        
+            <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+            <!-- ict-ads-4 -->
+            <ins class="adsbygoogle"
+                 style="display:block"
+                 data-ad-client="ca-pub-9136564254270725"
+                 data-ad-slot="9659561509"
+                 data-ad-format="auto"
+                 data-full-width-responsive="true"></ins>
+            <script>
+                 (adsbygoogle = window.adsbygoogle || []).push({});
+            </script>
+        
+            
+                  <div class="d-flex" id="wrapper">
+
+                    <%- include('../../sitebars/ict.ejs') %> 
+          </div>
+       </div>
+                <!-- /#sidebar-wrapper -->
+            
+                <!-- Page Content -->
+                <div id="page-content-wrapper">
+            
+                  <nav class="navbar navbar-expand-lg navbar-light bg-light border-bottom">
+                    <button class="btn btn-primary" id="menu-toggle">Contents</button>
+            
+                  </nav>
+            
+                  <div class="container-fluid">
+                      <div class="row content">
+                          
+                          <div class="col-sm-12 col-lg-9 col-md-8 text-left"> 
+                              <h2 class="bg-dark text-center text-white">HSC ICT Chaper 2 Part-5</h2>
+                   
+                              <h3 class="mt-4 text-center">Communication System And Networking</h3><p class="text-justify text-secondary"><b>
+                                In this HSC ICT Chapter 2 Part-4 : Communication System And Networking we will
+                                learn about What is Computer Networking, hosting ,Node? Difference between public and private network
+                                What is hub, Switch, Repeater, Gateway, Router, Bridge?
+
+                              </b></p><hr>
+                              <h4>৬৮. কম্পিউটার নেটওয়ার্কিং কাকে বলে?
+                                </h4>
+                                <p class="text-justify text-dark">
+                                    
+                                  উঃ দুই বা ততােধিক কম্পিউটার আন্তঃসংযুক্ত হওয়াকে কম্পিউটার নেটওয়ার্ক বলে। অর্থাৎ, কম্পিউটারের মধ্যে তথ্য আদান-প্রদানের উদ্দেশ্যে
+                                        সংযােগ ব্যবস্থাকে কম্পিউটার নেটওয়ার্ক বলা হয়ে থাকে। 
+                  
+                  
+                                </p><hr>
+                                
+                                <h4>৬৯. কম্পিউটার নেটওয়ার্কের ব্যবহার/ উদ্দেশ্য কী? </h4>
+                                <p class="text-justify text-dark">
+                                    
+                                  উঃ <br>ক) তথ্য বিনিময়।<br> খ) হার্ডওয়্যার রিসাের্স শেয়ারিং।<br> গ) সফটওয়্যার রিসাের্স শেয়ারিং।<br> ঘ) তথ্য সংরক্ষণ।<br> ঙ) দূরবর্তী স্থান থেকে ব্যবহার। <br>চ) ডেটাবেজ ম্যানেজমেন্ট।<br> ছ) অফিস অটোমেশন।<br>
+                                            জ) নিরাপত্তা।
+                  
+                  
+                                </p><hr>
+          
+                             
+                              <div class="embed-responsive embed-responsive-16by9">
+                                  <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/bEQ1zW9d7wk" allowfullscreen></iframe>
+                              </div>
+                              <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- ict-ads-3 -->
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-9136564254270725"
+     data-ad-slot="3477296539"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+                            
+                           
+                           
+                           
+                           
+                          
+                            
+
+              
+              <h4>৭০. হােস্ট কী এবং নোড কাকে বলে?
+              </h4>
+              <p class="text-justify text-dark">
+                  
+                উঃ হােস্টঃ যে কম্পিউটার সার্ভার হিসেবে কাজ করে তাকে হােস্ট বলে। নােডঃ যে কম্পিউটারে বসে কাজ করা হয় তাকে নােড বা
+                ওয়ার্কস্টেশন বলা হয়।
+                
+
+              </p><hr>
+              <h4>৭১. কম্পিউটার নেটওয়ার্কের প্রকারভেদকে চার্ট আকারে প্রকাশ কর?
+              </h4>
+              <p class="text-justify text-dark">
+                  
+               <img src="images/ch2p1.PNG" alt="কম্পিউটার নেটওয়ার্কের প্রকারভেদকে চার্ট ">
+               
+
+              </p><hr>
+              <h4>৭২. নেটওয়ার্ক কত প্রকার ও কী কী?
+
+              </h4>
+              <p class="text-justify text-dark">
+                  
+                উঃ কম্পিউটার নেটওয়ার্ককে প্রধানত ৪ ভাগে ভাগ করা যায়। যথাঃ<br> ১) PAN (Personal Area Network)<br>
+                ২) LAN (Local Area Network)<br> 3) MAN (Metropolitan Area Network)<br>
+                8) WAN (Wide Area Network) 
+                
+
+              </p><hr>
+              <h4>৭৩. নেটওয়ার্কের বৈশিষ্ট্য গুলাে লেখ?
+
+              </h4>
+              <p class="text-justify text-dark">
+                  
+                উঃ ১) PAN এর বৈশিষ্ট্যঃ<br> ক) পার্সোনাল কম্পিউটার ডিভাইসসমূহের মধ্যে যােগাযােগের জন্য ব্যবহৃত হয়।<br> খ) খরচ তুলনামূলক কম। <br>গ) দ্রুত ডেটা আদান-প্রদান করতে পারে।<br> ঘ) এ ধরনের নেটওয়ার্ক যে কোন জায়গায় তৈরি করা যায় ।<br> ঙ) ব্যাপ্তি সাধারণত ১০ মিটারের মধ্যেই সীমাবদ্ধ থাকে।<br> চ) ওয়্যারলেস নেটওয়ার্ক প্রযুক্তি দ্বারা একটি ওয়্যারলেস পার্সোনাল এরিয়া নেটওয়ার্ক বা WPAN তৈরি করা সম্ভব।<br><br> ২) LAN এর বৈশিষ্ট্যঃ <br>ক) সীমিত দুরত্বের মধ্যে এর কার্যক্রম সীমাবদ্ধ।<br> খ) শ্রেনি সংযােগের মাধ্যমে কম্পিউটারগুলাে সংযুক্ত হয়।<br> গ) ডেটা স্থানান্তরের হার সাধারনত 10Mb থেকে 1000Mb । <br>ঘ) এই নেটওয়ার্ক স্থাপন ও রক্ষনাবেক্ষন পদ্ধতি সহজ ও খরচ কম। <br>ঙ) এই নেটওয়ার্কে কম্পিউটারসমূহ তার বা তারবিহীন সংযোগ প্রদান করা যায়।<br><br> ৩) MAN এর বৈশিষ্ট্যঃ<br> ক) এর বিস্তৃতি ১০ থেকে ৩০ কি.মি. পর্যন্ত হতে পারে।<br> খ) LAN এর চাইতে দ্রুত গতির।<br> গ) খরচ তুলনামূলক ভাবে কম।<br> ঘ) বেশি পরিমান তথ্য আদান-প্রদান করা যায় ।<br> ঙ) MAN এর মালিকানা সাধারনত কোনাে অর্গানাইজেশনের হয়ে থাকে।<br> চ) ডেটা স্থানান্তরের হার সাধারনত 10Mbps থেকে 10Gbps ।<br><br> ৪) WAN এর বৈশিষ্ট্যঃ <br>ক) বিভিন্ন তথ্য, পত্র-পত্রিকা, বই, চলচ্চিত্র প্রভৃতি সংগ্রহ ও ব্যবহার করা যায়। <br>খ) বিশ্বের যে কোন স্থান থেকে ইমেইল প্রেরন করা যায়।
+
+
+              </p><hr>
+              <h4>পাবলিক নেটওয়ার্ক(public network) and প্রাইভেট নেটওয়ার্ক(private network) পার্থক্য লিখ ?
+              </h4>
+              <table class="table table-bordered">
+                <thead>
+                  <tr>
+                    <th scope="col">পাবলিক নেটওয়ার্ক(public network)</th>
+                    <th scope="col">প্রাইভেট নেটওয়ার্ক(private network)</th>
+                    
+                    
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                 
+                    <td>১। পাবলিক নেটওয়ার্ক কোন ব্যক্তি বা প্রতিষ্ঠানের একক মালিকাধীন নয়।</td>
+                    <td>১। CDMA শব্দটির পূর্নরুপ হচ্ছে Code Division Multiple Access. </td>
+                  </tr>    
+                      
+                  <tr>
+                        <td>২। যে কেউ এ নেটওয়ার্ক ব্যবহার করতে পারে। </td>
+                        <td>১। প্রাইভেট নেটওয়ার্ক কোন ব্যক্তি বা প্রতিষ্ঠানের একক মালিকাধীন হয়ে থাকে।
+                        </td>
+                        
+                  </tr>
+                  <tr>
+                      <td>৩। কম নিরাপদ।
+                      </td>
+                      <td>২। যে কেউ এ নেটওয়ার্ক ব্যবহার করতে পারে না। </td>
+                      </tr>
+                  <tr>
+                      <td> ৪। ট্রাফিক কম। </td>
+                      <td>৪। ট্রাফিক বেশি। 
+                      </td>
+                        
+                  </tr>
+                  <tr>
+                    <td> ৫। ইহা কোন প্রতিষ্ঠান বা সংস্থার মাধ্যমে পরিচালিত হয়।
+                    </td>
+                    <td>৫। ইহা ব্যক্তি মালিকাধীন  নিয়ন্ত্রিত হয়।
+
+                    </td>
+                      
+                </tr>
+                <tr>
+                  <td> ৬। ডেটা দ্রুত গতির হয়। উদাঃ ব্যাংকের এটিএম।
+                    
+
+                  </td>
+                  <td>৬। আন্তর্জাতিক রােমিং সুবিধা নেই।৬। ডেটা ট্রান্সফার কম গতির হয়।  উদাঃ ঢাকা বিশ্ববিদ্যালয়, বুয়েট এর নিজস্ব নেটওয়ার্ক।</td>
+                    
+              </tr>
+        
+                </tbody>
+              </table><hr>
+
+              
+              
+              
+              <hr>
+              <h4>৭১.LAN and  MANপার্থক্য লিখ ?
+              </h4>
+              <table class="table table-bordered">
+                <thead>
+                  <tr>
+                    <th scope="col">LAN</th>
+                    <th scope="col">MAN</th>
+                    
+                    
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                 
+                    <td>১। LAN এর পূর্নরুপ  হলাে _Local Area Network </td>
+                    <td> ১। MAN এর পূর্নরুপ হলাে _Metropolitan Area Network  </td>
+                  </tr>    
+                      
+                  <tr>
+                        <td>২। এক্ষেত্রে সাধারনত একটি নির্দিষ্ট ভবন বা ক্যাম্পাসে একদল কম্পিউটার নেটওয়ার্কভূক্ত হয়।  </td>
+                        <td>২। MAN হলাে কতগুলাে ল্যান এর সমন্বয় যা একটি পুরাে শহর বা বড় আকারের কোন এলাকাব্যাপী বিস্তৃত।
+
+                        </td>
+                        
+                  </tr>
+                  <tr>
+                      <td> ৩। LAN এর মালিকানা সাধারনত কোন একক ব্যক্তি বা কিছু সংখ্যক লােকের একটি গুপের হতে পারে। 
+                      </td>
+                      <td>৩। MAN এর মালিকানা সাধারনত কোনাে অর্গানাইজেশনের হয়ে থাকে। </td>
+                      </tr>
+                  <tr>
+                      <td> ৪। LAN এর গতি কম।
+                      </td>
+                      <td>৪। LAN এর চাইতে  MAN দ্রুত গতির।
+
+                      </td>
+                        
+                  </tr>
+                  
+                  
+        
+                </tbody>
+              </table><hr>
+              <h4>৭৬. NIC বা NIC Card কী?
+
+              </h4>
+              <p class="text-justify text-dark">
+                  
+                উঃ NIC এর পূর্নরুপ হচ্ছে Network Interface কে কম্পিউটারকে নেটওয়ার্কভুক্ত করার জন্য একটি বি বর্তনীর প্রয়ােজন হয়। এ বর্তনীকে যে কার্ডের উপর সf
+                করা হয় তাকেই নেটওয়ার্ক ইন্টারফেস কার্ড বা NIC বলে 
+                
+
+              </p><hr>
+              <h4>৭৭. মডেম(Modem) কী এর প্রকারভেদ লেখ?
+
+              </h4>
+              <p class="text-justify text-dark">
+                  
+                উঃ একটি ডেটা কমিউনিকেশন ডিভাইস যা ডেটাকে কম্পিউটার থেকে অন্য কম্পিউটারে মাধ্যমের সাহায্যে  দেয়া।
+                 মডেম শব্দটি Modulator ও DEModulator সংক্ষিপ্ত রুপ। যা ডিজিটাল ডেটাকে অ্যানালগ এবং অ্যান ডেটাকে ডিজিটাল 
+                 সিগন্যালে রুপান্তর করে তাকে Modem বলে। মডেম ২ প্রকার যথাঃ <br> 1) Internal Modem <br> 2) External Modem
+                 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+                 <ins class="adsbygoogle"
+                      style="display:block; text-align:center;"
+                      data-ad-layout="in-article"
+                      data-ad-format="fluid"
+                      data-ad-client="ca-pub-9136564254270725"
+                      data-ad-slot="2458044125"></ins>
+                 <script>
+                      (adsbygoogle = window.adsbygoogle || []).push({});
+                 </script>
+
+              </p><hr>
+              <h4>৭৮. হাব(HUB) কী এর প্রকারভেদ লেখ?
+
+              </h4>
+              <p class="text-justify text-dark">
+                  
+                উঃ হাব হলাে নেটওয়ার্ক ডিভাইসসমূহের জন্য একটি সাধারণ কানেকশন পয়েন্ট। ল্যানের সেগমেন্টগুলাে কানেক্ট করার জন্য সাধারনভাবে হাব ব্যবহৃত হয়। হাবের মাধ্যমে কম্পিউটারসমূহ পরস্পরের সাথে যুক্ত থাকে। কার্যকারিতার দিক হতে “হাব” প্রধানত ৩ প্রকার যথাঃ <br>ক) সক্রিয় হাব (Active Hub)।<br>
+                খ) নিষ্ক্রিয় হাব (Passive Hub)।<br>
+                গ) ইন্টেলিজেন্ট হাব (Intelligent Hub)। 
+                
+
+              </p><hr>
+              <h4>৭৯. সুইচ (Switch) কী?
+
+              </h4>
+              <p class="text-justify text-dark">
+                  
+                উঃ সুইচ ও হাবের কাজ প্রায় একই। ডেটা সিগন্যাল নেটওয়ার্কে প্রেরক প্রান্ত থেকে প্রাপ্ত ডেটা সিগন্যাল কম্পিউটারের সুনির্দিষ্ট পাের্টে প্রেরন করে তাকে সুইচ বলে। অথবা,
+                সুইচ এক ধরনের নেটওয়ার্ক কানেকটিভিটি ডিভাইস যা মিডিয়া সেগমেন্টগুলােকে একটি কেন্দ্রীয় অবস্থানে এনে একত্রিত করে। সুইচ সিগন্যাল গ্রহন করার পর তা সরাসরি টার্গেট কম্পিউটার বা কম্পিউটারসমূহে প্রেরন করে।
+                
+
+              </p><hr>
+              <h4>৮০.রিপিটার (Repeater) কী এর প্রকারভেদ লেখ?
+
+              </h4>
+              <p class="text-justify text-dark">
+                  
+                উঃ নেটওয়ার্কে ক্যাবলের সংকেতকে ইলেকট্রিক্যাল| অ্যামপ্লিফাই করে এবং পুনরায় নেটওয়ার্কে প্রেরন করার প্রক্রিয়াকে রিপিটার বলে। যা নেটওয়ার্ক ক্যাবলের নির্দিষ্ট দূরত্বের অতিক্রম করার পর সংকেত দূর্বল হয়ে পড়ে তাকে সবল করা এবং গন্তব্য স্থানের  দিকে প্রেরন করার জন্য রিপিটার ব্যবহার করা হয়। রিপিটার ২ প্রকার যথা ঃ ক) এমপ্লিফায়ার ও
+                খ) সিগন্যাল রিজেনারেটিং । 
+                
+
+              </p><hr>
+              <h4>৮১. গেটওয়ে(Gateway) কাকে বলে?
+
+              </h4>
+              <p class="text-justify text-dark">
+                  
+                উঃ যদি একাধিক নেটওয়ার্কের প্রটোকল ভিন্ন হয় তাহলে তাদের সংযুক্ত করতে রাউটারের চেয়ে বুদ্ধিমান একটি ডিভাইস প্রয়ােজন হয়, আর এই বুদ্ধিমান ডিভাইসকে গেটওয়ে বলে। অথবা,
+                যে নেটওয়ার্ক ব্যবস্থায় একটি নেটওয়ার্ককে এক বা একাধিক নেটওয়ার্কের সাথে যুক্ত করা হয় তকে গেটওয়ে বলে। এটি বিভিন্ন প্রটোকলকে একত্রিত করে বিভিন্ন
+                অ্যাপ্লিকেশনের মধ্যে যােগাযােগ রক্ষা করে।
+                
+
+              </p><hr>
+              <h4>৮২.রাউটার(Router) কাকে বলে?
+
+              </h4>
+              <p class="text-justify text-dark">
+                  
+                উঃ এক নেটওয়ার্ক থেকে আরেক নেটওয়ার্কে ডেটা পাঠানাের পদ্ধতিকে বলে রাউটিং। যে ডিভাইস রাউটিং এর কাজে। ব্যবহৃত হয় তাকে রাউটার বলে। এটি ডেটাকে গন্তব্য পৌঁছে। দেওয়ার জন্য সবচেয়ে কম দূরত্বের পাথ(Path) ব্যবহার করে। অথবা,
+                রাউটার একই প্রটোকলবিশিষ্ট দুই বা ততােধিক স্বতন্ত্র নেটওয়ার্কের মধ্যে সংযােগ স্থাপন করে নেটওয়ার্ক সম্প্রসারন করতে পারে তাকে রাউটার বলে। অথবা,
+                রাউটার একটি বুদ্ধিমান ইন্টারনেট ওয়ার্ক কানেকটিভিটি ডিভাইস যা লজিক্যাল এবং ফিজিক্যাল অ্যাড্রেস ব্যবহার। করে দুই বা ততােধিক নেটওয়ার্ক সেগমেন্টের মধ্যে ডেটা
+                আদান-প্রদানের ব্যবস্থা করে।
+                
+
+              </p><hr>
+              <h4>৮৩.ব্রিজ(Bridge) কী এর প্রকারভেদ লেখ?
+
+              </h4>
+              <p class="text-justify text-dark">
+                উঃ একাধিক নেটওয়ার্ককে সংযুক্ত করে একটি বৃহৎ| নেটওয়ার্ক গঠনের ক্ষেত্রে ব্যবহৃত বিশেষ ধরনের ডিভাইসকে ব্রিজ বলা হয়। ব্রিজ ৩ প্রকার যথা ঃ
+
+                <br>ক) লােকাল ব্রিজ। (এটি সরাসরি LAN এর সাথে যুক্ত থাকে।) <br>খ) রিমােট ব্রিজ । (ভৌগােলিকভাবে বিচ্ছিন্ন অবস্থানের একাধিক নেটওয়ার্ককে যুক্ত করে।)<br>
+                গ) ওয়্যারলেস ব্রিজ। (একধিক WLAN কে যুক্ত করে।) 
+
+              </p><hr>
+              
+              
+
+                            
+
+
+                           
+                     </div>
+                          <div class="col-sm-12 col-lg-3 col-md-4 sidenav">
+                              
+                        
+                            <div class="well my-5">
+                                
+                                <details >
+                                    <summary>Best way of learing</summary>
+                                    <p class="text-tustify">
+                                        Self learing is the best learing in the world.
+                                        Discover yourself first then will get what you are And
+                                        what you want to do .It will push you for self learing.
+                                    </p>
+                                  </details>
+                            </div>
+
+                           
+                            <div class="well my-5">
+                                
+                                <details >
+                                    <summary>Why you need to learn coding?</summary>
+                                    <p class="text-tustify">
+                                        Coding will play a vital role in one's life . It will help to open 
+                                        a new window of thinking . You can think better way than past . It 
+                                        helps to organise all the thing in better way .
+                                    </p>
+                                  </details>
+                            </div>
+                            <div class="well mt-5 sticky-top">
+                                    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+                                    <!-- ict-verticle-1 -->
+                                    <ins class="adsbygoogle"
+                                         style="display:block"
+                                         data-ad-client="ca-pub-9136564254270725"
+                                         data-ad-slot="1200802774"
+                                         data-ad-format="auto"
+                                         data-full-width-responsive="true"></ins>
+                                    <script>
+                                         (adsbygoogle = window.adsbygoogle || []).push({});
+                                    </script>
+                             
+                                </div>
+                          </div>
+                        </div>
+                      </div>
+                    
+                </div>
+               
+            
+              </div>
+              
+              <script>
+                $("#menu-toggle").click(function(e) {
+                  e.preventDefault();
+                  $("#wrapper").toggleClass("toggled");
+                });
+              </script>
+            
+        
+    
+    </main>
+
+    
+
+<%- include('../../includes/end.ejs') %>

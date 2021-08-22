@@ -1,0 +1,516 @@
+<!DOCTYPE html>
+    <html lang="en">
+       <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <title>HSC ICT Chapter 4 Part-5 : Introduction to Web Design And Html</title>
+
+        
+        <meta name="Description" content=" In this HSC ICT Chapter 4 Part-5 : Introduction to Web Design And Html we will
+        learn about What is Marquee tag and example , what is HTML list (Ordered list, Unordered List, Definition List) and example.
+      " />
+       
+        
+        <meta name="author" content="tutorialforbeginner.com">
+        <meta property="og:site_name" content="www.tutorialforbeginner.com" />
+        <meta property="og:locale" content="en_US" />
+        <meta property="og:type" content="website" />
+        <link rel="shortcut icon" href="images/ico.jpg" type="image/x-icon" />
+        <link rel="canonical" href="https://tutorialforbeginner.com/hsc-ict-web-design-and-html-part-5"/>
+
+        <%- include('../../includes/boostrap-head.ejs') %>
+        <style>
+            .navbar-collapse .navbar-nav{float:none;margin:0 auto;text-align:center}img{max-width:100%}#footer{background:#232323;padding:30px 0 0 0;font-size:12px;color:#999}#footer a{color:#ccc}#footer a:hover{color:#fff}#footer h3.widget-title{font-size:15px;font-size:.9375rem;text-transform:uppercase;color:#fff;margin:0 0 20px}#underfooter{background:#191919;padding:15px 0;color:#777;font-size:12px}#underfooter a{color:#aaa}#underfooter a:hover{color:#fff}@media (min-width:1200px){.container{max-width:1080px}}body{overflow-x:hidden}#sidebar-wrapper{min-height:100vh;margin-left:-15rem;-webkit-transition:margin .25s ease-out;-moz-transition:margin .25s ease-out;-o-transition:margin .25s ease-out;transition:margin .25s ease-out}#sidebar-wrapper .sidebar-heading{padding:.875rem 1.25rem;font-size:1.2rem}#sidebar-wrapper .list-group{width:15rem}#page-content-wrapper{min-width:100vw}#wrapper.toggled #sidebar-wrapper{margin-left:0}@media (min-width:768px){#sidebar-wrapper{margin-left:0}#page-content-wrapper{min-width:0;width:100%}#wrapper.toggled #sidebar-wrapper{margin-left:-15rem}}.row.content{height:auto;width:auto}.sidenav{padding-top:20px;background-color:#f1f1f1;height:cover}footer{background-color:#555;color:#fff;padding:15px}@media screen and (max-width:767px){.sidenav{height:auto;padding:15px}.row.content{height:auto}}
+          </style>
+          <script async type="text/javascript" src="js/print/run_prettify.js??autoload=true&amp;skin=sunburst&amp;"></script>
+        
+
+        
+        
+<script data-ad-client="ca-pub-9136564254270725" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+
+
+            <!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-148831263-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-148831263-1');
+</script>
+
+
+        
+
+        
+        
+    </head>
+
+
+    
+
+<body>
+    <%- include('../../includes/navigation.ejs') %>
+    
+    
+    <main id="main">
+        
+      <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+      <!-- ict-ads-3 -->
+      <ins class="adsbygoogle"
+           style="display:block"
+           data-ad-client="ca-pub-9136564254270725"
+           data-ad-slot="3477296539"
+           data-ad-format="auto"
+           data-full-width-responsive="true"></ins>
+      <script>
+           (adsbygoogle = window.adsbygoogle || []).push({});
+      </script>
+
+        
+            
+            
+<div class="d-flex" id="wrapper">
+
+  <%- include('../../sitebars/ict.ejs') %> 
+  </div>
+</div>
+                <!-- /#sidebar-wrapper -->
+            
+                <!-- Page Content -->
+                <div id="page-content-wrapper">
+            
+                  <nav class="navbar navbar-expand-lg navbar-light bg-light border-bottom">
+                    <button class="btn btn-primary" id="menu-toggle">Contents</button>
+            
+                  </nav>
+            
+                  <div class="container-fluid">
+                      <div class="row content">
+                          
+                          <div class="col-sm-12 col-lg-9 col-md-8 text-left"> 
+                              <h1 class="bg-dark text-center text-white">HSC ICT Chaper 4 Part-5</h1>
+                   
+                              <h3 class="mt-4 text-center">Introduction to Web Design and HTML</h3>
+                              <p class="text-justify text-secondary"><b>
+                                In this HSC ICT Chapter 4 Part-5 : Introduction to Web Design And Html we will
+                                learn about What is Marquee tag and example , what is HTML list (Ordered list, Unordered List, Definition List) and example.
+                              </b></p><hr>
+
+                              <h4> 47.ওয়েবপেজের অলংকার ( What is  Marquee Tag )
+                              </h4>
+                            <p class="text-justify text-dark">
+
+                                টেক্সট বা ইমেজকে বিভিন্ন দিকে স্ক্রলিং করানাের জন্য &lt;marquee&gt;....&lt;/marquee&gt;
+                                 ট্যাগটি ব্যবহৃত হয়। এর ফলে পেইজে অ্যানিমেটেড পরিবেশ সৃষ্টি হয়।
+                                  হােম পেজটি সৌন্দর্য বৃদ্ধির জন্য HTML এর marquee এলিমেন্ট টিকে ব্যবহার করা যায়। 
+                                  ব্রাউজকারীর দৃষ্টি আকর্ষণ করতে এটি একটি ভালাে মাধ্যম। বিশেষ করে অনেক সময় 
+                                  ওয়েবপেইজে বিভিন্ন ঘােষণা প্রদর্শনের প্রয়ােজন পড়ে। তখন এসব স্ক্রলিং আইটেমগুলাে বিশেষ
+                                   উপকার করে থাকে। &lt;marquee&gt; এবং &lt;/marquee&gt; ট্যাগের অভ্যন্তরে টেক্সটে
+                                    বা ইমেজের আচরণ নিয়ন্ত্রণের জন্য বিভিন্ন ধরনের অ্যাট্রিবিউট রয়েছে। 
+                                    নিম্নে &lt;marquee&gt; ট্যাগে ব্যবহার করা যায় এমন অ্যাট্রিবিউট গুলাের কার্যাবলী বর্ণিত হলাে:
+
+                              <div class="embed-responsive embed-responsive-16by9">
+                                  <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/sbZpn0i8L0A" allowfullscreen></iframe>
+                              </div>
+                              <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+                                <!-- ict-ads-4 -->
+                                <ins class="adsbygoogle"
+                                    style="display:block"
+                                    data-ad-client="ca-pub-9136564254270725"
+                                    data-ad-slot="9659561509"
+                                    data-ad-format="auto"
+                                    data-full-width-responsive="true"></ins>
+                                <script>
+                                    (adsbygoogle = window.adsbygoogle || []).push({});
+                                </script>
+                            
+                            
+                       <table class="table table-bordered text-center">
+                           <tr>
+                               <th>অ্যাট্রিবিউট</th>
+                               <th>Value</th>
+                               <th>Description</th>
+                           </tr>
+                           <tr>
+                               <td rowspan="3">Behavior</td>
+                               <td>scroll</td>
+                               <td>ট্যাগের অভ্যন্তরের টেক্সটি একপাশ থেকে অন্য পাশে scrolling
+                                করতে থাকবে। এর ডিফল্ট মান হলাে scroll.
+                                </td>
+                           </tr>
+                           <tr>
+                            
+                            <td>slide</td>
+                            <td>টেক্সটি অন্য পাশের মার্জিন স্পর্শ করার সাথে সাথে বন্ধ হয়ে
+                                যাবে।
+                                
+                             </td>
+                        </tr>
+                        <tr>
+                            
+                            <td>alternate</td>
+                            <td>টেক্সটি পেজের এপাশ থেকে ওপাশে বা সামনে পিছনে লাফাতে
+                                থাকবে।
+                                
+                                
+                             </td>
+                        </tr>
+
+                        <tr>
+                            <td rowspan="2">direction</td>
+                            <td>left</td>
+                            <td>টেক্সটি ডান হতে বামদিকে scrolling করবে। তবে direction এর
+                                ডিফল্ট মান হলাে left. 
+                                
+                             </td>
+                        </tr>
+                        <tr>
+                            
+                            <td>Right</td>
+                            <td>টেক্সটি বাম হতে ডানদিকে scrolling  করানাের জন্য। 
+                                
+                             </td>
+                        </tr>
+                        <tr>
+                            <td >bgcolor</td>
+                            <td></td>
+                            <td>ব্যাকগ্রাউন্ডের রং সৃষ্টি করে। 
+                             </td>
+                        </tr>
+                        <tr>
+                            <td >align</td>
+                            <td>top, middle, bottom</td>
+                            <td>marquee'র টেক্সটটি বসবে।  
+                             </td>
+                        </tr>
+                        <tr>
+                            <td >height</td>
+                            <td> n অথবা n%
+                            </td>
+                            <td>পিক্সেল দিয়ে (height=40) অথবা স্ক্রীন এর উচ্চতার ৫ দ্বারা।
+                                marquee এর উচ্চতা নির্ধারণ করে দেওয়া (height=40%)।
+                                
+                             </td>
+                        </tr>
+                        <tr>
+                            <td >width</td>
+                            <td> n অথবা n%
+                            </td>
+                            <td>marquee’র প্রস্থ পিক্সেল অথবা ৫ দ্বারা নির্ধারণ করে দেয়া
+                                (width=20 অথবা width=20%)।
+                                
+                             </td>
+                        </tr>
+                        <tr>
+                            <td >loop </td>
+                            <td> n অথবা infinity
+                            </td>
+                            <td>marquee’র টেক্সটটি কতবার আবর্তন করবে তা লুপ দ্বারা নির্ধারণ ।
+
+                             </td>
+                        </tr>
+                        <tr>
+                            <td >scrolldelay</td>
+                            <td> n 
+                            </td>
+                            <td>কত মিলিসেকেন্ডে সময়ে আবর্তন করবে তা নির্ধারণ করা হয়
+                               scrolldelay 
+                                
+
+                             </td>
+                        </tr>
+                        <tr>
+                            <td >scrollamoun</td>
+                            <td></td>
+                            <td>marquee কত দূরত্বে ঘােরাঘুরি করবে তা scroll amount অ্যাট্রিবিউট দ্বারা। এর মান নির্ধারণ করা হয় পিক্সেল দ্বারা।
+                            </td>
+                        </tr>
+                       </table>  
+                       <H4>Let see some example:</H4>    
+                            <hr>
+
+
+                            
+<pre class="prettyprint"><code>&lt;!DOCTYPE html&gt;
+&lt;html&gt; 
+    &lt;head&gt;
+
+    &lt;/head&gt;
+    &lt;body&gt;
+
+    &lt;marquee behavior="scroll" direction="Left" &gt; &lt;p&gt;ICT Coaching Center &lt;/p&gt;&lt;/marquee&gt;
+    &lt;marquee behavior="slide" direction="Right"&gt;&lt;p&gt;ICT Coaching Center &lt;/p&gt;&lt;/marquee&gt;
+    &lt;marquee behavior="alternate" direction="Left"&gt;&lt;p&gt;ICT Coaching Center&lt;/p&gt;&lt;/marquee&gt;
+    &lt;marquee  direction="Left" scrolldelay="500"&gt;&lt;p&gt;ICT Coaching Center &lt;/p&gt;&lt;/marquee&gt;
+    &lt;marquee  bgcolor="green"&gt; &lt;p&gt;ICT Coaching Center &lt;/p&gt;&lt;/marquee&gt;
+                             
+    &lt;/body&gt;
+&lt;/html&gt;</code></pre><hr>
+<h4 class="bg-dark text-center text-white">Output</h4>
+
+<marquee behavior="scroll" direction="Left" > <p>ICT Coaching Center </p></marquee>
+<marquee behavior="slide" direction="Right" > <p>ICT Coaching Center </p></marquee>
+<marquee behavior="alternate" direction="Left" > <p>ICT Coaching Center </p></marquee>
+<marquee  direction="Left" scrolldelay="500"  > <p>ICT Coaching Center </p></marquee>
+<marquee  bgcolor="green"  > <p>ICT Coaching Center </p></marquee> <br> <hr>
+                            
+
+                                 
+                            <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+                            <ins class="adsbygoogle"
+                                style="display:block; text-align:center;"
+                                data-ad-layout="in-article"
+                                data-ad-format="fluid"
+                                data-ad-client="ca-pub-9136564254270725"
+                                data-ad-slot="2687298352"></ins>
+                            <script>
+                                (adsbygoogle = window.adsbygoogle || []).push({});
+                            </script>
+
+
+
+                            </p><br>
+
+                                       
+                            
+                            <h4>49.What is এইচটিএমএল লিস্ট ( HTML List ) ?</h4>
+                            <p class="text-justify text-dark">
+                                ডকুমেন্টকে সংগঠিতভাবে উপস্থাপন করার জন্য অনেকগুলি উপায়ের মধ্যে একটি উপায় হচ্ছে List। আমাদের প্রাত্যহিক জীবনে প্রায় সর্বত্রই List এর ব্যবহার দেখে থাকি। রেস্টুরেন্টে খাবার খেতে গেলে হাতে ধরিয়ে দেয় খাদ্যের মেনু লিস্ট। তাছাড়া রয়েছে টেলিফোন গাইড,
+                                 স্কুলে বইয়ের লিস্ট ইত্যাদি। ঠিক তেমনিভাবে ওয়েবপেইজ তৈরির List হচ্ছে তথ্য সুসংগঠিত করার একটি মৌলিক উপায় । HTML সাধারণত তিন ধরনের লিস্ট সমর্থন করে। এগুলাে হলাে:
+                                <br> 1.Bulleted (unordered) lists, <br> 2.Numbered / lettered (ordered) lists,<br> 3.Definition lists
+                                 <ul>
+                                <li> <b>অর্ডারড লিস্ট (Ordered list):</b> এই লিস্টের আইটেমগুলাে নাম্বার তথা সংখ্যা দিয়ে চিহ্নিত করা হয়।
+                                     এই লিস্ট। আইটেমের ভেতরে প্যারাগ্রাফ, লাইন ব্রেক ইমেজ, লিংক ও অন্যান্য লিস্টসমূহ বসানাে যায়। 
+                                     অর্ডার লিস্ট শুরু। হয় &lt;ol&gt; ট্যাগ দিয়ে এবং প্রতিটি লিস্ট আইটেম শুরু হয় &lt;li&gt;ট্যাগ দিয়ে । &lt;ol&gt; ট্যাগের অ্যাট্রিবিউট আছে
+                                    দুইটি। যথা: type এবং start।
+                                    </li>
+                                <li><b> আনঅর্ডারড (Unordered list) :</b> আনঅর্ডারড লিস্টগুলাে বুলেট (ছােট ছােট বৃত্ত) দ্বারা চিহ্নিত করা হয়। এই
+                                    লিস্ট আইটেমের মধ্যেও প্যারাগ্রাফ, লাইন ব্রেক, ইমেজ, লিংক এবং অন্যান্য লিস্টসমূহ বসানাে যায়। আনঅর্ডারড লিস্ট শুরু হয় &lt;ul&gt; ট্যাগ দ্বারা এবং প্রতিটি লিস্ট আইটেম শুরু হয় &lt;li&gt;  ট্যাগ দিয়ে।&lt;li&gt; হচ্ছে empty tag
+                                    যার closing ট্যাগ না দিলেও চলে। &lt;ul&gt; ট্যাগের অ্যাট্রিবিউট আছে একটি। যথা: type । Type অ্যাট্রিবিউটসমূহ নিম্নরূপ :
+                                    </li>
+
+                                <table class="table text-center table-bordered">
+                                        <tr>
+                                            <th>ordered list type</th><th>unorderd list type </th>
+                                        </tr>
+                                        <tr>
+                                            <td>"A" হলে আউটপুট হবে A, B, C</td>
+                                            <td> type = "disc" হলে আউটপুট হবে •</td>
+                                        </tr>
+                                        <tr>
+                                            <td>type = "a" হলে আউটপুট হবে a, b, c</td>
+                                            <td> type = "circle" হলে আউটপুট হবে 0</td>
+                                        </tr>
+                                        <tr>
+                                            <td>type = "I" হলে আউটপুট হবে I, II, III </td>
+                                            <td>  type = "square" হলে আউটপুট হবে square </ul>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>type = "3" হলে আউটপুট হবে i, ii, iii
+                                            </td>
+                                            <td></td>
+                                        </tr>
+                                </table>
+                                <li> <b>ডেফিনিশন লিস্ট (Definition list):</b>ডেফিনিশন লিস্ট হচ্ছে HTML-এ ব্যবহৃত এক বিশেষ ধরনের লিস্ট যা গ্রোসারি লিস্ট নামেও পরিচিত। এই লিস্ট অন্যান্য লিস্ট হতে কিছুটা ভিন্ন ধরনের। ডেফিনিশন লিস্ট কোনাে একক আইটেমসমূহের তালিকা নয়। এর ফরম্যাট অনেকটা ডিকশনারির মতো। লিস্টের কোনাে আইটেমের জন্য যখন বর্ণনার প্রয়ােজন হয়, তখন এ ধরনের ফরম্যাট খুবই কার্যকরী। ডেফিনিশন লিস্ট দুটি অংশে বিভক্ত।<br>
+                                    ১. টার্ম (Term) যা আইটেম-এর বিষয়কে বােঝায়;<br>
+                                     ২. টার্মের বর্ণনা। <br>
+                                    ডেফিনিশন লিস্ট শুরু হয় &lt;df&gt; ট্যাগ Definition list দিয়ে। প্রতিটি আইটেম শুরু হয় &lt;dt&gt;  ট্যাগ (definition term) দিয়ে আর প্রতিটি বর্ণনা শুরু হয় &lt;dd&gt;  ট্যাগ (definition description) দিয়ে। &lt;dd&gt; ট্যাগের মধ্যে প্যারাগ্রাফ, লাইন ব্রেক, ইমেজ, লিংক এবং অন্যান্য লিস্টসমূহ বসানাে যায় । এখানে উল্লেখ্য যে, &lt;DD&gt; এবং &lt;DT&gt;উভয়েই Empty ট্যাগ। এদের জন্য কোনাে Closing ট্যাগের প্রয়োজন হয় না। নিচের উদাহরণটি লক্ষ করলে এ সম্পর্কে আরও ভালােভাবে বুঝতে পারব। এজন্য নিচের পদক্ষেপগুলাে অনুসরণ করি।
+                                    For an example:
+                                </li>
+                              </ul>
+                            </p>
+                              
+
+<pre class="prettyprint"><code>&lt;!DOCTYPE html&gt;
+  &lt;html&gt; 
+      &lt;head&gt;
+  
+      &lt;/head&gt;
+      &lt;body&gt;
+      &lt;h4&gt; A definition list : &lt;/h4&gt;
+      &lt;dl&gt;
+        &lt;dt&gt; Rice  
+            &lt;dd&gt;Made from paddy 
+        &lt;dt&gt; Tea  
+            &lt;dd&gt; Black not drink  
+        &lt;dt&gt; Milk  
+            &lt;dd&gt; white cold drink  
+      &lt;/dl&gt;
+  &lt;/body&gt;
+  &lt;/html&gt;</code></pre>  
+  
+  <h4 class="text-center bg-dark text-white">Output:</h4>
+  
+  <dl>
+    <dt> Rice  
+        <dd>Made from paddy 
+    <dt> Tea  
+        <dd> Black not drink  
+    <dt> Milk  
+        <dd> white cold drink  
+  </dl>
+ 
+  
+<hr>
+                
+
+                           
+
+
+                                            
+
+
+                           
+
+                           
+
+
+
+ <h4>47.Order list Unorder List ব্যাবহার করে নিচের পেজটি তৈরি করো ?</h4>
+
+ <ol type="1">
+  <li>Coffee</li>
+  <li>Tea</li>
+  <li>Milk</li>
+</ol> 
+ <ol type="A">
+  <li>Coffee</li>
+  <li>Tea</li>
+  <li>Milk</li>
+</ol>
+</ol> 
+<ol type="I">
+ <li>Coffee</li>
+ <li>Tea</li>
+ <li>Milk</li>
+</ol>
+  <ul type="Circle">
+    <li>Coffee</li>
+    <li>Tea</li>
+    <li>Milk</li>
+  </ul> 
+</ol> 
+<ul  type="Square">
+  <li>Coffee</li>
+  <li>Tea</li>
+  <li>Milk</li>
+</ul> 
+
+ 
+<pre class="prettyprint"><code>&lt;!DOCTYPE html&gt;
+  &lt;html&gt; 
+      &lt;head&gt;
+        &lt;title&gt;Using Order List Unorder List &lt;/title&gt;
+      &lt;/head&gt;
+      &lt;body&gt;
+
+      &lt;ol type = "1"&gt; 
+      &lt;li&gt;Coffee&lt;/li&gt; 
+      &lt;li&gt;Tea&lt;/li&gt; 
+      &lt;li&gt;Milk&lt;/li&gt; 
+      &lt;/ol&gt; 
+
+      &lt;ol type = "A"&gt; 
+      &lt;li&gt;Coffee&lt;/li&gt; 
+      &lt;li&gt;Tea&lt;/li&gt; 
+      &lt;li&gt;Milk&lt;/li&gt; 
+      &lt;/ol&gt; 
+
+      &lt;ol type = "I"&gt; 
+      &lt;li&gt;Coffee&lt;/li&gt; 
+      &lt;li&gt;Tea&lt;/li&gt; 
+      &lt;li&gt;Milk&lt;/li&gt; 
+      &lt;/ol&gt;
+
+      &lt;ul type = "Circle"&gt; 
+      &lt;li&gt;Coffee&lt;/li&gt; 
+      &lt;li&gt;Tea&lt;/li&gt; 
+      &lt;li&gt;Milk&lt;/li&gt; 
+      &lt;/ul&gt; 
+
+      &lt;ul type = "Square"&gt; 
+      &lt;li&gt;Coffee&lt;/li&gt; 
+      &lt;li&gt;Tea&lt;/li&gt; 
+      &lt;li&gt;Milk&lt;/li&gt; 
+      &lt;/ul&gt; 
+      
+      &lt;/body&gt;
+  &lt;/html&gt;</code></pre><hr>        
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+  <ins class="adsbygoogle"
+       style="display:block; text-align:center;"
+       data-ad-layout="in-article"
+       data-ad-format="fluid"
+       data-ad-client="ca-pub-9136564254270725"
+       data-ad-slot="2458044125"></ins>
+  <script>
+       (adsbygoogle = window.adsbygoogle || []).push({});
+  </script>
+</div>
+<div class="col-sm-12 col-lg-3 col-md-4 sidenav">
+ <div class="well my-5">
+                                
+         <details >
+            <summary>Best way of learing</summary>
+                <p class="text-tustify">
+                 Self learing is the best learing in the world.
+                 Discover yourself first then will get what you are And
+                 what you want to do .It will push you for self learing.
+                 </p>
+                </details>
+ </div>
+
+                            <div class="well my-5">
+                                
+                                <details >
+                                    <summary>Why you need to learn coding?</summary>
+                                    <p class="text-tustify">
+                                        Coding will play a vital role in one's life . It will help to open 
+                                        a new window of thinking . You can think better way than past . It 
+                                        helps to organise all the thing in better way .
+                                    </p>
+                                  </details>
+                            </div>
+                           
+                            <div class="well sticky-top">
+                                <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+                                <!-- ict-verticle-1 -->
+                                <ins class="adsbygoogle"
+                                     style="display:block"
+                                     data-ad-client="ca-pub-9136564254270725"
+                                     data-ad-slot="1200802774"
+                                     data-ad-format="auto"
+                                     data-full-width-responsive="true"></ins>
+                                <script>
+                                     (adsbygoogle = window.adsbygoogle || []).push({});
+                                </script>
+                             
+                            </div>
+                            
+
+                          </div>
+                        </div>
+                      </div>
+                    
+                </div>
+               
+            
+              </div>
+              
+              <script>
+                $("#menu-toggle").click(function(e) {
+                  e.preventDefault();
+                  $("#wrapper").toggleClass("toggled");
+                });
+              </script>
+            
+        
+    
+    </main>
+
+    
+
+<%- include('../../includes/end.ejs') %>
